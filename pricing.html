@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pricing Sheet | KR1 Publishing</title>
+<meta name="description" content="Where to price a tabletop PDF, what each band is for, and what your price is actually buying you.">
+<style>
+  :root{--bg:#14110d;--panel:#1c1813;--line:#2b251c;--gold:#dcc88d;--bronze:#b8863b;--cream:#f2ecdd;--muted:#8a8171;--red:#d1332e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6}
+  .wrap{max-width:660px;margin:0 auto;padding:38px 20px 60px}
+  h1,h2{font-family:Georgia,serif;font-weight:600;color:var(--gold);line-height:1.15}
+  h1{font-size:clamp(28px,5vw,40px);text-align:center}
+  h2{font-size:21px;margin-bottom:10px}
+  .brand{font-size:11px;letter-spacing:3px;color:var(--bronze);text-transform:uppercase;text-align:center;margin:26px 0 22px}
+  .sub{text-align:center;color:var(--muted);margin:14px auto 26px;max-width:480px;font-size:15px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:26px 24px;border-radius:3px;margin-bottom:18px}
+  label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px}
+  input[type=range]{width:100%;accent-color:var(--gold)}
+  .price{font-family:Georgia,serif;font-size:52px;color:var(--gold);text-align:center;line-height:1;margin:6px 0 4px}
+  .band{text-align:center;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:18px}
+  .readout{border-left:3px solid var(--bronze);padding:14px 16px;background:var(--bg);font-size:14.5px;margin-top:16px}
+  .readout b{color:var(--gold)}
+  .flags{margin-top:14px;font-size:13.5px}
+  .flag{display:flex;gap:9px;margin-bottom:7px;color:var(--muted)}
+  .flag i{font-style:normal;flex:none;color:var(--gold)}
+  .flag.warn i{color:var(--red)}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th{text-align:left;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--bronze);font-weight:600;padding:0 0 10px;border-bottom:1px solid var(--line)}
+  td{padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td:first-child{color:var(--gold);white-space:nowrap;padding-right:16px;font-weight:600}
+  ol{margin:0 0 0 18px;font-size:14.5px;color:var(--muted)}
+  ol li{margin-bottom:10px}
+  ol li b{color:var(--cream);font-weight:600}
+  .cta{display:inline-block;background:var(--gold);color:var(--bg);text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 26px;border-radius:26px;margin-top:16px}
+  footer{margin-top:26px;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.4px}
+  footer a{color:var(--bronze);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div style="background:#191713;padding:0 20px;border-bottom:1px solid #2b251c">
+  <div style="max-width:900px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;font-size:14px">
+    <a href="../index.html" style="color:#e8c96f;text-decoration:none;font-weight:700;letter-spacing:2px">KR1 PUBLISHING</a>
+    <span><a href="../library.html" style="color:#f2ece0;text-decoration:none;opacity:.85;margin-right:18px">Library</a><a href="../index.html" style="color:#f2ece0;text-decoration:none;opacity:.85">Back to the front page</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="brand">KR1 Publishing</div>
+  <h1>The Pricing Sheet</h1>
+  <p class="sub">Price is the fastest lever you have, and the one most people pull last. Move the slider and see what each price is actually buying you.</p>
+
+  <div class="card">
+    <div class="price" id="price">$4.99</div>
+    <div class="band" id="bandname">The workhorse band</div>
+    <label for="p">Drag to set your price</label>
+    <input type="range" id="p" min="0" max="3999" step="100" value="499">
+    <div class="readout" id="readout"></div>
+    <div class="flags" id="flags"></div>
+  </div>
+
+  <div class="card">
+    <h2>What each band is for</h2>
+    <table>
+      <tr><td>Free or PWYW</td><td>List builders and tasters. One per product line is plenty. Note that on DriveThruRPG a sale under twenty cents does not count toward a bestseller badge, so free titles rarely earn metals.</td></tr>
+      <tr><td>$2.99 to $4.99</td><td>The workhorse band. First purchases, entry points, series installments. This is where a stranger will take a chance on a name they have never seen.</td></tr>
+      <tr><td>$7.99 to $9.99</td><td>Flagship PDFs with demand you have already proven. Earned, not assumed. If nothing of yours has sold well yet, this band is a guess.</td></tr>
+      <tr><td>$10 and up</td><td>Big books, boxed content, or an established name. Every dollar above ten asks the buyer to trust you more, so the page has to work harder.</td></tr>
+      <tr><td>Print</td><td>Price print on top of the PDF, never instead of it. Same customer, larger order.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Five rules that hold up</h2>
+    <ol>
+      <li><b>Price the catalog, not the product.</b> Every title has a job. Some exist to introduce you to a stranger, some exist to reward the reader who already trusts you. Judge a price by what it does to the whole shelf rather than to one line in a spreadsheet.</li>
+      <li><b>Your first job is to be tried at all.</b> Nobody can love a book they never opened. Whatever band you choose, make sure one thing in your catalog is an easy yes for someone who has never heard your name.</li>
+      <li><b>Never run a fire sale below your free tier's dignity.</b> Deep discounts train your readers to wait rather than buy, and the discount you run this month sets the price they expect next month.</li>
+      <li><b>A paying customer is a different person from a free downloader.</b> Someone who has paid you once, even a little, behaves nothing like someone who has only ever taken something free. Free builds a list. Paid builds a business.</li>
+      <li><b>Raise prices on proof, not on hope.</b> Reviews, repeat buyers and a track record are proof. A long page count and a lot of effort are not, however unfair that feels.</li>
+    </ol>
+    <a class="cta" href="../index.html#signup">Get the free checklist</a>
+  </div>
+
+  <footer>© KR1 PUBLISHING · <a href="../library.html">Your library</a> · <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_pricing_footer&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a></footer>
+</div>
+
+<script>
+var BANDS = [
+  [0,   0,    'The free tier',      'Free is a list building tool, not a business model. Use it once per product line to introduce yourself, then send those readers somewhere they can pay you.'],
+  [1,   299,  'Below the workhorse','Under three dollars you are leaving money on the table without buying much extra reach. Most buyers do not feel the difference between $1.99 and $3.99.'],
+  [300, 499,  'The workhorse band', 'This is where strangers take a chance on a name they do not know. Low enough to be an easy yes, high enough that the buyer becomes a real customer rather than a download.'],
+  [500, 999,  'The proven band',    'Fair for a flagship with demand you have already proven. If nothing of yours has sold well yet, you are guessing, and the guess costs you the strangers.'],
+  [1000,1999, 'The commitment band','Ten dollars and up asks for trust. It can absolutely work, but the product page, the preview and the reviews all have to carry more weight.'],
+  [2000,3999, 'The flagship band',  'This is a considered purchase. Expect fewer, slower sales and a much harder job convincing anyone who has not read you before.']
+];
+function find(c){ for (var i=BANDS.length-1;i>=0;i--){ if (c>=BANDS[i][0]) return BANDS[i]; } return BANDS[0]; }
+function draw(){
+  var c = parseInt(document.getElementById('p').value,10);
+  var b = find(c);
+  document.getElementById('price').textContent = c === 0 ? 'Free' : '$' + (c/100).toFixed(2);
+  document.getElementById('bandname').textContent = b[2];
+  document.getElementById('readout').innerHTML = b[3];
+  var f = [];
+  if (c > 0 && c < 20) f.push(['warn','Below twenty cents a sale does not count toward a bestseller badge on DriveThruRPG.']);
+  if (c >= 300 && c <= 499) f.push(['ok','An easy yes for someone who has never read you.']);
+  if (c > 999) f.push(['warn','Above ten dollars you are outside the band where most first purchases happen.']);
+  if (c === 0) f.push(['warn','Free downloads build a list but convert to buyers at a much lower rate than paid customers repeat.']);
+  if (c >= 500 && c <= 999) f.push(['ok','Reasonable for a proven flagship. Check that you have reviews to support it.']);
+  f.push(['ok','Whatever you choose, offer print on top of the PDF rather than instead of it.']);
+  document.getElementById('flags').innerHTML = f.map(function(x){
+    return '<div class="flag ' + (x[0]==='warn'?'warn':'') + '"><i>' + (x[0]==='warn'?'!':'✓') + '</i><span>' + x[1] + '</span></div>';
+  }).join('');
+}
+document.getElementById('p').addEventListener('input', draw);
+draw();
+</script>
+</body>
+</html>

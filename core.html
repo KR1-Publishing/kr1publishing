@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Core Test | KR1 Publishing</title>
+<meta name="description" content="Three questions that reveal whether your game knows what it is. Answer them, check the seams, find your core loop.">
+<style>
+  :root{--bg:#14110d;--panel:#1c1813;--line:#2b251c;--gold:#dcc88d;--bronze:#b8863b;--cream:#f2ecdd;--muted:#8a8171;--red:#d1332e;--green:#4C9A4C}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6}
+  .wrap{max-width:680px;margin:0 auto;padding:38px 20px 60px}
+  h1,h2,h3{font-family:Georgia,serif;font-weight:600;color:var(--gold);line-height:1.2}
+  h1{font-size:clamp(28px,5vw,40px);text-align:center}
+  h2{font-size:21px;margin-bottom:10px}
+  .brand{font-size:11px;letter-spacing:3px;color:var(--bronze);text-transform:uppercase;text-align:center;margin:26px 0 22px}
+  .sub{text-align:center;color:var(--muted);margin:14px auto 26px;max-width:520px;font-size:15px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:26px 24px;border-radius:3px;margin-bottom:18px}
+  .qnum{font-family:Georgia,serif;font-size:26px;color:var(--bronze);font-weight:600}
+  .qtitle{font-family:Georgia,serif;font-size:22px;color:var(--gold);margin:2px 0 8px}
+  .hint{font-size:13.5px;color:var(--muted);margin-bottom:12px}
+  .ex{border-left:3px solid var(--bronze);background:var(--bg);padding:12px 14px;font-size:13.5px;margin:12px 0;color:var(--muted)}
+  .ex b{color:var(--gold)}
+  textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--cream);font-family:inherit;font-size:15px;padding:13px 14px;border-radius:3px;min-height:76px;resize:vertical}
+  textarea:focus{outline:none;border-color:var(--gold)}
+  .seam{border:1px solid var(--line);border-radius:3px;padding:16px;margin-bottom:12px;background:var(--bg)}
+  .seam p{font-size:14.5px;margin-bottom:10px}
+  .seam .opts{display:flex;gap:8px;flex-wrap:wrap}
+  .opt{flex:1;min-width:90px;background:none;border:1px solid var(--line);color:var(--cream);font-family:inherit;font-size:13.5px;padding:9px 10px;cursor:pointer;border-radius:3px;text-align:center}
+  .opt:hover{border-color:var(--gold)}
+  .opt.sel-yes{background:rgba(76,154,76,.16);border-color:var(--green);color:#a9d3a9}
+  .opt.sel-mid{background:rgba(219,122,38,.14);border-color:#DB7A26;color:#eab27e}
+  .opt.sel-no{background:rgba(209,51,46,.14);border-color:var(--red);color:#e79794}
+  button.primary{display:block;width:100%;background:var(--gold);color:var(--bg);border:none;font-family:inherit;font-weight:600;font-size:15px;letter-spacing:.5px;padding:15px;cursor:pointer;border-radius:3px;margin-top:8px}
+  button.primary:hover{background:#e9d9a8}
+  .verdict{border-radius:3px;padding:20px 22px;margin:18px 0;font-size:15px;display:none}
+  .verdict.ok{display:block;background:rgba(76,154,76,.12);border:1px solid var(--green)}
+  .verdict.warn{display:block;background:rgba(209,51,46,.10);border:1px solid var(--red)}
+  .verdict b{color:var(--gold)}
+  .loop{display:none;margin-top:18px}
+  .loop.show{display:block}
+  .loopgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  @media(max-width:520px){.loopgrid{grid-template-columns:1fr}}
+  .loopgrid input{background:var(--bg);border:1px solid var(--line);color:var(--cream);font-family:inherit;font-size:14px;padding:11px 12px;border-radius:3px}
+  .loopgrid input:focus{outline:none;border-color:var(--gold)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:20px}
+  .note a{color:var(--bronze)}
+  footer{margin-top:34px;font-size:11.5px;color:var(--muted);letter-spacing:.4px;text-align:center}
+  footer a{color:var(--bronze);text-decoration:none;font-weight:600}
+  @media print{body{background:#fff;color:#111}.card,.seam{border-color:#999;background:#fff}h1,h2,.qtitle,.qnum{color:#111}textarea,.loopgrid input{border-color:#999;background:#fff;color:#111}.noprint{display:none}}
+</style>
+</head>
+<body>
+
+<div class="noprint" style="background:#191713;padding:0 20px;border-bottom:1px solid #2b251c">
+  <div style="max-width:900px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;font-size:14px">
+    <a href="../index.html" style="color:#e8c96f;text-decoration:none;font-weight:700;letter-spacing:2px">KR1 PUBLISHING</a>
+    <span><a href="../library.html" style="color:#f2ece0;text-decoration:none;opacity:.85;margin-right:18px">Library</a><a href="../index.html" style="color:#f2ece0;text-decoration:none;opacity:.85">Back to the front page</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="brand">KR1 Publishing</div>
+  <h1>The Core Test</h1>
+  <p class="sub">Does your game know what it is? The core of a game is two things: <b style="color:var(--gold)">a frame</b>, what it is about, and <b style="color:var(--gold)">a loop</b>, what the table actually does, round after round. Three questions reveal both in minutes. A game without a core spreads in every direction.</p>
+
+  <div class="card">
+    <div style="font-size:11px;letter-spacing:2.5px;color:var(--bronze);text-transform:uppercase;font-weight:600;margin-bottom:6px">The frame</div>
+    <div class="qnum">1</div>
+    <div class="qtitle">What is the game about?</div>
+    <p class="hint">Set a thematic frame, genre plus theme, and bake the premise into it. One sentence.</p>
+    <div class="ex"><b>Dungeons &amp; Dragons:</b> A fantasy roleplaying game about heroes who grow by overcoming ever greater dangers.</div>
+    <textarea id="a1" placeholder="My game is about..."></textarea>
+  </div>
+
+  <div class="card">
+    <div style="font-size:11px;letter-spacing:2.5px;color:var(--bronze);text-transform:uppercase;font-weight:600;margin-bottom:6px">The loop, part one</div>
+    <div class="qnum">2</div>
+    <div class="qtitle">How do the rules express it?</div>
+    <p class="hint">The theme belongs in the rules, not just the illustrations. What do you count, roll or track? At least one core rule should be impossible to explain without the theme.</p>
+    <div class="ex"><b>Dungeons &amp; Dragons:</b> Levels, experience points, and the most detailed subsystem in the book is combat. The rules spend their weight exactly where the sentence says they should.</div>
+    <textarea id="a2" placeholder="The rule that carries the theme is..."></textarea>
+  </div>
+
+  <div class="card">
+    <div style="font-size:11px;letter-spacing:2.5px;color:var(--bronze);text-transform:uppercase;font-weight:600;margin-bottom:6px">The loop, part two</div>
+    <div class="qnum">3</div>
+    <div class="qtitle">What behavior does the game reward?</div>
+    <p class="hint">Players do what pays, not what you hoped. What gives growth or XP? What gives resources or status? What gets punished? The incentive is the real rulebook.</p>
+    <div class="ex"><b>Dungeons &amp; Dragons:</b> XP for defeating enemies. You get stronger, so you can face even stronger enemies. The loop closes perfectly: defeat, grow, seek bigger danger.</div>
+    <textarea id="a3" placeholder="The game rewards..."></textarea>
+  </div>
+
+  <div class="card">
+    <h2>Now check the seams</h2>
+    <p class="hint" style="margin-bottom:14px">The seams are where the frame meets the loop. Read your three answers out loud, then judge each seam honestly. A beautiful frame bolted onto a loop that plays a different game is how projects die at ninety percent.</p>
+
+    <div class="seam"><p><b style="color:var(--gold)">Seam 1 to 2.</b> Do the rules prove the sentence? Could a stranger guess what your game is about from the mechanics alone?</p>
+      <div class="opts" data-seam="1"><button class="opt" data-v="2">Yes</button><button class="opt" data-v="1">Partly</button><button class="opt" data-v="0">No</button></div></div>
+
+    <div class="seam"><p><b style="color:var(--gold)">Seam 2 to 3.</b> Does the reward push players toward that rule? Or does it pay them to ignore it?</p>
+      <div class="opts" data-seam="2"><button class="opt" data-v="2">Yes</button><button class="opt" data-v="1">Partly</button><button class="opt" data-v="0">No</button></div></div>
+
+    <div class="seam"><p><b style="color:var(--gold)">Seam 3 to 1.</b> Is what the game rewards the same thing the game is about? Would a table full of strangers act out your premise just by chasing the points?</p>
+      <div class="opts" data-seam="3"><button class="opt" data-v="2">Yes</button><button class="opt" data-v="1">Partly</button><button class="opt" data-v="0">No</button></div></div>
+
+    <button class="primary" id="check">Check my core</button>
+
+    <div class="verdict" id="vd"></div>
+
+    <div class="loop" id="loopBox">
+      <h2 style="font-size:19px">Write your core loop</h2>
+      <p class="hint">Answer 1 is your frame. Answers 2 and 3 together are your loop, the engine of your game. Write the engine out in four beats, each feeding the next, and check that the whole loop still lives inside the frame.</p>
+      <div class="loopgrid">
+        <input placeholder="Players do..." id="l1">
+        <input placeholder="which earns..." id="l2">
+        <input placeholder="which lets them..." id="l3">
+        <input placeholder="which leads to bigger..." id="l4">
+      </div>
+      <button class="primary noprint" onclick="window.print()" style="margin-top:14px">Print my core test</button>
+    </div>
+
+    <p class="note">The three questions are Jared Sorensen's, the sharpest design tool ever put in three lines. The seams, the loop and the framing are from my own runs with them, including the five years it took me to find the core of my own first game. A strong brand is not the same as a strong core, and the three questions reveal the difference in seconds.</p>
+  </div>
+
+  <footer class="noprint">&copy; KR1 PUBLISHING &middot; <a href="../library.html">Your library</a> &middot; <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_core_footer&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a> &middot; <a href="https://discord.gg/3xvckbcKz8" target="_blank" rel="noopener">Join the Discord</a></footer>
+</div>
+
+<script>
+var seams={};
+document.querySelectorAll('.opts').forEach(function(g){
+  g.querySelectorAll('.opt').forEach(function(b){
+    b.addEventListener('click',function(){
+      g.querySelectorAll('.opt').forEach(function(x){x.className='opt';});
+      var v=parseInt(b.getAttribute('data-v'),10);
+      b.classList.add(v===2?'sel-yes':v===1?'sel-mid':'sel-no');
+      seams[g.getAttribute('data-seam')]=v;
+    });
+  });
+});
+document.getElementById('check').addEventListener('click',function(){
+  var vd=document.getElementById('vd');
+  if(Object.keys(seams).length<3){
+    vd.className='verdict warn';
+    vd.innerHTML='<b>Judge all three seams first.</b> The honest answer is the useful one.';
+    return;
+  }
+  var total=seams[1]+seams[2]+seams[3];
+  var weakest=[1,2,3].sort(function(a,b){return seams[a]-seams[b];})[0];
+  var names={1:'between what the game is about and what the rules do',2:'between the rules and what the game rewards',3:'between the reward and the premise itself'};
+  var fixes={1:'Find one rule that is impossible to explain without your theme. If no rule qualifies, the theme lives in the illustrations, and illustrations do not survive contact with the table.',
+             2:'Follow the points. If the reward pays players to ignore your core rule, they will, every time. Move the growth, the resources or the status onto the behavior your rule creates.',
+             3:'Read your premise, then watch what a table actually does when chasing the reward. If those two scenes look different, the reward is writing a different game than your sentence promises.'};
+  if(total>=6){
+    vd.className='verdict ok';
+    vd.innerHTML='<b>Your game knows what it is.</b> The frame and the loop agree, which means every future design decision has a filter. Guard it. The next hundred ideas will each ask to blur it.';
+  } else if(total>=4){
+    vd.className='verdict ok';
+    vd.innerHTML='<b>The core is close.</b> The weakest seam is '+names[weakest]+'. '+fixes[weakest];
+  } else {
+    vd.className='verdict warn';
+    vd.innerHTML='<b>The friction is real, and finding it now is the win.</b> Start with the seam '+names[weakest]+'. '+fixes[weakest]+' Fix one seam, then run the test again.';
+  }
+  document.getElementById('loopBox').classList.add('show');
+  vd.scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>

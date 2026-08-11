@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Medal Calculator | KR1 Publishing</title>
+<meta name="description" content="How many sales to each DriveThruRPG bestseller badge, and how long it takes at your pace.">
+<style>
+  :root{--bg:#14110d;--panel:#1c1813;--line:#2b251c;--gold:#dcc88d;--bronze:#b8863b;--cream:#f2ecdd;--muted:#8a8171}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6}
+  .wrap{max-width:640px;margin:0 auto;padding:38px 20px 60px}
+  h1,h2{font-family:Georgia,serif;font-weight:600;color:var(--gold);line-height:1.15}
+  h1{font-size:clamp(28px,5vw,40px);text-align:center}
+  .brand{font-size:11px;letter-spacing:3px;color:var(--bronze);text-transform:uppercase;text-align:center;margin-bottom:22px}
+  .sub{text-align:center;color:var(--muted);margin:14px auto 26px;max-width:470px;font-size:15px}
+  .card{background:var(--panel);border:1px solid var(--line);padding:26px 24px;border-radius:3px}
+  label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+  input{width:100%;font-size:16px;padding:12px;background:var(--bg);border:1px solid var(--line);color:var(--cream);border-radius:3px;font-family:inherit}
+  input:focus{outline:none;border-color:var(--gold)}
+  table{width:100%;border-collapse:collapse;margin-top:24px;font-size:14.5px}
+  th{text-align:left;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--bronze);font-weight:600;padding:0 0 10px;border-bottom:1px solid var(--line)}
+  th.n,td.n{text-align:right}
+  td{padding:11px 0;border-bottom:1px solid var(--line)}
+  tr.done td{color:var(--gold)}
+  tr.next td{background:rgba(220,200,141,.07)}
+  .metal{display:inline-flex;align-items:center;gap:9px;font-weight:600}
+  .dot{width:26px;height:28px;flex:none;object-fit:contain;display:block}
+  tr.locked .dot{opacity:.32;filter:grayscale(1)}
+  td.b{padding:9px 0}
+  td.r{color:var(--bronze);font-size:13px;white-space:nowrap}
+  tr.done td.r{color:var(--gold)}
+  .tick{color:var(--gold);margin-left:7px}
+  .badge{display:inline-block;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;background:var(--gold);color:var(--bg);padding:2px 8px;border-radius:10px;margin-left:8px;font-weight:700}
+  .verdict{margin-top:24px;border-left:3px solid var(--bronze);padding:14px 16px;font-size:14.5px;background:var(--bg)}
+  .verdict b{color:var(--gold)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:20px}
+  .note a{color:var(--bronze)}
+  footer{margin-top:30px;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.4px}
+  footer a{color:var(--bronze);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div style="background:#191713;padding:0 20px;border-bottom:1px solid #2b251c">
+  <div style="max-width:900px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;font-size:14px">
+    <a href="index.html" style="color:#e8c96f;text-decoration:none;font-weight:700;letter-spacing:2px">KR1 PUBLISHING</a>
+    <span><a href="index.html" style="color:#f2ece0;text-decoration:none;opacity:.85">Back to the front page</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="brand" style="margin-top:26px">KR1 Publishing</div>
+  <h1>The Medal Calculator</h1>
+  <div style="display:flex;justify-content:center;gap:6px;margin:18px 0 4px;flex-wrap:wrap"><img src="img/badges/copper.png" alt="Copper" style="height:52px"><img src="img/badges/silver.png" alt="Silver" style="height:52px"><img src="img/badges/electrum.png" alt="Electrum" style="height:52px"><img src="img/badges/gold.png" alt="Gold" style="height:52px"><img src="img/badges/platinum.png" alt="Platinum" style="height:52px"><img src="img/badges/mithral.png" alt="Mithral" style="height:52px"><img src="img/badges/adamantine.png" alt="Adamantine" style="height:52px"></div>
+  <p class="sub">Every bestseller badge on DriveThruRPG has a number behind it. Put in where you are and how fast you sell, and see which badge is actually within reach.</p>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label for="sold">Copies sold so far</label>
+        <input type="number" id="sold" min="0" value="0" inputmode="numeric">
+      </div>
+      <div>
+        <label for="rate">Copies per month</label>
+        <input type="number" id="rate" min="0" value="20" inputmode="numeric">
+      </div>
+    </div>
+
+    <table>
+      <thead><tr><th>Badge</th><th class="n">Units</th><th class="n">Rarity</th><th class="n">To go</th><th class="n">Time</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="verdict" id="verdict"></div>
+
+    <p class="note" style="margin-top:16px">Rarity is the share of every title on the store that has reached that badge or better, from DriveThruRPG's own metal legend. Only 350 titles in the entire catalogue carry Adamantine. Mithral is held by 664. Fewer than one title in forty ever reaches Platinum.</p>
+    <p class="note">Thresholds are the public ones published by DriveThruRPG. A sale only counts if the title sold for at least twenty cents, which is why pay what you want titles rarely earn metals. <a href="https://help.drivethrurpg.com/hc/en-us/articles/33369972615319-Bestseller-Metals-and-How-to-Earn-Badges" target="_blank" rel="noopener">Their page on badges</a>. Badge artwork is DriveThruRPG's own, published for partners to use.</p>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <h2 style="font-size:20px;margin-bottom:8px">What the numbers actually mean</h2>
+    <p style="font-size:14.5px;color:var(--muted)">A badge is not vanity. It is placement. Once a title carries a metal it shows up in more lists, and lists are where strangers find you. That is why a cheap book that sells steadily can outperform an expensive one that sells in a single burst.</p>
+    <p style="font-size:14.5px;color:var(--muted);margin-top:12px">The gap between Copper at fifty one and Gold at five hundred and one looks enormous from below. It is roughly one steady year at fifty copies a month, and most of that comes from the books you launch afterwards pulling the earlier ones along with them.</p>
+    <a href="index.html#signup" style="display:inline-block;background:var(--gold);color:var(--bg);text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 26px;border-radius:26px;margin-top:18px">Get the free toolkit</a>
+  </div>
+
+  <footer>© KR1 PUBLISHING · <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_medals_public&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a> · <a href="https://discord.gg/3xvckbcKz8" target="_blank" rel="noopener">Join the Discord</a></footer>
+</div>
+
+<script>
+var METALS = [
+  ['Copper', 51, 'copper', '37.2'],
+  ['Silver', 101, 'silver', '24.9'],
+  ['Electrum', 251, 'electrum', '12.3'],
+  ['Gold', 501, 'gold', '6.0'],
+  ['Platinum', 1001, 'platinum', '2.3'],
+  ['Mithral', 2501, 'mithral', '0.6'],
+  ['Adamantine', 5001, 'adamantine', '0.2']
+];
+function n(v){ return v.toLocaleString('en-US'); }
+function months(m){
+  if (m <= 0) return 'reached';
+  if (m < 1) return 'under a month';
+  if (m < 24) return Math.ceil(m) + (Math.ceil(m) === 1 ? ' month' : ' months');
+  var y = m / 12;
+  return (y < 10 ? y.toFixed(1) : Math.round(y)) + ' years';
+}
+function draw(){
+  var sold = Math.max(0, parseInt(document.getElementById('sold').value, 10) || 0);
+  var rate = Math.max(0, parseInt(document.getElementById('rate').value, 10) || 0);
+  var html = '', nextFound = false, nextName = '', nextGap = 0, nextTime = '';
+  METALS.forEach(function(m){
+    var name = m[0], need = m[1], slug = m[2], rare = m[3];
+    var done = sold >= need;
+    var gap = Math.max(0, need - sold);
+    var t = done ? 'reached' : (rate > 0 ? months(gap / rate) : 'set a pace');
+    var isNext = !done && !nextFound;
+    if (isNext){ nextFound = true; nextName = name; nextGap = gap; nextTime = t; }
+    html += '<tr class="' + (done ? 'done' : (isNext ? 'next' : 'locked')) + '">' +
+      '<td class="b"><span class="metal"><img class="dot" src="img/badges/' + slug + '.png" alt=""> ' + name + '</span>' +
+      (done ? '<span class="tick">&#10003;</span>' : (isNext ? '<span class="badge">Next</span>' : '')) + '</td>' +
+      '<td class="n">' + n(need) + '</td>' +
+      '<td class="n r">top ' + rare + '%</td>' +
+      '<td class="n">' + (done ? '&mdash;' : n(gap)) + '</td>' +
+      '<td class="n">' + t + '</td></tr>';
+  });
+  document.getElementById('rows').innerHTML = html;
+
+  var v = document.getElementById('verdict');
+  if (!nextFound) {
+    v.innerHTML = 'You have passed <b>Adamantine</b>. There is no badge above it. Write the book about how you did it.';
+  } else if (rate <= 0) {
+    v.innerHTML = 'Your next badge is <b>' + nextName + '</b>, ' + n(nextGap) + ' copies away. Put in a monthly pace to see how long that takes.';
+  } else {
+    v.innerHTML = 'Your next badge is <b>' + nextName + '</b>. That is <b>' + n(nextGap) + ' copies</b>, or about <b>' + nextTime + '</b> at your current pace. Doubling your pace halves that number, and launching a second title in the same line usually does more than either.';
+  }
+}
+document.getElementById('sold').addEventListener('input', draw);
+document.getElementById('rate').addEventListener('input', draw);
+draw();
+</script>
+</body>
+</html>

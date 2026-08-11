@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The DTRPG Bestseller Score | KR1 Publishing</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14110d;--panel:#1c1813;--line:#2b251c;--gold:#dcc88d;--bronze:#b8863b;--cream:#f2ecdd;--muted:#8a8171;--red:#D1332E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:40px 20px}
+.wrap{width:100%;max-width:640px}
+.brand{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:3px;color:var(--bronze);text-transform:uppercase;text-align:center;margin-bottom:26px}
+h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--gold);line-height:1.15}
+h1{font-size:clamp(30px,5vw,44px);text-align:center}
+.sub{text-align:center;color:var(--muted);margin:14px auto 30px;max-width:480px}
+.card{background:var(--panel);border:1px solid var(--line);padding:34px;border-radius:2px}
+button.primary{display:block;width:100%;background:var(--gold);color:var(--bg);border:none;font-family:'Inter',sans-serif;font-weight:600;font-size:15px;letter-spacing:.5px;padding:15px;cursor:pointer;border-radius:2px;margin-top:8px}
+button.primary:hover{background:#e9d9a8}
+.progress{height:3px;background:var(--line);margin-bottom:26px;border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--gold);width:0;transition:width .25s}
+.qnum{font-size:11px;letter-spacing:2px;color:var(--bronze);text-transform:uppercase;margin-bottom:10px}
+.qtext{font-family:'Fraunces',Georgia,serif;font-size:22px;color:var(--cream);margin-bottom:22px;line-height:1.3}
+.opt{display:block;width:100%;text-align:left;background:none;border:1px solid var(--line);color:var(--cream);font-family:'Inter',sans-serif;font-size:14.5px;padding:13px 16px;margin-bottom:10px;cursor:pointer;border-radius:2px}
+.opt:hover,.opt:focus-visible{border-color:var(--gold);outline:none}
+.medal{font-family:'Fraunces',Georgia,serif;font-size:15px;letter-spacing:4px;color:var(--bronze);text-transform:uppercase;text-align:center}
+.score{font-family:'Fraunces',Georgia,serif;font-size:76px;font-weight:600;color:var(--gold);text-align:center;line-height:1}
+.score small{font-size:22px;color:var(--muted)}
+.verdict{text-align:center;color:var(--cream);margin:16px 0 26px}
+.bars{margin:22px 0 8px}
+.bar{display:grid;grid-template-columns:64px 1fr 36px;gap:12px;align-items:center;margin-bottom:10px;font-size:12px;color:var(--muted)}
+.bar .tr{height:8px;background:var(--line);border-radius:2px;overflow:hidden}
+.bar .tr i{display:block;height:100%;background:var(--gold)}
+.bar.weak .tr i{background:var(--red)}
+.bar.weak{color:var(--red)}
+.nextstep{border-left:3px solid var(--bronze);background:var(--bg);padding:14px 16px;font-size:14px;margin:20px 0 26px}
+.nextstep b{color:var(--gold)}
+.cta h2{font-size:24px;text-align:center;margin-bottom:8px}
+.cta p{font-size:13.5px;color:var(--muted);text-align:center;margin-bottom:16px}
+input[type=email]{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--cream);font-family:'Inter',sans-serif;font-size:15px;padding:13px 14px;margin-bottom:10px;border-radius:2px}
+input[type=email]:focus{border-color:var(--gold);outline:none}
+.fine{font-size:11.5px;color:var(--muted);text-align:center;margin-top:12px}
+footer{margin-top:34px;font-size:11px;color:var(--muted);letter-spacing:1px;text-align:center}
+footer a{color:var(--bronze);text-decoration:none}
+.hidden{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div style="background:#191713;padding:0 20px">
+  <div style="max-width:900px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:Inter,system-ui,sans-serif;font-size:14px">
+    <a href="index.html" style="color:#e8c96f;text-decoration:none;font-weight:700;letter-spacing:2px;font-size:14px">KR1 PUBLISHING</a>
+    <span><a href="index.html" style="color:#f2ece0;text-decoration:none;opacity:.85">Back to the front page</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="brand">KR1 Publishing</div>
+
+  <!-- INTRO -->
+  <div id="intro">
+    <h1>What's your DTRPG Bestseller Score?</h1>
+    <p class="sub">Twelve questions, two minutes, no email needed. Find out which phase of the road to a bestseller you are actually in, and the one step that moves you forward.</p>
+    <div class="card">
+      <button class="primary" id="startBtn">Start the diagnosis</button>
+      <p class="fine">Built on the Make, Give, Grow, Sell method behind 10,000+ books sold.</p>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" class="hidden">
+    <div class="progress"><i id="pbar"></i></div>
+    <div class="card">
+      <div class="qnum" id="qnum"></div>
+      <div class="qtext" id="qtext"></div>
+      <div id="opts"></div>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="hidden">
+    <div class="card">
+      <div class="medal" id="medal"></div>
+      <div style="max-width:280px;margin:10px auto 0">
+        <svg viewBox="0 0 200 118" role="img" aria-label="Score gauge">
+          <path d="M14 104 A86 86 0 0 1 55 30" fill="none" stroke="#D1332E" stroke-width="13" stroke-linecap="round"/>
+          <path d="M62 25 A86 86 0 0 1 138 25" fill="none" stroke="#DB7A26" stroke-width="13" stroke-linecap="round"/>
+          <path d="M145 30 A86 86 0 0 1 180.8 74.6" fill="none" stroke="#E5C34A" stroke-width="13" stroke-linecap="round"/>
+          <path d="M183.5 82.6 A86 86 0 0 1 186 104" fill="none" stroke="#4C9A4C" stroke-width="13" stroke-linecap="round"/>
+          <g id="needle" style="transform-origin:100px 104px;transition:transform 1s cubic-bezier(.2,.8,.3,1)">
+            <line x1="100" y1="104" x2="100" y2="34" stroke="#f2ecdd" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="100" cy="104" r="7" fill="#f2ecdd"/>
+          </g>
+        </svg>
+      </div>
+      <div class="score"><span id="scoreNum"></span><small> /100</small></div>
+      <div class="verdict" id="verdict"></div>
+      <div class="bars" id="bars"></div>
+      <div class="nextstep" id="nextstep"></div>
+    </div>
+    <div class="card cta" style="margin-top:18px">
+      <h2>Now fix it</h2>
+      <p style="color:var(--cream);font-size:14.5px">Your score above is the assessment. The toolkit that fixes it is free: the one page checklist, the launch kit, the pricing sheet and more. <span id="ctaPhase"></span></p>
+      <form id="waitForm">
+        <input type="email" id="email" placeholder="your@email.com" required aria-label="Email address">
+        <label style="display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--muted);margin:4px 0 4px;cursor:pointer"><input type="checkbox" id="bpwait" checked style="margin-top:3px;accent-color:#dcc88d"><span>Also join the waiting list for <b style="color:var(--gold)">The DTRPG Bestseller Blueprint</b>, the full manual, out Q2 2027. First word, launch price.</span></label>
+        <button class="primary" type="submit">Send me the toolkit</button>
+      </form>
+      <p class="fine">One email with your library link. The occasional short, useful thing after that. No noise, easy to leave.</p>
+    </div>
+  </div>
+
+  <footer>© KR1 PUBLISHING · <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_quiz_public&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a> · <a href="https://discord.gg/3xvckbcKz8" target="_blank" rel="noopener">Join the Discord</a></footer>
+</div>
+
+<script>
+const MAILCHIMP_ACTION = "https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&id=1eeadea463&f_id=007c7de9f0";
+
+const PHASES = ['Make','Give','Grow','Sell'];
+const Q = [
+ // MAKE
+ {ph:0, t:"How many finished things have you actually published, anywhere at all?",
+  o:[["None yet, they live in my drawer",0],["One",1],["Two to five",2],["Six or more",3]]},
+ {ph:0, t:"Your current project. Could you honestly finish it within a week?",
+  o:[["It's a sprawling world, years from done",0],["Months away",1],["Weeks away",2],["Yes, one focused week would do it",3]]},
+ {ph:0, t:"Who is your next release for?",
+  o:[["Everyone who loves RPGs",0],["A genre crowd, roughly",1],["A specific kind of player or GM",2],["One real person with one real problem",3]]},
+ // GIVE
+ {ph:1, t:"Do you have a free product live right now?",
+  o:[["No, I don't give work away",0],["I've shared things informally",1],["One free release",2],["A permanent free door into my catalog",3]]},
+ {ph:1, t:"When someone downloads your work, can you ever reach them again?",
+  o:[["No idea who they are",0],["They could follow me if they dig",1],["Follower and mailing toggles are on",2],["Toggles on, plus my own email list",3]]},
+ {ph:1, t:"What happens to the feedback you get?",
+  o:[["I try not to read it",0],["I read it and move on",1],["I note what repeats",2],["I log it and it shapes the next release",3]]},
+ // GROW
+ {ph:2, t:"How many things did you release in the last twelve months?",
+  o:[["Nothing",0],["One",1],["Two or three",2],["Four or more",3]]},
+ {ph:2, t:"When you release something new, what happens in the first days?",
+  o:[["Silence",0],["A few friends grab it",1],["Strangers find it within a week",2],["Downloads land within hours because people were waiting",3]]},
+ {ph:2, t:"Do your releases point at each other?",
+  o:[["Each one stands alone",0],["Loosely related",1],["Same series or setting",2],["Every book's back matter sells the next one",3]]},
+ // SELL
+ {ph:3, t:"Have you ever charged money for your work?",
+  o:[["Not yet",0],["Once, it felt terrifying",1],["A few paid releases",2],["Paid releases are my normal",3]]},
+ {ph:3, t:"How do you price?",
+  o:[["I haven't priced anything",0],["Gut feeling",1],["I look at what others charge",2],["Deliberately, single digit ending in nine",3]]},
+ {ph:3, t:"Do you know how many copies you moved last month?",
+  o:[["No, and I'd rather not look",0],["Roughly",1],["Yes, I check the reports",2],["Yes, per order, and I know my repeat rate",3]]}
+];
+
+let i = 0;
+const answers = [];
+const $ = id => document.getElementById(id);
+
+$('startBtn').addEventListener('click', () => { $('intro').classList.add('hidden'); $('quiz').classList.remove('hidden'); render(); });
+
+function render(){
+  const q = Q[i];
+  $('pbar').style.width = (100*i/Q.length)+'%';
+  $('qnum').textContent = 'Question '+(i+1)+' of '+Q.length+' · '+PHASES[q.ph];
+  $('qtext').textContent = q.t;
+  $('opts').innerHTML = '';
+  q.o.forEach(([txt,pts])=>{
+    const b = document.createElement('button');
+    b.className='opt'; b.type='button'; b.textContent=txt;
+    b.addEventListener('click', ()=>{ answers.push({ph:q.ph, pts}); i++; i<Q.length ? render() : finish(); });
+    $('opts').appendChild(b);
+  });
+  $('opts').querySelector('button').focus();
+}
+
+const TIERS = [
+ [0,  'COPPER','You are at the very start of the road, which means the biggest wins are all still ahead of you.'],
+ [30, 'SILVER','You make things. Now the machine around them needs building.'],
+ [50, 'ELECTRUM','A real publishing practice is taking shape. One phase is holding you back.'],
+ [70, 'GOLD','You are running the loop. Tighten the weakest link and the curve bends upward.'],
+ [85, 'PLATINUM','You operate near the top of the indie field, which is where the invisible mistakes get expensive. The next gains are in the details you cannot see from inside.'],
+ [95, 'MITHRAL','You run a real machine, and machines this good stall on the next bottleneck, not the current one. The system below is built for exactly that.']
+];
+const STEPS = [
+ '<b>Your bottleneck is Make.</b> Pick the smallest real thing you could finish in one week, even a single page, and finish it ugly. A finished one-pager teaches you the whole loop.',
+ '<b>Your bottleneck is Give.</b> Put one complete, useful piece up for free with follower and mailing toggles on. You cannot sell to people who do not know you exist.',
+ '<b>Your bottleneck is Grow.</b> Set a release cadence you can keep. Two or three small things a year beats one grand thing never. The list converts when you show up again.',
+ '<b>Your bottleneck is Sell.</b> Price a single digit ending in nine, point every back matter page at the next book, and read your sales report per order once a month.'
+];
+
+function finish(){
+  const perPhase = [0,0,0,0], maxPhase = [0,0,0,0];
+  Q.forEach(q => maxPhase[q.ph] += 3);
+  answers.forEach(a => perPhase[a.ph] += a.pts);
+  const total = perPhase.reduce((s,v)=>s+v,0);
+  const score = Math.round(100 * total / maxPhase.reduce((s,v)=>s+v,0));
+  let tier = TIERS[0];
+  TIERS.forEach(t => { if (score >= t[0]) tier = t; });
+  const pct = perPhase.map((v,k)=> v/maxPhase[k]);
+  const weak = pct.indexOf(Math.min(...pct));
+
+  $('quiz').classList.add('hidden'); $('result').classList.remove('hidden');
+  $('medal').textContent = tier[1]+' TIER';
+  $('scoreNum').textContent = score;
+  document.getElementById('needle').style.transform = 'rotate(' + (score*1.55 - 90) + 'deg)';
+  $('verdict').textContent = tier[2];
+  $('bars').innerHTML = PHASES.map((p,k)=>
+    `<div class="bar${k===weak?' weak':''}"><span>${p}</span><div class="tr"><i style="width:${Math.round(100*pct[k])}%"></i></div><span>${Math.round(100*pct[k])}%</span></div>`).join('');
+  $('nextstep').innerHTML = STEPS[weak];
+  $('ctaPhase').innerHTML = 'Start with your <b style="color:var(--gold)">'+PHASES[weak]+'</b> checklist.';
+  window._quizMeta = {score: score, phase: PHASES[weak]};
+  window.scrollTo({top:0});
+}
+
+$('waitForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const email = $('email').value;
+  if (MAILCHIMP_ACTION) {
+    const f = document.createElement('form');
+    f.method='POST'; f.action=MAILCHIMP_ACTION; f.target='_blank';
+    const inp=document.createElement('input'); inp.name='EMAIL'; inp.value=email; f.appendChild(inp);
+    const m = window._quizMeta || {};
+    const bp = document.getElementById('bpwait');
+    [['SCORE',m.score],['PHASE',m.phase],['BLUEPRINT',(bp&&bp.checked)?'yes':''],['TRACK','creator'],['PICKS','score-quiz'],['b_9b8e99b826134f12e16a15a13_1eeadea463','']].forEach(([n,v])=>{
+      const h=document.createElement('input'); h.name=n; h.value=v??''; f.appendChild(h);
+    });
+    document.body.appendChild(f); f.submit();
+  } else {
+    const m = window._quizMeta || {};
+    location.href = 'index.html#signup';
+  }
+});
+</script>
+</body>
+</html>

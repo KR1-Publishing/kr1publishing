@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /library.html
+Disallow: /tools/
+Sitemap: https://www.kr1publishing.com/sitemap.xml
