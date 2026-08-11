@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Value Equation | KR1 Publishing</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14110d;--panel:#1c1813;--line:#2b251c;--gold:#dcc88d;--bronze:#b8863b;--cream:#f2ecdd;--muted:#8a8171;--red:#b5543f;--green:#7a9b6d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--cream);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.5;padding:36px 18px 80px;display:flex;flex-direction:column;align-items:center}
+.wrap{width:100%;max-width:880px}
+.brand{font-size:11px;letter-spacing:3px;color:var(--bronze);text-transform:uppercase;text-align:center;margin-bottom:18px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(30px,5vw,46px);color:var(--gold);text-align:center;line-height:1.1}
+.sub{text-align:center;color:var(--muted);margin:10px auto 8px;max-width:520px;font-size:14px}
+.formula{font-family:'Fraunces',Georgia,serif;text-align:center;color:var(--cream);font-size:17px;margin-bottom:30px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:20px 22px;margin-bottom:16px}
+.card h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:17px;color:var(--gold);display:flex;justify-content:space-between;align-items:baseline}
+.card h2 .pts{font-family:'Inter';font-size:11px;letter-spacing:1px;color:var(--bronze)}
+.card.neg h2{color:var(--red)} .card.neg h2 .pts{color:var(--red)}
+.card .why{font-size:12px;color:var(--muted);font-style:italic;margin:2px 0 14px}
+label.item{display:flex;align-items:center;gap:12px;padding:8px 10px;margin:0 -10px;border-radius:3px;cursor:pointer;user-select:none}
+label.item:hover{background:rgba(220,200,141,.06)}
+label.item input{appearance:none;width:20px;height:20px;min-width:20px;border:1.5px solid var(--bronze);border-radius:3px;background:transparent;cursor:pointer;position:relative;transition:background .15s}
+label.item input:checked{background:var(--gold);border-color:var(--gold)}
+label.item input:checked::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--bg);font-weight:700;font-size:14px}
+.neg label.item input:checked{background:var(--red);border-color:var(--red)}
+.neg label.item input:checked::after{content:'✕';color:var(--cream)}
+label.item span{flex:1;font-size:14px}
+label.item i{font-style:normal;font-size:11px;color:var(--muted);font-weight:600}
+.pf label.item input{border-radius:50%}
+.pf label.item input:checked::after{content:'●';font-size:10px}
+.pfnote{font-size:11px;color:var(--muted);margin-top:8px}
+
+.scorebar{position:sticky;bottom:0;left:0;right:0;width:100%;max-width:880px;background:linear-gradient(180deg,rgba(20,17,13,0),#14110d 22%);padding-top:26px;margin-top:8px}
+.scoreinner{background:var(--panel);border:1px solid var(--bronze);border-radius:4px;padding:18px 22px;box-shadow:0 -8px 30px rgba(0,0,0,.5)}
+.scoretop{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.scoretop .lbl{font-size:11px;letter-spacing:2px;color:var(--bronze);text-transform:uppercase}
+.scoretop .num{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:44px;color:var(--gold);line-height:1;min-width:88px}
+.scoretop .math{font-size:13px;color:var(--muted)}
+.verdict{font-family:'Fraunces',Georgia,serif;font-size:19px;margin-left:auto;text-align:right}
+.verdict small{display:block;font-family:'Inter';font-size:12px;color:var(--muted)}
+.track{position:relative;height:10px;background:var(--line);border-radius:5px;margin-top:14px;overflow:visible}
+.zones{display:flex;height:100%;border-radius:5px;overflow:hidden}
+.zones i{display:block;height:100%}
+.marker{position:absolute;top:-4px;width:4px;height:18px;background:var(--cream);border-radius:2px;transition:left .25s;box-shadow:0 0 6px rgba(0,0,0,.6)}
+.zlabels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--muted);margin-top:6px;letter-spacing:.5px;text-transform:uppercase}
+footer{margin-top:34px;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.4px}
+footer a{color:var(--bronze);text-decoration:none;font-weight:600}
+@media print{
+ body{background:#fff;color:#1e1c18;padding:10px}
+ .card,.scoreinner{background:#fff;border-color:#b8863b}
+ .scorebar{position:static;background:none;box-shadow:none}
+ .card h2{color:#1e1c18} footer a{color:#b8863b}
+}
+</style>
+</head>
+<body>
+<div style="background:#191713;padding:0 20px">
+  <div style="max-width:900px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;font-family:Inter,system-ui,sans-serif;font-size:14px">
+    <a href="../index.html" style="color:#e8c96f;text-decoration:none;font-weight:700;letter-spacing:2px;font-size:14px">KR1 PUBLISHING</a>
+    <span><a href="../library.html" style="color:#f2ece0;text-decoration:none;opacity:.85;margin-right:18px">Library</a><a href="../index.html" style="color:#f2ece0;text-decoration:none;opacity:.85">Back to the front page</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="brand">KR1 Publishing</div>
+  <h1>The Value Equation</h1>
+  <p class="sub">Score your product before your customers do. Tick what is true and the verdict updates as you go.</p>
+  <p class="formula">Value = ( Plus − Minus ) × Price Factor</p>
+
+  <div class="cols">
+    <div>
+      <div class="card" data-group="pos">
+        <h2>A · The Promise <span class="pts">+2 each</span></h2>
+        <div class="why">Why the product exists at all</div>
+        <label class="item"><input type="checkbox" value="2"><span>Solves a problem people actually have</span><i>+2</i></label>
+        <label class="item"><input type="checkbox" value="2"><span>Usable at the table the same evening</span><i>+2</i></label>
+        <label class="item"><input type="checkbox" value="2"><span>Made for a defined audience, not "everyone"</span><i>+2</i></label>
+      </div>
+      <div class="card" data-group="pos">
+        <h2>B · The Craft <span class="pts">+1 each</span></h2>
+        <div class="why">How it is built</div>
+        <label class="item"><input type="checkbox" value="1"><span>Plain language</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Find what you need in under a minute</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Checklist or summary included</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Readable layout, no walls of text</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Art that explains, not decorates</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Digest length you can actually finish</span><i>+1</i></label>
+      </div>
+      <div class="card" data-group="pos">
+        <h2>C · The Table <span class="pts">+1 each</span></h2>
+        <div class="why">Does it work where play happens</div>
+        <label class="item"><input type="checkbox" value="1"><span>Key rules gathered on one spread</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Print friendly, with margins</span><i>+1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Hyperlinked table of contents</span><i>+1</i></label>
+      </div>
+    </div>
+    <div>
+      <div class="card neg" data-group="neg">
+        <h2>D · Friction <span class="pts">−1 each</span></h2>
+        <div class="why">What slows the reader down</div>
+        <label class="item"><input type="checkbox" value="1"><span>Pages that have no function</span><i>−1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Writing that shows off</span><i>−1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Messy structure</span><i>−1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Decorative art fighting the text</span><i>−1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Rules that force page-flipping</span><i>−1</i></label>
+        <label class="item"><input type="checkbox" value="1"><span>Never says how to use it at the table</span><i>−1</i></label>
+      </div>
+      <div class="card neg" data-group="neg">
+        <h2>E · Trust <span class="pts">−2 each</span></h2>
+        <div class="why">Broken trust is punished double</div>
+        <label class="item"><input type="checkbox" value="2"><span>Promises more than it delivers</span><i>−2</i></label>
+        <label class="item"><input type="checkbox" value="2"><span>Description hides what the product is</span><i>−2</i></label>
+        <label class="item"><input type="checkbox" value="2"><span>Demands a full read before first use</span><i>−2</i></label>
+        <label class="item"><input type="checkbox" value="2"><span>Undeclared AI that gets discovered</span><i>−2</i></label>
+      </div>
+      <div class="card pf" data-group="pf">
+        <h2>Price Factor <span class="pts">pick one</span></h2>
+        <div class="why">The price the customer actually pays, not the list price</div>
+        <label class="item"><input type="radio" name="pf" value="2" checked><span>Free or under $5</span><i>× 2.0</i></label>
+        <label class="item"><input type="radio" name="pf" value="1.5"><span>$5 to $10</span><i>× 1.5</i></label>
+        <label class="item"><input type="radio" name="pf" value="1"><span>$10 to $20</span><i>× 1.0</i></label>
+        <label class="item"><input type="radio" name="pf" value="0.75"><span>$20 to $35</span><i>× 0.75</i></label>
+        <label class="item"><input type="radio" name="pf" value="0.5"><span>Over $35</span><i>× 0.5</i></label>
+        <div class="pfnote">Known brand with proven quality: count one band cheaper (only above $5).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scorebar">
+    <div class="scoreinner">
+      <div class="scoretop">
+        <div><div class="lbl">Your score</div><div class="num" id="score">0</div></div>
+        <div class="math" id="math">( 0 − 0 ) × 2.0</div>
+        <div class="verdict" id="verdict">Forgettable<small id="vdesc">downloaded, forgotten</small></div>
+      </div>
+      <div class="track">
+        <div class="zones">
+          <i style="width:20%;background:#6e3427"></i><i style="width:13%;background:#4a3f2c"></i>
+          <i style="width:14%;background:#5c4d2e"></i><i style="width:15%;background:#77602f"></i>
+          <i style="width:17%;background:#a3812f"></i><i style="width:21%;background:#dcc88d"></i>
+        </div>
+        <div class="marker" id="marker" style="left:48%"></div>
+      </div>
+      <div class="zlabels"><span>Harmful</span><span>Forgettable</span><span>Acceptable</span><span>Useful</span><span>Recommended</span><span>Indispensable</span></div>
+    </div>
+  </div>
+
+  <footer>Weights calibrated against 20,000 simulated products · <a href="../library.html">Your library</a> · <a href="../files/kr1-value-equation-worksheet.pdf">Printable worksheet</a> · <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_valueeq_footer&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a></footer>
+</div>
+
+<script>
+const ZONES = [
+ [-28,'Harmful','damages your name at any price','#b5543f'],
+ [0,'Forgettable','downloaded, forgotten','#8a8171'],
+ [6,'Acceptable','bought, rarely used','#a8946a'],
+ [12,'Useful','makes it to the table','#c4a45a'],
+ [18,'Recommended','people tip others unprompted','#dcc88d'],
+ [24,'Indispensable','reviews, videos, they buy your whole shelf','#f0dfae']
+];
+const MIN=-28, MAX=30;
+function calc(){
+  let plus=0, minus=0;
+  document.querySelectorAll('[data-group=pos] input:checked').forEach(i=>plus+=+i.value);
+  document.querySelectorAll('[data-group=neg] input:checked').forEach(i=>minus+=+i.value);
+  const pf = +document.querySelector('input[name=pf]:checked').value;
+  const score = (plus-minus)*pf;
+  let z = ZONES[0];
+  ZONES.forEach(t=>{ if(score>=t[0]) z=t; });
+  document.getElementById('score').textContent = Number.isInteger(score)?score:score.toFixed(1);
+  document.getElementById('score').style.color = z[3];
+  document.getElementById('math').textContent = `( ${plus} − ${minus} ) × ${pf.toFixed(pf===0.75?2:1)}`;
+  document.getElementById('verdict').firstChild.textContent = z[1];
+  document.getElementById('verdict').style.color = z[3];
+  document.getElementById('vdesc').textContent = z[2];
+  const pct = Math.max(0, Math.min(100, 100*(score-MIN)/(MAX-MIN)));
+  document.getElementById('marker').style.left = `calc(${pct}% - 2px)`;
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('change', calc));
+calc();
+</script>
+</body>
+</html>
