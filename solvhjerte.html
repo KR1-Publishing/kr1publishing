@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sølvhjerte for skolen | KR1 Publishing</title>
+<meta name="description" content="Elevene lærer historie ved å leve den. Sølvhjerte er rollespillet fra sølvverkets Kongsberg, gitt til byens ungdomsskoler og i bruk i undervisningen. Lisensbasert skoleportal kommer i 2027.">
+<link rel="canonical" href="https://www.kr1publishing.com/solvhjerte">
+<meta property="og:title" content="Sølvhjerte for skolen | KR1 Publishing">
+<meta property="og:description" content="Elevene lærer historie ved å leve den. Sølvhjerte er rollespillet fra sølvverkets Kongsberg, gitt til byens ungdomsskoler og i bruk i undervisningen. Lisensbasert skoleportal kommer i 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kr1publishing.com/solvhjerte">
+<meta property="og:image" content="https://www.kr1publishing.com/img/og-creator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  /* =========================================================
+     KR1 KONFIG foer deploy:
+     FORM-ACTION, HONEYPOT og MERGE-FELT er satt opp (aug 2026).
+     Skjemaet poster til Mailchimp-listen med tag Checklist - Website.
+     BILDER i img/:  hero.jpg 2000x900 | checklist-pack.jpg,
+     value-equation.jpg, score-quiz.jpg 360x480 | portrait.jpg
+     800x800 | gate.jpg 600x800. Manglende fil skjules automatisk.
+     ========================================================= */
+  :root{
+    --ink:#1e1c18; --muted:#6b6455; --line:#d8cfba;
+    --gold:#e8c96f; --gold-dark:#b8863b; --gold-soft:#dcc88d;
+    --paper:#f7f3ea; --card:#fffdf8; --dark:#191713; --slot:#ece5d6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  .in{max-width:1120px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px;margin:0 auto}
+  .sans{font-family:system-ui,-apple-system,sans-serif}
+  a{color:inherit}
+
+  .btn{display:inline-block;background:var(--gold);color:var(--ink);text-decoration:none;font-family:system-ui,sans-serif;font-size:16.5px;font-weight:700;padding:18px 44px;border-radius:32px;border:none;cursor:pointer;letter-spacing:.2px}
+  .btn:hover{background:var(--gold-soft)}
+  .btn.sm{font-size:14px;padding:12px 24px}
+  .btn.ghost{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+  .btn.ghost:hover{background:var(--gold);color:var(--ink)}
+
+  /* ANNOUNCEMENT */
+  .ann{background:var(--gold);text-align:center;padding:11px 16px;font-family:system-ui,sans-serif;font-size:14px;font-weight:600}
+  .ann a{text-decoration:none}
+  .ann .tag{background:var(--ink);color:var(--gold);border-radius:20px;padding:3px 11px;font-size:11.5px;letter-spacing:1px;margin-right:9px}
+
+  /* NAV */
+  nav{background:var(--dark);color:#f2ece0}
+  nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
+  nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none}
+  nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
+  nav a{text-decoration:none;opacity:.88}
+  nav a:hover{opacity:1;color:var(--gold)}
+  @media(max-width:760px){nav ul{display:none}}
+
+  /* HERO */
+  .hero{position:relative;background:var(--paper);text-align:center;padding:64px 0 0;overflow:hidden}
+  .hero h1{font-size:clamp(31px,4.5vw,52px);line-height:1.1;font-weight:700;letter-spacing:-.5px}
+  .hero h1 em{font-style:normal;color:var(--gold-dark);border-bottom:6px solid var(--gold);padding-bottom:2px}
+  .hero p{font-size:clamp(17px,2.2vw,21px);max-width:640px;margin:20px auto 0;color:#3a352c}
+  .hero .cta-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+  .microtrust{font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);margin-top:22px}
+  /* BYLINE: img/byline.jpg ligger ferdig beskaaret 400x400. */
+  .byline{display:flex;align-items:center;justify-content:center;gap:12px;margin:32px 0 0;font-family:system-ui,sans-serif;text-align:left}
+  .byline img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center 30%;border:2px solid var(--gold);background:var(--slot);flex:none}
+  .byline b{display:block;font-size:14.5px;color:var(--ink)}
+  .byline span{font-size:12.5px;color:var(--muted)}
+
+  /* PROOF BAR */
+  .proofbar{background:var(--dark);color:#f2ece0;margin-top:52px}
+  .proofbar .in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;text-align:center}
+  .proofbar b{display:block;font-size:clamp(24px,3.4vw,34px);color:var(--gold);line-height:1.1}
+  .proofbar span{font-family:system-ui,sans-serif;font-size:12.5px;opacity:.8;letter-spacing:.3px}
+  @media(max-width:640px){.proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}}
+
+  /* SECTION SHELL */
+  section{padding:64px 0}
+  .band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .dark{background:var(--dark);color:#e6ded0}
+  .dark h2{color:var(--gold)}
+  .dark p{color:#cfc6b5}
+  h2{font-size:clamp(26px,3.6vw,38px);line-height:1.2;margin-bottom:14px}
+  .center{text-align:center}
+  .kicker{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:10px}
+  .lead{font-size:18px}
+  p+p{margin-top:14px}
+
+  /* TOOL CARDS */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px;align-items:stretch}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center;display:flex;flex-direction:column;height:100%}
+  .card .badge{display:inline-block;background:transparent;border:1px solid var(--line);color:var(--gold-dark);font-family:system-ui,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:4px 13px;border-radius:20px;margin-bottom:16px;align-self:center}
+  .card img{width:146px;height:195px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:var(--slot);margin:0 auto 16px;display:block;box-shadow:0 6px 18px rgba(30,28,24,.14)}
+  .card h3{font-size:18.5px;margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--muted);flex:1}
+  .card .btn{margin-top:16px;width:100%;padding-left:12px;padding-right:12px;font-size:15px}
+
+  /* SPLIT */
+  .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+  @media(max-width:860px){.split{grid-template-columns:1fr;gap:26px}}
+  /* PORTRETT: img/portrait.jpg, staaende 900x1100 eller kvadratisk
+     900x900. Beskjaeres pent uansett format. Gullrammen ligger som
+     en forskjoevet kant bak bildet. */
+  .portrait{position:relative;display:block;width:100%;margin:0}
+  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;border-radius:12px;background:var(--slot);display:block;position:relative;z-index:1}
+  .portrait figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+  .inlinecta{display:grid;grid-template-columns:130px 1fr;gap:26px;align-items:center;background:rgba(232,201,111,.07);border:1px solid rgba(232,201,111,.35);border-radius:14px;padding:22px 26px;max-width:780px;margin:0 auto}
+  .inlinecta img{width:130px;height:174px;object-fit:cover;border-radius:8px;display:block;box-shadow:0 8px 20px rgba(0,0,0,.45)}
+  .inlinecta h3{font-size:21px;color:var(--gold);margin-bottom:6px}
+  .inlinecta p{font-size:15px;margin-bottom:16px}
+  @media(max-width:640px){.inlinecta{grid-template-columns:1fr;text-align:center;justify-items:center}.inlinecta img{width:110px;height:147px}}
+  .twotools{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:960px;margin:0 auto}
+  @media(max-width:820px){.twotools{grid-template-columns:1fr;gap:22px}}
+  .tool{display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .tool img{width:120px;height:120px;object-fit:contain;display:block}
+  .tool img.shot{height:150px;width:112px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+  .tool h3{font-size:19px;margin-bottom:6px}
+  .tool p{font-size:14.5px;color:var(--muted);margin-bottom:14px}
+  @media(max-width:520px){.tool{grid-template-columns:1fr;text-align:center;justify-items:center}}
+  .medalcta{display:grid;grid-template-columns:190px 1fr;gap:38px;align-items:center;max-width:860px;margin:0 auto;text-align:left}
+  .medalcta img{width:190px;height:190px;object-fit:contain;display:block;filter:drop-shadow(0 10px 22px rgba(30,28,24,.28))}
+  @media(max-width:700px){.medalcta{grid-template-columns:1fr;text-align:center;justify-items:center;gap:22px}.medalcta img{width:150px;height:150px}}
+  .bpshot{display:flex;align-items:center;justify-content:center}
+  .bpshot img{max-width:100%;max-height:420px;object-fit:contain;display:block;filter:drop-shadow(0 22px 34px rgba(0,0,0,.55))}
+  @media(max-width:860px){.bpshot img{max-height:280px}}
+  /* PRISBAAND: svaret er selve CTA-en. Klikk setter PRICEBAND,
+     huker av ventelisten og hopper til skjemaet. */
+  .pq{font-family:system-ui,sans-serif;font-size:15.5px;color:#cfc6b5;margin-top:26px;line-height:1.5}
+  .pricebands{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px;max-width:430px}
+  .pb{display:block;text-align:center;background:transparent;border:1.5px solid rgba(232,201,111,.45);color:var(--gold);font-family:system-ui,sans-serif;font-size:15px;font-weight:700;padding:13px 8px;border-radius:26px;text-decoration:none;cursor:pointer}
+  .pb:hover,.pb.sel{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  @media(max-width:480px){.pricebands{grid-template-columns:1fr;max-width:none}}
+
+  /* GATE */
+  .gate{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;max-width:900px;margin:0 auto}
+  .gate-inner{padding:34px 32px}
+  /* BOKMOCKUP-PANEL. Legg img/book-blueprint.png (PNG med
+     gjennomsiktig bakgrunn, ca 900x1200). Bildet skaleres inn med
+     contain, saa hele mockupen synes uten beskjaering. */
+  .gate-visual{background:linear-gradient(180deg,#221f19 0%,#191713 100%);display:flex;align-items:center;justify-content:center;padding:26px 20px;text-align:center}
+  .gate-visual > div{max-width:100%}
+  .gate-visual a{display:block;text-decoration:none}
+  .gate-visual img{width:100%;max-width:230px;height:auto;object-fit:contain;display:block;margin:0 auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.45));transition:transform .18s}
+  .gate-visual a:hover img{transform:translateY(-3px) scale(1.02)}
+  .gate-visual .cap b:hover{color:#f0dda6}
+  .gate-visual .cap{font-family:system-ui,sans-serif;font-size:12px;color:#a89d89;margin-top:16px;line-height:1.4}
+  .gate-visual .cap b{color:var(--gold);display:block;font-size:13px;margin-bottom:2px}
+  @media(max-width:720px){.gate{grid-template-columns:1fr}.gate-visual{padding:24px}.gate-visual img{max-height:240px}}
+  .gate h2{font-size:26px;margin-bottom:6px}
+  .gate .sub2{font-size:15px;color:var(--muted);margin-bottom:18px}
+  .picks{display:grid;gap:8px;margin-bottom:16px}
+  .pick{display:flex;gap:10px;align-items:center;font-family:system-ui,sans-serif;font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+  .pick.on{border-color:var(--gold-dark);background:#fdf6e6}
+  .pick input{width:17px;height:17px;accent-color:var(--gold-dark);flex:none}
+  label.fl{display:block;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-family:system-ui,sans-serif}
+  input[type=email]{width:100%;font-size:16px;padding:14px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);font-family:system-ui,sans-serif}
+  input[type=email]:focus{outline:none;border-color:var(--gold-dark)}
+  .gate button{width:100%;margin-top:12px}
+  .wait{display:flex;gap:9px;align-items:flex-start;margin-top:16px;font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);line-height:1.45;cursor:pointer}
+  .wait input{width:17px;height:17px;accent-color:var(--gold-dark);flex:none;margin-top:2px}
+  .wait b{color:var(--ink)}
+  .fine{font-size:11.5px;color:var(--muted);margin-top:12px;font-family:system-ui,sans-serif}
+  .hp{position:absolute;left:-9999px}
+
+  blockquote{font-size:clamp(19px,2.4vw,25px);line-height:1.4;max-width:820px;margin:0 auto}
+  blockquote cite{display:block;font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);font-style:normal;margin-top:14px}
+  .dark blockquote cite{color:#a89d89}
+
+  .faqgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px 40px;margin-top:26px}
+  @media(max-width:760px){.faqgrid{grid-template-columns:1fr}}
+  .faqgrid h4{font-size:17px;margin-bottom:5px}
+  .faqgrid p{font-size:15px;color:var(--muted)}
+
+  footer{background:var(--dark);color:#bdb3a0;padding:38px 0;text-align:center;font-family:system-ui,sans-serif;font-size:13.5px}
+  footer a{color:var(--gold);text-decoration:none;margin:0 10px}
+
+  /* MOBIL: 90 prosent av trafikken. Stram topp, full bredde paa knapper. */
+  @media(max-width:640px){
+    .ann{font-size:12px;padding:8px 12px;line-height:1.35}
+    .ann .tag{display:none}
+    nav .in{height:54px}
+    nav .logo{font-size:13.5px;letter-spacing:1.5px}
+    nav .btn.sm{font-size:12.5px;padding:10px 16px}
+    .hero{padding:36px 0 0}
+    .hero h1{font-size:31px;line-height:1.15}
+    .hero h1 em{border-bottom-width:4px}
+    .hero p{font-size:15.5px;margin-top:14px}
+    .byline{margin-top:20px}
+    .byline img{width:44px;height:44px}
+    .cta-row{margin-top:24px;gap:10px}
+    .cta-row .btn{width:100%;max-width:340px;text-align:center;padding:15px 20px;font-size:15.5px}
+    .microtrust{margin-top:14px;font-size:12px;padding:0 10px}
+    .proofbar{margin-top:36px}
+    .proofbar .in{padding-top:20px;padding-bottom:20px;gap:14px}
+    .proofbar b{font-size:22px}
+    .proofbar span{font-size:10.5px}
+    section{padding:42px 0}
+    h2{font-size:23px}
+    .lead{font-size:16px}
+    .kicker{font-size:11px;letter-spacing:1.5px}
+    .gate-inner{padding:24px 20px}
+    .gate h2{font-size:22px}
+    .card img{width:120px;height:160px}
+  }
+
+
+  .shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px}
+  .bk{text-align:center}
+  .bk img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(30,28,24,.18);display:block}
+  .bk .cap{margin-top:10px;font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.4}
+  .bk .cap b{display:block;color:var(--ink);font-size:13.5px;margin-bottom:2px}
+  .medal{display:inline-block;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:12px;margin-top:6px;border:1px solid var(--line)}
+  .medal.mith{background:#e8ecf2;color:#3d4a63;border-color:#b9c4d6}
+  .medal.plat{background:#f0efec;color:#5a564c;border-color:#cfcabc}
+  .medal.new{background:#faf1d8;color:#8a6a28;border-color:#e0cd96}
+  .minishelf{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:24px}
+  .minishelf img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(30,28,24,.14);display:block}
+  .sidebyside{display:grid;grid-template-columns:1fr 250px;gap:34px;align-items:center}
+  .sidebyside img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(30,28,24,.22);display:block}
+  .stockists{background:var(--slot);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+  .stockists .in{text-align:center}
+  .stockists .lbl{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:9px}
+  .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
+  .stockists .names b{white-space:nowrap}
+  .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
+  .logobar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:4px}
+  .logobar span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 18px;display:flex;align-items:center;justify-content:center;height:44px}
+  .logobar img{max-height:30px;max-width:120px;width:auto;height:auto;display:block}
+  .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .ladder th{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:13px 16px;background:var(--slot);border-bottom:1px solid var(--line)}
+  .ladder td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:16px}
+  .ladder tr:last-child td{border-bottom:none}
+  .ladder tr.best td{background:#faf4e4;font-weight:700}
+  .ladder td.num{font-family:system-ui,sans-serif;white-space:nowrap}
+  .ladder td.win{color:var(--gold-dark);font-weight:700;white-space:nowrap}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+  .two{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+  .rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .rc h3{font-size:17.5px;margin-bottom:7px}
+  .rc p{font-size:14.5px;color:var(--muted);margin:0}
+  .pipeline{margin-top:20px;border-left:2px solid var(--gold-dark);padding-left:0}
+  .pl{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:13px 0 13px 22px;border-bottom:1px solid var(--line)}
+  .pl:last-child{border-bottom:none}
+  .pl .m{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;padding-top:3px}
+  .pl .t{font-size:16px}
+  .pl .t span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+  .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
+  .b2bform h2{font-size:24px;margin-bottom:6px}
+  .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
+  .b2bform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
+  .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
+  .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
+  .b2bform .btn{width:100%;margin-top:16px}
+  .b2bform .fine{margin-top:12px;text-align:center}
+  .hero.b2b{padding-bottom:58px}
+  .heroform{max-width:520px;margin:26px auto 0}
+  .heroform .row{display:grid;grid-template-columns:1fr auto;gap:10px}
+  .heroform input{padding:16px 16px;border:1px solid var(--line);border-radius:30px;font-size:16px;font-family:inherit;background:#fff;width:100%;box-sizing:border-box}
+  .heroform .btn{white-space:nowrap;padding-left:30px;padding-right:30px}
+  .sidebyside.sm{grid-template-columns:1fr 170px}
+  .fotorad{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  .fotorad figure{margin:0}
+  .fotorad img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:0 10px 24px rgba(30,28,24,.16)}
+  .fotorad figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45}
+  .orow{display:grid;grid-template-columns:74px 1fr 92px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+  .orow img{width:74px;height:auto;border-radius:5px;border:1px solid var(--line);box-shadow:0 5px 12px rgba(30,28,24,.15)}
+  .orow h3{font-size:16.5px;margin:0 0 3px}
+  .orow p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.45}
+  .orow .bdg{display:inline-block;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8a6a28;background:#faf1d8;border:1px solid #e0cd96;border-radius:10px;padding:2px 9px;margin-top:5px}
+  .orow input{width:82px;box-sizing:border-box;padding:12px 10px;border:1.5px solid var(--line);border-radius:10px;font-size:17px;font-family:system-ui,sans-serif;text-align:center;background:#fff}
+  .orow input:focus{outline:2px solid var(--gold)}
+  .osum{background:var(--card);border:2px solid var(--gold-dark);border-radius:14px;padding:20px 24px;margin-top:24px}
+  .osum .line{display:flex;justify-content:space-between;font-family:system-ui,sans-serif;font-size:15px;padding:4px 0}
+  .osum .line b{font-size:17px}
+  .osum .tot{border-top:1.5px solid var(--line);margin-top:8px;padding-top:10px}
+  .osum .tot b{font-size:22px;color:var(--gold-dark)}
+  .osum .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  .osum .btn.ghost2{background:transparent;border:2px solid var(--gold-dark);color:var(--gold-dark)}
+  .osum .note{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:12px}
+  .olist2{margin-top:34px}
+  .olist2 .orow{grid-template-columns:74px 1fr}
+  .fwd{background:var(--dark);color:#e9e2d3;border-radius:14px;padding:26px 28px;margin-top:22px}
+  .fwd .k{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+  .fwd .msg{background:#100e0b;border:1px solid #35301f;border-radius:10px;padding:18px 20px;font-size:15px;line-height:1.65;color:#d9d2c2;white-space:pre-line}
+  .fwd .btn{margin-top:16px}
+  .langbar{background:var(--dark);color:#cdc4b0;font-family:system-ui,sans-serif;font-size:13px}
+  .langbar .in{display:flex;justify-content:flex-end;gap:16px;padding-top:9px;padding-bottom:9px}
+  .langbar a{color:var(--gold);text-decoration:none;font-weight:600}
+  .langbar span{opacity:.6}
+  .todo{background:#fff6d8;border:1px dashed #c9a227;border-radius:8px;padding:10px 14px;font-family:system-ui,sans-serif;font-size:13px;color:#6b5310;margin:14px 0}
+  @media(max-width:820px){
+    .three,.two,.fotorad{grid-template-columns:1fr}
+    .orow{grid-template-columns:56px 1fr 78px;gap:10px}
+    .orow img{width:56px}
+    .sidebyside.sm{grid-template-columns:1fr}
+    .shelf{grid-template-columns:repeat(2,1fr)}
+    .minishelf{grid-template-columns:repeat(4,1fr)}
+    .sidebyside{grid-template-columns:1fr}
+    .b2bform .row{grid-template-columns:1fr}
+    .heroform .row{grid-template-columns:1fr}
+    .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
+    .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
+    .ladder th,.ladder td{padding:11px 12px;font-size:15px}
+    .b2bform{padding:22px 20px}
+  }
+</style>
+</head>
+<body><div class="langbar"><div class="in"><span>Norsk</span><a href="/silverheart">English</a></div></div><nav><div class="in">
+  <a class="logo" href="/">KR1 PUBLISHING</a>
+  <ul><li><a href="#hvorfor">Hvorfor det virker</a></li><li><a href="#spillet">Om spillet</a></li><li><a href="#venteliste">Skoleportalen</a></li><li><a href="/forhandler">For butikk</a></li></ul>
+  <a class="btn sm" href="#venteliste">Sett meg på ventelisten</a>
+</div></nav>
+<div class="hero b2b"><div class="in">
+  <div class="kicker">For lærere, skoler og bibliotek</div>
+  <h1>Elevene lærer historie ved <em style="white-space:nowrap">å leve den</em></h1>
+  <p>Sølvhjerte er rollespillet fra sølvverkets Kongsberg. Gjennom roller, valg og refleksjon møter elevene menneskene i bergstaden på slutten av 1700-tallet, på en måte lærebøkene ikke når frem med.<br><b style="display:inline-block;margin-top:10px;font-size:1.06em;color:var(--gold-dark)">Utviklet med støtte fra Kongsberg kommune, gitt til byens ungdomsskoler, og i bruk i undervisningen i dag.</b></p>
+  <form class="heroform" action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
+      <div class="row">
+        <input type="email" name="EMAIL" placeholder="din@skole.no" required autocomplete="email" aria-label="din@skole.no">
+        <button class="btn" type="submit">Sett meg på ventelisten</button>
+      </div>
+      <input type="hidden" name="TRACK" value="teacher">
+      <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
+      <p class="microtrust" style="margin-top:14px">Ventelisten hører først, og skolen din får tilbud om pilotpris. Ingen forpliktelser.</p>
+    </form>
+</div></div>
+
+<div class="proofbar"><div class="in">
+  <div><b>Jubileumsgave</b><span>til byens ungdomsskoler</span></div>
+  <div><b>I bruk</b><span>i historieundervisning</span></div>
+  <div><b>400 år</b><span>laget til byjubileet</span></div>
+  <div><b>2027</b><span>skoleportal og engelsk utgave</span></div>
+</div></div>
+
+<div class="stockists"><div class="in">
+  <div class="lbl">Utviklet med</div>
+  <div class="logobar" style="margin-top:12px"><span><img src="img/logos/kongsberg-kommune.png" alt="Kongsberg kommune" loading="lazy"></span><span><img src="img/logos/bergverksmuseet.png" alt="Norsk Bergverksmuseum" loading="lazy"></span></div>
+  <div class="inst">Økonomisk støtte fra Kongsberg kommune, faglig bistand fra Norsk Bergverksmuseum. Boken selges i museumsbutikken ved Bergverksmuseet.</div>
+</div></div>
+
+<section class="band" style="padding:54px 0" id="hvorfor"><div class="in narrow">
+  <div class="kicker">Hvorfor det virker</div>
+  <h2>Fire ting som gjør det trygt å ta inn i klasserommet</h2>
+  <div class="two">
+    <div class="rc"><h3>Bygget på virkelig historie</h3><p>Landemerker, yrker og hendelser er hentet fra Kongsbergs egen fortid, kvalitetssikret sammen med Bergverksmuseet.</p></div>
+    <div class="rc"><h3>Refleksjonen er innebygd</h3><p>Strukturert etterarbeid knytter opplevelsen til læreplanmålene, så spillet ikke blir en løsrevet time.</p></div>
+    <div class="rc"><h3>Ingen forkunnskaper nødvendig</h3><p>Fungerer i klasserom der verken lærer eller elever har spilt rollespill før.</p></div>
+    <div class="rc"><h3>Prøvd ut i skolen</h3><p>Utviklet sammen med museumspedagog og testet i ungdomsskolen før det gikk inn i vanlig bruk.</p></div>
+  </div>
+  <div class="fotorad">
+    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Ungdommer på Bjerkely med Sølvhjerte-boken" loading="lazy"><figcaption>Ungdommer på Bjerkely med boken. Foto: Bjerkely.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-laerere-1.jpg" alt="Lærere spiller Sølvhjerte på kurs i Kongsberg" loading="lazy"><figcaption>Fra lærersamling i Kongsberg: Sølvhjerte i gang rundt bordet.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-laerere-2.jpg" alt="Lærere rundt spillbordet med kart og rolleark" loading="lazy"><figcaption>Kart, brikker og rolleark på bordet, slik det ser ut i bruk.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Spillkveld på Berger, Sølvhjerte rundt bordet" loading="lazy"><figcaption>Spillkveld på Berger: rolleark, terninger og diskusjon.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-2.jpg" alt="Spillkveld på Berger, flere bord i gang samtidig" loading="lazy"><figcaption>Berger igjen: flere bord i gang samtidig, i alle aldre.</figcaption></figure>
+  </div>
+</div></section>
+
+<section style="padding:54px 0" id="spillet"><div class="in narrow">
+  <div class="kicker">Om spillet</div>
+  <h2>Sølvet fra dypet preger både byen og spillet</h2>
+  <div class="sidebyside sm"><div>
+  <p class="lead">I 1770 var Kongsberg landets nest største by etter Bergen. I 1805 la Sølvverket ned mesteparten av driften, selve grunnlaget for byens eksistens. Spillet foregår i denne krisetiden, og elevene tar rollene som fattigfolk med stor gjeld som må navigere byens utfordringer.</p>
+  <p>Reglene er enkle, inspirert av OSR-stilen, med fokus på utforsking. Målet er at elevene skal lære om Kongsberg på slutten av 1700-tallet, og ha det gøy på veien. Det er de to tingene i den rekkefølgen, og det er derfor det fungerer på elever som ellers melder seg ut av historietimen.</p>
+  <p>Med boken følger et høyoppløselig, historisk korrekt kart over fortidens Kongsberg, rolleark både digitalt og for utskrift, digitale spillebrikker og et spillerhefte til utdeling.</p>
+  </div><img src="img/covers/solvhjerte.jpg" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
+  <div class="todo"><b>FYLL INN FØR PUBLISERING:</b> trinn, tidsbruk og antall spillere. Dette er det første en lærer ser etter, og jeg har ikke tallene. Slett denne boksen når feltene under er fylt ut.</div>
+  <div class="three">
+    <div class="rc"><h3>Trinn</h3><p>Ungdomstrinnet</p></div>
+    <div class="rc"><h3>Tidsbruk</h3><p>[FYLL INN]</p></div>
+    <div class="rc"><h3>Antall elever</h3><p>[FYLL INN]</p></div>
+  </div>
+</div></section>
+
+<section class="band" style="padding:54px 0" id="send"><div class="in narrow">
+  <div class="kicker">Det er sjelden læreren som bestemmer</div>
+  <h2>Send dette videre til den som gjør det</h2>
+  <p class="lead">Du trenger ikke overbevise noen selv. Kopier meldingen under og send den til rektor, fagleder eller innkjøpsansvarlig.</p>
+  <div class="fwd">
+    <div class="k">Ferdig melding, klar til å sendes</div>
+    <div class="msg" id="fwdno">Hei,
+
+Jeg har sett på Sølvhjerte, et rollespill om Kongsberg på slutten av 1700-tallet. Det ble utviklet med støtte fra Kongsberg kommune og faglig bistand fra Norsk Bergverksmuseum, og ble gitt til byens egne ungdomsskoler, der det brukes i historieundervisningen. Elevene lærer historien ved å spille menneskene som levde den.
+
+I 2027 kommer en skoleportal der skolen tegner lisens og får ferdige undervisningsopplegg, lærerveiledning og klassesett-ordning. Skolene som står på ventelisten får tilgang først, og tilbud om pilotpris på lisensen.
+
+Kan vi sette skolen vår på listen? Det koster ingenting og forplikter oss ikke.
+
+Mer her: https://www.kr1publishing.com/solvhjerte</div>
+    <button class="btn" type="button" data-copy="fwdno" data-done="Kopiert">Kopier meldingen</button>
+  </div>
+</div></section>
+
+<section style="padding:54px 0" id="venteliste"><div class="in">
+  <div class="b2bform">
+      <h2>Skoleportalen kommer i 2027</h2><p class="sub2">Bruk i undervisningen skjer gjennom en skolelisens: den gir skolen tilgang til komplette undervisningsopplegg, lærerveiledning og klassesett-ordningen, bygget på metoden som allerede er i bruk i Kongsberg. Ventelisten får tilgang først og tilbud om pilotpris på lisensen.</p>
+      <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
+        <div class="row">
+          <div><label class="fl" for="f1">E-post</label>
+          <input type="email" id="f1" name="EMAIL" placeholder="din@skole.no" required autocomplete="email"></div>
+          <div><label class="fl" for="f2">Jeg er</label><select id="f2" name="ROLE"><option value="Lærer">Lærer</option><option value="Skoleleder">Skoleleder</option><option value="Bibliotekar">Bibliotekar</option><option value="Museumsansatt">Museumsansatt</option><option value="Forelder">Forelder</option><option value="Spiller">Spiller</option><option value="Annet">Annet</option></select></div>
+        </div>
+        <input type="hidden" name="TRACK" value="teacher">
+        <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
+        <button class="btn" type="submit">Sett meg på ventelisten</button>
+        <p class="fine">Ingen spam. Du hører fra oss når portalen nærmer seg, og kan melde deg av når som helst.</p>
+      </form></div>
+</div></section>
+
+<section class="band" style="padding:54px 0 62px"><div class="in narrow">
+  <div class="kicker">Vil du ha boken allerede i dag</div>
+  <h2>Sølvhjerte: Arven fra dypet</h2>
+  <p class="lead">Boken selges i museumsbutikken ved Norsk Bergverksmuseum, veiledende <b>449 kr</b>.</p>
+  <p>Bibliotek, skoler og butikker finner institusjonspriser og klassesett på <a href="/forhandler">forhandlersiden</a>, eller skriver til <a href="mailto:contact@kr1publishing.com?subject=S%C3%B8lvhjerte">contact@kr1publishing.com</a>.</p>
+</div></section>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.getAttribute('data-copy'));
+    var d=b.getAttribute('data-done')||'Copied';var o=b.textContent;
+    navigator.clipboard.writeText(t.textContent.trim()).then(function(){
+      b.textContent=d;setTimeout(function(){b.textContent=o},2200);
+    });
+  });
+});
+</script>
+<footer><div class="in">
+    <a href="/forhandler">Sølvhjerte for butikk og bibliotek</a>
+    <a href="https://www.karlottokristoffersen.com" target="_blank" rel="noopener">Historien, mens den skjer</a>
+    <a href="/silverheart">In English</a>
+    <p style="margin-top:14px;opacity:.7">contact@kr1publishing.com &middot; Kongsberg, Norge &middot; Org.nr 928 261 468 &middot; &copy; 2026 KR1 Publishing</p>
+  </div></footer>
+</body></html>

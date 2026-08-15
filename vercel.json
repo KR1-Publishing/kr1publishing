@@ -4,6 +4,36 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/s%C3%B8lvhjerte",
+      "destination": "/solvhjerte",
+      "permanent": false
+    },
+    {
+      "source": "/sølvhjerte",
+      "destination": "/solvhjerte",
+      "permanent": false
+    },
+    {
+      "source": "/skole",
+      "destination": "/solvhjerte",
+      "permanent": false
+    },
+    {
+      "source": "/schools",
+      "destination": "/silverheart",
+      "permanent": false
+    },
+    {
+      "source": "/retailers",
+      "destination": "/vendor",
+      "permanent": false
+    },
+    {
+      "source": "/bransjekveld",
+      "destination": "/forhandler",
+      "permanent": false
+    },
+    {
       "source": "/files/kr1-dtrpg-launch-kit.pdf",
       "destination": "/",
       "permanent": false

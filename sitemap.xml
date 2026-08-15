@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.kr1publishing.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.kr1publishing.com/quiz.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kr1publishing.com/medals.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.kr1publishing.com/</loc></url>
+  <url><loc>https://www.kr1publishing.com/quiz</loc></url>
+  <url><loc>https://www.kr1publishing.com/medals</loc></url>
+  <url><loc>https://www.kr1publishing.com/forhandler</loc></url>
+  <url><loc>https://www.kr1publishing.com/vendor</loc></url>
+  <url><loc>https://www.kr1publishing.com/solvhjerte</loc></url>
+  <url><loc>https://www.kr1publishing.com/silverheart</loc></url>
 </urlset>
