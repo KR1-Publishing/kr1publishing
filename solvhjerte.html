@@ -226,9 +226,9 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:4px}
-  .logobar span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 18px;display:flex;align-items:center;justify-content:center;height:44px}
-  .logobar img{max-height:30px;max-width:120px;width:auto;height:auto;display:block}
+  .logobar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:720px;margin:10px auto 0}
+  .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
+  .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
   .ladder th{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:13px 16px;background:var(--slot);border-bottom:1px solid var(--line)}
   .ladder td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:16px}
@@ -304,6 +304,7 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
+    .logobar{grid-template-columns:repeat(2,1fr)}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
   }
@@ -331,7 +332,7 @@
 
 <div class="proofbar"><div class="in">
   <div><b>Jubileumsgave</b><span>til byens ungdomsskoler</span></div>
-  <div><b>I bruk</b><span>i historieundervisning</span></div>
+  <div><b>3 skoler</b><span>har aktiv lisens i dag</span></div>
   <div><b>400 år</b><span>laget til byjubileet</span></div>
   <div><b>2027</b><span>skoleportal og engelsk utgave</span></div>
 </div></div>
@@ -397,7 +398,7 @@ Mer her: https://www.kr1publishing.com/solvhjerte</div>
 
 <section style="padding:54px 0" id="venteliste"><div class="in">
   <div class="b2bform">
-      <h2>Skoleportalen kommer i 2027</h2><p class="sub2">Bruk i undervisningen skjer gjennom en skolelisens: den gir skolen tilgang til komplette undervisningsopplegg, lærerveiledning og klassesett-ordningen, bygget på metoden som allerede er i bruk i Kongsberg. Ventelisten får tilgang først og tilbud om pilotpris på lisensen.</p>
+      <h2>Skoleportalen kommer i 2027</h2><p class="sub2">Bruk i undervisningen skjer gjennom en skolelisens: den gir skolen tilgang til komplette undervisningsopplegg, lærerveiledning og klassesett-ordningen. Tre skoler har aktiv lisens i dag. Ventelisten får tilgang først og tilbud om pilotpris på lisensen.</p>
       <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
         <div class="row">
           <div><label class="fl" for="f1">E-post</label>
@@ -414,7 +415,7 @@ Mer her: https://www.kr1publishing.com/solvhjerte</div>
 <section class="band" style="padding:54px 0 62px"><div class="in narrow">
   <div class="kicker">Vil du ha boken allerede i dag</div>
   <h2>Sølvhjerte: Arven fra dypet</h2>
-  <p class="lead">Boken selges i museumsbutikken ved Norsk Bergverksmuseum, veiledende <b>449 kr</b>.</p>
+  <p class="lead">Boken selges i museumsbutikken ved Norsk Bergverksmuseum, veiledende <b>449 kr</b> (restopplag), og som PDF på DriveThruRPG. Fra 2027 kommer norsk print on demand og engelsk utgave i både PDF og print.</p>
   <p>Bibliotek, skoler og butikker finner institusjonspriser og klassesett på <a href="/forhandler">forhandlersiden</a>, eller skriver til <a href="mailto:contact@kr1publishing.com?subject=S%C3%B8lvhjerte">contact@kr1publishing.com</a>.</p>
 </div></section>
 <script>
