@@ -206,7 +206,6 @@
     .card img{width:120px;height:160px}
   }
 
-
   .shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px}
   .bk{text-align:center}
   .bk img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(30,28,24,.18);display:block}
@@ -220,6 +219,7 @@
   .minishelf img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(30,28,24,.14);display:block}
   .sidebyside{display:grid;grid-template-columns:1fr 250px;gap:34px;align-items:center}
   .sidebyside img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(30,28,24,.22);display:block}
+  .sidebyside img[src$="-3d.png"]{border:none;border-radius:0;box-shadow:none}
   .stockists{background:var(--slot);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
   .stockists .in{text-align:center}
   .stockists .lbl{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:9px}
@@ -250,7 +250,7 @@
   .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
   .b2bform h2{font-size:24px;margin-bottom:6px}
   .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
-  .b2bform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
   .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
@@ -283,6 +283,17 @@
   .osum .note{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:12px}
   .olist2{margin-top:34px}
   .olist2 .orow{grid-template-columns:74px 1fr}
+  .caseband{background:var(--dark);color:#e9e2d3;border-radius:14px;padding:26px 30px;margin-top:24px}
+  .caseband .k{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+  .casenum{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:18px 0 4px}
+  .casenum div{text-align:center}
+  .casenum b{display:block;font-size:30px;color:var(--gold);line-height:1.1}
+  .casenum span{font-family:system-ui,sans-serif;font-size:12px;color:#a89d89;letter-spacing:.3px}
+  .caseband p{font-size:15.5px;color:#cfc7b4;margin:14px 0 0;line-height:1.6}
+  .caseband p b{color:#f2ece0}
+  .goals{list-style:none;padding:0;margin:18px 0 0;counter-reset:g}
+  .goals li{position:relative;padding-left:44px;margin-bottom:14px;font-size:16px}
+  .goals li:before{counter-increment:g;content:counter(g);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--gold-dark);color:var(--gold-dark);font-family:system-ui,sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
   .fwd{background:var(--dark);color:#e9e2d3;border-radius:14px;padding:26px 28px;margin-top:22px}
   .fwd .k{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
   .fwd .msg{background:#100e0b;border:1px solid #35301f;border-radius:10px;padding:18px 20px;font-size:15px;line-height:1.65;color:#d9d2c2;white-space:pre-line}
@@ -314,7 +325,7 @@
 </head>
 <body><div class="langbar"><div class="in"><span>Norsk</span><a href="/silverheart">English</a></div></div><nav><div class="in">
   <a class="logo" href="/">KR1 PUBLISHING</a>
-  <ul><li><a href="#hvorfor">Hvorfor det virker</a></li><li><a href="#spillet">Om spillet</a></li><li><a href="#venteliste">Skoleportalen</a></li><li><a href="/forhandler">For butikk</a></li></ul>
+  <ul><li><a href="#hvorfor">Hvorfor det virker</a></li><li><a href="#ibruk">I bruk</a></li><li><a href="#spillet">Om spillet</a></li><li><a href="#venteliste">Skoleportalen</a></li></ul>
   <a class="btn sm" href="#venteliste">Sett meg på ventelisten</a>
 </div></nav>
 <div class="hero b2b"><div class="in">
@@ -342,7 +353,7 @@
 <div class="stockists"><div class="in">
   <div class="lbl">Utviklet med</div>
   <div class="logobar" style="margin-top:12px"><span><img src="img/logos/kongsberg-kommune.png" alt="Kongsberg kommune" loading="lazy"></span><span><img src="img/logos/bergverksmuseet.png" alt="Norsk Bergverksmuseum" loading="lazy"></span></div>
-  <div class="inst">Økonomisk støtte fra Kongsberg kommune, faglig bistand fra Norsk Bergverksmuseum. Boken selges i museumsbutikken ved Bergverksmuseet.</div>
+  <div class="inst">Økonomisk støtte fra Kongsberg kommune, faglig bistand fra Norsk Bergverksmuseum. Boken selges i museumsbutikken ved Bergverksmuseet.<br>Også brukt av Berger Historielag og trukket fram av <a href="https://www.rollespill.info/2025/02/08/hva-er-rollespill-godt-for/" target="_blank" rel="noopener">rollespill.info</a> etter besøk på Bjerkely Folkehøyskole og SKAP Folkehøyskole.</div>
 </div></div>
 
 <section class="band" style="padding:54px 0" id="hvorfor"><div class="in narrow">
@@ -355,11 +366,11 @@
     <div class="rc"><h3>Prøvd ut i skolen</h3><p>Utviklet sammen med museumspedagog og testet i ungdomsskolen før det gikk inn i vanlig bruk.</p></div>
   </div>
   <div class="fotorad">
-    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Ungdommer på Bjerkely med Sølvhjerte-boken" loading="lazy"><figcaption>Ungdommer på Bjerkely med boken. Foto: Bjerkely.</figcaption></figure>
+    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Elever på Bjerkely Folkehøyskole med Sølvhjerte-boken" loading="lazy"><figcaption>Elever på Bjerkely Folkehøyskole med boken. Foto: Bjerkely Folkehøyskole.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-1.jpg" alt="Lærere spiller Sølvhjerte på kurs i Kongsberg" loading="lazy"><figcaption>Fra lærersamling i Kongsberg: Sølvhjerte i gang rundt bordet.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-2.jpg" alt="Lærere rundt spillbordet med kart og rolleark" loading="lazy"><figcaption>Kart, brikker og rolleark på bordet, slik det ser ut i bruk.</figcaption></figure>
-    <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Spillkveld på Berger, Sølvhjerte rundt bordet" loading="lazy"><figcaption>Spillkveld på Berger: rolleark, terninger og diskusjon.</figcaption></figure>
-    <figure><img src="img/solvhjerte/sh-berger-2.jpg" alt="Spillkveld på Berger, flere bord i gang samtidig" loading="lazy"><figcaption>Berger igjen: flere bord i gang samtidig, i alle aldre.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Spillkveld hos Berger Historielag, Sølvhjerte rundt bordet" loading="lazy"><figcaption>Spillkveld hos Berger Historielag: rolleark, terninger og diskusjon.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-2.jpg" alt="Berger Historielag, flere bord i gang samtidig" loading="lazy"><figcaption>Berger Historielag igjen: flere bord i gang samtidig, i alle aldre.</figcaption></figure>
   </div>
 </div></section>
 
@@ -370,13 +381,42 @@
   <p class="lead">I 1770 var Kongsberg landets nest største by etter Bergen. I 1805 la Sølvverket ned mesteparten av driften, selve grunnlaget for byens eksistens. Spillet foregår i denne krisetiden, og elevene tar rollene som fattigfolk med stor gjeld som må navigere byens utfordringer.</p>
   <p>Reglene er enkle, inspirert av OSR-stilen, med fokus på utforsking. Målet er at elevene skal lære om Kongsberg på slutten av 1700-tallet, og ha det gøy på veien. Det er de to tingene i den rekkefølgen, og det er derfor det fungerer på elever som ellers melder seg ut av historietimen.</p>
   <p>Med boken følger et høyoppløselig, historisk korrekt kart over fortidens Kongsberg, rolleark både digitalt og for utskrift, digitale spillebrikker og et spillerhefte til utdeling.</p>
-  </div><img src="img/covers/solvhjerte.jpg" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
-  <div class="todo"><b>FYLL INN FØR PUBLISERING:</b> trinn, tidsbruk og antall spillere. Dette er det første en lærer ser etter, og jeg har ikke tallene. Slett denne boksen når feltene under er fylt ut.</div>
+  </div><img src="img/solvhjerte-3d.png" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
+  
   <div class="three">
     <div class="rc"><h3>Trinn</h3><p>Ungdomstrinnet</p></div>
-    <div class="rc"><h3>Tidsbruk</h3><p>[FYLL INN]</p></div>
-    <div class="rc"><h3>Antall elever</h3><p>[FYLL INN]</p></div>
+    <div class="rc"><h3>Tidsbruk</h3><p>Fra 90 minutters økt til en hel skoledag i fire økter.</p></div>
+    <div class="rc"><h3>Antall elever</h3><p>4 til 6 spillere per gruppe. Skrim kjørte 70 elever på én dag.</p></div>
   </div>
+</div></section>
+
+<section style="padding:54px 0" id="ibruk"><div class="in narrow">
+  <div class="kicker">Slik har det blitt brukt</div>
+  <h2>En hel skoledag på Skrim ungdomsskole</h2>
+  <p class="lead">29. april 2024 satte Skrim av en hel dag til Sølvhjerte. Tre klasser, fire økter, og elevene ledet spillet selv.</p>
+  <div class="caseband">
+    <div class="k">Skrim ungdomsskole, 9. trinn</div>
+    <div class="casenum">
+      <div><b>70</b><span>elever involvert</span></div>
+      <div><b>10</b><span>elever som spilledere</span></div>
+      <div><b>3</b><span>klasser samtidig</span></div>
+      <div><b>1,5 t</b><span>spill per gruppe, minst</span></div>
+    </div>
+    <p>Ti elever fikk en egen opplæringsdag på forhånd og ledet så gruppene sine gjennom eventyret. Dagen begynte med en felles introduksjon på et kvarter, så laget elevene roller og tegnet eller bygget noe til figuren sin. Etter spillet skrev de intervju med sin egen rollefigur, satt opp som lokalavis anno 1796. De som ikke ville spille, lagde lapskaus og flatbrød etter oppskrifter fra 1796 og serverte hele trinnet.</p>
+    <p><b>Etterpå skrev en forelder til meg:</b> «I dag hadde vi det virkelig fint på skolen. Vi spilte et Kongsberg-spill om gamle dager.» Det er den setningen jeg måler opplegget mot.</p>
+  </div>
+</div></section>
+
+<section class="band" style="padding:54px 0" id="kompetansemal"><div class="in narrow">
+  <div class="kicker">Kompetansemål</div>
+  <h2>Det er norsk og samfunnsfag, ikke en fridag</h2>
+  <p class="lead">Sølvhjerte ble brukt tverrfaglig i norsk og samfunnsfag, og elevene ble vurdert i begge fag. Opplegget treffer disse målene direkte:</p>
+  <ol class="goals">
+    <li>Informere, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål, tilpasset mottaker og medium.</li>
+    <li>Utforske og beskrive levemåter, tradisjoner og geografi i et område, og se sammenhenger med egen bakgrunn.</li>
+    <li>Bruke kilder på en kritisk og etterrettelig måte.</li>
+  </ol>
+  <p style="margin-top:20px">Lærerne kommer i gang gjennom et arbeidsseminar. Det første gikk over en full dag i februar 2024, med ti lærere fra ungdomsskolene i Kongsberg, og deltakerne gikk hjem med hvert sitt klassesett. Kommunen, Norsk Bergverksmuseum og Laagendalsposten var til stede.</p>
 </div></section>
 
 <section class="band" style="padding:54px 0" id="send"><div class="in narrow">
@@ -406,6 +446,7 @@ Mer her: https://www.kr1publishing.com/solvhjerte</div>
           <div><label class="fl" for="f1">E-post</label>
           <input type="email" id="f1" name="EMAIL" placeholder="din@skole.no" required autocomplete="email"></div>
           <div><label class="fl" for="f2">Jeg er</label><select id="f2" name="ROLE"><option value="Lærer">Lærer</option><option value="Skoleleder">Skoleleder</option><option value="Bibliotekar">Bibliotekar</option><option value="Museumsansatt">Museumsansatt</option><option value="Forelder">Forelder</option><option value="Spiller">Spiller</option><option value="Annet">Annet</option></select></div>
+          <div><label class="fl" for="f3">Sted</label><input type="text" id="f3" name="LOCATION" placeholder="Skole, by eller kommune" autocomplete="organization"></div>
         </div>
         <input type="hidden" name="TRACK" value="teacher">
         <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
@@ -414,12 +455,6 @@ Mer her: https://www.kr1publishing.com/solvhjerte</div>
       </form></div>
 </div></section>
 
-<section class="band" style="padding:54px 0 62px"><div class="in narrow">
-  <div class="kicker">Vil du ha boken allerede i dag</div>
-  <h2>Sølvhjerte: Arven fra dypet</h2>
-  <p class="lead">Boken selges i museumsbutikken ved Norsk Bergverksmuseum, veiledende <b>449 kr</b> (restopplag), og som PDF på DriveThruRPG. Fra 2027 kommer norsk print on demand og engelsk utgave i både PDF og print.</p>
-  <p>Bibliotek, skoler og butikker finner institusjonspriser og klassesett på <a href="/forhandler">forhandlersiden</a>, eller skriver til <a href="mailto:contact@kr1publishing.com?subject=S%C3%B8lvhjerte">contact@kr1publishing.com</a>.</p>
-</div></section>
 <script>
 document.querySelectorAll('[data-copy]').forEach(function(b){
   b.addEventListener('click',function(){

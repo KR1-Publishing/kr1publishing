@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>For retailers and institutions | KR1 Publishing</title>
-<meta name="description" content="Books with bestseller medals, up to 50% margin, no minimum order and worldwide export. Printed in Europe or the USA, never on backorder.">
+<meta name="description" content="Twelve print titles, eleven with bestseller medals, up to 50% margin, no minimum order and worldwide export. Printed in Europe or the USA, never on backorder.">
 <link rel="canonical" href="https://www.kr1publishing.com/vendor">
 <meta property="og:title" content="For retailers and institutions | KR1 Publishing">
-<meta property="og:description" content="Books with bestseller medals, up to 50% margin, no minimum order and worldwide export. Printed in Europe or the USA, never on backorder.">
+<meta property="og:description" content="Twelve print titles, eleven with bestseller medals, up to 50% margin, no minimum order and worldwide export. Printed in Europe or the USA, never on backorder.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kr1publishing.com/vendor">
 <meta property="og:image" content="https://www.kr1publishing.com/img/og-creator.jpg">
@@ -220,6 +220,7 @@
   .minishelf img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(30,28,24,.14);display:block}
   .sidebyside{display:grid;grid-template-columns:1fr 250px;gap:34px;align-items:center}
   .sidebyside img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(30,28,24,.22);display:block}
+  .sidebyside img[src$="-3d.png"]{border:none;border-radius:0;box-shadow:none}
   .stockists{background:var(--slot);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
   .stockists .in{text-align:center}
   .stockists .lbl{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:9px}
@@ -250,7 +251,7 @@
   .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
   .b2bform h2{font-size:24px;margin-bottom:6px}
   .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
-  .b2bform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
   .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
@@ -273,6 +274,9 @@
   .orow .bdg{display:inline-block;font-family:system-ui,sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8a6a28;background:#faf1d8;border:1px solid #e0cd96;border-radius:10px;padding:2px 9px;margin-top:5px}
   .orow input{width:82px;box-sizing:border-box;padding:12px 10px;border:1.5px solid var(--line);border-radius:10px;font-size:17px;font-family:system-ui,sans-serif;text-align:center;background:#fff}
   .orow input:focus{outline:2px solid var(--gold)}
+  .curswitch{display:inline-flex;border:1.5px solid var(--gold-dark);border-radius:24px;overflow:hidden;margin-left:14px;vertical-align:middle}
+  .curswitch button{background:transparent;border:none;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px;padding:7px 16px;cursor:pointer;color:var(--gold-dark)}
+  .curswitch button.on{background:var(--gold-dark);color:#fff}
   .osum{background:var(--card);border:2px solid var(--gold-dark);border-radius:14px;padding:20px 24px;margin-top:24px}
   .osum .line{display:flex;justify-content:space-between;font-family:system-ui,sans-serif;font-size:15px;padding:4px 0}
   .osum .line b{font-size:17px}
@@ -320,16 +324,11 @@
 <div class="hero b2b"><div class="in">
   <div class="kicker">For retailers and institutions</div>
   <h1>The shops that stock them, <em style="white-space:nowrap">reorder</em></h1>
-  <p>A catalog where all eleven print titles carry a bestseller medal on the largest tabletop RPG marketplace in the world. Up to 50% margin, no minimum order, and printing in Europe or the USA depending on the market you order into.</p>
-  <form class="heroform" action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
-      <div class="row">
-        <input type="email" name="EMAIL" placeholder="you@yourshop.com" required autocomplete="email" aria-label="you@yourshop.com">
-        <button class="btn" type="submit">Send me the vendor pack</button>
-      </div>
-      <input type="hidden" name="TRACK" value="retailer">
-      <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
-      <p class="microtrust" style="margin-top:14px">A reply within 48 hours with the catalog, pricing and delivery details. No obligation.</p>
-    </form>
+  <p>A catalog where eleven of the twelve print titles carry a bestseller medal on the largest tabletop RPG marketplace in the world. Up to 50% margin, no minimum order, and printing in Europe or the USA depending on the market you order into.</p>
+  <div class="heroform" style="text-align:center">
+      <a class="btn" href="/files/kr1-vendor-pack.pdf?ref=vendor_hero" target="_blank" rel="noopener" style="padding-left:52px;padding-right:52px">Get the vendor pack</a>
+      <p class="microtrust" style="margin-top:16px">Opens straight away as a PDF. No email, nothing to fill in.<br>Catalog, margins, terms and the autumn releases, four pages.</p>
+    </div>
 </div></div>
 
 <div class="proofbar"><div class="in">
@@ -357,17 +356,17 @@
 
 <section style="padding:54px 0" id="margins"><div class="in narrow">
   <div class="kicker">Margins</div>
-  <h2>Recommended retail is $20. The rest is yours.</h2>
-  <p class="lead">The ladder covers the whole catalog and is set by the total number of books in the order, across any titles. Every title carries a $20 recommended retail. Prices exclude VAT and shipping, exports from Norway are zero rated for VAT. Silverheart is priced separately. Prices as of August 2026.</p>
-  <table class="ladder"><tr><th>Quantity</th><th>Your price</th><th>Your margin</th></tr><tr><td>1 to 29 copies</td><td class="num">$14</td><td class="win">$6 per book, 30%</td></tr><tr><td>30 to 49 copies</td><td class="num">$13</td><td class="win">$7 per book, 35%</td></tr><tr><td>50 to 99 copies</td><td class="num">$12</td><td class="win">$8 per book, 40%</td></tr><tr><td>100 to 249 copies</td><td class="num">$11</td><td class="win">$9 per book, 45%</td></tr><tr><td>250 to 499 copies</td><td class="num">$10</td><td class="win">$10 per book, 50%</td></tr><tr class="best"><td>500 or more</td><td class="num">$9</td><td class="win">$11 per book, 55%</td></tr></table>
-  <p style="margin-top:16px" class="fine">Prices in USD, exclusive of VAT and shipping. At 250 copies you are at the 50% off retail that hobby trade runs on. Ask us for NOK, GBP or EUR and we will quote at the same tiers.</p>
+  <h2>Recommended retail is <span class="cur-rrp">$20</span>. The rest is yours.<span class="curswitch" role="group" aria-label="Currency"><button type="button" data-cur="usd" class="on">USD</button><button type="button" data-cur="eur">EUR</button></span></h2>
+  <p class="lead">The ladder covers the whole catalog and is set by the total number of books in the order, across any titles. Every title carries a <span class="cur" data-usd="$20" data-eur="€18">$20</span> recommended retail. Prices exclude VAT and shipping, exports from Norway are zero rated for VAT. Silverheart is priced separately. Prices as of August 2026.</p>
+  <table class="ladder"><tr><th>Quantity</th><th>Your price</th><th>Your margin</th></tr><tr><td>1 to 29 copies</td><td class="num cur" data-usd="$14" data-eur="€12.50">$14</td><td class="win cur" data-usd="$6 per book, 30%" data-eur="€5.50 per book, 31%">$6 per book, 30%</td></tr><tr><td>30 to 49 copies</td><td class="num cur" data-usd="$13" data-eur="€11.50">$13</td><td class="win cur" data-usd="$7 per book, 35%" data-eur="€6.50 per book, 36%">$7 per book, 35%</td></tr><tr><td>50 to 99 copies</td><td class="num cur" data-usd="$12" data-eur="€11">$12</td><td class="win cur" data-usd="$8 per book, 40%" data-eur="€7 per book, 39%">$8 per book, 40%</td></tr><tr><td>100 to 249 copies</td><td class="num cur" data-usd="$11" data-eur="€10">$11</td><td class="win cur" data-usd="$9 per book, 45%" data-eur="€8 per book, 44%">$9 per book, 45%</td></tr><tr><td>250 to 499 copies</td><td class="num cur" data-usd="$10" data-eur="€9">$10</td><td class="win cur" data-usd="$10 per book, 50%" data-eur="€9 per book, 50%">$10 per book, 50%</td></tr><tr class="best"><td>500 or more</td><td class="num cur" data-usd="$9" data-eur="€8">$9</td><td class="win cur" data-usd="$11 per book, 55%" data-eur="€10 per book, 56%">$11 per book, 55%</td></tr></table>
+  <p style="margin-top:16px" class="fine"><span class="cur" data-usd="Prices in USD" data-eur="Prices in EUR">Prices in USD</span>, exclusive of VAT and shipping. At 250 copies you are at the 50% off retail that hobby trade runs on. The euro list is its own price list, not a live conversion, and is quoted at the same tiers. Ask us for NOK or GBP and we will do the same.</p>
 </div></section>
 
 <section style="padding:54px 0" id="catalog"><div class="in narrow">
   <div class="kicker">The catalog, ready to order now</div>
   <h2>Pick quantities, send the order</h2>
-  <p class="lead">Eleven titles in print. Recommended retail $20 across the whole catalog. The tier is set by the total number of books across all titles. The order goes out as an email, and you get confirmation and an invoice within 48 hours.</p>
-  <div class="orow"><img src="img/covers/wm-guidebook.jpg" alt="West Marches Campaign Guidebook" loading="lazy"><div><h3>West Marches Campaign Guidebook</h3><p>The foundational book on open table, West Marches style play. The flagship of the series.</p><span class="bdg">Mithral · 3,600+ · 4.9 on Amazon</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Campaign Guidebook" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: West Marches Campaign Guidebook"></div><div class="orow"><img src="img/covers/wm-gm-workbook.jpg" alt="West Marches GM Workbook" loading="lazy"><div><h3>West Marches GM Workbook</h3><p>The game master's workbook: world, factions, rumors and quests, session by session.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches GM Workbook" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: West Marches GM Workbook"></div><div class="orow"><img src="img/covers/wm-party-ledger.jpg" alt="West Marches Party Ledger" loading="lazy"><div><h3>West Marches Party Ledger</h3><p>The group's shared chronicle: roster, hirelings, quests, allies, rivals and the graveyard.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Party Ledger" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: West Marches Party Ledger"></div><div class="orow"><img src="img/covers/wm-player-journal.jpg" alt="West Marches Player Journal" loading="lazy"><div><h3>West Marches Player Journal</h3><p>Each player's own record: goals, gear, bonds, travels and legacy.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Player Journal" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: West Marches Player Journal"></div><div class="orow"><img src="img/covers/hexcrawl-campaign.jpg" alt="Hexcrawl: Campaign Style Guidebook" loading="lazy"><div><h3>Hexcrawl: Campaign Style Guidebook</h3><p>A complete framework for wilderness campaigns where the journey itself is the adventure.</p><span class="bdg">Platinum · 24 reviews</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Campaign Style Guidebook" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Hexcrawl: Campaign Style Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-encounter.jpg" alt="Hexcrawl: Encounter Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Encounter Design Guidebook</h3><p>Encounters that reveal the world, force choices and connect across sessions.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Encounter Design Guidebook" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Hexcrawl: Encounter Design Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-worldbuilding.jpg" alt="Hexcrawl: Worldbuilding Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Worldbuilding Design Guidebook</h3><p>Third in the series: regions, settlements and factions that connect.</p><span class="bdg">Gold · in print from late August</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Worldbuilding Design Guidebook" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Hexcrawl: Worldbuilding Design Guidebook"></div><div class="orow"><img src="img/covers/sandbox-city.jpg" alt="Sandbox Playstyle Toolkit: The City" loading="lazy"><div><h3>Sandbox Playstyle Toolkit: The City</h3><p>The city as a generator: inns, guilds, temples and 120 urban encounters.</p><span class="bdg">Electrum · in print from late August</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Sandbox Playstyle Toolkit: The City" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Sandbox Playstyle Toolkit: The City"></div><div class="orow"><img src="img/covers/grunder.jpg" alt="Gründer: Business Adventure Game" loading="lazy"><div><h3>Gründer: Business Adventure Game</h3><p>An OSR adventure game for 3 to 6 players on Into the Odd rules. A5 in color.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Gründer: Business Adventure Game" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Gründer: Business Adventure Game"></div><div class="orow"><img src="img/covers/roll-for-innovation.jpg" alt="Roll for Innovation" loading="lazy"><div><h3>Roll for Innovation</h3><p>A reflective essay on AI and creativity in tabletop games.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Roll for Innovation" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: Roll for Innovation"></div><div class="orow"><img src="img/covers/10k-books.jpg" alt="I Just Sold 10K Books" loading="lazy"><div><h3>I Just Sold 10K Books</h3><p>The method behind the numbers, for the creators among your customers.</p><span class="bdg">Copper</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="I Just Sold 10K Books" data-p="[14,13,12,11,10,9]" class="oq" aria-label="Antall: I Just Sold 10K Books"></div>
+  <p class="lead">Twelve titles in print, eleven of them at one price. Recommended retail <span class="cur" data-usd="$20" data-eur="€18">$20</span> across the whole catalog. The tier is set by the total number of books across all titles. The order goes out as an email, and you get confirmation and an invoice within 48 hours.</p>
+  <div class="orow"><img src="img/covers/wm-guidebook.jpg" alt="West Marches Campaign Guidebook" loading="lazy"><div><h3>West Marches Campaign Guidebook</h3><p>The foundational book on open table, West Marches style play. The flagship of the series.</p><span class="bdg">Mithral · 3,600+ · 4.9 on Amazon</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Campaign Guidebook" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: West Marches Campaign Guidebook"></div><div class="orow"><img src="img/covers/wm-gm-workbook.jpg" alt="West Marches GM Workbook" loading="lazy"><div><h3>West Marches GM Workbook</h3><p>The game master's workbook: world, factions, rumors and quests, session by session.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches GM Workbook" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: West Marches GM Workbook"></div><div class="orow"><img src="img/covers/wm-party-ledger.jpg" alt="West Marches Party Ledger" loading="lazy"><div><h3>West Marches Party Ledger</h3><p>The group's shared chronicle: roster, hirelings, quests, allies, rivals and the graveyard.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Party Ledger" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: West Marches Party Ledger"></div><div class="orow"><img src="img/covers/wm-player-journal.jpg" alt="West Marches Player Journal" loading="lazy"><div><h3>West Marches Player Journal</h3><p>Each player's own record: goals, gear, bonds, travels and legacy.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Player Journal" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: West Marches Player Journal"></div><div class="orow"><img src="img/covers/hexcrawl-campaign.jpg" alt="Hexcrawl: Campaign Style Guidebook" loading="lazy"><div><h3>Hexcrawl: Campaign Style Guidebook</h3><p>A complete framework for wilderness campaigns where the journey itself is the adventure.</p><span class="bdg">Platinum · 24 reviews</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Campaign Style Guidebook" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Hexcrawl: Campaign Style Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-encounter.jpg" alt="Hexcrawl: Encounter Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Encounter Design Guidebook</h3><p>Encounters that reveal the world, force choices and connect across sessions.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Encounter Design Guidebook" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Hexcrawl: Encounter Design Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-worldbuilding.jpg" alt="Hexcrawl: Worldbuilding Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Worldbuilding Design Guidebook</h3><p>Third in the series: regions, settlements and factions that connect.</p><span class="bdg">Gold · in print from late August</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Worldbuilding Design Guidebook" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Hexcrawl: Worldbuilding Design Guidebook"></div><div class="orow"><img src="img/covers/sandbox-city.jpg" alt="Sandbox Playstyle Toolkit: The City" loading="lazy"><div><h3>Sandbox Playstyle Toolkit: The City</h3><p>The city as a generator: inns, guilds, temples and 120 urban encounters.</p><span class="bdg">Electrum · in print from late August</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Sandbox Playstyle Toolkit: The City" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Sandbox Playstyle Toolkit: The City"></div><div class="orow"><img src="img/covers/grunder.jpg" alt="Gründer: Business Adventure Game" loading="lazy"><div><h3>Gründer: Business Adventure Game</h3><p>An OSR adventure game for 3 to 6 players on Into the Odd rules. A5 in color.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Gründer: Business Adventure Game" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Gründer: Business Adventure Game"></div><div class="orow"><img src="img/covers/roll-for-innovation.jpg" alt="Roll for Innovation" loading="lazy"><div><h3>Roll for Innovation</h3><p>A reflective essay on AI and creativity in tabletop games.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Roll for Innovation" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: Roll for Innovation"></div><div class="orow"><img src="img/covers/10k-books.jpg" alt="I Just Sold 10K Books" loading="lazy"><div><h3>I Just Sold 10K Books</h3><p>The method behind the numbers, for the creators among your customers.</p><span class="bdg">Copper</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="I Just Sold 10K Books" data-p="[14,13,12,11,10,9]" data-pe="[12.5,11.5,11,10,9,8]" class="oq" aria-label="Antall: I Just Sold 10K Books"></div>
   <div class="osum">
     <div class="line"><span>Total books</span><b id="on">0</b></div>
     <div class="line"><span>Price tier</span><b id="op">1-29</b></div>
@@ -411,22 +410,23 @@
   <h2>Silverheart: The Legacy of the Deep</h2>
   <p class="lead">The roleplaying game from the silver mining town of Kongsberg, made for the town's 400th anniversary with support from the Municipality of Kongsberg and expert assistance from the Norwegian Mining Museum. The game was gifted to the town's secondary schools, is used in teaching today, and is sold in the museum shop.</p>
   <p>Recommended retail <b>$45</b>. Institutional pricing and class sets on request. An English edition and a school portal with ready made lesson plans arrive in 2027. <a href="/silverheart">Read more about Silverheart for schools</a>.</p>
-  </div><img src="img/covers/solvhjerte.jpg" alt="Silverheart: The Legacy of the Deep" loading="lazy"></div>
+  </div><img src="img/solvhjerte-3d.png" alt="Silverheart: The Legacy of the Deep" loading="lazy"></div>
 </div></section>
 
 <section style="padding:56px 0 66px" id="pack"><div class="in">
   <div class="b2bform">
-      <h2>Leave an address, get the vendor pack</h2><p class="sub2">Catalog, pricing and delivery details within 48 hours. You decide how small you want to start.</p>
+      <h2>Want it by email instead?</h2><p class="sub2">Leave an address and I send the pack over, along with anything that is not in it. You decide how small you want to start.</p>
       <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
         <div class="row">
           <div><label class="fl" for="f1">Email</label>
           <input type="email" id="f1" name="EMAIL" placeholder="you@yourshop.com" required autocomplete="email"></div>
           <div><label class="fl" for="f2">Shop or organization</label><input type="text" id="f2" name="COMPANY" placeholder="Name of the shop" autocomplete="organization"></div>
+          <div><label class="fl" for="f3">Country or city</label><input type="text" id="f3" name="LOCATION" placeholder="Where you are" autocomplete="country-name"></div>
         </div>
         <input type="hidden" name="TRACK" value="retailer">
         <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
         <button class="btn" type="submit">Send me the vendor pack</button>
-        <p class="fine">No obligation. If you would rather just write: <a href="mailto:contact@kr1publishing.com?subject=Vendor%20pack">contact@kr1publishing.com</a></p>
+        <p class="fine">No obligation. Prefer to just write? <a href="mailto:contact@kr1publishing.com?subject=Vendor%20pack">contact@kr1publishing.com</a></p>
       </form></div>
 </div></section>
 <script>
@@ -434,13 +434,14 @@
 var rows=document.querySelectorAll('.oq');
 var BANDS=["1-29","30-49","50-99","100-249","250-499","500+"];
 function idx(n){return n>=500?5:n>=250?4:n>=100?3:n>=50?2:n>=30?1:0}
-function fmt(x){return 'USD'==='kr'? x+' kr' : '$'+x}
+var CUR='usd';
+function fmt(x){return CUR==='eur' ? '\u20ac'+x : '$'+x}
 function upd(){
   var n=0; rows.forEach(function(i){n+=parseInt(i.value)||0});
   var k=idx(n), sum=0, lines=[];
   rows.forEach(function(i){
     var q=parseInt(i.value)||0; if(q<1) return;
-    var p=JSON.parse(i.getAttribute('data-p'))[k];
+    var p=JSON.parse(i.getAttribute(CUR==='eur'?'data-pe':'data-p'))[k];
     sum+=q*p; lines.push(q+' x '+i.getAttribute('data-t')+' a '+fmt(p));
   });
   sum=Math.round(sum*100)/100;
@@ -451,7 +452,19 @@ function upd(){
   document.getElementById('ob').setAttribute('href','mailto:contact@kr1publishing.com?subject='+encodeURIComponent('Order - KR1 Publishing')+'&body='+encodeURIComponent(body+'\n'));
   document.getElementById('oc').onclick=function(){navigator.clipboard.writeText(body);var b=this;b.textContent=b.getAttribute('data-done');setTimeout(function(){b.textContent=b.getAttribute('data-t')},2000)};
 }
-rows.forEach(function(i){i.addEventListener('input',upd)});upd();
+rows.forEach(function(i){i.addEventListener('input',upd)});
+document.querySelectorAll('.curswitch button').forEach(function(b){
+  b.addEventListener('click',function(){
+    CUR=b.getAttribute('data-cur');
+    document.querySelectorAll('.curswitch button').forEach(function(x){x.classList.toggle('on',x===b)});
+    document.querySelectorAll('.cur').forEach(function(e){
+      var v=e.getAttribute(CUR==='eur'?'data-eur':'data-usd'); if(v) e.textContent=v;
+    });
+    document.querySelectorAll('.cur-rrp').forEach(function(e){e.textContent=CUR==='eur'?'\u20ac18':'$20'});
+    upd();
+  });
+});
+upd();
 })();
 </script><footer><div class="in">
     <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_vendor&affiliate_id=927841" target="_blank" rel="noopener">Books on DriveThruRPG</a>

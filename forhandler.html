@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>For butikk, bibliotek og museum | KR1 Publishing</title>
-<meta name="description" content="Bøker med bestselgermedalje, inntil 50 % margin, ingen minstebestilling og global eksport. Trykk i Europa eller USA, aldri restordre.">
+<meta name="description" content="Tolv print-titler, elleve med bestselgermedalje, inntil 50 % margin, ingen minstebestilling og global eksport. Trykk i Europa eller USA, aldri restordre.">
 <link rel="canonical" href="https://www.kr1publishing.com/forhandler">
 <meta property="og:title" content="For butikk, bibliotek og museum | KR1 Publishing">
-<meta property="og:description" content="Bøker med bestselgermedalje, inntil 50 % margin, ingen minstebestilling og global eksport. Trykk i Europa eller USA, aldri restordre.">
+<meta property="og:description" content="Tolv print-titler, elleve med bestselgermedalje, inntil 50 % margin, ingen minstebestilling og global eksport. Trykk i Europa eller USA, aldri restordre.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kr1publishing.com/forhandler">
 <meta property="og:image" content="https://www.kr1publishing.com/img/og-creator.jpg">
@@ -220,6 +220,7 @@
   .minishelf img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(30,28,24,.14);display:block}
   .sidebyside{display:grid;grid-template-columns:1fr 250px;gap:34px;align-items:center}
   .sidebyside img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(30,28,24,.22);display:block}
+  .sidebyside img[src$="-3d.png"]{border:none;border-radius:0;box-shadow:none}
   .stockists{background:var(--slot);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
   .stockists .in{text-align:center}
   .stockists .lbl{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:9px}
@@ -250,7 +251,7 @@
   .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
   .b2bform h2{font-size:24px;margin-bottom:6px}
   .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
-  .b2bform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
   .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
@@ -320,16 +321,11 @@
 <div class="hero b2b"><div class="in">
   <div class="kicker">For butikk, bibliotek og museum</div>
   <h1>Butikkene som tar dem inn, <em style="white-space:nowrap">bestiller påfyll</em></h1>
-  <p>En katalog der samtlige elleve print-titler bærer bestselgermedalje på verdens største markedsplass for rollespill. Inntil 50 % margin, ingen minstebestilling, og trykk i Europa eller USA avhengig av hvilket marked du bestiller til.</p>
-  <form class="heroform" action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
-      <div class="row">
-        <input type="email" name="EMAIL" placeholder="din@butikk.no" required autocomplete="email" aria-label="din@butikk.no">
-        <button class="btn" type="submit">Send meg forhandlerpakken</button>
-      </div>
-      <input type="hidden" name="TRACK" value="retailer">
-      <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
-      <p class="microtrust" style="margin-top:14px">Svar innen 48 timer med katalog, priser og leveringsinfo. Ingen forpliktelser.</p>
-    </form>
+  <p>En katalog der elleve av tolv print-titler bærer bestselgermedalje på verdens største markedsplass for rollespill. Inntil 50 % margin, ingen minstebestilling, og trykk i Europa eller USA avhengig av hvilket marked du bestiller til.</p>
+  <div class="heroform" style="text-align:center">
+      <a class="btn" href="/files/kr1-forhandlerpakke.pdf?ref=forhandler_hero" target="_blank" rel="noopener" style="padding-left:52px;padding-right:52px">Få forhandlerpakken</a>
+      <p class="microtrust" style="margin-top:16px">Åpnes med én gang som PDF. Ingen e-post, ingenting å fylle ut.<br>Katalog, marginer, vilkår og høstens lanseringer, fire sider.</p>
+    </div>
 </div></div>
 
 <div class="proofbar"><div class="in">
@@ -365,7 +361,7 @@
 <section style="padding:54px 0" id="katalog"><div class="in narrow">
   <div class="kicker">Katalogen, klar til bestilling nå</div>
   <h2>Velg antall, send bestillingen</h2>
-  <p class="lead">Elleve titler i print. Veiledende utsalgspris 199 kr på samtlige titler. Trappen regnes av totalt antall bøker på tvers av alle titler. Bestillingen går som e-post, og du får ordrebekreftelse og faktura innen 48 timer.</p>
+  <p class="lead">Tolv titler i print, elleve av dem til én pris. Veiledende utsalgspris 199 kr på samtlige titler. Trappen regnes av totalt antall bøker på tvers av alle titler. Bestillingen går som e-post, og du får ordrebekreftelse og faktura innen 48 timer.</p>
   <div class="orow"><img src="img/covers/wm-guidebook.jpg" alt="West Marches Campaign Guidebook" loading="lazy"><div><h3>West Marches Campaign Guidebook</h3><p>Grunnboken om åpent bord og West Marches-stilen. Seriens flaggskip.</p><span class="bdg">Mithral · 3 600+ · 4,9 på Amazon</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Campaign Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Campaign Guidebook"></div><div class="orow"><img src="img/covers/wm-gm-workbook.jpg" alt="West Marches GM Workbook" loading="lazy"><div><h3>West Marches GM Workbook</h3><p>Arbeidsboken for spillederen: verden, fraksjoner, rykter og oppdrag, økt for økt.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches GM Workbook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches GM Workbook"></div><div class="orow"><img src="img/covers/wm-party-ledger.jpg" alt="West Marches Party Ledger" loading="lazy"><div><h3>West Marches Party Ledger</h3><p>Gruppens felles krønike: roster, leiefolk, oppdrag, allierte, rivaler og gravlund.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Party Ledger" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Party Ledger"></div><div class="orow"><img src="img/covers/wm-player-journal.jpg" alt="West Marches Player Journal" loading="lazy"><div><h3>West Marches Player Journal</h3><p>Spillerens egen logg: mål, utstyr, bånd, reiser og ettermæle.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Player Journal" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Player Journal"></div><div class="orow"><img src="img/covers/hexcrawl-campaign.jpg" alt="Hexcrawl: Campaign Style Guidebook" loading="lazy"><div><h3>Hexcrawl: Campaign Style Guidebook</h3><p>Komplett rammeverk for villmarkskampanjer der selve reisen er eventyret.</p><span class="bdg">Platinum · 24 anmeldelser</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Campaign Style Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Campaign Style Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-encounter.jpg" alt="Hexcrawl: Encounter Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Encounter Design Guidebook</h3><p>Møter som avslører verden, tvinger frem valg og henger sammen på tvers av økter.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Encounter Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Encounter Design Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-worldbuilding.jpg" alt="Hexcrawl: Worldbuilding Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Worldbuilding Design Guidebook</h3><p>Tredje bok i serien: regioner, bosetninger og fraksjoner som henger sammen.</p><span class="bdg">Gold · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Worldbuilding Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Worldbuilding Design Guidebook"></div><div class="orow"><img src="img/covers/sandbox-city.jpg" alt="Sandbox Playstyle Toolkit: The City" loading="lazy"><div><h3>Sandbox Playstyle Toolkit: The City</h3><p>Byen som generator: vertshus, laug, templer og 120 bymøter.</p><span class="bdg">Electrum · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Sandbox Playstyle Toolkit: The City" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Sandbox Playstyle Toolkit: The City"></div><div class="orow"><img src="img/covers/grunder.jpg" alt="Gründer: Business Adventure Game" loading="lazy"><div><h3>Gründer: Business Adventure Game</h3><p>OSR-eventyrspill for 3 til 6 spillere på Into the Odd-regler. A5 i farger.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Gründer: Business Adventure Game" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Gründer: Business Adventure Game"></div><div class="orow"><img src="img/covers/roll-for-innovation.jpg" alt="Roll for Innovation" loading="lazy"><div><h3>Roll for Innovation</h3><p>Reflekterende essay om AI og kreativitet i rollespill.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Roll for Innovation" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Roll for Innovation"></div><div class="orow"><img src="img/covers/10k-books.jpg" alt="I Just Sold 10K Books" loading="lazy"><div><h3>I Just Sold 10K Books</h3><p>Metoden bak salgstallene, for skaperne blant kundene dine.</p><span class="bdg">Copper</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="I Just Sold 10K Books" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: I Just Sold 10K Books"></div>
   <div class="osum">
     <div class="line"><span>Antall bøker</span><b id="on">0</b></div>
@@ -410,22 +406,23 @@
   <h2>Sølvhjerte: Arven fra dypet</h2>
   <p class="lead">Rollespillet fra sølvverkets Kongsberg, laget til byens 400-årsjubileum med støtte fra Kongsberg kommune og faglig bistand fra Norsk Bergverksmuseum. Spillet ble gitt til byens ungdomsskoler, brukes i undervisningen i dag, og selges i museumsbutikken ved Bergverksmuseet.</p>
   <p>Veiledende utsalg <b>449 kr</b>. Institusjonspriser og klassesett på forespørsel. Skoleportal med ferdige undervisningsopplegg kommer i 2027. <a href="/solvhjerte">Les mer om Sølvhjerte for skolen</a>.</p>
-  </div><img src="img/covers/solvhjerte.jpg" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
+  </div><img src="img/solvhjerte-3d.png" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
 </div></section>
 
 <section style="padding:56px 0 66px" id="pakken"><div class="in">
   <div class="b2bform">
-      <h2>Legg igjen adressen, få forhandlerpakken</h2><p class="sub2">Katalog, priser og leveringsinfo innen 48 timer. Du bestemmer selv hvor smått du vil starte.</p>
+      <h2>Vil du heller ha den på e-post?</h2><p class="sub2">Legg igjen adressen, så sender jeg pakken over, sammen med det som ikke står i den. Du bestemmer selv hvor smått du vil starte.</p>
       <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
         <div class="row">
           <div><label class="fl" for="f1">E-post</label>
           <input type="email" id="f1" name="EMAIL" placeholder="din@butikk.no" required autocomplete="email"></div>
           <div><label class="fl" for="f2">Butikk eller organisasjon</label><input type="text" id="f2" name="COMPANY" placeholder="Navn på butikken" autocomplete="organization"></div>
+          <div><label class="fl" for="f3">Sted</label><input type="text" id="f3" name="LOCATION" placeholder="By eller land" autocomplete="country-name"></div>
         </div>
         <input type="hidden" name="TRACK" value="retailer">
         <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
         <button class="btn" type="submit">Send meg forhandlerpakken</button>
-        <p class="fine">Ingen forpliktelser. Vil du heller skrive selv: <a href="mailto:contact@kr1publishing.com?subject=Forhandlerpakke">contact@kr1publishing.com</a></p>
+        <p class="fine">Ingen forpliktelser. Vil du heller skrive? <a href="mailto:contact@kr1publishing.com?subject=Forhandlerpakke">contact@kr1publishing.com</a></p>
       </form></div>
 </div></section>
 <script>

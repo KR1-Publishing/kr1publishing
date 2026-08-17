@@ -206,7 +206,6 @@
     .card img{width:120px;height:160px}
   }
 
-
   .shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:26px}
   .bk{text-align:center}
   .bk img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line);box-shadow:0 10px 24px rgba(30,28,24,.18);display:block}
@@ -220,6 +219,7 @@
   .minishelf img{width:100%;height:auto;border-radius:4px;border:1px solid var(--line);box-shadow:0 5px 14px rgba(30,28,24,.14);display:block}
   .sidebyside{display:grid;grid-template-columns:1fr 250px;gap:34px;align-items:center}
   .sidebyside img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(30,28,24,.22);display:block}
+  .sidebyside img[src$="-3d.png"]{border:none;border-radius:0;box-shadow:none}
   .stockists{background:var(--slot);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
   .stockists .in{text-align:center}
   .stockists .lbl{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:9px}
@@ -250,7 +250,7 @@
   .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
   .b2bform h2{font-size:24px;margin-bottom:6px}
   .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
-  .b2bform .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
   .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
   .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
@@ -283,6 +283,17 @@
   .osum .note{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:12px}
   .olist2{margin-top:34px}
   .olist2 .orow{grid-template-columns:74px 1fr}
+  .caseband{background:var(--dark);color:#e9e2d3;border-radius:14px;padding:26px 30px;margin-top:24px}
+  .caseband .k{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+  .casenum{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:18px 0 4px}
+  .casenum div{text-align:center}
+  .casenum b{display:block;font-size:30px;color:var(--gold);line-height:1.1}
+  .casenum span{font-family:system-ui,sans-serif;font-size:12px;color:#a89d89;letter-spacing:.3px}
+  .caseband p{font-size:15.5px;color:#cfc7b4;margin:14px 0 0;line-height:1.6}
+  .caseband p b{color:#f2ece0}
+  .goals{list-style:none;padding:0;margin:18px 0 0;counter-reset:g}
+  .goals li{position:relative;padding-left:44px;margin-bottom:14px;font-size:16px}
+  .goals li:before{counter-increment:g;content:counter(g);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--gold-dark);color:var(--gold-dark);font-family:system-ui,sans-serif;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
   .fwd{background:var(--dark);color:#e9e2d3;border-radius:14px;padding:26px 28px;margin-top:22px}
   .fwd .k{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
   .fwd .msg{background:#100e0b;border:1px solid #35301f;border-radius:10px;padding:18px 20px;font-size:15px;line-height:1.65;color:#d9d2c2;white-space:pre-line}
@@ -314,7 +325,7 @@
 </head>
 <body><div class="langbar"><div class="in"><span>English</span><a href="/solvhjerte">Norsk</a></div></div><nav><div class="in">
   <a class="logo" href="/">KR1 PUBLISHING</a>
-  <ul><li><a href="#why">Why it works</a></li><li><a href="#game">The game</a></li><li><a href="#portal">School portal</a></li><li><a href="/vendor">For retailers</a></li></ul>
+  <ul><li><a href="#why">Why it works</a></li><li><a href="#inuse">In use</a></li><li><a href="#game">The game</a></li><li><a href="#portal">School portal</a></li></ul>
   <a class="btn sm" href="#portal">Join the waiting list</a>
 </div></nav>
 <div class="hero b2b"><div class="in">
@@ -342,7 +353,7 @@
 <div class="stockists"><div class="in">
   <div class="lbl">Developed with</div>
   <div class="logobar" style="margin-top:12px"><span><img src="img/logos/kongsberg-kommune.png" alt="Kongsberg kommune" loading="lazy"></span><span><img src="img/logos/bergverksmuseet.png" alt="Norsk Bergverksmuseum" loading="lazy"></span></div>
-  <div class="inst">Financial support from the Municipality of Kongsberg, expert assistance from the Norwegian Mining Museum. The book is sold in the museum shop.</div>
+  <div class="inst">Financial support from the Municipality of Kongsberg, expert assistance from the Norwegian Mining Museum. The book is sold in the museum shop.<br>Also used by Berger Historical Society, and highlighted by <a href="https://www.rollespill.info/2025/02/08/hva-er-rollespill-godt-for/" target="_blank" rel="noopener">rollespill.info</a> after visits to Bjerkely Folk High School and SKAP Folk High School.</div>
 </div></div>
 
 <section class="band" style="padding:54px 0" id="why"><div class="in narrow">
@@ -355,11 +366,11 @@
     <div class="rc"><h3>Tested in schools</h3><p>Developed with a museum educator and tried out in secondary school classrooms before it went into regular use.</p></div>
   </div>
   <div class="fotorad">
-    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Students at Bjerkely with the Silverheart book" loading="lazy"><figcaption>Students at Bjerkely with the book. Photo: Bjerkely.</figcaption></figure>
+    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Students at Bjerkely Folk High School with the Silverheart book" loading="lazy"><figcaption>Students at Bjerkely Folk High School with the book. Photo: Bjerkely Folk High School.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-1.jpg" alt="Teachers playing Silverheart at a course in Kongsberg" loading="lazy"><figcaption>From a teacher training day in Kongsberg: Silverheart underway at the table.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-2.jpg" alt="Teachers around the game table with map and character sheets" loading="lazy"><figcaption>Map, tokens and character sheets, the way it looks in use.</figcaption></figure>
-    <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Game night at Berger, Silverheart at the table" loading="lazy"><figcaption>Game night at Berger: character sheets, dice and discussion.</figcaption></figure>
-    <figure><img src="img/solvhjerte/sh-berger-2.jpg" alt="Game night at Berger, several tables playing at once" loading="lazy"><figcaption>Berger again: several tables running at once, all ages.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Game night at Berger Historical Society, Silverheart at the table" loading="lazy"><figcaption>Game night at Berger Historical Society: character sheets, dice and discussion.</figcaption></figure>
+    <figure><img src="img/solvhjerte/sh-berger-2.jpg" alt="Berger Historical Society, several tables playing at once" loading="lazy"><figcaption>Berger Historical Society again: several tables running at once, all ages.</figcaption></figure>
   </div>
 </div></section>
 
@@ -370,13 +381,42 @@
   <p class="lead">In 1770, Kongsberg was the second largest city in Norway after Bergen. By 1805 the Silver Works, the foundation of the town's existence, had largely shut down. The game is set in that crisis, and students take the roles of poor townspeople burdened with debt, navigating the town's challenges.</p>
   <p>The rules are simple, inspired by the OSR style, with a focus on exploration. The goal is that students learn about Kongsberg in the late 1700s, and have fun along the way. Those two things in that order, and it is why it reaches students who otherwise check out of a history lesson.</p>
   <p>The book comes with a high resolution, historically accurate map of old Kongsberg, character sheets both digital and printable, digital game tokens and a player's guide for handing out.</p>
-  </div><img src="img/covers/solvhjerte.jpg" alt="Silverheart: The Legacy of the Deep" loading="lazy"></div>
-  <div class="todo"><b>FILL IN BEFORE PUBLISHING:</b> year group, running time and number of players. This is the first thing a teacher looks for, and I do not have the numbers. Delete this box once the fields below are filled.</div>
+  </div><img src="img/solvhjerte-3d.png" alt="Silverheart: The Legacy of the Deep" loading="lazy"></div>
+  
   <div class="three">
     <div class="rc"><h3>Year group</h3><p>Lower secondary, ages 13 to 16</p></div>
-    <div class="rc"><h3>Running time</h3><p>[FILL IN]</p></div>
-    <div class="rc"><h3>Number of students</h3><p>[FILL IN]</p></div>
+    <div class="rc"><h3>Running time</h3><p>From a 90 minute session to a full school day across four periods.</p></div>
+    <div class="rc"><h3>Number of students</h3><p>4 to 6 players per group. Skrim ran 70 students in a single day.</p></div>
   </div>
+</div></section>
+
+<section style="padding:54px 0" id="inuse"><div class="in narrow">
+  <div class="kicker">How it has been used</div>
+  <h2>A full school day at Skrim lower secondary</h2>
+  <p class="lead">On 29 April 2024 Skrim gave Silverheart a whole day. Three classes, four periods, and the students ran the game themselves.</p>
+  <div class="caseband">
+    <div class="k">Skrim lower secondary school, students aged 14 to 15</div>
+    <div class="casenum">
+      <div><b>70</b><span>students involved</span></div>
+      <div><b>10</b><span>students as game masters</span></div>
+      <div><b>3</b><span>classes at once</span></div>
+      <div><b>1.5 h</b><span>of play per group, minimum</span></div>
+    </div>
+    <p>Ten students got a training day of their own beforehand and then led their groups through the adventure. The day opened with a fifteen minute joint introduction, then the students built characters and drew or made something for them. After play they wrote an interview with their own character, laid out as a local newspaper from 1796. The students who did not want to play cooked lapskaus stew and flatbread from 1796 recipes and served the whole year group.</p>
+    <p><b>Afterwards a parent wrote to me:</b> "Today we had a really good time at school. We played a Kongsberg game about the old days." That is the sentence I measure the programme against.</p>
+  </div>
+</div></section>
+
+<section class="band" style="padding:54px 0" id="curriculum"><div class="in narrow">
+  <div class="kicker">Curriculum goals</div>
+  <h2>It is language arts and social studies, not a day off</h2>
+  <p class="lead">Silverheart was used across two subjects, and the students were assessed in both. The programme maps directly onto these goals from the Norwegian curriculum:</p>
+  <ol class="goals">
+    <li>Inform, narrate, argue and reflect in a range of spoken and written genres, for different purposes, adapted to audience and medium.</li>
+    <li>Explore and describe ways of life, traditions and geography in an area, and see the connections with your own background.</li>
+    <li>Use sources critically and accountably.</li>
+  </ol>
+  <p style="margin-top:20px">Teachers get started through a workshop. The first ran a full day in February 2024 with ten teachers from the lower secondary schools in Kongsberg, and everyone went home with a class set. The municipality, the Norwegian Mining Museum and the local paper were present.</p>
 </div></section>
 
 <section class="band" style="padding:54px 0" id="forward"><div class="in narrow">
@@ -406,6 +446,7 @@ More here: https://www.kr1publishing.com/silverheart</div>
           <div><label class="fl" for="f1">Email</label>
           <input type="email" id="f1" name="EMAIL" placeholder="you@yourschool.org" required autocomplete="email"></div>
           <div><label class="fl" for="f2">I am a</label><select id="f2" name="ROLE"><option value="Teacher">Teacher</option><option value="School leader">School leader</option><option value="Librarian">Librarian</option><option value="Museum professional">Museum professional</option><option value="Parent">Parent</option><option value="Player">Player</option><option value="Other">Other</option></select></div>
+          <div><label class="fl" for="f3">Location</label><input type="text" id="f3" name="LOCATION" placeholder="School, city or country" autocomplete="organization"></div>
         </div>
         <input type="hidden" name="TRACK" value="teacher">
         <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
@@ -414,12 +455,6 @@ More here: https://www.kr1publishing.com/silverheart</div>
       </form></div>
 </div></section>
 
-<section class="band" style="padding:54px 0 62px"><div class="in narrow">
-  <div class="kicker">Want the book today</div>
-  <h2>Silverheart: The Legacy of the Deep</h2>
-  <p class="lead">The book is sold in the shop at the Norwegian Mining Museum, recommended retail <b>$45</b> (final print run), and as a PDF on DriveThruRPG. From 2027: Norwegian print on demand and an English edition in both PDF and print, alongside the school portal.</p>
-  <p>Libraries, schools and shops will find institutional pricing and class sets on the <a href="/vendor">retailer page</a>, or write to <a href="mailto:contact@kr1publishing.com?subject=Silverheart">contact@kr1publishing.com</a>.</p>
-</div></section>
 <script>
 document.querySelectorAll('[data-copy]').forEach(function(b){
   b.addEventListener('click',function(){
