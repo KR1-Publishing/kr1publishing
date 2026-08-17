@@ -226,7 +226,7 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:720px;margin:10px auto 0}
+  .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
   .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -304,7 +304,9 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
-    .logobar{grid-template-columns:repeat(2,1fr)}
+    .logobar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%}
+    .logobar span{height:54px;padding:8px 10px}
+    .logobar img{max-width:100%;max-height:34px}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
   }
@@ -326,7 +328,7 @@
       </div>
       <input type="hidden" name="TRACK" value="teacher">
       <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
-      <p class="microtrust" style="margin-top:14px">The list hears first, and your school is offered pilot pricing. No obligation.</p>
+      <p class="microtrust" style="margin-top:14px">The list hears first. No obligation, nothing to decide today.</p>
     </form>
 </div></div>
 
@@ -398,7 +400,7 @@ More here: https://www.kr1publishing.com/silverheart</div>
 
 <section style="padding:54px 0" id="portal"><div class="in">
   <div class="b2bform">
-      <h2>The school portal arrives in 2027</h2><p class="sub2">Classroom use runs on a school license: it gives your school access to the complete lesson plans, the teacher's guide and the class set program. Three schools hold an active license today. The waiting list gets first access and pilot pricing on the license.</p>
+      <h2>Join the waiting list</h2><p class="sub2">The school portal arrives in 2027. Classroom use runs on a school license: it gives your school access to the complete lesson plans, the teacher's guide and the class set program. Three schools hold an active license today, and the waiting list gets first access.</p>
       <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
         <div class="row">
           <div><label class="fl" for="f1">Email</label>

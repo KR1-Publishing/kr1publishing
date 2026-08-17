@@ -226,7 +226,7 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:720px;margin:10px auto 0}
+  .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
   .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -304,7 +304,9 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
-    .logobar{grid-template-columns:repeat(2,1fr)}
+    .logobar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%}
+    .logobar span{height:54px;padding:8px 10px}
+    .logobar img{max-width:100%;max-height:34px}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
   }
@@ -334,7 +336,7 @@
   <div><b>11,000+</b><span>books sold</span></div>
   <div><b>#8</b><span>DTRPG publisher 2025</span></div>
   <div><b>4.73</b><span>average of 74 reviews</span></div>
-  <div><b>50%</b><span>margin at 100+</span></div>
+  <div><b>50%</b><span>margin at 250+</span></div>
 </div></div>
 
 <div class="stockists"><div class="in">
@@ -358,7 +360,7 @@
   <h2>Recommended retail is $20. The rest is yours.</h2>
   <p class="lead">The ladder covers the whole catalog and is set by the total number of books in the order, across any titles. Every title carries a $20 recommended retail. Prices exclude VAT and shipping, exports from Norway are zero rated for VAT. Silverheart is priced separately. Prices as of August 2026.</p>
   <table class="ladder"><tr><th>Quantity</th><th>Your price</th><th>Your margin</th></tr><tr><td>1 to 29 copies</td><td class="num">$14</td><td class="win">$6 per book, 30%</td></tr><tr><td>30 to 49 copies</td><td class="num">$13</td><td class="win">$7 per book, 35%</td></tr><tr><td>50 to 99 copies</td><td class="num">$12</td><td class="win">$8 per book, 40%</td></tr><tr><td>100 to 249 copies</td><td class="num">$11</td><td class="win">$9 per book, 45%</td></tr><tr><td>250 to 499 copies</td><td class="num">$10</td><td class="win">$10 per book, 50%</td></tr><tr class="best"><td>500 or more</td><td class="num">$9</td><td class="win">$11 per book, 55%</td></tr></table>
-  <p style="margin-top:16px" class="fine">Prices in USD and exclusive of shipping. At 100 copies your margin equals your cost, which is the 50% off retail that hobby trade runs on. Ask us for NOK, GBP or EUR and we will quote at the same tiers.</p>
+  <p style="margin-top:16px" class="fine">Prices in USD, exclusive of VAT and shipping. At 250 copies you are at the 50% off retail that hobby trade runs on. Ask us for NOK, GBP or EUR and we will quote at the same tiers.</p>
 </div></section>
 
 <section style="padding:54px 0" id="catalog"><div class="in narrow">
@@ -378,6 +380,12 @@
     <p>Priced separately, everything is in the vendor pack. The full digital catalog is <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_vendor&affiliate_id=927841" target="_blank" rel="noopener">on DriveThruRPG</a>.</p>
     <div class="orow"><img src="img/covers/solvhjerte.jpg" alt="Silverheart: The Legacy of the Deep" loading="lazy"><div><h3>Silverheart: The Legacy of the Deep</h3><p>The roleplaying game from the Kongsberg silver mines. English version coming soon, current edition in Norwegian, final print run. RRP $45, institutional pricing on request.</p></div></div>
   </div>
+</div></section>
+
+<section class="band" style="padding:44px 0"><div class="in narrow" style="text-align:center">
+  <div class="kicker">Independent coverage</div>
+  <blockquote style="font-size:18px;line-height:1.6;margin:0 auto;max-width:720px;font-style:italic;color:var(--ink);border:none;padding:0">&ldquo;Seeing Karl Otto Kristoffersen (#8) rubbing shoulders with industry giants such as Cubicle 7 and Onyx Path is notable. It demonstrates that in the digital age, a single creator with a strong idea can commercially outperform entire editorial teams.&rdquo;</blockquote>
+  <p class="fine" style="margin-top:14px">Geek Native, <a href="https://www.geeknative.com/219694/the-unofficial-best-selling-2025-drivethrurpg-publisher-league-table/" target="_blank" rel="noopener">2025 DriveThruRPG publisher league table</a></p>
 </div></section>
 
 <section class="band" style="padding:54px 0"><div class="in narrow">
@@ -439,19 +447,8 @@ function upd(){
   document.getElementById('on').textContent=n;
   document.getElementById('op').textContent=BANDS[k];
   document.getElementById('ot').textContent=fmt(sum);
-  var body='Shop:
-VAT or reg. no:
-Delivery address:
-
-Order:
-
-'+(lines.length?lines.join('
-'):'-')+'
-
-Total: '+n+' ('+'tier'+' '+BANDS[k]+') = '+fmt(sum)+'
-';
-  document.getElementById('ob').setAttribute('href','mailto:contact@kr1publishing.com?subject='+encodeURIComponent('Order - KR1 Publishing')+'&body='+encodeURIComponent(body+'
-'));
+  var body='Shop:\nVAT or reg. no:\nDelivery address:\n\nOrder:\n\n'+(lines.length?lines.join('\n'):'-')+'\n\nTotal: '+n+' ('+'tier'+' '+BANDS[k]+') = '+fmt(sum)+'\n';
+  document.getElementById('ob').setAttribute('href','mailto:contact@kr1publishing.com?subject='+encodeURIComponent('Order - KR1 Publishing')+'&body='+encodeURIComponent(body+'\n'));
   document.getElementById('oc').onclick=function(){navigator.clipboard.writeText(body);var b=this;b.textContent=b.getAttribute('data-done');setTimeout(function(){b.textContent=b.getAttribute('data-t')},2000)};
 }
 rows.forEach(function(i){i.addEventListener('input',upd)});upd();

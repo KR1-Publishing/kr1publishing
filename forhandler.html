@@ -226,7 +226,7 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:720px;margin:10px auto 0}
+  .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
   .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -304,7 +304,9 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
-    .logobar{grid-template-columns:repeat(2,1fr)}
+    .logobar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%}
+    .logobar span{height:54px;padding:8px 10px}
+    .logobar img{max-width:100%;max-height:34px}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
   }
@@ -379,6 +381,12 @@
   </div>
 </div></section>
 
+<section class="band" style="padding:44px 0"><div class="in narrow" style="text-align:center">
+  <div class="kicker">Uavhengig omtale</div>
+  <blockquote style="font-size:18px;line-height:1.6;margin:0 auto;max-width:720px;font-style:italic;color:var(--ink);border:none;padding:0">&ldquo;Seeing Karl Otto Kristoffersen (#8) rubbing shoulders with industry giants such as Cubicle 7 and Onyx Path is notable. It demonstrates that in the digital age, a single creator with a strong idea can commercially outperform entire editorial teams.&rdquo;</blockquote>
+  <p class="fine" style="margin-top:14px">Geek Native, <a href="https://www.geeknative.com/219694/the-unofficial-best-selling-2025-drivethrurpg-publisher-league-table/" target="_blank" rel="noopener">tabell over de mest solgte DriveThruRPG-utgiverne i 2025</a></p>
+</div></section>
+
 <section class="band" style="padding:54px 0"><div class="in narrow">
   <div class="kicker">Hvorfor de selger</div>
   <h2>Én bok selger den neste</h2>
@@ -438,19 +446,8 @@ function upd(){
   document.getElementById('on').textContent=n;
   document.getElementById('op').textContent=BANDS[k];
   document.getElementById('ot').textContent=fmt(sum);
-  var body='Butikk:
-Org.nr:
-Leveringsadresse:
-
-Bestilling:
-
-'+(lines.length?lines.join('
-'):'-')+'
-
-Totalt: '+n+' ('+'trinn'+' '+BANDS[k]+') = '+fmt(sum)+'
-';
-  document.getElementById('ob').setAttribute('href','mailto:contact@kr1publishing.com?subject='+encodeURIComponent('Bestilling - KR1 Publishing')+'&body='+encodeURIComponent(body+'
-'));
+  var body='Butikk:\nOrg.nr:\nLeveringsadresse:\n\nBestilling:\n\n'+(lines.length?lines.join('\n'):'-')+'\n\nTotalt: '+n+' ('+'trinn'+' '+BANDS[k]+') = '+fmt(sum)+'\n';
+  document.getElementById('ob').setAttribute('href','mailto:contact@kr1publishing.com?subject='+encodeURIComponent('Bestilling - KR1 Publishing')+'&body='+encodeURIComponent(body+'\n'));
   document.getElementById('oc').onclick=function(){navigator.clipboard.writeText(body);var b=this;b.textContent=b.getAttribute('data-done');setTimeout(function(){b.textContent=b.getAttribute('data-t')},2000)};
 }
 rows.forEach(function(i){i.addEventListener('input',upd)});upd();
