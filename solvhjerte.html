@@ -69,7 +69,7 @@
   .byline span{font-size:12.5px;color:var(--muted)}
 
   /* PROOF BAR */
-  .proofbar{background:var(--dark);color:#f2ece0;margin-top:52px}
+  .proofbar{background:var(--dark);color:#f2ece0;margin-top:0}
   .proofbar .in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;text-align:center}
   .proofbar b{display:block;font-size:clamp(24px,3.4vw,34px);color:var(--gold);line-height:1.1}
   .proofbar span{font-family:system-ui,sans-serif;font-size:12.5px;opacity:.8;letter-spacing:.3px}
@@ -193,7 +193,7 @@
     .cta-row{margin-top:24px;gap:10px}
     .cta-row .btn{width:100%;max-width:340px;text-align:center;padding:15px 20px;font-size:15.5px}
     .microtrust{margin-top:14px;font-size:12px;padding:0 10px}
-    .proofbar{margin-top:36px}
+    .proofbar{margin-top:0}
     .proofbar .in{padding-top:20px;padding-bottom:20px;gap:14px}
     .proofbar b{font-size:22px}
     .proofbar span{font-size:10.5px}
@@ -226,8 +226,8 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
-  .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
+  .logobar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:720px;margin:12px auto 0}
+  .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 18px;display:flex;align-items:center;justify-content:center;height:64px;width:220px;box-sizing:border-box}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
   .ladder th{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:13px 16px;background:var(--slot);border-bottom:1px solid var(--line)}
@@ -236,9 +236,9 @@
   .ladder tr.best td{background:#faf4e4;font-weight:700}
   .ladder td.num{font-family:system-ui,sans-serif;white-space:nowrap}
   .ladder td.win{color:var(--gold-dark);font-weight:700;white-space:nowrap}
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;align-items:start}
   .two{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
-  .rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
   .rc h3{font-size:17.5px;margin-bottom:7px}
   .rc p{font-size:14.5px;color:var(--muted);margin:0}
   .pipeline{margin-top:20px;border-left:2px solid var(--gold-dark);padding-left:0}
@@ -256,16 +256,17 @@
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
   .b2bform .btn{width:100%;margin-top:16px}
   .b2bform .fine{margin-top:12px;text-align:center}
-  .hero.b2b{padding-bottom:58px}
+  .hero.b2b{padding-bottom:18px}
   .heroform{max-width:520px;margin:26px auto 0}
   .heroform .row{display:grid;grid-template-columns:1fr auto;gap:10px}
   .heroform input{padding:16px 16px;border:1px solid var(--line);border-radius:30px;font-size:16px;font-family:inherit;background:#fff;width:100%;box-sizing:border-box}
   .heroform .btn{white-space:nowrap;padding-left:30px;padding-right:30px}
   .sidebyside.sm{grid-template-columns:1fr 170px}
   .fotorad{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
-  .fotorad figure{margin:0}
-  .fotorad img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:0 10px 24px rgba(30,28,24,.16)}
-  .fotorad figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45}
+  .fotorad figure{margin:0;display:flex;flex-direction:column}
+  .fotorad img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:0 10px 24px rgba(30,28,24,.16)}
+  .fotorad figure.wide img{aspect-ratio:21/9}
+  .fotorad figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45;min-height:36px}
   .orow{display:grid;grid-template-columns:74px 1fr 92px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
   .orow img{width:74px;height:auto;border-radius:5px;border:1px solid var(--line);box-shadow:0 5px 12px rgba(30,28,24,.15)}
   .orow h3{font-size:16.5px;margin:0 0 3px}
@@ -315,8 +316,8 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
-    .logobar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%}
-    .logobar span{height:54px;padding:8px 10px}
+    .logobar{gap:10px;max-width:100%}
+    .logobar span{height:54px;padding:8px 12px;width:calc(50% - 5px)}
     .logobar img{max-width:100%;max-height:34px}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
@@ -339,7 +340,7 @@
       </div>
       <input type="hidden" name="TRACK" value="teacher">
       <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
-      <p class="microtrust" style="margin-top:14px">Ventelisten hører først. Ingen forpliktelser, ingenting å bestemme i dag.</p>
+      <p class="microtrust" style="margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;font-size:12px;line-height:1.55;color:#8f8878">Ventelisten hører først. Ingen forpliktelser, ingenting å bestemme i dag.</p>
     </form>
 </div></div>
 
@@ -362,11 +363,11 @@
   <div class="two">
     <div class="rc"><h3>Bygget på virkelig historie</h3><p>Landemerker, yrker og hendelser er hentet fra Kongsbergs egen fortid, kvalitetssikret sammen med Bergverksmuseet.</p></div>
     <div class="rc"><h3>Refleksjonen er innebygd</h3><p>Strukturert etterarbeid knytter opplevelsen til læreplanmålene, så spillet ikke blir en løsrevet time.</p></div>
-    <div class="rc"><h3>Ingen forkunnskaper nødvendig</h3><p>Fungerer i klasserom der verken lærer eller elever har spilt rollespill før.</p></div>
+    <div class="rc"><h3>Ingen forkunnskaper nødvendig</h3><p>Reglene læres på noen minutter, og fungerer i klasserom der verken lærer eller elever har spilt rollespill før.</p></div>
     <div class="rc"><h3>Prøvd ut i skolen</h3><p>Utviklet sammen med museumspedagog og testet i ungdomsskolen før det gikk inn i vanlig bruk.</p></div>
   </div>
   <div class="fotorad">
-    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Elever på Bjerkely Folkehøyskole med Sølvhjerte-boken" loading="lazy"><figcaption>Elever på Bjerkely Folkehøyskole med boken. Foto: Bjerkely Folkehøyskole.</figcaption></figure>
+    <figure class="wide" style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Elever på Bjerkely Folkehøyskole med Sølvhjerte-boken" loading="lazy"><figcaption>Elever på Bjerkely Folkehøyskole med boken. Foto: Bjerkely Folkehøyskole.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-1.jpg" alt="Lærere spiller Sølvhjerte på kurs i Kongsberg" loading="lazy"><figcaption>Fra lærersamling i Kongsberg: Sølvhjerte i gang rundt bordet.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-2.jpg" alt="Lærere rundt spillbordet med kart og rolleark" loading="lazy"><figcaption>Kart, brikker og rolleark på bordet, slik det ser ut i bruk.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Spillkveld hos Berger Historielag, Sølvhjerte rundt bordet" loading="lazy"><figcaption>Spillkveld hos Berger Historielag: rolleark, terninger og diskusjon.</figcaption></figure>
@@ -374,12 +375,12 @@
   </div>
 </div></section>
 
-<section style="padding:54px 0" id="spillet"><div class="in narrow">
+<section style="padding:40px 0 34px" id="spillet"><div class="in narrow">
   <div class="kicker">Om spillet</div>
   <h2>Sølvet fra dypet preger både byen og spillet</h2>
   <div class="sidebyside sm"><div>
   <p class="lead">I 1770 var Kongsberg landets nest største by etter Bergen. I 1805 la Sølvverket ned mesteparten av driften, selve grunnlaget for byens eksistens. Spillet foregår i denne krisetiden, og elevene tar rollene som fattigfolk med stor gjeld som må navigere byens utfordringer.</p>
-  <p>Reglene er enkle, inspirert av OSR-stilen, med fokus på utforsking. Målet er at elevene skal lære om Kongsberg på slutten av 1700-tallet, og ha det gøy på veien. Det er de to tingene i den rekkefølgen, og det er derfor det fungerer på elever som ellers melder seg ut av historietimen.</p>
+  <p>Reglene er enkle, får plass på ett ark, og handler om å utforske. Målet er at elevene skal lære om Kongsberg på slutten av 1700-tallet, og ha det gøy på veien. Det er de to tingene i den rekkefølgen, og det er derfor det fungerer på elever som ellers melder seg ut av historietimen.</p>
   <p>Med boken følger et høyoppløselig, historisk korrekt kart over fortidens Kongsberg, rolleark både digitalt og for utskrift, digitale spillebrikker og et spillerhefte til utdeling.</p>
   </div><img src="img/solvhjerte-3d.png" alt="Sølvhjerte: Arven fra dypet" loading="lazy"></div>
   
@@ -390,7 +391,7 @@
   </div>
 </div></section>
 
-<section style="padding:54px 0" id="ibruk"><div class="in narrow">
+<section style="padding:34px 0 40px" id="ibruk"><div class="in narrow">
   <div class="kicker">Slik har det blitt brukt</div>
   <h2>En hel skoledag på Skrim ungdomsskole</h2>
   <p class="lead">29. april 2024 satte Skrim av en hel dag til Sølvhjerte. Tre klasser, fire økter, og elevene ledet spillet selv.</p>
@@ -409,8 +410,8 @@
 
 <section class="band" style="padding:54px 0" id="kompetansemal"><div class="in narrow">
   <div class="kicker">Kompetansemål</div>
-  <h2>Det er norsk og samfunnsfag, ikke en fridag</h2>
-  <p class="lead">Sølvhjerte ble brukt tverrfaglig i norsk og samfunnsfag, og elevene ble vurdert i begge fag. Opplegget treffer disse målene direkte:</p>
+  <h2>Norsk og samfunnsfag gjennom lek og læring</h2>
+  <p class="lead">Sølvhjerte brukes tverrfaglig i norsk og samfunnsfag, og elevene vurderes i begge fag. Opplegget treffer disse målene direkte:</p>
   <ol class="goals">
     <li>Informere, fortelle, argumentere og reflektere i ulike muntlige og skriftlige sjangre og for ulike formål, tilpasset mottaker og medium.</li>
     <li>Utforske og beskrive levemåter, tradisjoner og geografi i et område, og se sammenhenger med egen bakgrunn.</li>
@@ -419,10 +420,10 @@
   <p style="margin-top:20px">Lærerne kommer i gang gjennom et arbeidsseminar. Det første gikk over en full dag i februar 2024, med ti lærere fra ungdomsskolene i Kongsberg, og deltakerne gikk hjem med hvert sitt klassesett. Kommunen, Norsk Bergverksmuseum og Laagendalsposten var til stede.</p>
 </div></section>
 
-<section class="band" style="padding:54px 0" id="send"><div class="in narrow">
+<section class="band" style="padding:38px 0" id="send"><div class="in narrow">
   <div class="kicker">Det er sjelden læreren som bestemmer</div>
   <h2>Send dette videre til den som gjør det</h2>
-  <p class="lead">Du trenger ikke overbevise noen selv. Kopier meldingen under og send den til rektor, fagleder eller innkjøpsansvarlig.</p>
+  <p class="lead">Kopier meldingen under og send den til rektor, fagleder eller innkjøpsansvarlig, så slipper du å overbevise noen selv.</p>
   <div class="fwd">
     <div class="k">Ferdig melding, klar til å sendes</div>
     <div class="msg" id="fwdno">Hei,

@@ -69,7 +69,7 @@
   .byline span{font-size:12.5px;color:var(--muted)}
 
   /* PROOF BAR */
-  .proofbar{background:var(--dark);color:#f2ece0;margin-top:52px}
+  .proofbar{background:var(--dark);color:#f2ece0;margin-top:0}
   .proofbar .in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;text-align:center}
   .proofbar b{display:block;font-size:clamp(24px,3.4vw,34px);color:var(--gold);line-height:1.1}
   .proofbar span{font-family:system-ui,sans-serif;font-size:12.5px;opacity:.8;letter-spacing:.3px}
@@ -193,7 +193,7 @@
     .cta-row{margin-top:24px;gap:10px}
     .cta-row .btn{width:100%;max-width:340px;text-align:center;padding:15px 20px;font-size:15.5px}
     .microtrust{margin-top:14px;font-size:12px;padding:0 10px}
-    .proofbar{margin-top:36px}
+    .proofbar{margin-top:0}
     .proofbar .in{padding-top:20px;padding-bottom:20px;gap:14px}
     .proofbar b{font-size:22px}
     .proofbar span{font-size:10.5px}
@@ -226,8 +226,8 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
-  .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
-  .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
+  .logobar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:720px;margin:12px auto 0}
+  .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 18px;display:flex;align-items:center;justify-content:center;height:64px;width:220px;box-sizing:border-box}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
   .ladder{width:100%;border-collapse:collapse;margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
   .ladder th{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:13px 16px;background:var(--slot);border-bottom:1px solid var(--line)}
@@ -236,9 +236,9 @@
   .ladder tr.best td{background:#faf4e4;font-weight:700}
   .ladder td.num{font-family:system-ui,sans-serif;white-space:nowrap}
   .ladder td.win{color:var(--gold-dark);font-weight:700;white-space:nowrap}
-  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;align-items:start}
   .two{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
-  .rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .rc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
   .rc h3{font-size:17.5px;margin-bottom:7px}
   .rc p{font-size:14.5px;color:var(--muted);margin:0}
   .pipeline{margin-top:20px;border-left:2px solid var(--gold-dark);padding-left:0}
@@ -256,16 +256,17 @@
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
   .b2bform .btn{width:100%;margin-top:16px}
   .b2bform .fine{margin-top:12px;text-align:center}
-  .hero.b2b{padding-bottom:58px}
+  .hero.b2b{padding-bottom:18px}
   .heroform{max-width:520px;margin:26px auto 0}
   .heroform .row{display:grid;grid-template-columns:1fr auto;gap:10px}
   .heroform input{padding:16px 16px;border:1px solid var(--line);border-radius:30px;font-size:16px;font-family:inherit;background:#fff;width:100%;box-sizing:border-box}
   .heroform .btn{white-space:nowrap;padding-left:30px;padding-right:30px}
   .sidebyside.sm{grid-template-columns:1fr 170px}
   .fotorad{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
-  .fotorad figure{margin:0}
-  .fotorad img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:0 10px 24px rgba(30,28,24,.16)}
-  .fotorad figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45}
+  .fotorad figure{margin:0;display:flex;flex-direction:column}
+  .fotorad img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:10px;border:1px solid var(--line);display:block;box-shadow:0 10px 24px rgba(30,28,24,.16)}
+  .fotorad figure.wide img{aspect-ratio:21/9}
+  .fotorad figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45;min-height:36px}
   .orow{display:grid;grid-template-columns:74px 1fr 92px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
   .orow img{width:74px;height:auto;border-radius:5px;border:1px solid var(--line);box-shadow:0 5px 12px rgba(30,28,24,.15)}
   .orow h3{font-size:16.5px;margin:0 0 3px}
@@ -315,8 +316,8 @@
     .heroform .row{grid-template-columns:1fr}
     .pl{grid-template-columns:1fr;gap:2px;padding-left:16px}
     .proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}
-    .logobar{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:100%}
-    .logobar span{height:54px;padding:8px 10px}
+    .logobar{gap:10px;max-width:100%}
+    .logobar span{height:54px;padding:8px 12px;width:calc(50% - 5px)}
     .logobar img{max-width:100%;max-height:34px}
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
@@ -339,7 +340,7 @@
       </div>
       <input type="hidden" name="TRACK" value="teacher">
       <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
-      <p class="microtrust" style="margin-top:14px">The list hears first. No obligation, nothing to decide today.</p>
+      <p class="microtrust" style="margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;font-size:12px;line-height:1.55;color:#8f8878">The list hears first. No obligation, nothing to decide today.</p>
     </form>
 </div></div>
 
@@ -362,11 +363,11 @@
   <div class="two">
     <div class="rc"><h3>Built on real history</h3><p>Landmarks, trades and events are drawn from Kongsberg's own past, verified together with the Mining Museum.</p></div>
     <div class="rc"><h3>Reflection is built in</h3><p>Structured follow-up work connects the experience to curriculum goals, so the session does not stand on its own.</p></div>
-    <div class="rc"><h3>No prior knowledge needed</h3><p>Works in classrooms where neither the teacher nor the students have played a roleplaying game before.</p></div>
+    <div class="rc"><h3>No prior knowledge needed</h3><p>The rules take minutes to learn, and it works in classrooms where neither teacher nor students have played a roleplaying game before.</p></div>
     <div class="rc"><h3>Tested in schools</h3><p>Developed with a museum educator and tried out in secondary school classrooms before it went into regular use.</p></div>
   </div>
   <div class="fotorad">
-    <figure style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Students at Bjerkely Folk High School with the Silverheart book" loading="lazy"><figcaption>Students at Bjerkely Folk High School with the book. Photo: Bjerkely Folk High School.</figcaption></figure>
+    <figure class="wide" style="grid-column:1/-1"><img src="img/solvhjerte/sh-bjerkely.jpg" alt="Students at Bjerkely Folk High School with the Silverheart book" loading="lazy"><figcaption>Students at Bjerkely Folk High School with the book. Photo: Bjerkely Folk High School.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-1.jpg" alt="Teachers playing Silverheart at a course in Kongsberg" loading="lazy"><figcaption>From a teacher training day in Kongsberg: Silverheart underway at the table.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-laerere-2.jpg" alt="Teachers around the game table with map and character sheets" loading="lazy"><figcaption>Map, tokens and character sheets, the way it looks in use.</figcaption></figure>
     <figure><img src="img/solvhjerte/sh-berger-1.jpg" alt="Game night at Berger Historical Society, Silverheart at the table" loading="lazy"><figcaption>Game night at Berger Historical Society: character sheets, dice and discussion.</figcaption></figure>
@@ -374,12 +375,12 @@
   </div>
 </div></section>
 
-<section style="padding:54px 0" id="game"><div class="in narrow">
+<section style="padding:40px 0 34px" id="game"><div class="in narrow">
   <div class="kicker">The game</div>
   <h2>The silver from the deep shapes both the town and the game</h2>
   <div class="sidebyside sm"><div>
   <p class="lead">In 1770, Kongsberg was the second largest city in Norway after Bergen. By 1805 the Silver Works, the foundation of the town's existence, had largely shut down. The game is set in that crisis, and students take the roles of poor townspeople burdened with debt, navigating the town's challenges.</p>
-  <p>The rules are simple, inspired by the OSR style, with a focus on exploration. The goal is that students learn about Kongsberg in the late 1700s, and have fun along the way. Those two things in that order, and it is why it reaches students who otherwise check out of a history lesson.</p>
+  <p>The rules are simple, fit on a single sheet, and are about exploring. The goal is that students learn about Kongsberg in the late 1700s, and have fun along the way. Those two things in that order, and it is why it reaches students who otherwise check out of a history lesson.</p>
   <p>The book comes with a high resolution, historically accurate map of old Kongsberg, character sheets both digital and printable, digital game tokens and a player's guide for handing out.</p>
   </div><img src="img/solvhjerte-3d.png" alt="Silverheart: The Legacy of the Deep" loading="lazy"></div>
   
@@ -390,7 +391,7 @@
   </div>
 </div></section>
 
-<section style="padding:54px 0" id="inuse"><div class="in narrow">
+<section style="padding:34px 0 40px" id="inuse"><div class="in narrow">
   <div class="kicker">How it has been used</div>
   <h2>A full school day at Skrim lower secondary</h2>
   <p class="lead">On 29 April 2024 Skrim gave Silverheart a whole day. Three classes, four periods, and the students ran the game themselves.</p>
@@ -409,8 +410,8 @@
 
 <section class="band" style="padding:54px 0" id="curriculum"><div class="in narrow">
   <div class="kicker">Curriculum goals</div>
-  <h2>It is language arts and social studies, not a day off</h2>
-  <p class="lead">Silverheart was used across two subjects, and the students were assessed in both. The programme maps directly onto these goals from the Norwegian curriculum:</p>
+  <h2>Language arts and social studies, learned through play</h2>
+  <p class="lead">Silverheart is used across two subjects, and the students are assessed in both. The programme maps directly onto these goals from the Norwegian curriculum:</p>
   <ol class="goals">
     <li>Inform, narrate, argue and reflect in a range of spoken and written genres, for different purposes, adapted to audience and medium.</li>
     <li>Explore and describe ways of life, traditions and geography in an area, and see the connections with your own background.</li>
@@ -419,10 +420,10 @@
   <p style="margin-top:20px">Teachers get started through a workshop. The first ran a full day in February 2024 with ten teachers from the lower secondary schools in Kongsberg, and everyone went home with a class set. The municipality, the Norwegian Mining Museum and the local paper were present.</p>
 </div></section>
 
-<section class="band" style="padding:54px 0" id="forward"><div class="in narrow">
+<section class="band" style="padding:38px 0" id="forward"><div class="in narrow">
   <div class="kicker">The teacher is rarely the one who decides</div>
   <h2>Send this to the person who does</h2>
-  <p class="lead">You do not have to make the case yourself. Copy the message below and send it to your head teacher, department lead or whoever signs off on purchases.</p>
+  <p class="lead">Copy the message below and send it to your head teacher, department lead or whoever signs off on purchases, and you never have to make the case yourself.</p>
   <div class="fwd">
     <div class="k">Ready to send, nothing to write</div>
     <div class="msg" id="fwden">Hello,
