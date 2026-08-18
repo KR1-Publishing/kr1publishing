@@ -258,7 +258,9 @@
   .b2bform{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;padding:28px 30px;max-width:620px;margin:0 auto}
   .b2bform h2{font-size:24px;margin-bottom:6px}
   .b2bform .sub2{font-size:15.5px;color:var(--muted);margin-bottom:18px}
-  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .b2bform .row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end}
+  .b2bform .row>div{display:flex;flex-direction:column;justify-content:flex-end}
+  .b2bform label.fl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .b2bform label.fl{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 5px}
   .b2bform input,.b2bform select{width:100%;box-sizing:border-box;padding:14px 15px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
   .b2bform input:focus,.b2bform select:focus{outline:2px solid var(--gold);outline-offset:1px}
@@ -432,7 +434,7 @@
         <div class="row">
           <div><label class="fl" for="f1">E-post</label>
           <input type="email" id="f1" name="EMAIL" placeholder="din@butikk.no" required autocomplete="email"></div>
-          <div><label class="fl" for="f2">Butikk eller organisasjon</label><input type="text" id="f2" name="COMPANY" placeholder="Navn på butikken" autocomplete="organization"></div>
+          <div><label class="fl" for="f2">Butikk</label><input type="text" id="f2" name="COMPANY" placeholder="Navn på butikken" autocomplete="organization"></div>
           <div><label class="fl" for="f3">Sted</label><input type="text" id="f3" name="LOCATION" placeholder="By eller land" autocomplete="country-name"></div>
         </div>
         <input type="hidden" name="TRACK" value="retailer">
