@@ -447,11 +447,11 @@
 </div></section>
 <script>
 (function(){
-var RRP_USD=199, RRP_EUR=0;
+var RRP=199;
 var rows=document.querySelectorAll('.oq');
 var BANDS=["1-29","30-49","50-99","100-249","250-499","500+"];
 function idx(n){return n>=500?5:n>=250?4:n>=100?3:n>=50?2:n>=30?1:0}
-function fmt(x){return 'kr'==='kr'? x+' kr' : '$'+x}
+function fmt(x){return x.toLocaleString('nb-NO')+' kr'}
 function upd(){
   var n=0; rows.forEach(function(i){n+=parseInt(i.value)||0});
   var k=idx(n), sum=0, lines=[];
@@ -464,7 +464,7 @@ function upd(){
   document.getElementById('on').textContent=n;
   document.getElementById('op').textContent=BANDS[k];
   document.getElementById('ot').textContent=fmt(sum);
-  var rrp=(CUR==='eur'?RRP_EUR:RRP_USD), rv=n*rrp, pf=rv-sum;
+  var rv=n*RRP, pf=rv-sum;
   document.getElementById('orv').textContent=n?fmt(rv):'-';
   document.getElementById('opf').textContent=n?fmt(pf)+' ('+Math.round(pf/(rv||1)*100)+' %)':'-';
   var body='Butikk:\nOrg.nr:\nLeveringsadresse:\n\nBestilling:\n\n'+(lines.length?lines.join('\n'):'-')+'\n\nTotalt: '+n+' ('+'trinn'+' '+BANDS[k]+') = '+fmt(sum)+'\n';
