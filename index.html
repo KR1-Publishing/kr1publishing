@@ -19,7 +19,7 @@
      KR1 KONFIG foer deploy:
      FORM-ACTION, HONEYPOT og MERGE-FELT er satt opp (aug 2026).
      Skjemaet poster til Mailchimp-listen med tag Checklist - Website.
-     BILDER i img/:  hero.jpg 2000x900 | checklist-pack.jpg,
+     BILDER i img/:  checklist-pack.jpg,
      value-equation.jpg, score-quiz.jpg 360x480 | portrait.jpg
      800x800 | gate.jpg 600x800. Manglende fil skjules automatisk.
      ========================================================= */
@@ -130,10 +130,10 @@
   /* PRISBAAND: svaret er selve CTA-en. Klikk setter PRICEBAND,
      huker av ventelisten og hopper til skjemaet. */
   .pq{font-family:system-ui,sans-serif;font-size:15.5px;color:#cfc6b5;margin-top:26px;line-height:1.5}
-  .pricebands{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px;max-width:430px}
+  .priceslider{margin-top:18px;max-width:520px}.psval{font-family:Georgia,serif;font-size:30px;color:var(--gold);margin-bottom:10px}.priceslider input[type=range]{width:100%;accent-color:var(--gold);height:32px;cursor:pointer}.pslabels{display:flex;justify-content:space-between;font-family:system-ui,sans-serif;font-size:12px;color:#a89d89;margin:2px 0 16px}.pslabels span{flex:1;text-align:center}.pslabels span:first-child{text-align:left}.pslabels span:last-child{text-align:right}.priceslider .pb{max-width:430px}
   .pb{display:block;text-align:center;background:transparent;border:1.5px solid rgba(232,201,111,.45);color:var(--gold);font-family:system-ui,sans-serif;font-size:15px;font-weight:700;padding:13px 8px;border-radius:26px;text-decoration:none;cursor:pointer}
   .pb:hover,.pb.sel{background:var(--gold);color:var(--ink);border-color:var(--gold)}
-  @media(max-width:480px){.pricebands{grid-template-columns:1fr;max-width:none}}
+  @media(max-width:480px){.psval{font-size:24px}}
 
   /* GATE */
   .gate{background:var(--card);border:2px solid var(--gold-dark);border-radius:16px;display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden;max-width:900px;margin:0 auto}
@@ -239,8 +239,6 @@
       <img src="img/byline.jpg" alt="Karl Otto Kristoffersen" onerror="this.style.display='none'">
       <span><b>Karl Otto Kristoffersen</b><span>#8 best selling publisher on DriveThruRPG, 2025</span></span>
     </div>
-    <!-- IMG hero.jpg 2000x900 -->
-    <img src="img/hero.jpg" alt="" style="width:100%;max-width:1000px;margin:52px auto 0;display:block;border-radius:14px 14px 0 0;border:1px solid var(--line);border-bottom:none" onerror="this.style.display='none'">
   </div>
 </div>
 
@@ -438,11 +436,11 @@
       <p>It is not the only thing on the way either. There are tools, templates and a few projects I am not ready to name yet, all built to help you further along the same road. The waiting list hears about every one of them first.</p>
       <p class="pq"><b style="color:var(--gold)">What would this be worth to you?</b><br>
         The Blueprint will not launch as a book alone. It comes as a full package built to support and accelerate your journey to independent bestseller. If it took you from full drawer to published author in a week, what would you pay for it?</p>
-      <div class="pricebands">
-        <a class="pb" href="#signup" data-band="under-20">Under $20</a>
-        <a class="pb" href="#signup" data-band="20-49">$20 to $49</a>
-        <a class="pb" href="#signup" data-band="50-99">$50 to $99</a>
-        <a class="pb" href="#signup" data-band="100-plus">$100 and up</a>
+      <div class="priceslider">
+        <div class="psval" id="psVal">$30 to $300</div>
+        <input type="range" id="psRange" min="0" max="3" step="1" value="1" aria-label="What would you pay">
+        <div class="pslabels"><span>Under $30</span><span>$30 to $300</span><span>$300 to $3,000</span><span>Over $3,000</span></div>
+        <a class="pb" href="#signup" id="psGo" data-band="30-300">Join the waiting list with this answer</a>
       </div>
       <p style="font-family:system-ui,sans-serif;font-size:13px;color:#a89d89;margin-top:14px">Answering puts you on the waiting list. Free to join, you hear first, and you get the launch price. You can join from the form above without answering if you would rather not.</p>
     </div>
@@ -534,17 +532,17 @@
     setTimeout(function(){ document.getElementById('em').focus({preventScroll:true}); }, 600);
   });
 
-  var bands = Array.prototype.slice.call(document.querySelectorAll('[data-band]'));
-  bands.forEach(function(a){
-    a.addEventListener('click', function(){
-      var f = document.getElementById('mcBand');
-      if (f) f.value = a.getAttribute('data-band');
-      var bp = document.getElementById('bpBox');
-      if (bp) bp.checked = true;
-      bands.forEach(function(x){ x.classList.remove('sel'); });
-      a.classList.add('sel');
-      setTimeout(function(){ document.getElementById('em').focus({preventScroll:true}); }, 600);
-    });
+  var psRange = document.getElementById('psRange'), psVal = document.getElementById('psVal'), psGo = document.getElementById('psGo');
+  var psBands = ['under-30','30-300','300-3000','3000-plus'];
+  var psText = ['Under $30','$30 to $300','$300 to $3,000','Over $3,000'];
+  function psUpdate(){ var i = parseInt(psRange.value,10); psVal.textContent = psText[i]; psGo.setAttribute('data-band', psBands[i]); }
+  psRange.addEventListener('input', psUpdate); psUpdate();
+  psGo.addEventListener('click', function(){
+    var f = document.getElementById('mcBand');
+    if (f) f.value = psGo.getAttribute('data-band');
+    var bp = document.getElementById('bpBox');
+    if (bp) bp.checked = true;
+    setTimeout(function(){ document.getElementById('em').focus({preventScroll:true}); }, 600);
   });
 
   document.getElementById('gateForm').addEventListener('submit', function(e){
