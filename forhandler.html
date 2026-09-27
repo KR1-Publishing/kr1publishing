@@ -237,6 +237,14 @@
   .stockists .names{font-size:16.5px;color:var(--ink);line-height:1.75}
   .stockists .names b{white-space:nowrap}
   .stockists .inst{margin-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
+  .stocklist{margin-top:14px;text-align:left;max-width:640px;margin-left:auto;margin-right:auto}
+  .stocklist summary{cursor:pointer;font-family:system-ui,sans-serif;font-size:13px;color:var(--gold-dark);font-weight:700;text-align:center;list-style:none}
+  .stocklist summary::-webkit-details-marker{display:none}
+  table.stock{width:100%;border-collapse:collapse;margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-family:system-ui,sans-serif}
+  table.stock th{font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:10px 13px;background:var(--slot);border-bottom:1px solid var(--line)}
+  table.stock td{padding:10px 13px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink)}
+  table.stock tr:last-child td{border-bottom:none}
+  @media(max-width:640px){table.stock{display:block;overflow-x:auto;white-space:nowrap}}
   .logobar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:720px;margin:10px auto 0;justify-items:stretch}
   .logobar span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;align-items:center;justify-content:center;height:64px}
   .logobar img{max-height:40px;max-width:150px;width:auto;height:auto;display:block}
@@ -335,7 +343,7 @@
 </head>
 <body><div class="langbar"><div class="in"><span>Norsk</span><a href="/vendor">English</a></div></div><nav><div class="in">
   <a class="logo" href="/">KR1 PUBLISHING</a>
-  <ul><li><a href="#marginer">Marginer</a></li><li><a href="#katalog">Katalogen</a></li><li><a href="/solvhjerte">Sølvhjerte</a></li><li><a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen" target="_blank" rel="noopener">Bøkene</a></li></ul>
+  <ul><li><a href="#marginer">Marginer</a></li><li><a href="#katalog">Katalogen</a></li><li><a href="/ressurser">Forhandlerpakke</a></li><li><a href="/solvhjerte">Sølvhjerte</a></li><li><a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen" target="_blank" rel="noopener">Bøkene</a></li></ul>
   <a class="btn sm" href="#pakken">Få forhandlerpakken</a>
 </div></nav>
 <div class="hero b2b"><div class="in">
@@ -349,7 +357,7 @@
 </div></div>
 
 <div class="proofbar"><div class="in">
-  <div><b>11 000+</b><span>bøker solgt</span></div>
+  <div><b>15 000+</b><span>bøker solgt</span></div>
   <div><b>#8</b><span>DTRPG-utgiver 2025</span></div>
   <div><b>4,73</b><span>snitt av 74 anmeldelser</span></div>
   <div><b>55 %</b><span>margin ved 500+</span></div>
@@ -357,8 +365,24 @@
 
 <div class="stockists"><div class="in">
   <div class="lbl">Føres i dag av</div>
-  <div class="logobar"><span><img src="img/logos/dtrpg.png" alt="DriveThruRPG" loading="lazy"></span><span><img src="img/logos/outland.png" alt="Outland" loading="lazy"></span><span><img src="img/logos/norli.png" alt="Norli" loading="lazy"></span><span><img src="img/logos/manaheim.png" alt="Manaheim" loading="lazy"></span><span><img src="img/logos/amazon.png" alt="Amazon" loading="lazy"></span><span><img src="img/logos/alphaspel.png" alt="Alphaspel" loading="lazy"></span><span><img src="img/logos/sf-bokhandeln.png" alt="Science Fiction Bokhandeln" loading="lazy"></span><span><img src="img/logos/noble-knight.png" alt="Noble Knight Games" loading="lazy"></span></div>
+  <div class="logobar"><span><img src="img/logos/dtrpg.png" alt="DriveThruRPG" loading="lazy"></span><span><img src="img/logos/outland.png" alt="Outland" loading="lazy"></span><span><img src="img/logos/norli.png" alt="Norli" loading="lazy"></span><span><img src="img/logos/manaheim.png" alt="Manaheim" loading="lazy"></span><span><img src="img/logos/amazon.png" alt="Amazon" loading="lazy"></span><span><img src="img/logos/alphaspel.png" alt="Alphaspel" loading="lazy"></span><span><img src="img/logos/sf-bokhandeln.png" alt="Science Fiction Bokhandeln" loading="lazy"></span><span><img src="img/logos/noble-knight.png" alt="Noble Knight Games" loading="lazy"></span><span><img src="img/logos/faraos-cigarer.png" alt="Faraos Cigarer" loading="lazy"></span><span><img src="img/logos/imago-tribe.png" alt="imago tribe" loading="lazy"></span><span><img src="img/logos/hihopia.png" alt="Hihopia" loading="lazy"></span><span><img src="img/logos/tesoros-de-la-marca.png" alt="Tesoros de la Marca" loading="lazy"></span></div>
   <div class="inst">Institusjonelt: Norsk Bergverksmuseum &middot; ungdomsskolene i Kongsberg &middot; West Marches Guidebook: 4,9 av 5 på Amazon</div>
+  <details class="stocklist">
+    <summary>Se hele listen, land og rolle &rsaquo;</summary>
+    <table class="stock">
+      <tr><th>Butikk</th><th>Land</th><th>Rolle</th></tr>
+      <tr><td>Faraos Cigarer</td><td>Danmark</td><td>Eksklusiv partner, leverer til danske forhandlere</td></tr>
+      <tr><td>Outland</td><td>Norge</td><td>Kjede, rollespillavdeling</td></tr>
+      <tr><td>imago tribe</td><td>Tsjekkia</td><td>Partner for det tsjekkiske markedet</td></tr>
+      <tr><td>Alphaspel</td><td>Sverige</td><td>Stockholm</td></tr>
+      <tr><td>Science Fiction Bokhandeln</td><td>Sverige</td><td>Fire butikker</td></tr>
+      <tr><td>Hihopia</td><td>Sverige</td><td>Str&ouml;mstad</td></tr>
+      <tr><td>Tesoros de la Marca</td><td>Spania</td><td>F&oslash;rste spanske forhandler</td></tr>
+      <tr><td>Norli Kongsberg &middot; Manaheim &middot; Norsk Bergverksmuseum</td><td>Norge</td><td>Uavhengig og institusjonelt</td></tr>
+      <tr><td>Noble Knight Games</td><td>USA</td><td>Nett</td></tr>
+    </table>
+    <p class="fine" style="margin-top:10px">Den f&oslash;rste butikken i et nytt land kan bli v&aring;r eksklusive partner der. Forhandlere som tar kontakt fra det landet henvises dit.</p>
+  </details>
 </div></div>
 
 <section class="band" style="padding:54px 0"><div class="in narrow">
@@ -382,7 +406,7 @@
   <div class="kicker">Katalogen, klar til bestilling nå</div>
   <h2>Velg antall, send bestillingen</h2>
   <p class="lead">Tolv titler i print, elleve av dem til én pris. Veiledende utsalgspris 199 kr på samtlige titler. Trappen regnes av totalt antall bøker på tvers av alle titler. Bestillingen går som e-post, og du får ordrebekreftelse og faktura innen 48 timer.</p>
-  <div class="orow"><img src="img/covers/wm-guidebook.jpg" alt="West Marches Campaign Guidebook" loading="lazy"><div><h3>West Marches Campaign Guidebook</h3><p>Grunnboken om åpent bord og West Marches-stilen. Seriens flaggskip.</p><span class="bdg">Mithral · 3 600+ · 4,9 på Amazon</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Campaign Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Campaign Guidebook"></div><div class="orow"><img src="img/covers/wm-gm-workbook.jpg" alt="West Marches GM Workbook" loading="lazy"><div><h3>West Marches GM Workbook</h3><p>Arbeidsboken for spillederen: verden, fraksjoner, rykter og oppdrag, økt for økt.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches GM Workbook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches GM Workbook"></div><div class="orow"><img src="img/covers/wm-party-ledger.jpg" alt="West Marches Party Ledger" loading="lazy"><div><h3>West Marches Party Ledger</h3><p>Gruppens felles krønike: roster, leiefolk, oppdrag, allierte, rivaler og gravlund.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Party Ledger" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Party Ledger"></div><div class="orow"><img src="img/covers/wm-player-journal.jpg" alt="West Marches Player Journal" loading="lazy"><div><h3>West Marches Player Journal</h3><p>Spillerens egen logg: mål, utstyr, bånd, reiser og ettermæle.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Player Journal" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Player Journal"></div><div class="orow"><img src="img/covers/hexcrawl-campaign.jpg" alt="Hexcrawl: Campaign Style Guidebook" loading="lazy"><div><h3>Hexcrawl: Campaign Style Guidebook</h3><p>Komplett rammeverk for villmarkskampanjer der selve reisen er eventyret.</p><span class="bdg">Platinum · 24 anmeldelser</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Campaign Style Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Campaign Style Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-encounter.jpg" alt="Hexcrawl: Encounter Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Encounter Design Guidebook</h3><p>Møter som avslører verden, tvinger frem valg og henger sammen på tvers av økter.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Encounter Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Encounter Design Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-worldbuilding.jpg" alt="Hexcrawl: Worldbuilding Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Worldbuilding Design Guidebook</h3><p>Tredje bok i serien: regioner, bosetninger og fraksjoner som henger sammen.</p><span class="bdg">Gold · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Worldbuilding Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Worldbuilding Design Guidebook"></div><div class="orow"><img src="img/covers/sandbox-city.jpg" alt="Sandbox Playstyle Toolkit: The City" loading="lazy"><div><h3>Sandbox Playstyle Toolkit: The City</h3><p>Byen som generator: vertshus, laug, templer og 120 bymøter.</p><span class="bdg">Electrum · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Sandbox Playstyle Toolkit: The City" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Sandbox Playstyle Toolkit: The City"></div><div class="orow"><img src="img/covers/grunder.jpg" alt="Gründer: Business Adventure Game" loading="lazy"><div><h3>Gründer: Business Adventure Game</h3><p>OSR-eventyrspill for 3 til 6 spillere på Into the Odd-regler. A5 i farger.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Gründer: Business Adventure Game" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Gründer: Business Adventure Game"></div><div class="orow"><img src="img/covers/roll-for-innovation.jpg" alt="Roll for Innovation" loading="lazy"><div><h3>Roll for Innovation</h3><p>Reflekterende essay om AI og kreativitet i rollespill.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Roll for Innovation" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Roll for Innovation"></div><div class="orow"><img src="img/covers/10k-books.jpg" alt="I Just Sold 10K Books" loading="lazy"><div><h3>I Just Sold 10K Books</h3><p>Metoden bak salgstallene, for skaperne blant kundene dine.</p><span class="bdg">Copper</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="I Just Sold 10K Books" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: I Just Sold 10K Books"></div>
+  <div class="orow"><img src="img/covers/wm-guidebook.jpg" alt="West Marches Campaign Guidebook" loading="lazy"><div><h3>West Marches Campaign Guidebook</h3><p>Grunnboken om åpent bord og West Marches-stilen. Seriens flaggskip.</p><span class="bdg">Mithral · 4 450+ solgt · 4,9 på Amazon</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Campaign Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Campaign Guidebook"></div><div class="orow"><img src="img/covers/wm-gm-workbook.jpg" alt="West Marches GM Workbook" loading="lazy"><div><h3>West Marches GM Workbook</h3><p>Arbeidsboken for spillederen: verden, fraksjoner, rykter og oppdrag, økt for økt.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches GM Workbook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches GM Workbook"></div><div class="orow"><img src="img/covers/wm-party-ledger.jpg" alt="West Marches Party Ledger" loading="lazy"><div><h3>West Marches Party Ledger</h3><p>Gruppens felles krønike: roster, leiefolk, oppdrag, allierte, rivaler og gravlund.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Party Ledger" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Party Ledger"></div><div class="orow"><img src="img/covers/wm-player-journal.jpg" alt="West Marches Player Journal" loading="lazy"><div><h3>West Marches Player Journal</h3><p>Spillerens egen logg: mål, utstyr, bånd, reiser og ettermæle.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="West Marches Player Journal" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: West Marches Player Journal"></div><div class="orow"><img src="img/covers/hexcrawl-campaign.jpg" alt="Hexcrawl: Campaign Style Guidebook" loading="lazy"><div><h3>Hexcrawl: Campaign Style Guidebook</h3><p>Komplett rammeverk for villmarkskampanjer der selve reisen er eventyret.</p><span class="bdg">Platinum · 24 anmeldelser</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Campaign Style Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Campaign Style Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-encounter.jpg" alt="Hexcrawl: Encounter Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Encounter Design Guidebook</h3><p>Møter som avslører verden, tvinger frem valg og henger sammen på tvers av økter.</p><span class="bdg">Platinum</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Encounter Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Encounter Design Guidebook"></div><div class="orow"><img src="img/covers/hexcrawl-worldbuilding.jpg" alt="Hexcrawl: Worldbuilding Design Guidebook" loading="lazy"><div><h3>Hexcrawl: Worldbuilding Design Guidebook</h3><p>Tredje bok i serien: regioner, bosetninger og fraksjoner som henger sammen.</p><span class="bdg">Gold · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Hexcrawl: Worldbuilding Design Guidebook" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Hexcrawl: Worldbuilding Design Guidebook"></div><div class="orow"><img src="img/covers/sandbox-city.jpg" alt="Sandbox Playstyle Toolkit: The City" loading="lazy"><div><h3>Sandbox Playstyle Toolkit: The City</h3><p>Byen som generator: vertshus, laug, templer og 120 bymøter.</p><span class="bdg">Electrum · i print fra slutten av august</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Sandbox Playstyle Toolkit: The City" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Sandbox Playstyle Toolkit: The City"></div><div class="orow"><img src="img/covers/grunder.jpg" alt="Gründer: Business Adventure Game" loading="lazy"><div><h3>Gründer: Business Adventure Game</h3><p>OSR-eventyrspill for 3 til 6 spillere på Into the Odd-regler. A5 i farger.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Gründer: Business Adventure Game" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Gründer: Business Adventure Game"></div><div class="orow"><img src="img/covers/roll-for-innovation.jpg" alt="Roll for Innovation" loading="lazy"><div><h3>Roll for Innovation</h3><p>Reflekterende essay om AI og kreativitet i rollespill.</p><span class="bdg">Silver</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="Roll for Innovation" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: Roll for Innovation"></div><div class="orow"><img src="img/covers/10k-books.jpg" alt="I Just Sold 10K Books" loading="lazy"><div><h3>I Just Sold 10K Books</h3><p>Metoden bak salgstallene, for skaperne blant kundene dine.</p><span class="bdg">Copper</span></div><input type="number" min="0" step="1" value="0" inputmode="numeric" data-t="I Just Sold 10K Books" data-p="[115,110,105,100,95,90]" class="oq" aria-label="Antall: I Just Sold 10K Books"></div>
 <p class="medalnote">Medaljene er DriveThruRPGs offisielle bestselgermerker, målt mot alle titler på markedsplassen. Copper = topp 37 %, Silver = topp 25 %, Electrum = topp 12 %, Gold = topp 6 %, Platinum = topp 2,3 %, Mithral = topp 0,6 %.</p>
   <div class="osum">
     <div class="line"><span>Antall bøker</span><b id="on">0</b></div>
@@ -391,13 +415,20 @@
 <div class="line tot"><span>Sum, eks. mva. og frakt</span><b id="ot">0 kr</b></div>
         <div class="line tot" style="border-top:none;padding-top:2px"><span>Din fortjeneste om alt selges</span><b id="opf">-</b></div>
     <div class="btns"><a class="btn" id="ob" href="#">Send bestillingen</a><button class="btn ghost2" type="button" id="oc" data-t="Kopier bestillingen" data-done="Kopiert">Kopier bestillingen</button></div>
-    <div class="note">Knappen åpner e-posten din med ordren ferdig utfylt. Legg til butikknavn og leveringsadresse, og send. Ingenting er bindende før du har fått ordrebekreftelse. Priser per august 2026. Vil du heller ha katalogen med deg: <a href="/files/kr1-forhandlerpakke.pdf">last ned forhandlerpakken som PDF</a>.</div>
+    <div class="note">Knappen åpner e-posten din med ordren ferdig utfylt. Legg til butikknavn og leveringsadresse, og send. Ingenting er bindende før du har fått ordrebekreftelse. Priser per august 2026. Vil du heller ha katalogen med deg: <a href="/files/kr1-forhandlerpakke.pdf">last ned forhandlerpakken som PDF</a>. Fører du oss allerede og trenger bilder, produktkoder og tekst til egen nettside? Hent <a href="/ressurser">forhandlerpakken</a> (engelsk).</div>
   </div>
   <div class="olist2">
     <h2 style="font-size:24px">Restopplag og spesialpriser</h2>
     <p>Prises for seg, alt står i forhandlerpakken. Hele den digitale katalogen ligger <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen" target="_blank" rel="noopener">på DriveThruRPG</a>.</p>
     <div class="orow"><img src="img/covers/solvhjerte.jpg" alt="Sølvhjerte: Arven fra dypet" loading="lazy"><div><h3>Sølvhjerte: lær historie ved å leve den</h3><p>Rollespillet fra sølvverkets Kongsberg. Norsk tekst, restopplag. Veiledende 449 kr, institusjonspriser og klassesett på forespørsel.</p></div></div>
   </div>
+</div></section>
+
+<section style="padding:54px 0" id="forhandlerpakke"><div class="in narrow" style="text-align:center">
+  <div class="kicker">Fører du oss allerede</div>
+  <h2>Forhandlerpakken</h2>
+  <p class="lead" style="max-width:640px;margin:0 auto">Alt du trenger til egen nettbutikk og til de ansatte, samlet på ett sted: omslag, mockups, KR1-logoen, strekkodene som står på bøkene, tekst til hver tittel og en PDF-lesekopi av hver bok. Passordbeskyttet, spør oss om passordet.</p>
+  <div style="margin-top:22px"><a class="btn" href="/ressurser">Åpne forhandlerpakken</a></div>
 </div></section>
 
 <section class="band" style="padding:44px 0"><div class="in narrow" style="text-align:center">
@@ -409,16 +440,15 @@
 <section class="band" style="padding:54px 0"><div class="in narrow">
   <div class="kicker">Hvorfor de selger</div>
   <h2>Én bok selger den neste</h2>
-  <p class="lead">West Marches Guidebook holder Mithral-medalje på DriveThruRPG, verdens største markedsplass for rollespill, med over 3 600 solgte og 4,9 av 5 i snitt på Amazon. De tre andre bøkene i serien holder Platinum.</p>
+  <p class="lead">West Marches Guidebook holder Mithral-medalje på DriveThruRPG, verdens største markedsplass for rollespill, med over 4 450 solgte og 4,9 av 5 i snitt på Amazon. De tre andre bøkene i serien holder Platinum.</p>
   <p>Kunden som kjøper én bok kommer tilbake for resten av rekken. Det er derfor butikkene som fører dem bestiller påfyll, og det er grunnen til at en serie er verdt hylleplass på en måte en enkeltbok aldri blir.</p>
 </div></section>
 
 <section style="padding:54px 0"><div class="in narrow">
-  <div class="kicker">Og fire lanseringer før jul</div>
+  <div class="kicker">En voksende katalog</div>
   <h2>En hylle som fornyer seg selv</h2>
-  <p class="lead">Er du inne før september, står du med hele rekken når julehandelen begynner.</p>
-  <div class="pipeline"><div class="pl"><div class="m">September</div><div class="t">Hexcrawl: Thornwall Frontier<span>Fjerde bok i serien, der bok 1 og 2 holder Platinum</span></div></div><div class="pl"><div class="m">Oktober</div><div class="t">Sandbox Playstyle Toolkit: The Wilderness<span>Bok to i serien. Bok én nådde Electrum</span></div></div><div class="pl"><div class="m">November</div><div class="t">Hexcrawl: Players Field Guide og GM Workbook<span>Dobbeltlansering rett før Black Friday</span></div></div><div class="pl"><div class="m">Desember</div><div class="t">Sandbox Playstyle Toolkit: The Dungeon<span>Serien komplett</span></div></div></div>
-  <p style="margin-top:20px">Og dette er begynnelsen, ikke unntaket. KR1 bygger katalogen sammen med etablerte designere og partnerforlag, og frem mot 2030 vil den vokse betydelig: flere serier, flere samarbeid og flere titler i print hvert eneste år.</p>
+  <p class="lead">Flere nye titler er i produksjon for høsten og vinteren, både i seriene du allerede fører og utenfor. Butikker på listen vår får beskjed om hver lansering først, så en etterbestilling kan ta med den nye boken fra første dag.</p>
+    <p style="margin-top:20px">Og dette er begynnelsen, ikke unntaket. KR1 bygger katalogen sammen med etablerte designere og partnerforlag, og frem mot 2030 vil den vokse betydelig: flere serier, flere samarbeid og flere titler i print hvert eneste år.</p>
 </div></section>
 
 
@@ -479,6 +509,7 @@ rows.forEach(function(i){i.addEventListener('input',upd)});upd();
 </script><footer><div class="in">
     <a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen" target="_blank" rel="noopener">Bøkene på DriveThruRPG</a>
     <a href="https://www.karlottokristoffersen.com" target="_blank" rel="noopener">Historien, mens den skjer</a>
+    <a href="/ressurser">Forhandlerpakke</a>
     <a href="/solvhjerte">Sølvhjerte for skolen</a>
     <a href="/vendor">In English</a>
     <p style="margin-top:14px;opacity:.7">contact@kr1publishing.com &middot; Kongsberg, Norge &middot; Org.nr 928 261 468 &middot; &copy; 2026 KR1 Publishing</p>
