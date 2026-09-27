@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Retailer pack | KR1 Publishing</title>
+<title>Retailer assets | KR1 Publishing</title>
 <meta name="description" content="Product codes, cover art, mockups, copy text and reading copies for every KR1 Publishing title. Updated 27 September 2026.">
 <link rel="canonical" href="https://www.kr1publishing.com/assets">
-<meta property="og:title" content="Retailer pack | KR1 Publishing">
+<meta property="og:title" content="Retailer assets | KR1 Publishing">
 <meta property="og:description" content="Product codes, cover art, mockups, copy text and reading copies for every KR1 Publishing title.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kr1publishing.com/assets">
@@ -55,14 +55,15 @@
   .aboutlogo{width:140px;height:auto;display:block}
   @media(max-width:640px){.aboutbox{grid-template-columns:1fr;text-align:center}.aboutlogo{width:100px;margin:0 auto}}
   @media(max-width:700px){.statrow{grid-template-columns:repeat(2,1fr)}}
-  .stat{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:16px 10px}
-  .stat b{display:block;font-size:22px;color:var(--gold-dark);font-family:Georgia,serif}
+  .stat{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:16px 10px;display:flex;flex-direction:column;justify-content:center;min-height:96px}
+  .stat b{display:block;font-size:22px;line-height:1.15;color:var(--gold-dark);font-family:Georgia,serif;margin-bottom:6px}
   .stat span{font-family:system-ui,sans-serif;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
   .noteboxes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
   @media(max-width:820px){.noteboxes{grid-template-columns:1fr}}
-  .nb{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .nb h3{font-family:system-ui,sans-serif;font-size:15px;margin-bottom:6px}
-  .nb p{font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
+  .nb{background:var(--dark);border:1px solid var(--dark);border-top:3px solid var(--gold);border-radius:12px;padding:20px 22px;color:#e9e2d2}
+  .nb h3{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .nb p{font-family:system-ui,sans-serif;font-size:13.5px;color:#d9d1bf;line-height:1.55}
+  .nb b{color:var(--gold)}
 
   .seriesgroup{margin-top:36px}
   .seriesgroup h3{font-family:system-ui,sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:14px;border-bottom:2px solid var(--gold);padding-bottom:8px;display:inline-block}
@@ -81,6 +82,10 @@
   .pill.badge{background:#faf1d8;color:#8a6a28;border-color:#e0cd96}
   @media(max-width:520px){.pcard{grid-template-columns:76px 1fr}.pcard img{width:76px;height:112px}}
   .pcard .btn.tiny{margin-right:6px;margin-bottom:6px}
+  .fulltxt{margin:8px 0 10px}
+  .fulltxt summary{cursor:pointer;font-family:system-ui,sans-serif;font-size:12px;color:var(--gold-dark);font-weight:700;list-style:none}
+  .fulltxt summary::-webkit-details-marker{display:none}
+  .fulltxt pre{white-space:pre-wrap;font-family:system-ui,sans-serif;font-size:12.5px;line-height:1.5;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:8px}
 
   table.disc{width:100%;border-collapse:collapse;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-family:system-ui,sans-serif}
   table.disc th{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold-dark);text-align:left;padding:12px 14px;background:var(--slot);border-bottom:1px solid var(--line)}
@@ -115,26 +120,23 @@
 <nav><div class="in">
   <a class="logo" href="/">KR1 PUBLISHING</a>
   <ul><li><a href="/vendor">Vendor terms</a></li><li><a href="#catalogue">Catalogue</a></li><li><a href="/silverheart">Silverheart</a></li></ul>
-  <button type="button" class="btn sm unlockbtn" data-ref="assets_nav">Download the pack</button>
+  <button type="button" class="btn sm unlockbtn" data-ref="assets_nav">Download the assets</button>
 </div></nav>
 
 <div class="hero" id="top"><div class="in narrow">
   <div class="kicker">KR1 Publishing &middot; Kongsberg, Norway</div>
-  <h1>Retailer Pack</h1>
+  <h1>Retailer Assets</h1>
   <p>Everything you need to list and sell our books: product codes, cover art, mockups, copy text, the KR1 logo and a PDF reading copy of every book for your staff.</p>
   <div class="cta-row">
-    <button type="button" class="btn unlockbtn" data-ref="assets_hero">Download the retailer pack (ZIP, 12 MB)</button>
-    <button type="button" class="btn ghost unlockbtn" data-ref="books_hero_1" data-href="/files/kr1-reading-copies-1.zip">Reading copies 1: West Marches Guidebook and GM Workbook (ZIP, 16 MB)</button>
-    <button type="button" class="btn ghost unlockbtn" data-ref="books_hero_2" data-href="/files/kr1-reading-copies-2.zip">Reading copies 2: Party Ledger and Player Journal (ZIP, 12 MB)</button>
-    <button type="button" class="btn ghost unlockbtn" data-ref="books_hero_3" data-href="/files/kr1-reading-copies-3.zip">Reading copies 3: Hexcrawl, Sandbox, Gr&uuml;nder, Roll for Innovation, 10K Books (ZIP, 23 MB)</button>
+    <button type="button" class="btn unlockbtn" data-ref="assets_hero">Download the retailer assets (ZIP, 12 MB)</button>
   </div>
-  <p class="microtrust">Covers, mockups, logo, product codes and copy for 11 titles in print &middot; one CSV &middot; a PDF reading copy of every book &middot; no email required</p>
+  <p class="microtrust">Covers, mockups, logo, product codes and copy for 11 titles in print &middot; one CSV &middot; no email required. PDF reading copies for your staff are on each title card below.</p>
   <p class="updated">Updated 27 September 2026 &middot; contact@kr1publishing.com &middot; kr1publishing.com</p>
   <div class="statrow">
     <div class="stat"><b>11</b><span>titles in print</span></div>
-    <div class="stat"><b>2&ndash;4 weeks</b><span>order to delivery</span></div>
-    <div class="stat"><b>Printed in the US or Europe</b><span>suited for your market</span></div>
-    <div class="stat"><b>Invoice on arrival</b><span>you pay after the books land</span></div>
+    <div class="stat"><b>2&ndash;4 weeks</b><span>from order to delivery</span></div>
+    <div class="stat"><b>US or Europe</b><span>printed for your market</span></div>
+    <div class="stat"><b>Pay on arrival</b><span>invoice after delivery</span></div>
   </div>
 </div></div>
 
@@ -175,7 +177,46 @@
       <p class="desc">The book that started the series. It sets up a player-driven campaign where different groups explore the same wilderness on different nights, and shows how to keep one world consistent across them. System-free, so it works with whatever the buyer already plays.</p>
       <div class="pills"><span class="pill badge">Best seller, 4,450+ sold</span></div>
       <div class="meta"><span>Barcode <b>2370022198619</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 4,450+</span></div>
-      <button class="btn tiny copytxt" data-copy="West Marches Campaign Playstyle Guidebook. Run one open campaign for more players than fit at your table. The book that started the series. It sets up a player-driven campaign where different groups explore the same wilderness on different nights, and shows how to keep one world consistent across them. System-free, so it works with whatever the buyer already plays.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can you run one open campaign for more players than fit at your table?
+
+The West Marches Campaign Playstyle Guidebook is a system-agnostic GM guide to the West Marches style of play: a player-driven campaign where different groups explore the same wilderness on different nights, and the world stays consistent across all of them.
+
+Instead of one fixed group and a plot you steer, this book shows you how to set up a campaign that thrives on exploration and player choice, from the first session to a shared world with years of history.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the method adapts to your system.
+
+Inside you&#x27;ll find:
+- The six core principles of West Marches play
+- How to prepare one session at a time, for whoever shows up
+- A safe home base, a dangerous wilderness and how the two connect
+- Running the game so players set the goals and the pace
+- Sharing discoveries between groups so the world grows
+- Character-driven storytelling without a script
+
+Perfect for GMs who want more players than one table can hold, a world that outlives any single party, and a campaign that runs on curiosity.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can you run one open campaign for more players than fit at your table?
+
+The West Marches Campaign Playstyle Guidebook is a system-agnostic GM guide to the West Marches style of play: a player-driven campaign where different groups explore the same wilderness on different nights, and the world stays consistent across all of them.
+
+Instead of one fixed group and a plot you steer, this book shows you how to set up a campaign that thrives on exploration and player choice, from the first session to a shared world with years of history.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the method adapts to your system.
+
+Inside you&#x27;ll find:
+- The six core principles of West Marches play
+- How to prepare one session at a time, for whoever shows up
+- A safe home base, a dangerous wilderness and how the two connect
+- Running the game so players set the goals and the pace
+- Sharing discoveries between groups so the world grows
+- Character-driven storytelling without a script
+
+Perfect for GMs who want more players than one table can hold, a world that outlives any single party, and a campaign that runs on curiosity.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_wm-guidebook" data-href="/files/books/wm-guidebook.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_wm-guidebook" data-href="/img/mockups/wm-guidebook.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -185,9 +226,48 @@
       <div><h4>West Marches Game Master Workbook</h4>
       <div class="tag">The paperwork of an open campaign, already laid out.</div>
       <p class="desc">Worksheets a GM fills in while running: region sheets, session logs, rumour tracking and downtime. Sold as a companion to the Guidebook, and most buyers of one take the other.</p>
-      <div class="pills"><span class="pill badge">The add-on most buyers take</span></div>
+      <div class="pills"><span class="pill badge">Keep track of every faction, rumour and quest in one book</span></div>
       <div class="meta"><span>Barcode <b>2370022613440</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 1,450+</span></div>
-      <button class="btn tiny copytxt" data-copy="West Marches Game Master Workbook. The paperwork of an open campaign, already laid out. Worksheets a GM fills in while running: region sheets, session logs, rumour tracking and downtime. Sold as a companion to the Guidebook, and most buyers of one take the other.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can you keep one world consistent across many groups and many nights?
+
+The West Marches Game Master Workbook is the practical companion to the Campaign Playstyle Guidebook: structured pages for everything a GM tracks while running an open campaign.
+
+Instead of loose notes, this book gives you one place for the world, its factions, NPCs, events, rumours and quests, so the campaign stays consistent session after session and every group meets the same world.
+
+Works with any fantasy RPG, alongside the Party Ledger and the Player Journal.
+
+Inside you&#x27;ll find:
+- Region sheets for mapping the wilderness zone by zone
+- Faction and NPC pages with goals, standing and history
+- Session logs that record what each group changed
+- Rumour and quest tracking across groups
+- Downtime and home base pages
+- Reference pages for the exploration procedures
+
+Perfect for GMs who run West Marches campaigns and want the bookkeeping to take care of itself.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can you keep one world consistent across many groups and many nights?
+
+The West Marches Game Master Workbook is the practical companion to the Campaign Playstyle Guidebook: structured pages for everything a GM tracks while running an open campaign.
+
+Instead of loose notes, this book gives you one place for the world, its factions, NPCs, events, rumours and quests, so the campaign stays consistent session after session and every group meets the same world.
+
+Works with any fantasy RPG, alongside the Party Ledger and the Player Journal.
+
+Inside you&#x27;ll find:
+- Region sheets for mapping the wilderness zone by zone
+- Faction and NPC pages with goals, standing and history
+- Session logs that record what each group changed
+- Rumour and quest tracking across groups
+- Downtime and home base pages
+- Reference pages for the exploration procedures
+
+Perfect for GMs who run West Marches campaigns and want the bookkeeping to take care of itself.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_wm-gm-workbook" data-href="/files/books/wm-gm-workbook.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_wm-gm-workbook" data-href="/img/mockups/wm-gm-workbook.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -197,9 +277,48 @@
       <div><h4>West Marches Party Ledger</h4>
       <div class="tag">Shared records the players keep themselves.</div>
       <p class="desc">The table's own book: expedition records, maps drawn as the players find them, loot and standing debts. It moves the bookkeeping off the GM and onto the group, which is what makes an open campaign survive past a few months.</p>
-      <div class="pills"><span class="pill badge">One per table</span></div>
+      <div class="pills"><span class="pill badge">One per table, graveyard included</span></div>
       <div class="meta"><span>Barcode <b>2370022613471</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 1,300+</span></div>
-      <button class="btn tiny copytxt" data-copy="West Marches Party Ledger. Shared records the players keep themselves. The table's own book: expedition records, maps drawn as the players find them, loot and standing debts. It moves the bookkeeping off the GM and onto the group, which is what makes an open campaign survive past a few months.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Who keeps the history of the company: the GM, or the players themselves?
+
+The West Marches Party Ledger is the group&#x27;s shared record of adventures. The party logs its rules, roster, hirelings, home base, quests, allies, rivals, maps and the fallen in its graveyard.
+
+Instead of the GM carrying every detail, this book moves the shared bookkeeping onto the group. Over time it becomes a living history of the company, not only what you did but who you were together.
+
+Works with any fantasy RPG, alongside the Game Master Workbook and the Player Journal.
+
+Inside you&#x27;ll find:
+- Company charter, rules and roster pages
+- Hirelings, allies and rivals
+- Expedition records and maps drawn as the players find them
+- Quest log, loot and standing debts
+- The graveyard, for those who did not come back
+- Pages that carry over from group to group
+
+Perfect for tables that want one book the players own, and a campaign that survives past a few months.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Who keeps the history of the company: the GM, or the players themselves?
+
+The West Marches Party Ledger is the group&#x27;s shared record of adventures. The party logs its rules, roster, hirelings, home base, quests, allies, rivals, maps and the fallen in its graveyard.
+
+Instead of the GM carrying every detail, this book moves the shared bookkeeping onto the group. Over time it becomes a living history of the company, not only what you did but who you were together.
+
+Works with any fantasy RPG, alongside the Game Master Workbook and the Player Journal.
+
+Inside you&#x27;ll find:
+- Company charter, rules and roster pages
+- Hirelings, allies and rivals
+- Expedition records and maps drawn as the players find them
+- Quest log, loot and standing debts
+- The graveyard, for those who did not come back
+- Pages that carry over from group to group
+
+Perfect for tables that want one book the players own, and a campaign that survives past a few months.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_wm-party-ledger" data-href="/files/books/wm-party-ledger.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_wm-party-ledger" data-href="/img/mockups/wm-party-ledger.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -209,9 +328,48 @@
       <div><h4>West Marches Player Journal</h4>
       <div class="tag">One book per player, carried between sessions.</div>
       <p class="desc">A personal journal for a single character in an open campaign: what they saw, what they owe, what they mean to do next time they head out. The impulse buy of the series, and the one shops reorder in multiples.</p>
-      <div class="pills"><span class="pill badge">One per player</span></div>
+      <div class="pills"><span class="pill badge">One per player, record your story as you go</span></div>
       <div class="meta"><span>Barcode <b>2370022613396</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 1,300+</span></div>
-      <button class="btn tiny copytxt" data-copy="West Marches Player Journal. One book per player, carried between sessions. A personal journal for a single character in an open campaign: what they saw, what they owe, what they mean to do next time they head out. The impulse buy of the series, and the one shops reorder in multiples.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>What did your character see out there, and what do they mean to do about it?
+
+The West Marches Player Journal is a personal record of play for one character in an open campaign: identity, goals, gear, bonds, quests, rumours, grudges, travels and legacy.
+
+Instead of paperwork, this book is a chronicle of one character&#x27;s story, carried between sessions and filled in by the player.
+
+Works with any fantasy RPG, alongside the Campaign Playstyle Guidebook, the Game Master Workbook and the Party Ledger.
+
+Inside you&#x27;ll find:
+- Character identity, background and goals
+- Gear, wealth and what is owed
+- Bonds, grudges and rumours heard
+- Travel log, expedition by expedition
+- Quest pages and discoveries
+- Legacy pages for what the character leaves behind
+
+Perfect for players who want their own book at the table, and for shops that stock one per player.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="What did your character see out there, and what do they mean to do about it?
+
+The West Marches Player Journal is a personal record of play for one character in an open campaign: identity, goals, gear, bonds, quests, rumours, grudges, travels and legacy.
+
+Instead of paperwork, this book is a chronicle of one character&#x27;s story, carried between sessions and filled in by the player.
+
+Works with any fantasy RPG, alongside the Campaign Playstyle Guidebook, the Game Master Workbook and the Party Ledger.
+
+Inside you&#x27;ll find:
+- Character identity, background and goals
+- Gear, wealth and what is owed
+- Bonds, grudges and rumours heard
+- Travel log, expedition by expedition
+- Quest pages and discoveries
+- Legacy pages for what the character leaves behind
+
+Perfect for players who want their own book at the table, and for shops that stock one per player.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_wm-player-journal" data-href="/files/books/wm-player-journal.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_wm-player-journal" data-href="/img/mockups/wm-player-journal.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -225,9 +383,54 @@
       <div><h4>Hexcrawl: Campaign Style Guidebook</h4>
       <div class="tag">Travel that is the adventure, not the gap between adventures.</div>
       <p class="desc">Book one of the Hexcrawl series. How to build a map worth crossing, what a day of travel costs a party, and how to keep the journey interesting at the table. Our fastest-selling series.</p>
-      <div class="pills"><span class="pill badge">Fastest selling series</span></div>
+      <div class="pills"><span class="pill badge">The essential hexcrawling guidebook</span></div>
       <div class="meta"><span>Barcode <b>2370022631000</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 2,850+</span></div>
-      <button class="btn tiny copytxt" data-copy="Hexcrawl: Campaign Style Guidebook. Travel that is the adventure, not the gap between adventures. Book one of the Hexcrawl series. How to build a map worth crossing, what a day of travel costs a party, and how to keep the journey interesting at the table. Our fastest-selling series.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can your players survive the journey and discover what lies beyond the map?
+
+The Hexcrawl Campaign Style Guidebook is a system-agnostic GM guide for running long-form wilderness exploration campaigns, where the hex map, the exploration turn, encounter tables and player decisions drive the story forward.
+
+Instead of skipping travel, this book turns the journey itself into the adventure through clear procedures, meaningful risk and a low-friction session structure.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the hexcrawl method adapts to your system while keeping the same exploration framework.
+
+Inside you&#x27;ll find:
+- A complete hexcrawl campaign framework and six core principles
+- Step-by-step exploration turn procedures for every session
+- Tools for building hex maps, keyed locations and encounter tables
+- Practical checklists, player handouts and GM workflow guidance
+- A worked example region ready to run at the table
+- A sandbox starter region for immediate play
+
+Perfect for GMs who want the journey to matter, wilderness to feel dangerous, and exploration to become the core gameplay loop.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can your players survive the journey and discover what lies beyond the map?
+
+The Hexcrawl Campaign Style Guidebook is a system-agnostic GM guide for running long-form wilderness exploration campaigns, where the hex map, the exploration turn, encounter tables and player decisions drive the story forward.
+
+Instead of skipping travel, this book turns the journey itself into the adventure through clear procedures, meaningful risk and a low-friction session structure.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the hexcrawl method adapts to your system while keeping the same exploration framework.
+
+Inside you&#x27;ll find:
+- A complete hexcrawl campaign framework and six core principles
+- Step-by-step exploration turn procedures for every session
+- Tools for building hex maps, keyed locations and encounter tables
+- Practical checklists, player handouts and GM workflow guidance
+- A worked example region ready to run at the table
+- A sandbox starter region for immediate play
+
+Perfect for GMs who want the journey to matter, wilderness to feel dangerous, and exploration to become the core gameplay loop.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_hexcrawl-campaign" data-href="/files/books/hexcrawl-campaign.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_hexcrawl-campaign" data-href="/img/mockups/hexcrawl-campaign.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -237,9 +440,54 @@
       <div><h4>Hexcrawl: Encounter Design Guidebook</h4>
       <div class="tag">What the party meets out there, and why it is there.</div>
       <p class="desc">Book two. Encounter tables that carry meaning rather than noise, wandering monsters with a reason to wander, and the pacing that makes a wilderness feel inhabited. Reads on its own, sells best beside book one.</p>
-      <div class="pills"><span class="pill badge">Sells beside book one</span></div>
+      <div class="pills"><span class="pill badge">Stop with boring encounters</span></div>
       <div class="meta"><span>Barcode <b>2370022634209</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 2,200+</span></div>
-      <button class="btn tiny copytxt" data-copy="Hexcrawl: Encounter Design Guidebook. What the party meets out there, and why it is there. Book two. Encounter tables that carry meaning rather than noise, wandering monsters with a reason to wander, and the pacing that makes a wilderness feel inhabited. Reads on its own, sells best beside book one.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can your encounters carry the weight of the world and keep your players making real decisions?
+
+The Hexcrawl Encounter Design Guidebook is a system-agnostic GM guide for building hexcrawl encounters, random encounter tables and wilderness encounters that do more than fill space. They reveal the world, force choices and create consequences across the campaign.
+
+Instead of treating encounters as filler or random combat, this book shows you how to design sandbox encounters that connect, escalate and stay memorable over time.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, these tools adapt to your system while strengthening the core of your hexcrawl: what actually happens at the table.
+
+Inside you&#x27;ll find:
+- The Encounter Trifecta, a simple framework for evaluating every encounter
+- The 60/40 rule for dynamic and varied random encounter tables
+- Techniques for signs, NPCs, hazards and discoveries that drive play
+- The layering method for connecting encounters across sessions and locations
+- Tools for pacing encounters across the exploration day
+- Practical formats and table-ready examples for fast play
+
+Perfect for GMs who want encounters to matter, decisions to feel real, and wilderness play to stay engaging session after session.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can your encounters carry the weight of the world and keep your players making real decisions?
+
+The Hexcrawl Encounter Design Guidebook is a system-agnostic GM guide for building hexcrawl encounters, random encounter tables and wilderness encounters that do more than fill space. They reveal the world, force choices and create consequences across the campaign.
+
+Instead of treating encounters as filler or random combat, this book shows you how to design sandbox encounters that connect, escalate and stay memorable over time.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, these tools adapt to your system while strengthening the core of your hexcrawl: what actually happens at the table.
+
+Inside you&#x27;ll find:
+- The Encounter Trifecta, a simple framework for evaluating every encounter
+- The 60/40 rule for dynamic and varied random encounter tables
+- Techniques for signs, NPCs, hazards and discoveries that drive play
+- The layering method for connecting encounters across sessions and locations
+- Tools for pacing encounters across the exploration day
+- Practical formats and table-ready examples for fast play
+
+Perfect for GMs who want encounters to matter, decisions to feel real, and wilderness play to stay engaging session after session.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_hexcrawl-encounter" data-href="/files/books/hexcrawl-encounter.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_hexcrawl-encounter" data-href="/img/mockups/hexcrawl-encounter.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -249,9 +497,58 @@
       <div><h4>Hexcrawl: Worldbuilding Design Guidebook</h4>
       <div class="tag">A region a table can believe in, built in an evening.</div>
       <p class="desc">Book three. Terrain, settlements, factions and the history that explains why the ruins are where they are. The newest of the three in print, and the one reviewers have covered most this year.</p>
-      <div class="pills"><span class="pill badge">Most reviewed title of 2026</span></div>
+      <div class="pills"><span class="pill badge">A playable region in ninety minutes</span></div>
       <div class="meta"><span>Barcode <b>2370022642143</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 1,550+</span></div>
-      <button class="btn tiny copytxt" data-copy="Hexcrawl: Worldbuilding Design Guidebook. A region a table can believe in, built in an evening. Book three. Terrain, settlements, factions and the history that explains why the ruins are where they are. The newest of the three in print, and the one reviewers have covered most this year.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Does your world explain itself, or does it only make sense in your notes?
+
+The Hexcrawl Worldbuilding Design Guidebook is a system-agnostic GM guide for building hexcrawl regions, hex maps, settlements and factions that connect to each other. Every hex points to at least one other: what caused it, or what it causes.
+
+Instead of treating worldbuilding as backstory the players never see, this book shows you how to build a region in one evening and put its history on the map, where the party can find it, investigate it and loot it.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, these tools adapt to your system while strengthening the foundation of your hexcrawl: the world your encounters sit in.
+
+Inside you&#x27;ll find:
+- The six-step build procedure, a playable region in about ninety minutes
+- Three facts and a twist, the setup that makes players lean forward at session zero
+- Terrain profiles, barriers and chokepoints that turn travel into a decision
+- Culture derived from terrain, plus four outsider stances for settlements
+- Faction traces, so players discover territory through physical evidence
+- The fact, clue and mystery structure for ruins, and what lives there now
+- Printable cards for terrain, settlements, factions, ruins, history and growth
+- The Greymire, a full worked example from blank page to session one
+
+Perfect for GMs who want a world that runs itself, decisions with consequences, and a map that rewards exploration session after session.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Does your world explain itself, or does it only make sense in your notes?
+
+The Hexcrawl Worldbuilding Design Guidebook is a system-agnostic GM guide for building hexcrawl regions, hex maps, settlements and factions that connect to each other. Every hex points to at least one other: what caused it, or what it causes.
+
+Instead of treating worldbuilding as backstory the players never see, this book shows you how to build a region in one evening and put its history on the map, where the party can find it, investigate it and loot it.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, these tools adapt to your system while strengthening the foundation of your hexcrawl: the world your encounters sit in.
+
+Inside you&#x27;ll find:
+- The six-step build procedure, a playable region in about ninety minutes
+- Three facts and a twist, the setup that makes players lean forward at session zero
+- Terrain profiles, barriers and chokepoints that turn travel into a decision
+- Culture derived from terrain, plus four outsider stances for settlements
+- Faction traces, so players discover territory through physical evidence
+- The fact, clue and mystery structure for ruins, and what lives there now
+- Printable cards for terrain, settlements, factions, ruins, history and growth
+- The Greymire, a full worked example from blank page to session one
+
+Perfect for GMs who want a world that runs itself, decisions with consequences, and a map that rewards exploration session after session.
+
+Written by Matthijs Holter
+Edited by Karl Otto Kristoffersen
+Layout by Michael Sollien
+Cover art by Nicolai Strøm
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_hexcrawl-worldbuilding" data-href="/files/books/hexcrawl-worldbuilding.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_hexcrawl-worldbuilding" data-href="/img/mockups/hexcrawl-worldbuilding.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -265,9 +562,54 @@
       <div><h4>Sandbox Playstyle Toolkit: The City</h4>
       <div class="tag">A city the players can push against, without forty pages of lore.</div>
       <p class="desc">Districts, factions, patrons and the trouble that follows a party through a city. Art by Nicolai Strøm.</p>
-      <div class="pills"><span class="pill badge">Ordered by all seven new shops this autumn</span></div>
+      <div class="pills"><span class="pill badge">Tables and procedures for generating a living, breathing city</span></div>
       <div class="meta"><span>Barcode <b>2370022642136</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 750+</span></div>
-      <button class="btn tiny copytxt" data-copy="Sandbox Playstyle Toolkit: The City. A city the players can push against, without forty pages of lore. Districts, factions, patrons and the trouble that follows a party through a city. Art by Nicolai Strøm.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can your players walk into any city and find it alive, named and full of hooks?
+
+Sandbox Playstyle Toolkit: The City is a system-agnostic collection of roll tables for building the home base and every settlement beyond it: cities, taverns, guilds, shops, temples and street encounters, all generated in minutes.
+
+Instead of prepping the city from scratch, this book turns a handful of dice into a mapped, named and governed settlement through the eight-step A City in a Jiffy recipe, then fills it with people, rumours and trouble.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the tables slot straight into your campaign. Built as a companion to the West Marches and Hexcrawl series, and just as ready to stand alone.
+
+Inside you&#x27;ll find:
+- The eight-step city generator with a worked example city, ready to run
+- Inns and taverns: names, proprietors, staff, patrons, menus, entertainment and rumours
+- The adventurers&#x27; guild: codes, leaders, headquarters with a map, and 40 ready-to-run quests
+- Vendors and merchants: shops of every size and what the keeper hides behind the counter
+- Temples and shrines: faiths, rituals, temple features and spiritual leaders
+- 120 city encounters split by day, night, safe and unsafe areas
+
+Perfect for GMs who want the home base to matter, city streets to feel alive, and improvisation to come easy at the table. First book of the Sandbox Toolkit series.
+
+Designed and written by Michael Sollien
+Additional writing by Nicolai Strøm
+Edited by Karl Otto Kristoffersen and Simen Strandberg Andresen
+Artwork by Nicolai &quot;House of Adelsten&quot; Strøm
+Published by KR1 Publishing in collaboration with Seidmann Games</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can your players walk into any city and find it alive, named and full of hooks?
+
+Sandbox Playstyle Toolkit: The City is a system-agnostic collection of roll tables for building the home base and every settlement beyond it: cities, taverns, guilds, shops, temples and street encounters, all generated in minutes.
+
+Instead of prepping the city from scratch, this book turns a handful of dice into a mapped, named and governed settlement through the eight-step A City in a Jiffy recipe, then fills it with people, rumours and trouble.
+
+Whether you run Shadowdark, OSR, 5e, Pathfinder 2e or another fantasy RPG, the tables slot straight into your campaign. Built as a companion to the West Marches and Hexcrawl series, and just as ready to stand alone.
+
+Inside you&#x27;ll find:
+- The eight-step city generator with a worked example city, ready to run
+- Inns and taverns: names, proprietors, staff, patrons, menus, entertainment and rumours
+- The adventurers&#x27; guild: codes, leaders, headquarters with a map, and 40 ready-to-run quests
+- Vendors and merchants: shops of every size and what the keeper hides behind the counter
+- Temples and shrines: faiths, rituals, temple features and spiritual leaders
+- 120 city encounters split by day, night, safe and unsafe areas
+
+Perfect for GMs who want the home base to matter, city streets to feel alive, and improvisation to come easy at the table. First book of the Sandbox Toolkit series.
+
+Designed and written by Michael Sollien
+Additional writing by Nicolai Strøm
+Edited by Karl Otto Kristoffersen and Simen Strandberg Andresen
+Artwork by Nicolai &quot;House of Adelsten&quot; Strøm
+Published by KR1 Publishing in collaboration with Seidmann Games">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_sandbox-city" data-href="/files/books/sandbox-city.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_sandbox-city" data-href="/img/mockups/sandbox-city.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -281,9 +623,50 @@
       <div><h4>Gründer: Business Adventure Game</h4>
       <div class="tag">A one-shot adventure game where the loot decides who gets to start a company.</div>
       <p class="desc">By Petter Fornes from Trondheim. Into the Odd rules, 3 to 6 players, one session. Same family as Cairn, Mausritter and Mythic Bastionland. The premise: a serial killer's hoard lies in a cave, thirty soldiers are marching to seize it, and you try to get there first. Whatever you carry out is your start-up capital, and one final dice roll decides whether the company survives. A5, full colour, public domain art.</p>
-      <div class="pills"><span class="pill badge">One-shot game, Into the Odd rules</span></div>
+      <div class="pills"><span class="pill badge">A complete one-shot adventure</span></div>
       <div class="meta"><span>Barcode <b>2370022625238</b></span><span>Softcover, colour</span><span><b>$20</b> / 199 kr</span><span>Author Petter Fornes</span><span>Sold 430+</span></div>
-      <button class="btn tiny copytxt" data-copy="Gründer: Business Adventure Game. A one-shot adventure game where the loot decides who gets to start a company. By Petter Fornes from Trondheim. Into the Odd rules, 3 to 6 players, one session. Same family as Cairn, Mausritter and Mythic Bastionland. The premise: a serial killer's hoard lies in a cave, thirty soldiers are marching to seize it, and you try to get there first. Whatever you carry out is your start-up capital, and one final dice roll decides whether the company survives. A5, full colour, public domain art.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Can your Company secure enough capital to survive?
+
+Gründer is a business adventure RPG for 3 to 6 players. You found a Company together with fellow ambitious minds and set out on a daring adventure to secure the funds you need. Through risky decisions, clever planning and cooperation, you chase opportunity in a world where profit always comes at a cost.
+
+The game is built for fast, focused play and works especially well as a one-shot. Sessions end in a final roll that decides the fate of the Company: success, failure, or something in between.
+
+Rules from Into the Odd, in the same family as Cairn, Mausritter and Mythic Bastionland. Inspired by OSR design principles and historical business realities.
+
+Inside you&#x27;ll find:
+- The complete 24-page rulebook
+- Character Sheet and Company Sheet
+- DIY Character Booklet and Role Descriptors
+- A plug-and-play starting adventure, Christman and the Devil
+- Clear procedures and low friction at the table
+- Meaningful risk versus reward, and player-driven consequences
+
+Perfect for tables that want a complete game in one evening, and for shops with a shelf for small, odd, well-made books.
+
+Written, designed and laid out by Petter Fornes
+Rules from Into the Odd by Chris McDowall
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Can your Company secure enough capital to survive?
+
+Gründer is a business adventure RPG for 3 to 6 players. You found a Company together with fellow ambitious minds and set out on a daring adventure to secure the funds you need. Through risky decisions, clever planning and cooperation, you chase opportunity in a world where profit always comes at a cost.
+
+The game is built for fast, focused play and works especially well as a one-shot. Sessions end in a final roll that decides the fate of the Company: success, failure, or something in between.
+
+Rules from Into the Odd, in the same family as Cairn, Mausritter and Mythic Bastionland. Inspired by OSR design principles and historical business realities.
+
+Inside you&#x27;ll find:
+- The complete 24-page rulebook
+- Character Sheet and Company Sheet
+- DIY Character Booklet and Role Descriptors
+- A plug-and-play starting adventure, Christman and the Devil
+- Clear procedures and low friction at the table
+- Meaningful risk versus reward, and player-driven consequences
+
+Perfect for tables that want a complete game in one evening, and for shops with a shelf for small, odd, well-made books.
+
+Written, designed and laid out by Petter Fornes
+Rules from Into the Odd by Chris McDowall
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_grunder" data-href="/files/books/grunder.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_grunder" data-href="/img/mockups/grunder.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -293,9 +676,40 @@
       <div><h4>Roll for Innovation</h4>
       <div class="tag">What creative work looks like when the tools change under you.</div>
       <p class="desc">A short book on creativity and new tools, written for makers rather than for the argument. Readers from outside the hobby have been its best reviewers. A good counter-display title next to the till.</p>
-      <div class="pills"><span class="pill badge">Counter display, next to the till</span></div>
+      <div class="pills"><span class="pill badge">A reflective essay on creativity and new tools</span></div>
       <div class="meta"><span>Barcode <b>2370022624552</b></span><span>ISBN <b>979-8-2431-6872-4</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 230+</span></div>
-      <button class="btn tiny copytxt" data-copy="Roll for Innovation. What creative work looks like when the tools change under you. A short book on creativity and new tools, written for makers rather than for the argument. Readers from outside the hobby have been its best reviewers. A good counter-display title next to the till.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>What still depends on human creativity when the tools change under you?
+
+Roll for Innovation is a short reflective essay about AI and creativity in tabletop roleplaying games. It began as a blog post in 2024, when the conversation around AI felt too heated to be useful. This book is an attempt to slow things down and think more clearly.
+
+It does not argue for or against AI. Instead it reflects on judgment, responsibility, and what still depends on human creativity.
+
+Inside you&#x27;ll find:
+- Ten short chapters, from Fear of a Black Dragon to Enter the Dragon
+- Reflections on judgment and responsibility in creative work
+- What the tools change, and what they do not
+- Questions for your own practice as a writer, designer or GM
+
+Perfect for RPG writers, designers and GMs who feel conflicted, curious or uncertain, and want a calm place to think about AI in creative work.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="What still depends on human creativity when the tools change under you?
+
+Roll for Innovation is a short reflective essay about AI and creativity in tabletop roleplaying games. It began as a blog post in 2024, when the conversation around AI felt too heated to be useful. This book is an attempt to slow things down and think more clearly.
+
+It does not argue for or against AI. Instead it reflects on judgment, responsibility, and what still depends on human creativity.
+
+Inside you&#x27;ll find:
+- Ten short chapters, from Fear of a Black Dragon to Enter the Dragon
+- Reflections on judgment and responsibility in creative work
+- What the tools change, and what they do not
+- Questions for your own practice as a writer, designer or GM
+
+Perfect for RPG writers, designers and GMs who feel conflicted, curious or uncertain, and want a calm place to think about AI in creative work.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_roll-for-innovation" data-href="/files/books/roll-for-innovation.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_roll-for-innovation" data-href="/img/mockups/roll-for-innovation.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -305,9 +719,42 @@
       <div><h4>I Just Sold 10K Books (and you can too)</h4>
       <div class="tag">How a small publisher in Norway sold ten thousand books.</div>
       <p class="desc">The working method behind this catalogue: free products that build a mailing list, launches that carry the backlist, and what actually moved copies. Written for other small publishers and self-published authors, so it sells to a shelf most game shops do not otherwise serve.</p>
-      <div class="pills"><span class="pill badge">For the small press shelf</span></div>
+      <div class="pills"><span class="pill badge">How a small press sold 10,000 books</span></div>
       <div class="meta"><span>Barcode <b>2370022641290</b></span><span>Softcover, B&amp;W</span><span><b>$20</b> / 199 kr</span><span>Sold 120+</span></div>
-      <button class="btn tiny copytxt" data-copy="I Just Sold 10K Books (and you can too). How a small publisher in Norway sold ten thousand books. The working method behind this catalogue: free products that build a mailing list, launches that carry the backlist, and what actually moved copies. Written for other small publishers and self-published authors, so it sells to a shelf most game shops do not otherwise serve.">Copy product text</button>
+      <details class="fulltxt"><summary>Show full product text ›</summary><pre>Is your drawer full of finished games that nobody has read?
+
+I Just Sold 10K Books (and you can too) is a beginner&#x27;s guide to selling on DriveThruRPG. Between 2019 and 2024 the author sold sixty-nine books on the storefront. Then one release in May 2025 moved two hundred and fifty copies in its first week, and by June 2026 he had passed ten thousand books sold.
+
+Instead of a theory of marketing, this book gives you the order things were done in. Four phases, and selling is the last one: make one small finished thing for one real person, give it away, grow by running the loop, then sell once the value is obviously bigger than the price.
+
+Inside you&#x27;ll find:
+- The four phases, step by step
+- Key highlights behind ten thousand sales, from the author&#x27;s own account
+- Why selling comes last, and what happens when you start there
+- The honest timeline, flat years included
+- A one-page checklist to print and tick off as you go
+
+Perfect for makers with years of work in the drawer and no audience yet. About thirty pages, short enough to read in one evening.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing</pre></details>
+      <button class="btn tiny copytxt" data-copy="Is your drawer full of finished games that nobody has read?
+
+I Just Sold 10K Books (and you can too) is a beginner&#x27;s guide to selling on DriveThruRPG. Between 2019 and 2024 the author sold sixty-nine books on the storefront. Then one release in May 2025 moved two hundred and fifty copies in its first week, and by June 2026 he had passed ten thousand books sold.
+
+Instead of a theory of marketing, this book gives you the order things were done in. Four phases, and selling is the last one: make one small finished thing for one real person, give it away, grow by running the loop, then sell once the value is obviously bigger than the price.
+
+Inside you&#x27;ll find:
+- The four phases, step by step
+- Key highlights behind ten thousand sales, from the author&#x27;s own account
+- Why selling comes last, and what happens when you start there
+- The honest timeline, flat years included
+- A one-page checklist to print and tick off as you go
+
+Perfect for makers with years of work in the drawer and no audience yet. About thirty pages, short enough to read in one evening.
+
+Written by Karl Otto Kristoffersen
+Published by KR1 Publishing">Copy product text</button>
       
       <a class="btn tiny unlockbtn" data-ref="pdf_10k-books" data-href="/files/books/10k-books.pdf" style="text-decoration:none;display:inline-block">Reading copy (PDF)</a>
       <a class="btn tiny unlockbtn" data-ref="mockup_10k-books" data-href="/img/mockups/10k-books.png" style="text-decoration:none;display:inline-block">Mockup (PNG)</a>
@@ -334,8 +781,8 @@
   <h2>Mockups, box art or a specific print file</h2>
   <p class="lead">Print-resolution files not yet in the ZIP are sent within a day or two. Write to <a href="mailto:contact@kr1publishing.com?subject=Retailer%20asset%20request" style="color:var(--gold-dark);font-weight:700">contact@kr1publishing.com</a> naming the title and what you need it for.</p>
   <div class="cta-row" style="margin-top:22px">
-    <button type="button" class="btn unlockbtn" data-ref="assets_bottom">Download the retailer pack (ZIP)</button>
-    <a class="btn ghost" href="#top">All reading copies (three ZIPs, top of page)</a>
+    <button type="button" class="btn unlockbtn" data-ref="assets_bottom">Download the retailer assets (ZIP)</button>
+    
   </div>
   <p class="lead" style="margin-top:16px;font-size:13px">Prices in this pack are valid for the 2026 season. Ask for a written quote before you order and the amount is fixed.</p>
 </div></section>
@@ -349,7 +796,7 @@
 
 <div class="gateoverlay" id="gateoverlay">
   <div class="gatebox">
-    <h3>Retailer pack</h3>
+    <h3>Retailer assets</h3>
     <p>This download is for retailers and partners. Ask contact@kr1publishing.com if you do not have the password.</p>
     <input type="password" id="gatepw" placeholder="Password" autocomplete="off">
     <div class="err" id="gateerr"></div>
