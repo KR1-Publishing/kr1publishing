@@ -117,9 +117,10 @@
   .q3 .card{text-align:left}
   .qn{font-family:'IM Fell English SC',Georgia,serif;font-size:40px;color:var(--blood-soft);line-height:1;margin-bottom:8px}
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-  @media(max-width:700px){.gallery{grid-template-columns:repeat(3,1fr);gap:8px}.gallery figcaption{font-size:11px;letter-spacing:.02em}}
+  @media(max-width:700px){.gallery{grid-template-columns:repeat(3,1fr);gap:8px}.gallery figcaption{font-size:14px;letter-spacing:.02em}.gallery figcaption small{font-size:11px}}
   .gallery img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid #2a2622;box-shadow:0 24px 50px rgba(0,0,0,.6)}
-  .gallery figcaption{font-family:'IM Fell English SC',Georgia,serif;font-size:15px;letter-spacing:.06em;color:var(--bone);margin-top:10px;text-align:center}
+  .gallery figcaption{font-family:'IM Fell English SC',Georgia,serif;font-size:17px;letter-spacing:.06em;color:var(--bone);margin-top:10px;text-align:center}
+  .gallery figcaption small{display:block;font-family:system-ui,sans-serif;font-size:13px;letter-spacing:0;color:#8f8878;margin-top:3px;line-height:1.35}
   .dice{display:flex;gap:6px;margin-bottom:16px}
   .die{width:34px;height:34px;border-radius:7px;background:var(--bone);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;font-weight:700;font-size:17px;border:2px solid #000}
   .die.x{opacity:.35}
@@ -191,6 +192,27 @@
   .wide span{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 22px;text-align:center;font-family:'IM Fell English SC',Georgia,serif;font-size:clamp(22px,3vw,34px);letter-spacing:.08em;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.9);background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.75));pointer-events:none}
   footer{background:var(--dark);color:#bdb3a0;padding:38px 0;text-align:center;font-family:system-ui,sans-serif;font-size:13.5px}
   footer a{color:var(--gold);text-decoration:none;margin:0 10px}
+
+  /* Mobil, rettet etter test på iPhone med ekte fonter */
+  nav .logo{white-space:nowrap}
+  nav .btn{white-space:nowrap}
+  .figs{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .figs img{aspect-ratio:346/800;object-fit:cover}
+  @media(max-width:860px){
+    .figs{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .split .tall img{aspect-ratio:4/3;width:100%;max-height:none;object-position:50% 30%}
+  }
+  @media(max-width:520px){
+    nav .in{height:56px;gap:10px}
+    nav .logo{font-size:13px;letter-spacing:1.5px}
+    nav .btn.sm{font-size:13px;padding:10px 16px}
+    .hero{padding:40px 0 48px}
+    .hero .cta-row{flex-direction:column;align-items:center;gap:12px;margin-top:28px}
+    .hero .cta-row .btn{width:100%;max-width:300px;padding:15px 20px;text-align:center}
+    .figs{gap:6px}
+    .figs figcaption{font-size:12px;letter-spacing:0;margin-top:8px;overflow-wrap:anywhere}
+    .figs small{font-size:10.5px;line-height:1.3}
+  }
 </style>
 </head>
 
@@ -319,9 +341,9 @@
   </div>
 
   <div class="gallery">
-    <figure><img src="/img/ddb/ill-morgrel.jpg" alt="Morgrel, et mareritt med klør og åpen kjeft"><figcaption>Morgrel. Kommer fra marerittet, og tar seg med tilbake.</figcaption></figure>
-    <figure><img src="/img/ddb/ill-fratser.jpg" alt="Fråtser, en vandød som spiser blant gravene"><figcaption>Fråtser. Vandød. Den slutter ikke å spise.</figcaption></figure>
-    <figure><img src="/img/ddb/ill-leshzi.jpg" alt="Leshzi, et stort underjordisk vesen med kølle"><figcaption>Leshzi. Underjordisk. Nevene ignorerer rustningen din.</figcaption></figure>
+    <figure><img src="/img/ddb/ill-morgrel.jpg" alt="Morgrel, et mareritt med klør og åpen kjeft"><figcaption>Morgrel<small>Kommer fra marerittet, og tar seg med tilbake.</small></figcaption></figure>
+    <figure><img src="/img/ddb/ill-fratser.jpg" alt="Fråtser, en vandød som spiser blant gravene"><figcaption>Fråtser<small>Vandød. Den slutter ikke å spise.</small></figcaption></figure>
+    <figure><img src="/img/ddb/ill-leshzi.jpg" alt="Leshzi, et stort underjordisk vesen med kølle"><figcaption>Leshzi<small>Underjordisk. Nevene ignorerer rustningen din.</small></figcaption></figure>
   </div>
 </div></section>
 
