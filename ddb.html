@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De Dødes Bok | KR1 Publishing</title>
+<meta name="description" content="De Dødes Bok er et norsk rollespill av Henrik Grimshei om vanlige folk som går dit ingen andre tør. Kommer til BackerKit tredje kvartal 2027. Prøv Trefningsbordet i nettleseren.">
+<link rel="canonical" href="https://www.kr1publishing.com/ddb">
+<meta property="og:title" content="De Dødes Bok | KR1 Publishing">
+<meta property="og:description" content="Et rollespill om vanlige folk som går dit ingen andre tør. Kommer til BackerKit tredje kvartal 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kr1publishing.com/ddb">
+<meta property="og:image" content="https://www.kr1publishing.com/img/ddb/og-ddb.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://www.kr1publishing.com/img/ddb/og-ddb.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+
+<style>
+  /* =========================================================
+     DE DØDES BOK, innledende side (okt 2026).
+     Bilder i img/ddb/: logo.jpg (Henriks logo), kloster.jpg og
+     skog.jpg (Henriks illustrasjoner), tok-*.jpg (rolle- og
+     fiendeportretter), og og-ddb.jpg 1200x630.
+     Appen ligger som /ddb/trefningsbordet (egen fil i ddb/).
+     Skjemaet poster til Mailchimp-listen med TRACK=ddb.
+     ========================================================= */
+  :root{
+    --ink:#1e1c18; --muted:#6b6455; --line:#d8cfba;
+    --gold:#e8c96f; --gold-dark:#b8863b; --gold-soft:#dcc88d;
+    --paper:#f7f3ea; --card:#fffdf8; --dark:#191713; --slot:#ece5d6;
+    --blood:#a8201a; --blood-soft:#d8453b; --bone:#e9e2d2; --night:#0d0c0b; --night2:#171412;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'EB Garamond',Georgia,'Times New Roman',serif;color:var(--bone);background:var(--night);line-height:1.55;font-size:18px}
+  .in{max-width:1120px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px;margin:0 auto}
+  a{color:inherit}
+  .cap{font-family:'IM Fell English SC',Georgia,serif;letter-spacing:.08em}
+
+  .btn{display:inline-block;background:var(--gold);color:var(--ink);text-decoration:none;font-family:system-ui,sans-serif;font-size:16.5px;font-weight:700;padding:18px 44px;border-radius:32px;border:none;cursor:pointer;letter-spacing:.2px}
+  .btn:hover{background:var(--gold-soft)}
+  .btn.sm{font-size:14px;padding:12px 24px}
+  .btn.ghost{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+  .btn.ghost:hover{background:var(--gold);color:var(--ink)}
+  .btn.blood{background:var(--blood);color:#fff}
+  .btn.blood:hover{background:var(--blood-soft)}
+
+  /* ANNOUNCEMENT */
+  .ann{background:var(--blood);color:#fff;text-align:center;padding:11px 16px;font-family:system-ui,sans-serif;font-size:14px;font-weight:600}
+  .ann a{text-decoration:none}
+  .ann .tag{background:#fff;color:var(--blood);border-radius:20px;padding:3px 11px;font-size:11.5px;letter-spacing:1px;margin-right:9px}
+
+  /* NAV (som resten av kr1publishing.com) */
+  nav{background:var(--dark);color:#f2ece0}
+  nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
+  nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none}
+  nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
+  nav a{text-decoration:none;opacity:.88}
+  nav a:hover{opacity:1;color:var(--gold)}
+  @media(max-width:760px){nav ul{display:none}}
+
+  /* HERO */
+  .hero{position:relative;text-align:center;padding:56px 0 64px;overflow:hidden;background:
+    radial-gradient(ellipse at 50% 0%,rgba(168,32,26,.28),transparent 55%),
+    linear-gradient(180deg,#000 0%,var(--night) 100%)}
+  .hero img.logo{width:min(720px,92vw);height:auto;display:block;margin:0 auto;mix-blend-mode:screen}
+  .hero h1{position:absolute;left:-9999px}
+  .hero p.lead{font-size:clamp(19px,2.4vw,24px);max-width:640px;margin:26px auto 0;color:var(--bone);font-style:italic}
+  .hero .cta-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+  .microtrust{font-family:system-ui,sans-serif;font-size:13px;color:#8f8878;margin-top:22px}
+
+  /* PROOF BAR */
+  .proofbar{background:var(--night2);border-top:1px solid #2a2622;border-bottom:1px solid #2a2622}
+  .proofbar .in{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px;text-align:center}
+  .proofbar b{display:block;font-size:clamp(24px,3.4vw,34px);color:var(--gold);line-height:1.1;font-weight:500}
+  .proofbar span{font-family:system-ui,sans-serif;font-size:12.5px;opacity:.8;letter-spacing:.3px}
+  @media(max-width:640px){.proofbar .in{grid-template-columns:repeat(2,1fr);gap:18px}}
+
+  /* SECTIONS */
+  section{padding:72px 0}
+  .band{background:var(--night2);border-top:1px solid #2a2622;border-bottom:1px solid #2a2622}
+  h2{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:clamp(28px,3.8vw,42px);line-height:1.15;margin-bottom:16px;color:#fff;letter-spacing:.02em}
+  h2 em{font-style:normal;color:var(--blood-soft)}
+  .kicker{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+  .center{text-align:center}
+  p+p{margin-top:14px}
+  p{color:#d5cdbd}
+  .lead{font-size:20px}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}}
+  .split figure img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 24px 50px rgba(0,0,0,.6);border:1px solid #2a2622}
+  .split figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:#8f8878;margin-top:12px;text-align:center}
+  .split .tall img{aspect-ratio:520/974;object-fit:cover;max-height:560px;width:auto;margin:0 auto}
+
+  /* RULE CARDS */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+  @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}}
+  .card{background:#1d1916;border:1px solid #302a25;border-radius:14px;padding:26px 24px}
+  .card h3{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:24px;margin-bottom:10px;color:var(--gold)}
+  .card p{font-size:16.5px;color:#cfc6b5}
+  .dice{display:flex;gap:6px;margin-bottom:16px}
+  .die{width:34px;height:34px;border-radius:7px;background:var(--bone);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;font-weight:700;font-size:17px;border:2px solid #000}
+  .die.x{opacity:.35}
+  .die.one{background:var(--blood);color:#fff;border-color:#5a0e0b}
+  .ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:16px;font-family:system-ui,sans-serif;font-size:11.5px;text-align:center;letter-spacing:.5px;text-transform:uppercase}
+  .ladder span{padding:7px 4px;border-radius:5px;background:#2a2420;color:#cfc6b5}
+  .ladder span:first-child{background:var(--blood);color:#fff}
+  .ladder span:last-child{background:var(--gold);color:var(--ink)}
+  .twin{display:flex;gap:10px;margin-bottom:16px}
+  .twin b{flex:1;display:block;padding:9px 6px;border-radius:7px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px}
+  .twin .leg{background:#5a1612;color:#fff}
+  .twin .fat{background:#243a56;color:#fff}
+
+  /* PORTRAITS */
+  .folk{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:36px}
+  @media(max-width:860px){.folk{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr);gap:14px}}
+  .folk figure{text-align:center}
+  .folk img{width:100%;max-width:150px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--gold-dark);box-shadow:0 10px 24px rgba(0,0,0,.6);display:block;margin:0 auto;background:#000}
+  .folk.foe img{border-color:var(--blood)}
+  .folk figcaption{font-family:'IM Fell English SC',Georgia,serif;font-size:17px;margin-top:10px;color:var(--bone);letter-spacing:.06em}
+  .tokph{width:100%;max-width:150px;aspect-ratio:1;border-radius:50%;border:3px solid var(--gold-dark);background:radial-gradient(circle,#2a1d1a,#0d0c0b);display:flex;align-items:center;justify-content:center;color:var(--blood-soft);font-size:44px;margin:0 auto;box-shadow:0 10px 24px rgba(0,0,0,.6)}
+  .split .folk img{border-radius:50%;aspect-ratio:1;object-fit:cover;max-width:120px;border:3px solid var(--blood);box-shadow:0 10px 24px rgba(0,0,0,.6)}
+  .folk small{display:block;font-family:system-ui,sans-serif;font-size:12px;color:#8f8878;letter-spacing:.3px;margin-top:2px}
+
+  /* APP CARD */
+  .app{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1f1a16,#120f0d);border:1px solid #3a2f28;border-radius:18px;padding:36px 40px;max-width:980px;margin:36px auto 0}
+  @media(max-width:860px){.app{grid-template-columns:1fr;padding:28px 24px}}
+  .app h3{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:30px;color:#fff;margin-bottom:10px}
+  .app p{font-size:17px}
+  .app ul{margin:14px 0 22px 20px;color:#cfc6b5;font-size:16.5px}
+  .app li+li{margin-top:5px}
+  .board{position:relative;aspect-ratio:4/3;border-radius:12px;background:
+    repeating-linear-gradient(0deg,transparent 0 39px,rgba(232,201,111,.12) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,rgba(232,201,111,.12) 39px 40px),
+    radial-gradient(circle at 50% 50%,#2b231d,#15110e);border:1px solid #3a2f28;overflow:hidden;box-shadow:inset 0 0 60px rgba(0,0,0,.7)}
+  .tok{position:absolute;width:64px;height:64px;border-radius:50%;object-fit:cover;border:4px solid var(--blood);box-shadow:0 8px 18px rgba(0,0,0,.7)}
+  .tok.s{border-color:#4f78ad;border-left-color:#c8322a;border-bottom-color:#c8322a}
+  @media(max-width:520px){.tok{width:48px;height:48px;border-width:3px}}
+  .board .lbl{position:absolute;left:12px;bottom:10px;font-family:system-ui,sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8f8878}
+
+  /* SIGNUP */
+  .signup{background:
+    radial-gradient(ellipse at 50% 100%,rgba(168,32,26,.25),transparent 60%),var(--night)}
+  .heroform{max-width:560px;margin:30px auto 0}
+  .heroform .row{display:flex;gap:10px}
+  .heroform input[type=email]{flex:1;min-width:0;padding:16px 18px;border-radius:32px;border:1px solid #4a4038;background:#120f0d;color:#fff;font-size:16px;font-family:system-ui,sans-serif}
+  .heroform input[type=email]::placeholder{color:#7d7466}
+  .heroform .btn{white-space:nowrap;padding-left:28px;padding-right:28px}
+  @media(max-width:560px){.heroform .row{flex-direction:column}}
+  .hp{position:absolute;left:-5000px}
+  .by{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:34px;font-family:system-ui,sans-serif;font-size:13.5px;color:#8f8878}
+  .by b{color:var(--bone);font-weight:600}
+
+  footer{background:var(--dark);color:#bdb3a0;padding:38px 0;text-align:center;font-family:system-ui,sans-serif;font-size:13.5px}
+  footer a{color:var(--gold);text-decoration:none;margin:0 10px}
+</style>
+</head>
+
+<body>
+<div class="ann"><a href="#varsel"><span class="tag">KOMMER</span>De Dødes Bok lanseres på BackerKit i tredje kvartal 2027. Få beskjed først.</a></div>
+
+<nav><div class="in">
+  <a class="logo" href="/">KR1 PUBLISHING</a>
+  <ul><li><a href="#spillet">Spillet</a></li><li><a href="#regler">Slik spilles det</a></li><li><a href="#sokerne">Søkerne</a></li><li><a href="#appen">Trefningsbordet</a></li></ul>
+  <a class="btn sm" href="#varsel">Få beskjed</a>
+</div></nav>
+
+<header class="hero"><div class="in">
+  <img class="logo" src="/img/ddb/logo.jpg" alt="De Dødes Bok. Et rollespill av Henrik Grimshei" width="720" height="200">
+  <h1>De Dødes Bok</h1>
+  <p class="lead">Et rollespill om vanlige folk som går dit ingen andre tør.</p>
+  <div class="cta-row">
+    <a class="btn blood" href="#varsel">Få beskjed ved lansering</a>
+    <a class="btn ghost" href="/ddb/trefningsbordet">Prøv Trefningsbordet</a>
+  </div>
+  <p class="microtrust">Norsk rollespill. BackerKit tredje kvartal 2027. Utgis av KR1 Publishing.</p>
+</div></header>
+
+<div class="proofbar"><div class="in">
+  <div><b>36</b><span>kapitler spredt over Unara</span></div>
+  <div><b>6</b><span>nasjoner å komme fra</span></div>
+  <div><b>5D6</b><span>tre terninger teller</span></div>
+  <div><b>Q3 2027</b><span>BackerKit-kampanje</span></div>
+</div></div>
+
+<section id="spillet"><div class="in">
+  <div class="split">
+    <div>
+      <div class="kicker">Spillet</div>
+      <h2>Boken er delt i seks. <em>Noen vokter sidene.</em></h2>
+      <p class="lead">De Dødes Bok er et spill om mennesker som velger å gå dit ingen andre tør. Hver spiller tar rollen som en Søker: vanlige folk fra de seks nasjonene som har skjønt noe de fleste aldri oppdager, at verdens hemmeligheter er noe håndgripelig, og at den som besitter dem får nesten grenseløs makt.</p>
+      <p>Boken er tematisk delt i seks deler med seks kapitler hver. Trettiseks kapitler ligger spredt rundt i Unara. Noen er skjult for alle, noen ble funnet, gjemt og glemt, og andre voktes strengt av noen som kjenner bokens krefter.</p>
+      <p>Som Søker leter du etter sporene: en forvrengning av virkeligheten, et rykte, et tegn. Undersøkelsene tar tid, og det du finner er ikke alltid et kapittel. Men det er alltid noe.</p>
+      <p>Dette er ikke fortellinger om helter som overlever heltemodige kamper mot overmakten. Søkerne bruker tjuvtriks, kunnskap og magi for å unnslippe den sikre død, med økt innsikt som belønning.</p>
+    </div>
+    <figure class="tall">
+      <img src="/img/ddb/kloster.jpg" alt="Et kloster på en klippe over tåken, med en bro som fører opp" width="520" height="974" loading="lazy">
+      <figcaption>Illustrasjon fra manuset. Henrik Grimshei.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="regler" class="band"><div class="in">
+  <div class="center narrow">
+    <div class="kicker">Slik spilles det</div>
+    <h2>Enkle regler. <em>Vonde valg.</em></h2>
+    <p class="lead">Reglene er laget for å bære stemningen, ikke for å administreres. Det er tre ting du må kunne.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="dice"><span class="die">6</span><span class="die">5</span><span class="die">4</span><span class="die x">2</span><span class="die one">1</span></div>
+      <h3>Fem terninger, tre teller</h3>
+      <p>Du kaster 5D6 og teller de tre beste. Fordel gir deg flere terninger å velge mellom, ulempe færre. Summen leses på én stige: Feilslag, Svakt treff, Sterkt treff, Fulltreffer. Og en 1'er som teller, er aldri bare en 1'er. Da svarer verden.</p>
+    </div>
+    <div class="card">
+      <div class="ladder"><span>0 til 5</span><span>6 til 10</span><span>11 til 15</span><span>16+</span></div>
+      <h3>Samme stige overalt</h3>
+      <p>Kamp, snik, rituale, reise og undersøkelse leses på den samme stigen. Spillederen trenger ingen egne tabeller for hver ferdighet. Et Svakt treff lykkes, men koster noe. Et Fulltreffer gir litt til.</p>
+    </div>
+    <div class="card">
+      <div class="twin"><b class="leg">Legeme</b><b class="fat">Fatning</b></div>
+      <h3>Kropp og sinn slites</h3>
+      <p>Søkerne tåler skade på kroppen og på sinnet. Når Legeme går tomt, venter Banesår. Når Fatning går tomt, venter Galskap. Fienden kjenner forskjellen: en Mare bryr seg lite om rustningen din.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="sokerne"><div class="in">
+  <div class="center narrow">
+    <div class="kicker">Søkerne</div>
+    <h2>Vanlige folk. <em>Uvanlige valg.</em></h2>
+    <p class="lead">Ingen av dem er bygget for kamp. Alle har noe de kan, og det er det som holder dem i live.</p>
+  </div>
+  <div class="folk">
+    <figure><img src="/img/ddb/tok-akademiker.jpg" alt="" loading="lazy"><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
+    <figure><img src="/img/ddb/tok-dusorjeger.jpg" alt="" loading="lazy"><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
+    <figure><img src="/img/ddb/tok-hundetrener.jpg" alt="" loading="lazy"><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
+    <figure><img src="/img/ddb/tok-duelist.jpg" alt="" loading="lazy"><figcaption>Duelist</figcaption><small>Står først</small></figure>
+    <figure><img src="/img/ddb/tok-leiesoldat.jpg" alt="" loading="lazy"><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
+    <figure><div class="tokph">✦</div><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
+    <figure><img src="/img/ddb/tok-konstruktor.jpg" alt="" loading="lazy"><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
+    <figure><img src="/img/ddb/tok-artist.jpg" alt="" loading="lazy"><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
+    <figure><img src="/img/ddb/tok-hund.jpg" alt="" loading="lazy"><figcaption>Hunden</figcaption><small>Følger sporet</small></figure>
+    <figure><img src="/img/ddb/tok-dukke.jpg" alt="" loading="lazy"><figcaption>Dukken</figcaption><small>Konstruktørens verk</small></figure>
+  </div>
+</div></section>
+
+<section class="band"><div class="in">
+  <div class="split">
+    <figure>
+      <img src="/img/ddb/skog.jpg" alt="To Søkere møter en skapning mellom trærne i en mørk skog" width="900" height="918" loading="lazy">
+      <figcaption>Illustrasjon fra manuset. Henrik Grimshei.</figcaption>
+    </figure>
+    <div>
+      <div class="kicker">Det som venter</div>
+      <h2>Tre lag under verden. <em>Hvert har sitt våpen.</em></h2>
+      <p class="lead">Det som vokter kapitlene, kommer fra Underverdenen, fra Drøm eller fra det Kosmiske. Hvert lag har ett materiale som biter: sølv, speilglass, stjernesten. Uten riktig våpen gjør du halv skade, og kampen skal kjennes gal.</p>
+      <p>Vetten i myra, trollet under broen, maren som setter seg på brystet om natten. Fiendene kaster ikke terninger. De står der, de tåler, og de svarer når Søkerne feiler.</p>
+      <div class="folk foe" style="grid-template-columns:repeat(3,1fr);max-width:460px;margin-top:26px">
+        <figure><img src="/img/ddb/tok-vette.jpg" alt="" loading="lazy"><figcaption>Vette</figcaption></figure>
+        <figure><img src="/img/ddb/tok-troll.jpg" alt="" loading="lazy"><figcaption>Troll</figcaption></figure>
+        <figure><img src="/img/ddb/tok-mare.jpg" alt="" loading="lazy"><figcaption>Mare</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="appen"><div class="in">
+  <div class="center narrow">
+    <div class="kicker">Prøv kampreglene nå</div>
+    <h2>Trefningsbordet</h2>
+    <p class="lead">Et digitalt kampbord i nettleseren. Sett opp Søkerne, velg fiender, og spill en trefning runde for runde med reglene slik de står i manuset.</p>
+  </div>
+  <div class="app">
+    <div>
+      <h3>Spill en trefning på fem minutter</h3>
+      <p>Trefningsbordet er verktøyet vi bruker når vi tester reglene. Det kaster terningene, holder rekkefølgen, trekker skade og viser hvem som er i rekkevidde.</p>
+      <ul>
+        <li>Brikker med Legeme og Fatning som ringer rundt portrettet</li>
+        <li>Presse, Avvente eller Manøver, i den rekkefølgen reglene krever</li>
+        <li>Fiendene angriper bare det de når, og svarer på tellende 1'ere</li>
+        <li>Banesår og Galskap merkes på brikken når det smeller</li>
+        <li>Fungerer på mobil, lagrer bordet i nettleseren din</li>
+      </ul>
+      <a class="btn" href="/ddb/trefningsbordet">Åpne Trefningsbordet</a>
+      <p class="microtrust" style="margin-top:14px">Betaversjon. Reglene endres mens manuset redigeres.</p>
+    </div>
+    <div class="board" aria-hidden="true">
+      <img class="tok s" src="/img/ddb/tok-duelist.jpg" alt="" style="left:14%;top:22%">
+      <img class="tok s" src="/img/ddb/tok-hundetrener.jpg" alt="" style="left:30%;top:52%">
+      <img class="tok s" src="/img/ddb/tok-hund.jpg" alt="" style="left:46%;top:34%;width:48px;height:48px">
+      <img class="tok" src="/img/ddb/tok-troll.jpg" alt="" style="left:70%;top:26%;width:80px;height:80px">
+      <img class="tok" src="/img/ddb/tok-vette.jpg" alt="" style="left:62%;top:62%">
+      <span class="lbl">Runde 2 · Duelisten presser</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="varsel" class="signup"><div class="in center narrow">
+  <div class="kicker">BackerKit, tredje kvartal 2027</div>
+  <h2>Vær blant de første <em>som får vite det.</em></h2>
+  <p class="lead">Vi sender én beskjed når forhåndssiden åpner, og én når kampanjen starter. Ikke mer.</p>
+  <form class="heroform" action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank">
+    <div class="row">
+      <input type="email" name="EMAIL" placeholder="din@epost.no" required autocomplete="email" aria-label="E-postadresse">
+      <button class="btn blood" type="submit">Få beskjed ved lansering</button>
+    </div>
+    <input type="hidden" name="TRACK" value="ddb">
+    <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
+    <p class="microtrust">Ingen forpliktelser. Du kan melde deg av når som helst.</p>
+  </form>
+  <div class="by"><span>Skrevet av <b>Henrik Grimshei</b></span><span>·</span><span>Redigert og utgitt av <b>KR1 Publishing</b></span></div>
+</div></section>
+
+<footer><div class="in">
+  <a href="/">KR1 Publishing</a>
+  <a href="/ddb/trefningsbordet">Trefningsbordet</a>
+  <a href="https://discord.gg/3xvckbcKz8" target="_blank" rel="noopener">Discord</a>
+  <a href="https://www.karlottokristoffersen.com" target="_blank" rel="noopener">Historien, mens den skjer</a>
+  <p style="margin-top:14px;opacity:.7">contact@kr1publishing.com &middot; Kongsberg, Norge &middot; Org.nr 928 261 468 &middot; &copy; 2026 KR1 Publishing &middot; De Dødes Bok &copy; Henrik Grimshei</p>
+</div></footer>
+</body>
+</html>
