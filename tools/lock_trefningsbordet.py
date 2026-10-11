@@ -46,10 +46,13 @@ page = r'''<!DOCTYPE html>
   .err{color:var(--blood-soft);margin-top:14px;min-height:1.5em;font-style:italic}
   .small{font-family:system-ui,sans-serif;font-size:13px;color:#8f8878;margin-top:26px}
   .small a{color:var(--gold)}
+  .back{position:fixed;left:20px;top:18px;font-family:system-ui,sans-serif;font-size:14px;color:#b9ab95;text-decoration:none;letter-spacing:.02em}
+  .back:hover{color:var(--gold)}
   @media(max-width:480px){form{flex-direction:column}}
 </style>
 </head>
 <body>
+<a class="back" href="/ddb">&larr; Tilbake til De Dødes Bok</a>
 <div class="gate">
   <div class="kicker">De Dødes Bok</div>
   <h1>Trefningsbordet</h1>
