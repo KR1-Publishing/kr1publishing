@@ -111,6 +111,12 @@
   .card{background:#1d1916;border:1px solid #302a25;border-radius:14px;padding:26px 24px}
   .card h3{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:24px;margin-bottom:10px;color:var(--gold)}
   .card p{font-size:16.5px;color:#cfc6b5}
+  .q3 .card{text-align:left}
+  .qn{font-family:'IM Fell English SC',Georgia,serif;font-size:40px;color:var(--blood-soft);line-height:1;margin-bottom:8px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+  @media(max-width:700px){.gallery{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
+  .gallery img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid #2a2622;box-shadow:0 24px 50px rgba(0,0,0,.6)}
+  .gallery figcaption{font-family:'IM Fell English SC',Georgia,serif;font-size:15px;letter-spacing:.06em;color:var(--bone);margin-top:10px;text-align:center}
   .dice{display:flex;gap:6px;margin-bottom:16px}
   .die{width:34px;height:34px;border-radius:7px;background:var(--bone);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:system-ui,sans-serif;font-weight:700;font-size:17px;border:2px solid #000}
   .die.x{opacity:.35}
@@ -168,10 +174,9 @@
   .by{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;margin-top:34px;font-family:system-ui,sans-serif;font-size:13.5px;color:#8f8878}
   .by b{color:var(--bone);font-weight:600}
 
-  .wide{position:relative;max-height:420px;overflow:hidden;border-top:1px solid #2a2622;border-bottom:1px solid #2a2622}
-  .wide img{width:100%;height:420px;object-fit:cover;display:block}
+  .wide{position:relative;border-top:1px solid #2a2622;border-bottom:1px solid #2a2622;background:#000}
+  .wide img{width:100%;max-width:1400px;height:auto;display:block;margin:0 auto}
   .wide span{position:absolute;right:16px;bottom:10px;font-family:system-ui,sans-serif;font-size:12px;color:#d5cdbd;background:rgba(0,0,0,.55);padding:4px 10px;border-radius:12px}
-  @media(max-width:700px){.wide img,.wide{height:220px;max-height:220px}}
   footer{background:var(--dark);color:#bdb3a0;padding:38px 0;text-align:center;font-family:system-ui,sans-serif;font-size:13.5px}
   footer a{color:var(--gold);text-decoration:none;margin:0 10px}
 </style>
@@ -219,13 +224,25 @@
       <p>Dette er ikke fortellinger om helter som overlever heltemodige kamper mot overmakten. Søkerne bruker tjuvtriks, kunnskap og magi for å unnslippe den sikre død, med økt innsikt som belønning.</p>
     </div>
     <figure class="tall">
-      <img src="/img/ddb/kloster.jpg" alt="Et kloster på en klippe over tåken, med en bro som fører opp" width="520" height="974" loading="lazy">
+      <img src="/img/ddb/kloster.jpg" alt="Et kloster på en klippe over tåken, med en bro som fører opp" width="520" height="974">
       <figcaption>Illustrasjon fra manuset. Henrik Grimshei.</figcaption>
     </figure>
   </div>
 </div></section>
 
-<div class="wide"><img src="/img/ddb/ill-landskap.jpg" alt="Fjell, innsjø og en reisende ved veien" loading="lazy"><span>Reisen mot episenteret. Illustrasjon fra manuset.</span></div>
+<section class="band" id="kjernen"><div class="in">
+  <div class="center narrow">
+    <div class="kicker">Tre spørsmål</div>
+    <h2>Hva spillet handler om, <em>og hvordan reglene viser det.</em></h2>
+    <p class="lead">Et spill uten kjerne sprer seg i alle retninger. Tre spørsmål holder dette på plass.</p>
+  </div>
+  <div class="cards q3">
+    <div class="card"><div class="qn">1</div><h3>Hva handler spillet om?</h3><p>Hva kunnskap koster. Vanlige folk som søker sannheten selv når den ødelegger dem, og en bok som lover alt til den som samler den.</p></div>
+    <div class="card"><div class="qn">2</div><h3>Hvordan uttrykker reglene det?</h3><p>Kropp og sinn slites hver for seg. Legeme ender i Banesår, Fatning i Galskap. Kapitlene gir makt, og hver bruk koster. Hver 1'er som teller, gjør stedet mer urolig.</p></div>
+    <div class="card"><div class="qn">3</div><h3>Hvilken adferd belønnes?</h3><p>Innsikt. Fremgang kommer av å finne, forstå og komme seg hjem, aldri av å drepe. Den som spiller stille, forberedt og nysgjerrig, får mest ut av verden bak sløret.</p></div>
+  </div>
+</div></section>
+<div class="wide"><img src="/img/ddb/ill-landskap.jpg" alt="Fjell, innsjø og en reisende ved veien"><span>Reisen mot episenteret. Illustrasjon fra manuset.</span></div>
 <section id="regler" class="band"><div class="in">
   <div class="center narrow">
     <div class="kicker">Slik spilles det</div>
@@ -258,23 +275,23 @@
     <p class="lead">Alle har sett bak sløret. De reiser ut i verden med noe de kan, og noe som holder dem i live.</p>
   </div>
   <div class="folk">
-    <figure><img src="/img/ddb/tok-akademiker.jpg" alt="" loading="lazy"><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
-    <figure><img src="/img/ddb/tok-dusorjeger.jpg" alt="" loading="lazy"><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
-    <figure><img src="/img/ddb/tok-hundetrener.jpg" alt="" loading="lazy"><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
-    <figure><img src="/img/ddb/tok-duelist.jpg" alt="" loading="lazy"><figcaption>Duelist</figcaption><small>Står først</small></figure>
-    <figure><img src="/img/ddb/tok-leiesoldat.jpg" alt="" loading="lazy"><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
-    <figure><img src="/img/ddb/tok-okkultist.jpg" alt="" loading="lazy"><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
-    <figure><img src="/img/ddb/tok-konstruktor.jpg" alt="" loading="lazy"><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
-    <figure><img src="/img/ddb/tok-artist.jpg" alt="" loading="lazy"><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
-    <figure><img src="/img/ddb/tok-hund.jpg" alt="" loading="lazy"><figcaption>Hunden</figcaption><small>Følger sporet</small></figure>
-    <figure><img src="/img/ddb/tok-dukke.jpg" alt="" loading="lazy"><figcaption>Dukken</figcaption><small>Konstruktørens verk</small></figure>
+    <figure><img src="/img/ddb/tok-akademiker.jpg" alt=""><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
+    <figure><img src="/img/ddb/tok-dusorjeger.jpg" alt=""><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
+    <figure><img src="/img/ddb/tok-hundetrener.jpg" alt=""><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
+    <figure><img src="/img/ddb/tok-duelist.jpg" alt=""><figcaption>Duelist</figcaption><small>Står først</small></figure>
+    <figure><img src="/img/ddb/tok-leiesoldat.jpg" alt=""><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
+    <figure><img src="/img/ddb/tok-okkultist.jpg" alt=""><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
+    <figure><img src="/img/ddb/tok-konstruktor.jpg" alt=""><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
+    <figure><img src="/img/ddb/tok-artist.jpg" alt=""><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
+    <figure><img src="/img/ddb/tok-hund.jpg" alt=""><figcaption>Hunden</figcaption><small>Følger sporet</small></figure>
+    <figure><img src="/img/ddb/tok-dukke.jpg" alt=""><figcaption>Dukken</figcaption><small>Konstruktørens verk</small></figure>
   </div>
 </div></section>
 
 <section class="band"><div class="in">
   <div class="split">
     <figure>
-      <img src="/img/ddb/skog.jpg" alt="To Søkere møter en skapning mellom trærne i en mørk skog" width="900" height="918" loading="lazy">
+      <img src="/img/ddb/skog.jpg" alt="To Søkere møter en skapning mellom trærne i en mørk skog" width="900" height="918">
       <figcaption>Illustrasjon fra manuset. Henrik Grimshei.</figcaption>
     </figure>
     <div>
@@ -283,18 +300,24 @@
       <p class="lead">Det som vokter kapitlene, kommer fra Underverdenen, fra Drøm eller fra det Kosmiske. Hvert lag har ett materiale som biter: sølv, speilglass, stjernesten. Uten riktig våpen gjør du halv skade, og kampen skal kjennes gal.</p>
       <p>Vampyren i borgen, gjengangeren på kirkegården, morgrelen i marerittet, surmaen som ser på deg fra mørket. Fiendene kaster ikke terninger. De står der, de tåler, og de svarer når Søkerne feiler.</p>
       <div class="folk foe" style="grid-template-columns:repeat(3,1fr);max-width:460px;margin-top:26px;gap:12px">
-        <figure><img src="/img/ddb/tok-vampyr.jpg" alt="" loading="lazy"><figcaption>Vampyr</figcaption></figure>
-        <figure><img src="/img/ddb/tok-gjenganger.jpg" alt="" loading="lazy"><figcaption>Gjenganger</figcaption></figure>
-        <figure><img src="/img/ddb/tok-morgrel.jpg" alt="" loading="lazy"><figcaption>Morgrel</figcaption></figure>
-        <figure><img src="/img/ddb/tok-fratser.jpg" alt="" loading="lazy"><figcaption>Fråtser</figcaption></figure>
-        <figure><img src="/img/ddb/tok-leshzi.jpg" alt="" loading="lazy"><figcaption>Leshzi</figcaption></figure>
-        <figure><img src="/img/ddb/tok-surma.jpg" alt="" loading="lazy"><figcaption>Surma</figcaption></figure>
+        <figure><img src="/img/ddb/tok-vampyr.jpg" alt=""><figcaption>Vampyr</figcaption></figure>
+        <figure><img src="/img/ddb/tok-gjenganger.jpg" alt=""><figcaption>Gjenganger</figcaption></figure>
+        <figure><img src="/img/ddb/tok-morgrel.jpg" alt=""><figcaption>Morgrel</figcaption></figure>
+        <figure><img src="/img/ddb/tok-fratser.jpg" alt=""><figcaption>Fråtser</figcaption></figure>
+        <figure><img src="/img/ddb/tok-leshzi.jpg" alt=""><figcaption>Leshzi</figcaption></figure>
+        <figure><img src="/img/ddb/tok-surma.jpg" alt=""><figcaption>Surma</figcaption></figure>
       </div>
     </div>
   </div>
+
+  <div class="gallery">
+    <figure><img src="/img/ddb/ill-morgrel.jpg" alt="Morgrel, et mareritt med klør og åpen kjeft"><figcaption>Morgrel. Kommer fra marerittet, og tar seg med tilbake.</figcaption></figure>
+    <figure><img src="/img/ddb/ill-fratser.jpg" alt="Fråtser, en vandød som spiser blant gravene"><figcaption>Fråtser. Vandød. Den slutter ikke å spise.</figcaption></figure>
+    <figure><img src="/img/ddb/ill-leshzi.jpg" alt="Leshzi, et stort underjordisk vesen med kølle"><figcaption>Leshzi. Underjordisk. Nevene ignorerer rustningen din.</figcaption></figure>
+  </div>
 </div></section>
 
-<div class="wide"><img src="/img/ddb/ill-ruin.jpg" alt="En Søker foran en ruin i ørkenen" loading="lazy"><span>Der spillet er. Illustrasjon fra manuset.</span></div>
+<div class="wide"><img src="/img/ddb/ill-ruin.jpg" alt="En Søker foran en ruin i ørkenen"><span>Der spillet er. Illustrasjon fra manuset.</span></div>
 <section id="appen"><div class="in">
   <div class="center narrow">
     <div class="kicker">Prøv kampreglene nå</div>
