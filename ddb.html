@@ -22,7 +22,7 @@
 <style>
   /* =========================================================
      DE DØDES BOK, innledende side (okt 2026).
-     Bilder i img/ddb/: logo.jpg (Henriks logo), kloster.jpg og
+     Bilder i img/ddb/: logo.png (Henriks logo, vektor fra 5. artwork), kloster.jpg og
      skog.jpg (Henriks illustrasjoner), tok-*.jpg (rolle- og
      fiendeportretter), og og-ddb.jpg 1200x630.
      Appen ligger som /ddb/trefningsbordet (egen fil i ddb/).
@@ -68,8 +68,11 @@
   .hero{position:relative;text-align:center;padding:56px 0 64px;overflow:hidden;background:
     radial-gradient(ellipse at 50% 0%,rgba(168,32,26,.28),transparent 55%),
     linear-gradient(180deg,#000 0%,var(--night) 100%)}
-  .hero img.logo{width:min(720px,92vw);height:auto;display:block;margin:0 auto;mix-blend-mode:screen}
+  .hero img.logo{width:100%;max-width:720px;height:auto;display:block;margin:0 auto}
   .hero h1{position:absolute;left:-9999px}
+  .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;text-align:center}
+  .hero .book{width:100%;max-width:360px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.8))}
+  @media(max-width:860px){.herogrid{grid-template-columns:1fr}.hero .book{max-width:260px;margin-top:30px}}
   .hero p.lead{font-size:clamp(19px,2.4vw,24px);max-width:640px;margin:26px auto 0;color:var(--bone);font-style:italic}
   .hero .cta-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:38px}
   .microtrust{font-family:system-ui,sans-serif;font-size:13px;color:#8f8878;margin-top:22px}
@@ -109,9 +112,11 @@
   .die.x{opacity:.35}
   .die.one{background:var(--blood);color:#fff;border-color:#5a0e0b}
   .ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:16px;font-family:system-ui,sans-serif;font-size:11.5px;text-align:center;letter-spacing:.5px;text-transform:uppercase}
-  .ladder span{padding:7px 4px;border-radius:5px;background:#2a2420;color:#cfc6b5}
-  .ladder span:first-child{background:var(--blood);color:#fff}
-  .ladder span:last-child{background:var(--gold);color:var(--ink)}
+  .ladder span{padding:7px 4px;border-radius:5px;color:#fff}
+  .ladder span:nth-child(1){background:#7a1810}
+  .ladder span:nth-child(2){background:#a8502a}
+  .ladder span:nth-child(3){background:#b8863b;color:var(--ink)}
+  .ladder span:nth-child(4){background:var(--gold);color:var(--ink)}
   .twin{display:flex;gap:10px;margin-bottom:16px}
   .twin b{flex:1;display:block;padding:9px 6px;border-radius:7px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px}
   .twin .leg{background:#5a1612;color:#fff}
@@ -155,9 +160,13 @@
   .heroform .btn{white-space:nowrap;padding-left:28px;padding-right:28px}
   @media(max-width:560px){.heroform .row{flex-direction:column}}
   .hp{position:absolute;left:-5000px}
-  .by{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:34px;font-family:system-ui,sans-serif;font-size:13.5px;color:#8f8878}
+  .by{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;margin-top:34px;font-family:system-ui,sans-serif;font-size:13.5px;color:#8f8878}
   .by b{color:var(--bone);font-weight:600}
 
+  .wide{position:relative;max-height:420px;overflow:hidden;border-top:1px solid #2a2622;border-bottom:1px solid #2a2622}
+  .wide img{width:100%;height:420px;object-fit:cover;display:block}
+  .wide span{position:absolute;right:16px;bottom:10px;font-family:system-ui,sans-serif;font-size:12px;color:#d5cdbd;background:rgba(0,0,0,.55);padding:4px 10px;border-radius:12px}
+  @media(max-width:700px){.wide img,.wide{height:220px;max-height:220px}}
   footer{background:var(--dark);color:#bdb3a0;padding:38px 0;text-align:center;font-family:system-ui,sans-serif;font-size:13.5px}
   footer a{color:var(--gold);text-decoration:none;margin:0 10px}
 </style>
@@ -172,8 +181,10 @@
   <a class="btn sm" href="#varsel">Få beskjed</a>
 </div></nav>
 
-<header class="hero"><div class="in">
-  <img class="logo" src="/img/ddb/logo.jpg" alt="De Dødes Bok. Et rollespill av Henrik Grimshei" width="720" height="200">
+<header class="hero"><div class="in herogrid">
+ <div>
+  <img class="logo" src="/img/ddb/logo.png" alt="De Dødes Bok" width="1600" height="507">
+  <p class="cap" style="font-size:15px;letter-spacing:.2em;color:#b9ab95;margin-top:-6px">Et rollespill av Henrik Grimshei</p>
   <h1>De Dødes Bok</h1>
   <p class="lead">Et rollespill om vanlige folk som går dit ingen andre tør.</p>
   <div class="cta-row">
@@ -181,6 +192,8 @@
     <a class="btn ghost" href="/ddb/trefningsbordet">Prøv Trefningsbordet</a>
   </div>
   <p class="microtrust">Norsk rollespill. BackerKit tredje kvartal 2027. Utgis av KR1 Publishing.</p>
+ </div>
+  <img class="book" src="/img/ddb/bok-mockup.png" alt="De Dødes Bok, innbundet utgave" width="900" height="1200">
 </div></header>
 
 <div class="proofbar"><div class="in">
@@ -207,6 +220,7 @@
   </div>
 </div></section>
 
+<div class="wide"><img src="/img/ddb/ill-landskap.jpg" alt="Fjell, innsjø og en reisende ved veien" loading="lazy"><span>Reisen mot episenteret. Illustrasjon fra manuset.</span></div>
 <section id="regler" class="band"><div class="in">
   <div class="center narrow">
     <div class="kicker">Slik spilles det</div>
@@ -215,9 +229,9 @@
   </div>
   <div class="cards">
     <div class="card">
-      <div class="dice"><span class="die">6</span><span class="die">5</span><span class="die">4</span><span class="die x">2</span><span class="die one">1</span></div>
+      <div class="dice"><span class="die x">6</span><span class="die">5</span><span class="die">4</span><span class="die">3</span><span class="die x one">1</span></div>
       <h3>Fem terninger, tre teller</h3>
-      <p>Du kaster 5D6 og teller de tre beste. Fordel gir deg flere terninger å velge mellom, ulempe færre. Summen leses på én stige: Feilslag, Svakt treff, Sterkt treff, Fulltreffer. Og en 1'er som teller, er aldri bare en 1'er. Da svarer verden.</p>
+      <p>Du kaster 5D6 og teller de tre i midten. Den høyeste og den laveste faller bort. Med fordel teller du de tre høyeste, med ulempe de tre laveste. Summen leses på én stige: Feilslag, Svakt treff, Sterkt treff, Fulltreffer. Og en 1'er som teller, er aldri bare en 1'er. Da svarer verden.</p>
     </div>
     <div class="card">
       <div class="ladder"><span>0 til 5</span><span>6 til 10</span><span>11 til 15</span><span>16+</span></div>
@@ -227,7 +241,7 @@
     <div class="card">
       <div class="twin"><b class="leg">Legeme</b><b class="fat">Fatning</b></div>
       <h3>Kropp og sinn slites</h3>
-      <p>Søkerne tåler skade på kroppen og på sinnet. Når Legeme går tomt, venter Banesår. Når Fatning går tomt, venter Galskap. Fienden kjenner forskjellen: en Mare bryr seg lite om rustningen din.</p>
+      <p>Søkerne utforsker verden bak sløret, og der venter utfordringer forbi kjøtt og blod. Derfor tåler de skade på to måter: på kroppen og på sinnet. Når Legeme går tomt, venter Banesår. Når Fatning går tomt, venter Galskap. Det som kommer fra Underverdenen, Drøm eller det Kosmiske, bryr seg lite om rustningen din.</p>
     </div>
   </div>
 </div></section>
@@ -244,7 +258,7 @@
     <figure><img src="/img/ddb/tok-hundetrener.jpg" alt="" loading="lazy"><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
     <figure><img src="/img/ddb/tok-duelist.jpg" alt="" loading="lazy"><figcaption>Duelist</figcaption><small>Står først</small></figure>
     <figure><img src="/img/ddb/tok-leiesoldat.jpg" alt="" loading="lazy"><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
-    <figure><div class="tokph">✦</div><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
+    <figure><img src="/img/ddb/tok-okkultist.jpg" alt="" loading="lazy"><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
     <figure><img src="/img/ddb/tok-konstruktor.jpg" alt="" loading="lazy"><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
     <figure><img src="/img/ddb/tok-artist.jpg" alt="" loading="lazy"><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
     <figure><img src="/img/ddb/tok-hund.jpg" alt="" loading="lazy"><figcaption>Hunden</figcaption><small>Følger sporet</small></figure>
@@ -262,16 +276,20 @@
       <div class="kicker">Det som venter</div>
       <h2>Tre lag under verden. <em>Hvert har sitt våpen.</em></h2>
       <p class="lead">Det som vokter kapitlene, kommer fra Underverdenen, fra Drøm eller fra det Kosmiske. Hvert lag har ett materiale som biter: sølv, speilglass, stjernesten. Uten riktig våpen gjør du halv skade, og kampen skal kjennes gal.</p>
-      <p>Vetten i myra, trollet under broen, maren som setter seg på brystet om natten. Fiendene kaster ikke terninger. De står der, de tåler, og de svarer når Søkerne feiler.</p>
-      <div class="folk foe" style="grid-template-columns:repeat(3,1fr);max-width:460px;margin-top:26px">
-        <figure><img src="/img/ddb/tok-vette.jpg" alt="" loading="lazy"><figcaption>Vette</figcaption></figure>
-        <figure><img src="/img/ddb/tok-troll.jpg" alt="" loading="lazy"><figcaption>Troll</figcaption></figure>
-        <figure><img src="/img/ddb/tok-mare.jpg" alt="" loading="lazy"><figcaption>Mare</figcaption></figure>
+      <p>Vampyren i borgen, gjengangeren på kirkegården, morgrelen i marerittet, surmaen som ser på deg fra mørket. Fiendene kaster ikke terninger. De står der, de tåler, og de svarer når Søkerne feiler.</p>
+      <div class="folk foe" style="grid-template-columns:repeat(3,1fr);max-width:460px;margin-top:26px;gap:12px">
+        <figure><img src="/img/ddb/tok-vampyr.jpg" alt="" loading="lazy"><figcaption>Vampyr</figcaption></figure>
+        <figure><img src="/img/ddb/tok-gjenganger.jpg" alt="" loading="lazy"><figcaption>Gjenganger</figcaption></figure>
+        <figure><img src="/img/ddb/tok-morgrel.jpg" alt="" loading="lazy"><figcaption>Morgrel</figcaption></figure>
+        <figure><img src="/img/ddb/tok-fratser.jpg" alt="" loading="lazy"><figcaption>Fråtser</figcaption></figure>
+        <figure><img src="/img/ddb/tok-leshzi.jpg" alt="" loading="lazy"><figcaption>Leshzi</figcaption></figure>
+        <figure><img src="/img/ddb/tok-surma.jpg" alt="" loading="lazy"><figcaption>Surma</figcaption></figure>
       </div>
     </div>
   </div>
 </div></section>
 
+<div class="wide"><img src="/img/ddb/ill-ruin.jpg" alt="En Søker foran en ruin i ørkenen" loading="lazy"><span>Der spillet er. Illustrasjon fra manuset.</span></div>
 <section id="appen"><div class="in">
   <div class="center narrow">
     <div class="kicker">Prøv kampreglene nå</div>
@@ -316,7 +334,7 @@
     <div class="hp" aria-hidden="true"><input type="text" name="b_9b8e99b826134f12e16a15a13_1eeadea463" tabindex="-1" value=""></div>
     <p class="microtrust">Ingen forpliktelser. Du kan melde deg av når som helst.</p>
   </form>
-  <div class="by"><span>Skrevet av <b>Henrik Grimshei</b></span><span>·</span><span>Redigert og utgitt av <b>KR1 Publishing</b></span></div>
+  <div class="by"><span>Skrevet av <b>Henrik Grimshei</b></span><span>·</span><span>Redigert av <b>Karl Otto Kristoffersen</b></span><span>·</span><span>Utgitt av <b>KR1 Publishing</b></span></div>
 </div></section>
 
 <footer><div class="in">
