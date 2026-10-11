@@ -56,7 +56,7 @@ page = r'''<!DOCTYPE html>
   <p>Bordet er låst. Koden får du når du følger De Dødes Bok på BackerKit.</p>
   <form id="f"><input id="pw" type="password" placeholder="Kode fra BackerKit" autocomplete="off" autofocus><button type="submit">Åpne bordet</button></form>
   <div class="err" id="err"></div>
-  <p class="small">Har du ikke koden? <a href="/ddb#varsel">Følg lanseringen</a>, så kommer den til deg.</p>
+  <p class="small">Har du ikke koden? <a href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener">Følg De Dødes Bok på BackerKit</a>, så får du den.</p>
 </div>
 <script id="payload" type="application/json">__PAYLOAD__</script>
 <script>
