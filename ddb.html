@@ -137,6 +137,12 @@
   .twin .fat{background:#243a56;color:#fff}
 
   /* PORTRAITS */
+  .figs{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-top:40px;align-items:end}
+  .figs figure{text-align:center}
+  .figs img{width:100%;height:auto;display:block;border-radius:8px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.8))}
+  .figs figcaption{font-family:'IM Fell English SC',Georgia,serif;font-size:clamp(12px,1.4vw,18px);margin-top:10px;color:var(--bone);letter-spacing:.04em}
+  .figs small{display:block;font-family:system-ui,sans-serif;font-size:11px;color:#8f8878;margin-top:2px}
+  @media(max-width:860px){.figs{grid-template-columns:repeat(4,1fr);gap:8px}.figs figcaption{font-size:14px}}
   .folk{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
   @media(max-width:860px){.folk{grid-template-columns:repeat(4,1fr)}}
   @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr);gap:14px}}
@@ -281,15 +287,15 @@
     <p>Du velger en av åtte profesjoner. Ingen av dem er laget for å vinne slag. Akademikeren vet hva tegnet betyr, Dusørjegeren vet hvor sporet fører, Hundetreneren har en som lukter faren før den kommer. Duelisten og Leiesoldaten står mellom gruppen og det som angriper, Konstruktøren blåser liv i dukkene sine, Artisten får døren opp med ord, og Okkultisten leser det ingen andre tør. Hver av dem har en manøver bare de kan, en ferdighet som vinner en reise, og en nasjon i ryggen med sin egen motstand mot det som kommer bak sløret.</p>
     <p>De vokser ikke av å drepe. De vokser av innsikt: det de finner, det de forstår, og det de får med seg hjem. Slik blir en Søker farligere for hvert kapittel, og litt mindre hel.</p>
   </div>
-  <div class="folk">
-    <figure><img src="/img/ddb/tok-akademiker.jpg" alt=""><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
-    <figure><img src="/img/ddb/tok-dusorjeger.jpg" alt=""><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
-    <figure><img src="/img/ddb/tok-hundetrener.jpg" alt=""><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
-    <figure><img src="/img/ddb/tok-duelist.jpg" alt=""><figcaption>Duelist</figcaption><small>Står først</small></figure>
-    <figure><img src="/img/ddb/tok-leiesoldat.jpg" alt=""><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
-    <figure><img src="/img/ddb/tok-okkultist.jpg" alt=""><figcaption>Okkultist</figcaption><small>Leser det som ikke bør leses</small></figure>
-    <figure><img src="/img/ddb/tok-konstruktor.jpg" alt=""><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
-    <figure><img src="/img/ddb/tok-artist.jpg" alt=""><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
+  <div class="figs">
+    <figure><img src="/img/ddb/fig-akademiker.jpg" alt="Akademiker"><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
+    <figure><img src="/img/ddb/fig-dusorjeger.jpg" alt="Dusørjeger"><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
+    <figure><img src="/img/ddb/fig-hundetrener.jpg" alt="Hundetrener"><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
+    <figure><img src="/img/ddb/fig-duelist.jpg" alt="Duelist"><figcaption>Duelist</figcaption><small>Står først</small></figure>
+    <figure><img src="/img/ddb/fig-leiesoldat.jpg" alt="Leiesoldat"><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
+    <figure><img src="/img/ddb/fig-okkultist.jpg" alt="Okkultist"><figcaption>Okkultist</figcaption><small>Leser det ingen tør</small></figure>
+    <figure><img src="/img/ddb/fig-konstruktor.jpg" alt="Konstruktør"><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
+    <figure><img src="/img/ddb/fig-artist.jpg" alt="Artist"><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
   </div>
 </div></section>
 
