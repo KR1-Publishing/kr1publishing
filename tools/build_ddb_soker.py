@@ -83,20 +83,34 @@ ABOUT = [
    ("spenning","Spenning og fare"),("mysterier","Mysterier å løse"),("samtaler","Rollespill og samtaler"),("taktikk","Taktikk og terninger")]),
 ]
 FIT = {
- "exp": {"aldri":"Har du aldri spilt? Fint. Du trenger fem terninger og én regel, og resten lærer du mens du spiller.",
-         "noen":"Spiller du av og til? Da slipper du å lese deg opp før hver kveld. Én regel gjelder alt: kast fem terninger og tell de tre i midten.",
-         "fast":"Har du en fast gruppe? 36 kapitler ligger gjemt rundt om i Unara. Dere kan jakte på dem i måneder, og hver kveld bringer dere nærmere.",
-         "gm":"Er du spilleder? Du får én stige for alt som skjer ved bordet. Ingen tabeller å slå opp i, og mer tid til historien."},
- "sys": {"dnd":"Fra D&D kjenner du klassene. Her velger du et yrke, og du blir sterkere av det du finner og forstår, ikke bare av det du dreper.",
-         "coc":"Fra Call of Cthulhu kjenner du sinnet som slites ned. Her kan Søkerne slå tilbake, men all magi har en pris.",
-         "osr":"Fra OSR kjenner du døden bak neste dør. Her har den et navn: Banesår. Du tåler to. Det tredje tar deg.",
-         "iron":"Fra Ironsworn kjenner du kastet som avgjør alt. Her kaster du fem terninger, og ett blikk forteller hvordan det gikk.",
-         "norsk":"Liker du norske rollespill? De Dødes Bok er skrevet på norsk fra grunnen av, med folketro, skrekk og gamle myter.",
-         "ingen":"Du trenger ikke kjenne andre spill. Alt du trenger, står i boken, og terningene forklarer resten."},
- "vil": {"spenning":"Vil du ha spenning? Hver 1'er som teller, gir verden et trekk mot deg. Du vet aldri helt hva som venter.",
-         "mysterier":"Vil du løse gåter? Hvert av de 36 kapitlene er en gåte, og ingen av dem ligger der du venter.",
-         "samtaler":"Vil du spille et menneske, ikke en helt? Søkerne er vanlige folk, med et hjemland, minner og noe de har mistet.",
-         "taktikk":"Liker du å tenke ut neste trekk? Angripe først eller vente på fienden, ta skaden på kroppen eller på sinnet. Hver runde er et valg."},
+ "exp": {"aldri":["Har du aldri spilt? Da er dette stedet å begynne. Du kaster fem terninger, teller de tre i midten, og du er i gang. Resten lærer du ved bordet, sammen med de andre.",
+                  "Aldri spilt før? Du trenger ingen forkunnskaper. Én regel styrer alt, og allerede første kveld vet du hvordan den virker."],
+         "noen":["Spiller du av og til? Her trenger du ikke lese deg opp før hver kveld. Én regel gjelder alt, så dere kan sette dere ned og begynne med en gang.",
+                 "Spiller du innimellom? Reglene sitter etter første kast, også når det har gått en måned siden sist."],
+         "fast":["Har du en fast gruppe? 36 tapte kapitler ligger gjemt rundt om i Unara. Det holder til måneder med spillkvelder, og hvert kapittel dere finner, endrer hva dere kan gjøre.",
+                 "Har du en fast gruppe? Her vokser Søkerne av det de finner. Etter et halvt år ved bordet er de ikke de samme som gikk inn porten første gang."],
+         "gm":["Er du spilleder? Én stige gjelder alt, fra sverdhugg til samtaler. Du slipper å bla i tabeller og får mer tid til det som skjer ved bordet.",
+               "Er du spilleder? Fiendene er enkle å styre, og terningene forteller deg når verden slår tilbake. Du bestemmer bare hvordan."]},
+ "sys": {"dnd":["Kommer du fra D&D? Da kjenner du gleden av å bli sterkere. Her vokser du av det du finner og forstår, ikke bare av det du dreper.",
+                "Kommer du fra D&D? Du kjenner kampene og eventyrene. Her er døden nærmere, og hver seier kjennes større."],
+         "coc":["Kommer du fra Call of Cthulhu? Da kjenner du redselen for det ukjente. Her kan Søkerne slå tilbake, men all magi har en pris.",
+                "Liker du skrekk? Her er det ikke bare kroppen som blør. Fatning er det som holder deg hel, og den går fortere enn du tror."],
+         "osr":["Kommer du fra OSR? Da kjenner du døden bak neste dør. Her har den et navn: Banesår. Du tåler to. Det tredje tar deg.",
+                "Kommer du fra OSR? Her er det farlig, og det er meningen. Hvert Banesår blir værende, og du kjenner det på hvert kast."],
+         "iron":["Kommer du fra Ironsworn? Da kjenner du kastet som avgjør alt. Her kaster du fem terninger, og ett blikk forteller hvordan det gikk.",
+                 "Spiller du gjerne i små grupper? Reglene er så enkle at to spillere holder. Kastet forteller historien videre."],
+         "norsk":["Liker du norske rollespill? De Dødes Bok er skrevet på norsk fra første side, med folketro, skrekk og gamle myter du kjenner igjen.",
+                  "Vil du spille på norsk? Her er ingenting oversatt. Mare, gjenganger og vardøger hører hjemme her, og det merkes."],
+         "ingen":["Du trenger ikke kjenne andre spill. Alt du trenger, står i boken, og terningene forklarer resten.",
+                  "Har du ikke spilt noe av dette? Da har du ingenting å lære om igjen. Du starter blankt, akkurat som Søkerne."]},
+ "vil": {"spenning":["Vil du ha spenning? Hver 1'er som teller, gir verden et trekk mot deg. Ingen kast er helt trygge, og hele bordet holder pusten.",
+                     "Vil du kjenne at det står om noe? Her kan ett dårlig kast koste dyrt, og ett godt kast kan snu hele kvelden."],
+         "mysterier":["Vil du løse gåter? Hvert av de 36 kapitlene er en gåte, og ingen av dem ligger der du venter.",
+                      "Vil du finne ut hva som egentlig skjedde? Bak hver grav og hver lukket dør ligger en historie som ikke vil bli funnet."],
+         "samtaler":["Vil du spille et menneske, ikke en helt? Søkerne er vanlige folk, med et hjemland, minner og noe de har mistet.",
+                     "Liker du å snakke deg ut av problemer? Her kan ord vinne der våpen taper, og selv de døde har noe å si."],
+         "taktikk":["Liker du å tenke ut neste trekk? Angripe først eller vente på fienden, ta skaden på kroppen eller på sinnet. Hver runde er et valg.",
+                    "Liker du å legge planer? Dere bestemmer sammen hvem som går først, hvem som venter og hvem som hjelper. Gode valg kjennes på terningene."]},
 }
 
 def esc(s): return (s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;"))
@@ -232,10 +246,10 @@ function pick(){{ const s={{}}; ORDER.forEach(k=>s[k]=0);
 function esc(t){{return String(t).replace(/[&<>"]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]))}}
 function show(k){{ const p=P[k]; const r=document.getElementById('resbox');
   document.getElementById('quizbox').classList.add('hidden'); r.classList.remove('hidden');
-  const fit=[FIT.exp[about.exp],FIT.sys[about.sys],FIT.vil[about.vil]].filter(Boolean);
+  const bi=Math.max(0,ORDER.indexOf(k)); const sh={{exp:0,sys:1,vil:2}}; const pk=(g,v)=>{{const L=FIT[g][v]; return L?L[((bi>>sh[g])&1)%L.length]:'';}}; const fit=[pk('exp',about.exp),pk('sys',about.sys),pk('vil',about.vil)].filter(Boolean);
   const track=['ddb-soker',k,about.exp||'',about.sys||'',about.vil||''].join('-');
   r.innerHTML=`<div class="fit top"><div class="kicker">Derfor passer spillet for deg</div>${{fit.map(t=>`<p>${{esc(t)}}</p>`).join('')}}
-    <p class="tryk">Prøv det selv. I <b>Kirkegården</b> spiller du kampreglene fra boken, tre rom rett i nettleseren. Følg De Dødes Bok på BackerKit, så får du koden.</p>
+    <p class="tryk"><b>Klar til å prøve?</b> I Kirkegården spiller du kampreglene fra boken, tre rom rett i nettleseren. Følg De Dødes Bok på BackerKit, så får du koden og kan gå inn porten i kveld.</p>
     <div class="cta"><a class="btn blood" href="{BK}" target="_blank" rel="noopener">Følg og få koden</a><a class="btn ghost" href="/DDBkirkegarden">Jeg har koden</a></div></div>
   <div class="hero" style="padding-bottom:0"><div class="kicker">Din Søker</div></div>
   <div class="res"><img src="/img/ddb/fig-${{k}}.jpg" alt="${{esc(p.n)}}"><div>
