@@ -123,6 +123,8 @@
   .card h3{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:24px;margin-bottom:10px;color:var(--gold)}
   .card p{font-size:16.5px;color:#cfc6b5}
   .q3 .card{text-align:left}
+  .cards.two{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:900px){.cards.two{grid-template-columns:1fr}}
   .qn{font-family:'IM Fell English SC',Georgia,serif;font-size:40px;color:var(--blood-soft);line-height:1;margin-bottom:8px}
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
   @media(max-width:700px){.gallery{grid-template-columns:repeat(3,1fr);gap:8px}.gallery figcaption{font-size:14px;letter-spacing:.02em}.gallery figcaption small{font-size:11px}}
@@ -230,7 +232,7 @@
 
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ddb/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a>
-  <ul><li><a href="#spillet">Spillet</a></li><li><a href="#regler">Slik spilles det</a></li><li><a href="#sokerne">Søkerne</a></li><li><a href="#appen">Kirkegården</a></li></ul>
+  <ul><li><a href="#spillet">Spillet</a></li><li><a href="#boka">Boka</a></li><li><a href="#regler">Slik spilles det</a></li><li><a href="#sokerne">Søkerne</a></li><li><a href="#appen">Kirkegården</a></li></ul>
   <a class="btn sm" href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener">Følg på BackerKit</a>
 </div></nav>
 
@@ -250,21 +252,15 @@
   <img class="book" src="/img/ddb/bok-mockup.png" alt="De Dødes Bok, innbundet utgave" width="900" height="1200">
 </div></header>
 
-<div class="proofbar"><div class="in">
-  <div><b>36</b><span>kapitler spredt over Unara</span></div>
-  <div><b>3</b><span>lag bak virkelighetens slør</span></div>
-  <div><b>5D6</b><span>ett kast, én stige, ett system</span></div>
-  <div><b>2027</b><span>BackerKit, tredje kvartal</span></div>
-</div></div>
 
 <section id="spillet"><div class="in">
   <div class="split">
     <div>
       <div class="kicker">Spillet</div>
-      <h2>Kunnskapen finnes. <em>Den koster det du er.</em></h2>
-      <p class="lead">De Dødes Bok er et spill om mennesker som velger å gå dit ingen andre tør. Hver spiller tar rollen som en Søker: vanlige folk fra de seks nasjonene som har skjønt noe de fleste aldri oppdager, at verdens hemmeligheter er noe håndgripelig, og at den som besitter dem får nesten grenseløs makt.</p>
-      <p>Som Søker leter du etter sporene: en forvrengning av virkeligheten, et rykte, et tegn. Undersøkelsene tar tid, og det du finner er ikke alltid et kapittel. Men det er alltid noe.</p>
-      <p>Dette er ikke fortellinger om helter som overlever heltemodige kamper mot overmakten. Søkerne bruker tjuvtriks, kunnskap og magi for å unnslippe den sikre død, med økt innsikt som belønning.</p>
+      <h2>Hva gjør man i <em>De Dødes Bok?</em></h2>
+      <p class="lead">Dere spiller Søkere, vanlige folk i Unara som leter etter sidene fra en gammel bok. Boka er revet i trettiseks kapitler, og hvert av dem gir makt til den som har det. Noen vil gjøre hva som helst for å få dem først.</p>
+      <p>En kveld kan gå slik: I et vertshus hører dere at en gjeter har sett lys i fjellsiden der ingen bor. Dere spør rundt, finner veien, og står foran en hule når det mørkner. Der inne må dere velge mellom å snike dere forbi det som sover, eller å ta kampen mens dere ennå har lys.</p>
+      <p>Innerst kan det ligge en side fra boka. Det kan også ligge noe der som har ventet på dere. Søkerne er ikke helter. De klarer seg med list, kunnskap og litt magi, og de som kommer hjem, vet mer enn da de dro.</p>
     </div>
     <figure class="tall">
       <img src="/img/ddb/kloster.jpg" alt="Et kloster på en klippe over tåken, med en bro som fører opp" width="520" height="974">
@@ -272,24 +268,25 @@
   </div>
 </div></section>
 
-<section class="band" id="kjernen"><div class="in">
+<section class="band" id="boka"><div class="in">
   <div class="center narrow">
-    <div class="kicker">Tre spørsmål</div>
-    <h2>Hva spillet handler om, <em>og hvordan reglene viser det.</em></h2>
-    <p class="lead">Et spill uten kjerne sprer seg i alle retninger. Tre spørsmål holder dette på plass.</p>
+    <div class="kicker">Hva er i boka</div>
+    <h2>Alt dere trenger <em>for å begynne å spille</em></h2>
+    <p class="lead">De Dødes Bok er én innbundet bok med regler, verden og eventyr. Dere trenger bare den, terninger og noen å spille med.</p>
   </div>
-  <div class="cards q3">
-    <div class="card"><div class="qn">1</div><h3>Hva handler spillet om?</h3><p>Hva kunnskap koster. Vanlige folk som søker sannheten selv når den ødelegger dem, og en bok som lover alt til den som samler den.</p></div>
-    <div class="card"><div class="qn">2</div><h3>Hvordan viser reglene det?</h3><p>Kropp og sinn slites hver for seg. Legeme ender i Banesår, Fatning i Galskap. Kapitlene gir makt, og hver bruk koster. Med hver 1'er som teller, handler verden mot deg.</p></div>
-    <div class="card"><div class="qn">3</div><h3>Hvilken adferd belønnes?</h3><p>Å gå dit få kjenner og ingen tør. Søkerne blir bedre av å bekjempe det som står i veien, utforske nye steder og oppdage tapt kunnskap. Men Innsikt, det som åpner ritualene og det okkulte, får de bare av hemmelighetene de avdekker. Den som spiller forberedt og nysgjerrig, får mest ut av verden bak sløret.</p></div>
+  <div class="cards q3 two">
+    <div class="card"><h3>Søkerne og reglene</h3><p>Tolv yrker og seks nasjoner å lage Søkere av. Regler for kamp, reise, hvile, skader og ritualer, alt med det samme terningkastet.</p></div>
+    <div class="card"><h3>Unara</h3><p>Seks nasjoner med byer, adelshus, kulter og konflikter. Nok til at dere vet hvem dere kan stole på i hver by, og hvem dere bør holde dere unna.</p></div>
+    <div class="card"><h3>Det som venter</h3><p>Vampyrer, gjengangere, mareritt og verre ting, hver med det den tåler og det den ikke tåler. Spillederen får vite hvordan hver av dem slåss.</p></div>
+    <div class="card"><h3>Eventyrene</h3><p>Et første eventyr å starte med, og de trettiseks kapitlene beskrevet som steder dere kan dra til, hver med sine rom, sine voktere og sin hemmelighet.</p></div>
   </div>
 </div></section>
-<div class="wide"><img src="/img/ddb/ill-ruin.jpg" alt="En Søker foran en ruin i ørkenen"><span>Reisen mot episenteret</span></div>
+<div class="wide"><img src="/img/ddb/ill-ruin.jpg" alt="En Søker foran en ruin i ørkenen"><span>På vei mot et kapittel</span></div>
 <section id="regler" class="band"><div class="in">
   <div class="center narrow">
     <div class="kicker">Slik spilles det</div>
-    <h2>Enkle regler. <em>Vonde valg.</em></h2>
-    <p class="lead">Reglene er laget for å bære stemningen, ikke for å administreres. Det er tre ting du må kunne.</p>
+    <h2>Fem terninger <em>og én stige</em></h2>
+    <p class="lead">Det er tre ting du må kunne for å spille.</p>
   </div>
   <div class="cards">
     <div class="card">
@@ -300,12 +297,12 @@
     <div class="card">
       <div class="ladder"><span>0 til 5</span><span>6 til 10</span><span>11 til 15</span><span>16+</span></div>
       <h3>Samme stige overalt</h3>
-      <p>Kamp, snike, rituale, reise og undersøkelse leses fra den samme stigen. Spillederen trenger ingen egne tabeller for hver ferdighet. Et Feilslag gjør vondt verre, et Svakt treff lykkes, men koster noe. Et Sterkt treff gjør susen og et Fulltreffer gir alltid noe ekstra.</p>
+      <p>Om du slåss, sniker, utfører et rituale eller leter etter et spor, leser du resultatet på den samme stigen. Feilslag betyr at noe går galt. Svakt treff betyr at du lykkes, men det koster deg noe. Sterkt treff betyr at du lykkes. Fulltreffer gir deg litt ekstra.</p>
     </div>
     <div class="card">
       <div class="twin"><b class="leg">Legeme</b><b class="fat">Fatning</b></div>
-      <h3>Kropp og sinn slites</h3>
-      <p>Søkerne utforsker verden bak sløret, og der venter utfordringer forbi kjøtt og blod. Derfor tåler de skade på to måter: på kroppen og på sinnet. Når Legeme går tomt, venter Banesår. Når Fatning går tomt, venter Galskap. Det som kommer fra Underverdenen, Drøm eller det Kosmiske, bryr seg lite om rustningen din.</p>
+      <h3>To slags skade</h3>
+      <p>Legeme er hvor mye kroppen tåler, og Fatning er hvor mye sinnet tåler. Går Legeme tomt, får du et Banesår, og etter tre Banesår dør Søkeren. Går Fatning tomt, får du Galskap. Gjengangere og mareritt går rett på sinnet, så rustningen hjelper lite mot dem.</p>
     </div>
   </div>
 </div></section>
@@ -313,10 +310,10 @@
 <section id="sokerne"><div class="in">
   <div class="center narrow">
     <div class="kicker">Søkerne</div>
-    <h2>Vanlige folk. <em>Uvanlig innsikt.</em></h2>
-    <p class="lead">Alle har sett bak sløret. De reiser ut i verden med noe de kan, og noe som holder dem i live.</p>
-    <p>Du velger en av tolv profesjoner, fra leiesoldat og dusørjeger til okkultist og åndemaner. Ingen av dem er bygget for å vinne slag alene. Hver har en manøver bare de kan, en ferdighet som vinner en reise, og en nasjon i ryggen med sin egen motstand mot det som kommer bak sløret.</p>
-    <p>De vokser av alt de gjør der ute: motstandere de overvinner, steder de utforsker, kunnskap de henter hjem. Men Innsikt, nøkkelen til det okkulte, får de bare av hemmelighetene de avdekker. Slik blir en Søker farligere for hvert kapittel, og litt mindre hel.</p>
+    <h2>Tolv yrker <em>å velge mellom</em></h2>
+    <p class="lead">Søkerne er folk med et vanlig yrke og en nysgjerrighet som har ført dem for langt.</p>
+    <p>Du velger blant tolv yrker, fra leiesoldat og dusørjeger til okkultist og åndemaner. Hvert yrke har noe bare det kan. Hundetreneren har en hund som finner sporet. Artisten får folk til å snakke. Okkultisten kan bryte et tegn og sende det mot fienden. Ingen av dem klarer seg alene, så gruppa må utfylle hverandre.</p>
+    <p>Søkerne blir bedre av det de opplever på veien. Innsikt, som trengs for å lære ritualer, får de bare når de finner ut noe ingen andre vet.</p>
   </div>
   <div class="figs">
     <figure><img src="/img/ddb/fig-akademiker.jpg" alt="Akademiker"><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
@@ -338,10 +335,10 @@
     </figure>
     <div>
       <div class="kicker">Det som venter</div>
-      <h2>Tre lag under verden. <em>Hvert har sitt våpen.</em></h2>
-      <p class="lead">Det som vokter kapitlene, kommer fra Underverdenen, fra Drøm eller fra det Kosmiske. Hvert lag har ett materiale som biter: sølv, speilglass, stjernesten. Uten riktig våpen gjør du halv skade, og kampen skal kjennes gal.</p>
-      <p>Trettiseks kapitler ligger spredt rundt i Unara. Noen er skjult for alle, noen ble funnet, gjemt og glemt, og andre voktes strengt av noen som kjenner bokens krefter.</p>
-      <p>Vampyren i borgen, gjengangeren på kirkegården, morgrelen i marerittet, surmaen som ser på deg fra mørket. Fiendene kaster ikke terninger. De står der, de tåler, og de svarer når Søkerne feiler.</p>
+      <h2>Hvem dere <em>møter der ute</em></h2>
+      <p class="lead">De verste fiendene kommer fra tre steder: Underverdenen, Drømmen og det Kosmiske. Mot gjengangere trenger du sølv, mot mareritt speilglass, og mot det kosmiske svartstål. Med feil våpen gjør du bare halv skade, så det lønner seg å vite hva dere går mot før dere drar.</p>
+      <p>De trettiseks kapitlene ligger spredt rundt i Unara. Noen er gjemt, noen er glemt, og noen voktes av folk som vet hva de har.</p>
+      <p>Fiendene kaster ikke terninger. Det er bare spillerne som kaster, og når de bommer, slår fienden tilbake.</p>
       <div class="folk foe" style="grid-template-columns:repeat(3,1fr);max-width:460px;margin-top:26px;gap:12px">
         <figure><img src="/img/ddb/tok-vampyr.jpg" alt=""><figcaption>Vampyr</figcaption></figure>
         <figure><img src="/img/ddb/tok-gjenganger.jpg" alt=""><figcaption>Gjenganger</figcaption></figure>
@@ -351,9 +348,9 @@
   </div>
 
   <div class="gallery">
-    <figure><img src="/img/ddb/ill-morgrel.jpg" alt="Morgrel, et mareritt med klør og åpen kjeft"><figcaption>Morgrel<small>Kommer fra marerittet, og tar seg med tilbake.</small></figcaption></figure>
-    <figure><img src="/img/ddb/ill-fratser.jpg" alt="Fråtser, en vandød som spiser blant gravene"><figcaption>Fråtser<small>Vandød. Den slutter ikke å spise.</small></figcaption></figure>
-    <figure><img src="/img/ddb/ill-leshzi.jpg" alt="Leshzi, et stort underjordisk vesen med kølle"><figcaption>Leshzi<small>Underjordisk. Nevene ignorerer rustningen din.</small></figcaption></figure>
+    <figure><img src="/img/ddb/ill-morgrel.jpg" alt="Morgrel, et mareritt med klør og åpen kjeft"><figcaption>Morgrel<small>Fra marerittene. Angriper sinnet.</small></figcaption></figure>
+    <figure><img src="/img/ddb/ill-fratser.jpg" alt="Fråtser, en vandød som spiser blant gravene"><figcaption>Fråtser<small>Vandød som aldri blir mett.</small></figcaption></figure>
+    <figure><img src="/img/ddb/ill-leshzi.jpg" alt="Leshzi, et stort underjordisk vesen med kølle"><figcaption>Leshzi<small>Underjordisk. Slår gjennom rustning.</small></figcaption></figure>
   </div>
 </div></section>
 
@@ -361,17 +358,17 @@
   <div class="center narrow">
     <div class="kicker">Prøv spillet</div>
     <h2>Klarer du å overvinne <em>Kirkegården</em>?</h2>
-    <p class="lead">Tre rom, fire Søkere, og det som venter mellom gravene. Du velger hva hver av dem gjør og kaster terningene selv. Reglene forteller deg hvorfor det gikk som det gikk.</p>
+    <p class="lead">Prøv kampreglene før boka kommer. Du styrer fire Søkere gjennom tre rom på en kirkegård utenfor landsbyen, og kaster terningene selv.</p>
   </div>
   <div class="app">
     <figure class="mock"><img src="/img/ddb/kirkegarden-mockup.png" alt="Kirkegården på en laptop og en telefon" width="1684" height="1037"><figcaption>Spill på pc, nettbrett eller telefon</figcaption></figure>
 
     <div>
       <h3>Løs mysteriet på Kirkegården</h3>
-      <p>Fire ferdige Søkere, én fra hvert lag av verden, mot tre rom som blir verre for hvert steg. Flytt brikkene, velg Presse eller Avvente, og kast terningene selv.</p>
+      <p>Ved porten venter villhunder, mellom gravene gjengangere, og i krypten marer. For hver runde velger du om Søkerne skal angripe først eller vente på fienden.</p>
       <ul>
-        <li>Villhunder ved porten, gjengangere mellom gravene, marer i krypten</li>
-        <li>Hvert kast vises med terningene, stigen og hvorfor det gikk som det gikk</li>
+        <li>Hvert kast vises med terningene og hva resultatet betyr</li>
+        <li>Spilles i nettleseren, på pc, nettbrett eller telefon</li>
       </ul>
       <a class="btn" href="/DDBkirkegarden">Spill Kirkegården</a>
       <p class="microtrust" style="margin-top:14px">Låst. Koden får du når du <a href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener" style="color:var(--gold)">følger De Dødes Bok på BackerKit</a>. Prototype.</p>
@@ -381,7 +378,7 @@
 
 <section id="varsel" class="signup"><div class="in center narrow">
   <div class="kicker">BackerKit, tredje kvartal 2027</div>
-  <h2>Følg prosjektet. <em>Få koden.</em></h2>
+  <h2>Følg prosjektet <em>og få koden</em></h2>
   <p class="lead">Følgere får koden til Kirkegården, og beskjed når kampanjen starter.</p>
   <p style="margin-top:28px"><a class="btn blood" href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener">Følg De Dødes Bok på BackerKit</a></p>
   <p class="lead" style="margin-top:44px;font-size:18px">Vil du heller ha det på e-post? Skriv deg opp her.</p>
