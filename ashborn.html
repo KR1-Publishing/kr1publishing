@@ -57,9 +57,6 @@
   nav{background:var(--dark);color:#f2ece0}
   nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
   nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none}
-  nav .logo{display:inline-flex;align-items:center;gap:10px}
-  nav .logo img{width:auto;height:34px}
-  @media(max-width:520px){nav .logo img{height:28px}nav .logo{gap:8px}}
   nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
   nav a{text-decoration:none;opacity:.88}
   nav a:hover{opacity:1;color:var(--gold)}
@@ -134,20 +131,21 @@
 
   .folk{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
   @media(max-width:860px){.folk{grid-template-columns:repeat(3,1fr);gap:12px}}
-  @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr)}.folk figure:last-child{grid-column:1/-1;max-width:50%;margin:0 auto}}
   .folk figure{text-align:center}
   .folk img{width:100%;aspect-ratio:5/7;object-fit:cover;object-position:center;border-radius:12px;border:1px solid #2a2622;box-shadow:0 18px 36px rgba(0,0,0,.6)}
   .folk figcaption{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:14px}
   .folk .ser{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.5px;color:#8f8878;margin-top:3px}
   .folk small{display:block;font-style:italic;font-size:14.5px;color:#cfc6b5;margin-top:8px;line-height:1.35;min-height:2.7em}
 
-  .vale{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
-  .vale .cities{display:flex;flex-direction:column;justify-content:space-between;gap:26px}
-  .vale .cities figure{margin:0}
-  .vale .cities img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;border:1px solid #2a2622;box-shadow:0 24px 50px rgba(0,0,0,.6)}
-  @media(max-width:860px){.vale{grid-template-columns:1fr;gap:28px}}
-  .vale figure img{width:100%;border-radius:10px;box-shadow:0 24px 50px rgba(0,0,0,.6);border:1px solid #2a2622}
-  .vale figcaption{font-family:system-ui,sans-serif;font-size:12.5px;color:#8f8878;margin-top:12px;text-align:center}
+  .vale{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .vale>figure{margin:0}
+  .vale>figure img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 24px 50px rgba(0,0,0,.6);border:1px solid #2a2622}
+  .vale .cities{position:relative;min-height:0}
+  .vale .cities-in{position:absolute;inset:0;display:grid;grid-template-rows:1fr 1fr;gap:40px}
+  .vale .city{margin:0;display:flex;flex-direction:column;min-height:0}
+  .vale .city img{flex:1;min-height:0;width:100%;object-fit:cover;border-radius:10px;border:1px solid #2a2622;box-shadow:0 24px 50px rgba(0,0,0,.6)}
+  @media(max-width:860px){.vale{grid-template-columns:1fr}.vale .cities-in{position:static;grid-template-rows:auto auto}.vale .city img{flex:none;aspect-ratio:16/10}}
   .city{margin-top:28px}
   .city h3{font-family:var(--disp);font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:14px 0 4px}
   .city p{font-size:16px}
@@ -185,7 +183,7 @@
 <div class="ann"><a href="https://www.backerkit.com/c/projects/kr1-publishing/ashborn-the-long-road-home-a-hopeful-dark-fantasy-rpg/pre-launch" target="_blank" rel="noopener"><span class="tag">COMING</span>Ashborn launches on BackerKit in the first quarter of 2027. Follow it and get the code to the Ledger.</a></div>
 
 <nav><div class="in">
-  <a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a>
+  <a class="logo" href="/">KR1 PUBLISHING</a>
   <ul><li><a href="#game">The game</a></li><li><a href="#play">How it plays</a></li><li><a href="#molds">The Ashborn</a></li><li><a href="#vale">The Vale</a></li><li><a href="#ledger">The Ledger</a></li></ul>
   <a class="btn sm" href="https://www.backerkit.com/c/projects/kr1-publishing/ashborn-the-long-road-home-a-hopeful-dark-fantasy-rpg/pre-launch" target="_blank" rel="noopener">Follow on BackerKit</a>
 </div></nav>
@@ -226,7 +224,7 @@
       <p>The game is the distance between what you were made for and who you are trying to become. A mortal is no contest for you. The hardest thing peace will ask is to hold back a strike you could land with ease.</p>
     </div>
     <figure>
-      <img src="/img/ashborn/road-relic.jpg" alt="An Ashborn on the road above the Vale, ink on paper by Joe Porkio" width="1468" height="1612">
+      <img src="/img/ashborn/road-relic.jpg" alt="An Ashborn on the road above the Vale, ink on paper by Joe Porkio" width="1400" height="1956">
       <figcaption>The road to Rivermoot. Everyone you meet remembers what your kind did.</figcaption>
     </figure>
   </div>
@@ -280,11 +278,11 @@
     <p class="lead">One for each kin the Dark Lord harvested. Each comes with a Gift, a Skill, a weapon, a kit and a Dark Secret from the war. Until Humanity 1, a serial number is the only name you have.</p>
   </div>
   <div class="folk">
-    <figure><img src="/img/ashborn/mold-bloodhunter.jpg" alt="Bloodhunter, an orc with a spear" width="700" height="984"><figcaption>Bloodhunter</figcaption><div class="ser">ORC</div><small>Built to hunt those who run.</small></figure>
-    <figure><img src="/img/ashborn/mold-darkspeaker.jpg" alt="Darkspeaker, an elf with a scepter" width="700" height="1000"><figcaption>Darkspeaker</figcaption><div class="ser">ELF</div><small>Built to rule without a blade.</small></figure>
-    <figure><img src="/img/ashborn/mold-gloamer.jpg" alt="Gloamer, a halfling in the dark" width="700" height="982"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to go unseen and end things.</small></figure>
-    <figure><img src="/img/ashborn/mold-juggernaut.jpg" alt="Juggernaut, a dwarf with a maul" width="700" height="984"><figcaption>Juggernaut</figcaption><div class="ser">DWARF</div><small>Built to break and to hold.</small></figure>
-    <figure><img src="/img/ashborn/mold-prefect.jpg" alt="Prefect, a human with a saber raised" width="700" height="981"><figcaption>Prefect</figcaption><div class="ser">HUMAN</div><small>Built to command the rest.</small></figure>
+    <figure><img src="/img/ashborn/mold-bloodhunter.jpg" alt="Bloodhunter, an orc with a spear" width="1000" height="1400"><figcaption>Bloodhunter</figcaption><div class="ser">ORC</div><small>Built to hunt those who run.</small></figure>
+    <figure><img src="/img/ashborn/mold-darkspeaker.jpg" alt="Darkspeaker, an elf with a scepter" width="1000" height="1400"><figcaption>Darkspeaker</figcaption><div class="ser">ELF</div><small>Built to rule without a blade.</small></figure>
+    <figure><img src="/img/ashborn/mold-gloamer.jpg" alt="Gloamer, a halfling in the dark" width="1000" height="1400"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to go unseen and end things.</small></figure>
+    <figure><img src="/img/ashborn/mold-juggernaut.jpg" alt="Juggernaut, a dwarf with a maul" width="1000" height="1400"><figcaption>Juggernaut</figcaption><div class="ser">DWARF</div><small>Built to break and to hold.</small></figure>
+    <figure><img src="/img/ashborn/mold-prefect.jpg" alt="Prefect, a human with a saber raised" width="1000" height="1400"><figcaption>Prefect</figcaption><div class="ser">HUMAN</div><small>Built to command the rest.</small></figure>
   </div>
 </div></section>
 
@@ -292,14 +290,14 @@
   <div class="center narrow">
     <div class="kicker">The world</div>
     <h2>Five lands. <em>Five cities that keep their own count of you.</em></h2>
-    <p class="lead">Stonehold, the Vale, the Aeonwoods, the Hearthlands, and the Darklands where it all began. One central city for each kin, and every one of them starts you at zero.</p>
+    <p class="lead">Stonehold, the Vale, the Aeonwoods, the Hearthlands, and the Darklands where it all began. One central city for each kin, and every one of them starts you at zero. The free quickstart runs in the Vale, the valley in the middle. Würmhall, Applecrust and Gorrath are being inked now.</p>
+    <p class="microtrust" style="margin-top:10px">The world, ink on paper by <a href="https://instagram.com/joeporkio" target="_blank" rel="noopener" class="joe">Joe Porkio</a>.</p>
   </div>
   <div class="vale" style="margin-top:44px">
     <figure>
       <img src="/img/ashborn/worldmap.jpg" alt="The world map, five lands around the Vale, ink on paper by Joe Porkio" width="1600" height="2277">
-      <figcaption>The world, ink on paper by <a href="https://instagram.com/joeporkio" target="_blank" rel="noopener" class="joe">Joe Porkio</a>. The free quickstart runs in the Vale, the valley in the middle.</figcaption>
     </figure>
-    <div class="cities">
+    <div class="cities"><div class="cities-in">
       <figure class="city">
         <img src="/img/ashborn/rivermoot.jpg" alt="The quay market in Rivermoot, ink on paper by Joe Porkio" width="805" height="580">
         <h3>Rivermoot, the Vale</h3>
@@ -310,8 +308,7 @@
         <h3>Silvarion, the Aeonwoods</h3>
         <p>The most beautiful city you have seen, and the saddest. Half of it burned, and the leaves turn toward you as you pass.</p>
       </figure>
-      <p class="note" style="margin:0">Würmhall, Applecrust and Gorrath are being inked now. The quickstart covers the Vale. The full book opens the rest.</p>
-    </div>
+    </div></div>
   </div>
 </div></section>
 
