@@ -39,7 +39,7 @@ Q = [
    ("Sliper våpenet og legger meg tidlig", ["leiesoldat","duelist"]),
    ("Leser alt som finnes om stedet", ["akademiker","okkultist"]),
    ("Går ut og hører hva folk i landsbyen sier", ["artist","dusorjeger"]),
-   ("Gjør klart utstyret, og hunden", ["hundetrener","konstruktor"])]),
+   ("Gjør klart utstyret, og vier ekstra oppmerksomhet til følgesvennen din", ["hundetrener","konstruktor"])]),
  ("Gruppa står foran en dør som ikke vil åpne seg.", [
    ("Den åpner seg om den får en skulder", ["leiesoldat"]),
    ("Jeg leser tegnene i treverket", ["okkultist","akademiker"]),
