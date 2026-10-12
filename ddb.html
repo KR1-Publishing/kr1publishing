@@ -156,8 +156,9 @@
   .folk small{display:block;font-family:system-ui,sans-serif;font-size:12px;color:#8f8878;letter-spacing:.3px;margin-top:2px}
 
   /* APP CARD */
-  .app{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1f1a16,#120f0d);border:1px solid #3a2f28;border-radius:18px;padding:36px 40px;max-width:980px;margin:36px auto 0}
+  .app{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1f1a16,#120f0d);border:1px solid #3a2f28;border-radius:18px;padding:36px 40px;max-width:980px;margin:36px auto 0}
   @media(max-width:860px){.app{grid-template-columns:1fr;padding:28px 24px}}
+  .mock{margin:0}.mock img{width:100%;height:auto;display:block}.mock figcaption{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:#8f8878;text-align:center;margin-top:10px}
   .app h3{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:30px;color:#fff;margin-bottom:10px}
   .app p{font-size:17px}
   .app ul{margin:14px 0 22px 20px;color:#cfc6b5;font-size:16.5px}
@@ -354,27 +355,20 @@
     <p class="lead">Tre rom, fire Søkere, og det som venter mellom gravene. Du velger hva hver av dem gjør og kaster terningene selv. Reglene forteller deg hvorfor det gikk som det gikk.</p>
   </div>
   <div class="app">
+    <figure class="mock"><img src="/img/ddb/kirkegarden-mockup.png" alt="Kirkegården på en laptop og en telefon" width="1684" height="1037"><figcaption>Kartet på pc-en, din Søker på telefonen</figcaption></figure>
+
     <div>
       <h3>Løs mysteriet på Kirkegården</h3>
       <p>Et ferdig scenario med reglene slik de står i manuset nå. Fire ferdige Søkere, én fra hvert lag av verden, mot tre rom som blir verre for hvert steg.</p>
       <ul>
         <li>Alrik, leiesoldat med skjold. Sigrun, hundetrener med Varg og sølv i spydet</li>
-        <li>Matei, artist med kniv av speilglass. Ysolde, okkultist med tre ladede tegn</li>
+        <li>Matei, artist med kniv av speilglass. Jurek, okkultist med tre ladede tegn</li>
         <li>Villhunder ved porten, gjengangere mellom gravene, marer i krypten</li>
         <li>Hvert kast vises med terningene, stigen og hvorfor det gikk som det gikk</li>
         <li>Fungerer på mobil. Si hva du synes med én knapp</li>
       </ul>
       <a class="btn" href="/Trefningsbordet">Spill Kirkegården</a>
       <p class="microtrust" style="margin-top:14px">Kirkegården er låst. Koden får du når du <a href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener" style="color:var(--gold)">følger De Dødes Bok på BackerKit</a>. Prototype, reglene endres mens manuset redigeres.</p>
-    </div>
-    <div class="board" aria-hidden="true">
-      <img class="tok s" src="/img/ddb/tok-leiesoldat.jpg" alt="" style="left:14%;top:58%">
-      <img class="tok s" src="/img/ddb/tok-hundetrener.jpg" alt="" style="left:30%;top:30%">
-      <img class="tok s" src="/img/ddb/tok-hund.jpg" alt="" style="left:44%;top:50%;width:48px;height:48px">
-      <img class="tok s" src="/img/ddb/tok-okkultist.jpg" alt="" style="left:12%;top:18%">
-      <img class="tok" src="/img/ddb/tok-gjenganger.jpg" alt="" style="left:70%;top:24%;width:80px;height:80px">
-      <img class="tok" src="/img/ddb/tok-vette.jpg" alt="" style="left:64%;top:62%">
-      <span class="lbl">Rom 2 · Gravene</span>
     </div>
   </div>
 </div></section>
