@@ -4,6 +4,51 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/ddbverksted",
+      "destination": "/DDBverksted",
+      "permanent": false
+    },
+    {
+      "source": "/kirkegården",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/kirkegarden",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/DDBkirkeg%C3%A5rden",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/ddbkirkeg%C3%A5rden",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/DDBkirkegården",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/ddbkirkegarden",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/trefningsbordet",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
+      "source": "/Trefningsbordet",
+      "destination": "/DDBkirkegarden",
+      "permanent": false
+    },
+    {
       "source": "/s%C3%B8lvhjerte",
       "destination": "/solvhjerte",
       "permanent": false
