@@ -69,7 +69,8 @@
   .hero h1{position:absolute;left:-9999px}
   .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;text-align:center}
   .hero img.wm{width:100%;max-width:620px;margin:0 auto}
-  @media(max-width:560px){.hero .tagline{letter-spacing:.14em;line-height:1.8}}
+  .hero .tagline .tl2{display:block;margin-top:6px}
+  @media(max-width:560px){.hero .tagline{letter-spacing:.14em;line-height:1.8}.hero .tagline .tl2{display:inline;margin:0}.hero .tagline .tl2::before{content:" "}}
   .hero .tagline{font-family:var(--disp);font-size:clamp(11px,1.4vw,14px);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:22px}
   .hero .tagline b{color:var(--ember-soft);font-weight:600}
   .hero p.lead{font-size:clamp(19px,2.2vw,23px);max-width:560px;margin:22px auto 0;color:var(--bone);line-height:1.45}
@@ -133,11 +134,11 @@
   .tl{font-family:var(--disp);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:10px 0 5px;display:flex;justify-content:space-between;color:#a89f8c}
   .tl span{color:var(--gold)}
 
-  .folk{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px}
+  .folk{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:40px;max-width:1260px;margin-left:auto;margin-right:auto}
   @media(max-width:860px){.folk{grid-template-columns:repeat(3,1fr);gap:12px}}
   @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr)}.folk figure:last-child{grid-column:1/-1;max-width:50%;margin:0 auto}}
   .folk figure{text-align:center}
-  .folk img{width:100%;aspect-ratio:5/7;object-fit:cover;object-position:center;border-radius:12px;border:1px solid #2a2622;box-shadow:0 18px 36px rgba(0,0,0,.6)}
+  .folk img{width:100%;aspect-ratio:5/7;object-fit:cover;object-position:center;border-radius:12px;image-rendering:auto;border:1px solid #2a2622;box-shadow:0 18px 36px rgba(0,0,0,.6)}
   .folk figcaption{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-top:14px}
   .folk .ser{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.5px;color:#8f8878;margin-top:3px}
   .folk small{display:block;font-style:italic;font-size:14.5px;color:#cfc6b5;margin-top:8px;line-height:1.35;min-height:2.7em}
@@ -197,7 +198,7 @@
   <div class="herogrid">
     <div>
       <img class="wm" src="/img/ashborn/wordmark.png" alt="Ashborn: The Long Road Home" width="1100" height="267">
-      <div class="tagline">Ironsworn at heart. <b>Rebuilt for destruction.</b> Played for redemption.</div>
+      <div class="tagline">Ironsworn at heart. <b>Rebuilt for destruction.</b><span class="tl2">Played for redemption.</span></div>
       <p class="lead">A hopeful dark fantasy roleplaying game about coming home from a war you were forced to fight.</p>
       <a class="cta" href="#game">The war is over. The weapons it made are still around.</a>
       <div class="cta-row">
@@ -282,12 +283,13 @@
     <p class="lead">One for each kin the Dark Lord harvested. Each comes with a Gift, a Skill, a weapon, a kit and a Dark Secret from the war. Until Humanity 1, a serial number is the only name you have.</p>
   </div>
   <div class="folk">
-    <figure><img src="/img/ashborn/mold-bloodhunter-v2-480.jpg" srcset="/img/ashborn/mold-bloodhunter-v2-480.jpg 480w, /img/ashborn/mold-bloodhunter-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Bloodhunter, an orc with a spear" width="1000" height="1400"><figcaption>Bloodhunter</figcaption><div class="ser">ORC</div><small>Built to hunt those who run.</small></figure>
-    <figure><img src="/img/ashborn/mold-darkspeaker-v2-480.jpg" srcset="/img/ashborn/mold-darkspeaker-v2-480.jpg 480w, /img/ashborn/mold-darkspeaker-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Darkspeaker, an elf with a scepter" width="1000" height="1400"><figcaption>Darkspeaker</figcaption><div class="ser">ELF</div><small>Built to rule without a blade.</small></figure>
-    <figure><img src="/img/ashborn/mold-gloamer-v2-480.jpg" srcset="/img/ashborn/mold-gloamer-v2-480.jpg 480w, /img/ashborn/mold-gloamer-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Gloamer, a halfling in the dark" width="1000" height="1400"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to sneak and end things.</small></figure>
-    <figure><img src="/img/ashborn/mold-juggernaut-v2-480.jpg" srcset="/img/ashborn/mold-juggernaut-v2-480.jpg 480w, /img/ashborn/mold-juggernaut-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Juggernaut, a dwarf with a maul" width="1000" height="1400"><figcaption>Juggernaut</figcaption><div class="ser">DWARF</div><small>Built to break and to hold.</small></figure>
-    <figure><img src="/img/ashborn/mold-prefect-v2-480.jpg" srcset="/img/ashborn/mold-prefect-v2-480.jpg 480w, /img/ashborn/mold-prefect-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Prefect, a human with a saber raised" width="1000" height="1400"><figcaption>Prefect</figcaption><div class="ser">HUMAN</div><small>Built to command the rest.</small></figure>
+    <figure><img src="/img/ashborn/mold-bloodhunter-v3-480.jpg" srcset="/img/ashborn/mold-bloodhunter-v3-240.jpg 240w, /img/ashborn/mold-bloodhunter-v3-480.jpg 480w, /img/ashborn/mold-bloodhunter-v3-720.jpg 720w, /img/ashborn/mold-bloodhunter-v3-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 236px" alt="Bloodhunter, an orc with a spear" width="1000" height="1400"><figcaption>Bloodhunter</figcaption><div class="ser">ORC</div><small>Built to hunt those who run.</small></figure>
+    <figure><img src="/img/ashborn/mold-darkspeaker-v3-480.jpg" srcset="/img/ashborn/mold-darkspeaker-v3-240.jpg 240w, /img/ashborn/mold-darkspeaker-v3-480.jpg 480w, /img/ashborn/mold-darkspeaker-v3-720.jpg 720w, /img/ashborn/mold-darkspeaker-v3-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 236px" alt="Darkspeaker, an elf with a scepter" width="1000" height="1400"><figcaption>Darkspeaker</figcaption><div class="ser">ELF</div><small>Built to rule without a blade.</small></figure>
+    <figure><img src="/img/ashborn/mold-gloamer-v3-480.jpg" srcset="/img/ashborn/mold-gloamer-v3-240.jpg 240w, /img/ashborn/mold-gloamer-v3-480.jpg 480w, /img/ashborn/mold-gloamer-v3-720.jpg 720w, /img/ashborn/mold-gloamer-v3-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 236px" alt="Gloamer, a halfling in the dark" width="1000" height="1400"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to sneak and end things.</small></figure>
+    <figure><img src="/img/ashborn/mold-juggernaut-v3-480.jpg" srcset="/img/ashborn/mold-juggernaut-v3-240.jpg 240w, /img/ashborn/mold-juggernaut-v3-480.jpg 480w, /img/ashborn/mold-juggernaut-v3-720.jpg 720w, /img/ashborn/mold-juggernaut-v3-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 236px" alt="Juggernaut, a dwarf with a maul" width="1000" height="1400"><figcaption>Juggernaut</figcaption><div class="ser">DWARF</div><small>Built to break and to hold.</small></figure>
+    <figure><img src="/img/ashborn/mold-prefect-v3-480.jpg" srcset="/img/ashborn/mold-prefect-v3-240.jpg 240w, /img/ashborn/mold-prefect-v3-480.jpg 480w, /img/ashborn/mold-prefect-v3-720.jpg 720w, /img/ashborn/mold-prefect-v3-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 236px" alt="Prefect, a human with a saber raised" width="1000" height="1400"><figcaption>Prefect</figcaption><div class="ser">HUMAN</div><small>Built to command the rest.</small></figure>
   </div>
+  <div class="center" style="margin-top:38px"><a class="btn ghost" href="/ashborn/mold">Which Mold are you?</a><p class="microtrust" style="margin-top:12px">Eight questions, one of five. Share the result.</p></div>
 </div></section>
 
 <section id="vale"><div class="in">
