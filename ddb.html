@@ -72,9 +72,11 @@
   @media(max-width:760px){nav ul{display:none}}
 
   /* HERO */
-  .hero{position:relative;text-align:center;padding:56px 0 64px;overflow:hidden;background:
-    radial-gradient(ellipse at 50% 0%,rgba(168,32,26,.28),transparent 55%),
-    linear-gradient(180deg,#000 0%,var(--night) 100%)}
+  .hero{position:relative;text-align:center;padding:72px 0 84px;overflow:hidden;background:
+    linear-gradient(180deg,rgba(13,12,11,0) 45%,var(--night) 97%),
+    linear-gradient(90deg,rgba(8,7,6,.92) 0%,rgba(8,7,6,.72) 45%,rgba(8,7,6,.35) 100%),
+    url(/img/ddb/ill-landskap.jpg) center 40%/cover no-repeat #0b0a09}
+  .hero p.lead,.hero .microtrust{text-shadow:0 2px 12px rgba(0,0,0,.9)}
   .hero img.logo{width:100%;max-width:720px;height:auto;display:block;margin:0 auto}
   .hero h1{position:absolute;left:-9999px}
   .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;text-align:center}
@@ -148,6 +150,13 @@
   .twin .fat{background:#243a56;color:#fff}
 
   /* PORTRAITS */
+  .skort{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:44px}
+  .skort figure{margin:0;border:1px solid rgba(232,201,111,.55);border-radius:14px;padding:10px;background:#1b1714;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 30px rgba(0,0,0,.45)}
+  .skort img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 18%;border-radius:8px;display:block}
+  .skort figcaption{text-align:center;padding:0 6px 8px;display:flex;flex-direction:column;gap:4px}
+  .skort b{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:22px;letter-spacing:.06em;color:var(--bone)}
+  .skort span{text-wrap:balance;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:16.5px;line-height:1.35;color:#bfb4a0}
+  @media(max-width:860px){.skort{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.skort b{font-size:17px}.skort span{font-size:14.5px}}
   .figs{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-top:40px;align-items:start}
   .figs figure{text-align:center}
   .figs img{width:100%;height:auto;display:block;border-radius:8px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.8))}
@@ -315,15 +324,15 @@
     <p>Du velger blant tolv yrker, fra leiesoldat og dusørjeger til okkultist og åndemaner. Hvert yrke har noe bare det kan. Hundetreneren har en hund som finner sporet. Artisten får folk til å snakke. Okkultisten kan bryte et tegn og sende det mot fienden. Ingen av dem klarer seg alene, så gruppa må utfylle hverandre.</p>
     <p>Søkerne blir bedre av det de opplever på veien. Innsikt, som trengs for å lære ritualer, får de bare når de finner ut noe ingen andre vet.</p>
   </div>
-  <div class="figs">
-    <figure><img src="/img/ddb/fig-akademiker.jpg" alt="Akademiker"><figcaption>Akademiker</figcaption><small>Vet hva det er</small></figure>
-    <figure><img src="/img/ddb/fig-dusorjeger.jpg" alt="Dusørjeger"><figcaption>Dusørjeger</figcaption><small>Vet hvor det er</small></figure>
-    <figure><img src="/img/ddb/fig-hundetrener.jpg" alt="Hundetrener"><figcaption>Hundetrener</figcaption><small>Finner veien</small></figure>
-    <figure><img src="/img/ddb/fig-duelist.jpg" alt="Duelist"><figcaption>Duelist</figcaption><small>Står først</small></figure>
-    <figure><img src="/img/ddb/fig-leiesoldat.jpg" alt="Leiesoldat"><figcaption>Leiesoldat</figcaption><small>Står lengst</small></figure>
-    <figure><img src="/img/ddb/fig-okkultist.jpg" alt="Okkultist"><figcaption>Okkultist</figcaption><small>Leser det ingen tør</small></figure>
-    <figure><img src="/img/ddb/fig-konstruktor.jpg" alt="Konstruktør"><figcaption>Konstruktør</figcaption><small>Bygger det som trengs</small></figure>
-    <figure><img src="/img/ddb/fig-artist.jpg" alt="Artist"><figcaption>Artist</figcaption><small>Får folk til å snakke</small></figure>
+  <div class="skort">
+    <figure><img src="/img/ddb/fig-akademiker.jpg" alt="Akademiker" loading="lazy"><figcaption><b>Akademiker</b><span>Vet hva det er før de andre har spurt.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-dusorjeger.jpg" alt="Dusørjeger" loading="lazy"><figcaption><b>Dusørjeger</b><span>Finner alle, for en pris.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-hundetrener.jpg" alt="Hundetrener" loading="lazy"><figcaption><b>Hundetrener</b><span>Hunden finner sporet før du gjør det.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-duelist.jpg" alt="Duelist" loading="lazy"><figcaption><b>Duelist</b><span>Står først og avslutter fort.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-leiesoldat.jpg" alt="Leiesoldat" loading="lazy"><figcaption><b>Leiesoldat</b><span>Tåler mest og står lengst.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-okkultist.jpg" alt="Okkultist" loading="lazy"><figcaption><b>Okkultist</b><span>Bryter et tegn og sender det mot fienden.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-konstruktor.jpg" alt="Konstruktør" loading="lazy"><figcaption><b>Konstruktør</b><span>Bygger en dukke som slåss for seg.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-artist.jpg" alt="Artist" loading="lazy"><figcaption><b>Artist</b><span>Får folk til å si det de ikke burde.</span></figcaption></figure>
   </div>
   <div class="center" style="margin-top:30px"><a class="btn" href="/ddb/soker">Hvilken Søker er du?</a><p class="microtrust" style="margin-top:10px">Sju spørsmål, to minutter.</p></div>
 </div></section>
