@@ -65,7 +65,8 @@
 
   .hero{position:relative;text-align:center;padding:60px 0 64px;overflow:hidden;background:
     radial-gradient(ellipse at 50% 0%,rgba(216,96,58,.22),transparent 55%),
-    linear-gradient(180deg,#000 0%,var(--night) 100%)}
+    linear-gradient(180deg,rgba(0,0,0,.84) 0%,rgba(8,7,6,.84) 60%,var(--night) 100%),
+    url(/img/ashborn/banner.jpg) center 70%/cover no-repeat #000}
   .hero h1{position:absolute;left:-9999px}
   .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;text-align:center}
   .hero img.wm{width:100%;max-width:620px;margin:0 auto}
@@ -189,6 +190,15 @@
   #play .vis .arrow,#play .vis .mod{font-size:16px}
   #play .vis .lad div{padding:9px 4px;font-size:13px}
   #play .vis .lad div small{font-size:12.5px}
+  @media(max-width:480px){nav .logo{font-size:0;letter-spacing:0;gap:0}}
+  @media(max-width:860px){
+    .hero{background:radial-gradient(ellipse at 50% 0%,rgba(216,96,58,.2),transparent 55%),linear-gradient(180deg,rgba(0,0,0,.8) 0px,rgba(8,7,6,.82) 380px,var(--night) 620px),url(/img/ashborn/banner.jpg) 14% 0/auto 620px no-repeat var(--night)}
+    #game .split{display:flex;flex-direction:column;gap:0}
+    #game .split>div{display:contents}
+    #game .split>div>*{order:1}
+    #game .split>figure{order:2;margin:22px 0 26px}
+    #game .split>div>p:not(.lead){order:3}
+  }
 </style>
 </head>
 <body>
