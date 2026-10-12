@@ -114,6 +114,7 @@
   .qn{font-family:var(--disp);font-size:40px;color:var(--ember-soft);line-height:1;margin-bottom:8px;font-weight:700}
   .dice{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:18px}
   .die{width:46px;height:42px;border:1px solid #4a3f36;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:700;font-size:13px;background:#241f1b;color:var(--bone)}
+  .mod{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--gold);padding:0 2px}
   .die.hot{background:var(--gold);color:var(--ink);border-color:var(--gold)}
   .die.dia{width:34px;height:34px;margin:0 8px;border-radius:5px;transform:rotate(45deg);background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
   .die.dia i{display:block;transform:rotate(-45deg);font-style:normal}
@@ -121,8 +122,10 @@
   .lad{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:18px}
   .lad div{border:1px solid #4a3f36;padding:9px 4px;text-align:center;font-family:var(--disp);font-size:12px;letter-spacing:.06em;font-weight:700;background:#241f1b;line-height:1.3;border-radius:7px;color:var(--bone)}
   .lad div small{display:block;font-family:var(--serif);font-weight:400;font-size:12.5px;letter-spacing:0;color:#a89f8c}
-  .lad .bz{background:var(--ember);border-color:var(--ember);color:#fff}
-  .lad .bz small{color:#f6d9cc}
+  .lad .l1{background:#2a2622;border-color:#4a433c;color:#a89f8c}.lad .l1 small{color:#8a8070}
+  .lad .l2{background:#1f3a27;border-color:#4e7a55;color:#d6ead5}.lad .l2 small{color:#9fc7a3}
+  .lad .l3{background:#4a2f16;border-color:#b06a2a;color:#f6d4a8}.lad .l3 small{color:#e5ad6a}
+  .lad .l4{background:#8a1212;border-color:#c22626;color:#fff}.lad .l4 small{color:#f3c7c7}
   .track{display:flex;gap:3px}
   .track i{flex:1;height:16px;border:1px solid #4a3f36;background:#241f1b;border-radius:3px}
   .track i.lv{background:#3a3129}
@@ -238,9 +241,9 @@
     <p class="lead">A game without a core spreads in every direction. Three questions keep this one in place.</p>
   </div>
   <div class="cards">
-    <div class="card"><div class="qn">1</div><h3>What is the game about?</h3><p>Restraint. Weapons that could end any fight in a heartbeat, walking into towns that fear them, trying to earn a door that opens. Killing is the easy part. The aftermath is the game.</p></div>
-    <div class="card"><div class="qn">2</div><h3>How do the rules show it?</h3><p>Your action die is a Rage Die. Every wound makes it bigger, and bigger dice win more rolls, right up until the bare die beats both Challenge Dice and you go Berserk. Power is the trap.</p></div>
-    <div class="card"><div class="qn">3</div><h3>What behavior is rewarded?</h3><p>Humanity. There is no experience for killing. You mark Humanity for restraint, protection, amends and costly kindness, and every level hands a memory back. At the first, your name.</p></div>
+    <div class="card"><div class="qn">1</div><h3>What is the game about?</h3><p>Restraint. You are a weapon that could end any fight in a heartbeat, walking into towns that fear you, trying to earn a door that opens. Killing is the easy part. What comes after it is the game.</p></div>
+    <div class="card"><div class="qn">2</div><h3>How do the rules show it?</h3><p>Your action die is a Rage Die. Every wound makes it bigger, and bigger dice win more rolls, right up until the bare die beats both Challenge Dice and you go Berserk. Power is the trap, and it is always on offer.</p></div>
+    <div class="card"><div class="qn">3</div><h3>What behavior is rewarded?</h3><p>Humanity. There is no experience for killing. You mark Humanity for restraint, protection, amends and costly kindness, and every level hands a memory back from before the war. The first one gives you back your name.</p></div>
   </div>
 </div></section>
 
@@ -252,14 +255,14 @@
   </div>
   <div class="cards">
     <div class="card">
-      <div class="dice"><span class="die hot">D6</span><span class="arrow">+</span><span class="die">+3</span><span class="arrow">vs</span><span class="die dia"><i>4</i></span><span class="die dia"><i>7</i></span></div>
+      <div class="dice"><span class="die hot">D6</span><span class="arrow">+</span><span class="mod">+3</span><span class="arrow">vs</span><span class="die dia"><i>4</i></span><span class="die dia"><i>7</i></span></div>
       <h3>One roll, roll high</h3>
       <p>Say what you do and what you want from it. Roll your Rage Die, add one of five Abilities, and compare the total with two ten-sided Challenge Dice. Beat both for a Strong Hit, one for a Weak Hit, neither for a Miss. The system is player-facing. The GM never rolls.</p>
     </div>
     <div class="card">
-      <div class="lad"><div>D4<small>1 %</small></div><div>D8<small>7 %</small></div><div>D12<small>18 %</small></div><div class="bz">D20<small>45 %</small></div></div>
+      <div class="lad"><div class="l1">D4<small>1 %</small></div><div class="l2">D8<small>7 %</small></div><div class="l3">D12<small>18 %</small></div><div class="l4">D20<small>45 %</small></div></div>
       <h3>The die that grows</h3>
-      <p>Every point of Harm moves the Rage Die one step up. If the bare die ever beats both Challenge Dice added together, you go Berserk. No roll, no target of your choosing. The monster attacks whatever set it off. At a D4 that is once in a hundred rolls. At a D20, almost once in two.</p>
+      <p>Every point of Harm moves the Rage Die one step up. A bigger die wins more rolls, so you gain power as you lose control. If the bare die ever beats both Challenge Dice added together, you go Berserk. There is no roll and no target of your choosing, because the monster attacks whatever set it off. At a D4 that is once in a hundred rolls. At a D20, almost once in two.</p>
     </div>
     <div class="card">
       <div class="tl" style="margin-top:0"><span>Humanity</span>never resets</div>
@@ -281,7 +284,7 @@
   <div class="folk">
     <figure><img src="/img/ashborn/mold-bloodhunter-v2-480.jpg" srcset="/img/ashborn/mold-bloodhunter-v2-480.jpg 480w, /img/ashborn/mold-bloodhunter-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Bloodhunter, an orc with a spear" width="1000" height="1400"><figcaption>Bloodhunter</figcaption><div class="ser">ORC</div><small>Built to hunt those who run.</small></figure>
     <figure><img src="/img/ashborn/mold-darkspeaker-v2-480.jpg" srcset="/img/ashborn/mold-darkspeaker-v2-480.jpg 480w, /img/ashborn/mold-darkspeaker-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Darkspeaker, an elf with a scepter" width="1000" height="1400"><figcaption>Darkspeaker</figcaption><div class="ser">ELF</div><small>Built to rule without a blade.</small></figure>
-    <figure><img src="/img/ashborn/mold-gloamer-v2-480.jpg" srcset="/img/ashborn/mold-gloamer-v2-480.jpg 480w, /img/ashborn/mold-gloamer-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Gloamer, a halfling in the dark" width="1000" height="1400"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to go unseen and end things.</small></figure>
+    <figure><img src="/img/ashborn/mold-gloamer-v2-480.jpg" srcset="/img/ashborn/mold-gloamer-v2-480.jpg 480w, /img/ashborn/mold-gloamer-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Gloamer, a halfling in the dark" width="1000" height="1400"><figcaption>Gloamer</figcaption><div class="ser">HALFLING</div><small>Built to sneak and end things.</small></figure>
     <figure><img src="/img/ashborn/mold-juggernaut-v2-480.jpg" srcset="/img/ashborn/mold-juggernaut-v2-480.jpg 480w, /img/ashborn/mold-juggernaut-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Juggernaut, a dwarf with a maul" width="1000" height="1400"><figcaption>Juggernaut</figcaption><div class="ser">DWARF</div><small>Built to break and to hold.</small></figure>
     <figure><img src="/img/ashborn/mold-prefect-v2-480.jpg" srcset="/img/ashborn/mold-prefect-v2-480.jpg 480w, /img/ashborn/mold-prefect-v2-1000.jpg 1000w" sizes="(max-width:520px) 45vw, (max-width:860px) 30vw, 210px" alt="Prefect, a human with a saber raised" width="1000" height="1400"><figcaption>Prefect</figcaption><div class="ser">HUMAN</div><small>Built to command the rest.</small></figure>
   </div>
@@ -291,7 +294,7 @@
   <div class="center narrow">
     <div class="kicker">The world</div>
     <h2>Five lands. <em>Five cities that keep their own count of you.</em></h2>
-    <p class="lead">Stonehold, the Vale, the Aeonwoods, the Hearthlands, and the Darklands where it all began. One central city for each kin, and every one of them starts you at zero. The free quickstart runs in the Vale, the valley in the middle. Würmhall, Applecrust and Gorrath are being inked now.</p>
+    <p class="lead">Five lands share the map. Stonehold in the mountains, the Vale in the valley at the heart of it, the Aeonwoods, the Hearthlands, and the Darklands in the north, where the Black Mirrors still stand and where it all began. Each land has one central city, built by one of the kin the Dark Lord harvested, and every one of those cities starts you at zero. They remember what the Ashborn did, so trust has to be earned there, job by job, before any gate opens for good. The free quickstart runs in the Vale, with Rivermoot as the first town that has to decide what you are. Rivermoot and Silvarion are inked. Würmhall, Applecrust and Gorrath are on Joe's table now.</p>
     <p class="microtrust" style="margin-top:10px">The world, ink on paper by <a href="https://instagram.com/joeporkio" target="_blank" rel="noopener" class="joe">Joe Porkio</a>.</p>
   </div>
   <div class="vale" style="margin-top:44px">
@@ -317,7 +320,7 @@
   <div class="center narrow">
     <div class="kicker">Play it before you back it</div>
     <h2>The quickstart is free. <em>The Ledger runs it.</em></h2>
-    <p class="lead">It is a real game, not a preview. Download it, run it on a Friday with three friends, and decide for yourself whether the road is worth walking.</p>
+    <p class="lead">This is a complete game in its own right. Download it, run it on a Friday with three friends, and decide for yourself whether the road is worth walking.</p>
   </div>
   <div class="app">
     <div>
