@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="/img/kr1-hex.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>From 69 books to 10,000 | KR1 Publishing</title>
 <meta name="description" content="I sold 69 books in five years, then 10,000 in the twelve months that followed. The checklist, the scoring tool and the quiz behind it are free.">
@@ -50,7 +51,9 @@
   /* NAV */
   nav{background:var(--dark);color:#f2ece0}
   nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
-  nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none}
+  nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+  nav .logo img{width:auto;height:34px}
+  @media(max-width:520px){nav .logo img{height:28px}nav .logo{gap:8px}}
   nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
   nav a{text-decoration:none;opacity:.88}
   nav a:hover{opacity:1;color:var(--gold)}
@@ -206,6 +209,19 @@
     .gate h2{font-size:22px}
     .card img{width:120px;height:160px}
   }
+
+  /* Prosjekter */
+  .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+  .proj a{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+  .proj a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,28,24,.14)}
+  .proj img{width:100%;aspect-ratio:1200/630;object-fit:cover;display:block;background:var(--dark)}
+  .proj .pjb{display:flex;flex-direction:column;flex:1;padding:16px 18px 18px;text-align:left;background:none;border:0;border-radius:0}
+  .proj .pk{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold-dark);font-weight:700}
+  .proj h3{font-size:22px;margin:4px 0 6px;line-height:1.2;color:var(--ink);font-family:inherit;text-align:left}
+  .proj .pjb p{font-size:15.5px;color:var(--muted);margin:0;line-height:1.45;font-weight:400;font-family:inherit;text-align:left}
+  .proj .pjb p{text-wrap:pretty}
+  .proj .go{display:inline-block;margin-top:auto;padding-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;font-weight:700;color:var(--gold-dark)}
+  @media(max-width:860px){.proj{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
 </style>
 </head>
 <body>
@@ -213,9 +229,10 @@
 <div class="ann"><a href="#signup"><span class="tag">NEW</span>The DTRPG Bestseller Blueprint arrives Q2 2027. Join the waiting list &rarr;</a></div>
 
 <nav><div class="in">
-  <a class="logo" href="#">KR1 PUBLISHING</a>
+  <a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a>
   <ul>
     <li><a href="#tools">Free Tools</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#story">The Story</a></li>
     <li><a href="#blueprint">Blueprint</a></li>
     <li><a href="#faq">Questions</a></li>
@@ -478,6 +495,20 @@
     <h2>Start where I should have started</h2>
     <p class="lead narrow" style="margin-bottom:26px">One page, sixteen boxes, and the honest numbers behind them.</p>
     <a class="btn" href="#signup">Get the checklist</a>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="band" id="projects">
+  <div class="in">
+    <div class="center"><div class="kicker">On the desk right now</div>
+    <h2 style="font-size:clamp(23px,3vw,32px)">What I am working on</h2>
+    <p class="lead narrow" style="color:var(--muted)">Each one has its own page, so this one can stay about the method.</p></div>
+    <div class="proj">
+      <a href="/ashborn"><img src="/img/ashborn/og-ashborn.jpg" alt="Ashborn" loading="lazy"><div class="pjb"><div class="pk">BackerKit · Q1 2027</div><h3>Ashborn</h3><p>Hopeful dark fantasy about coming home from a war you never chose. The free quickstart is out now.</p><span class="go">See Ashborn &rarr;</span></div></a>
+      <a href="/ddb"><img src="/img/ddb/og-ddb.jpg" alt="De Dødes Bok" loading="lazy"><div class="pjb"><div class="pk">BackerKit · 2027 · Norwegian</div><h3>De Dødes Bok</h3><p>Henrik Grimshei's gothic fantasy about lost chapters and forbidden knowledge. Playable demo for followers.</p><span class="go">See De Dødes Bok &rarr;</span></div></a>
+      <a href="/silverheart"><img src="/img/og-silverheart.jpg" alt="Silverheart" loading="lazy"><div class="pjb"><div class="pk">For schools · Portal 2027</div><h3>Silverheart</h3><p>The roleplaying game from the silver mining town of Kongsberg, gifted to its schools and in classroom use today.</p><span class="go">See Silverheart &rarr;</span></div></a>
+    </div>
   </div>
 </section>
 
