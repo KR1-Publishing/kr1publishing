@@ -53,6 +53,9 @@
   nav{background:var(--dark);color:#f2ece0}
   nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
   nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none}
+  nav .logo{display:inline-flex;align-items:center;gap:10px}
+  nav .logo img{width:auto;height:34px}
+  @media(max-width:520px){nav .logo img{height:28px}nav .logo{gap:8px}}
   nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
   nav a{text-decoration:none;opacity:.88}
   nav a:hover{opacity:1;color:var(--gold)}
@@ -342,7 +345,7 @@
 </style>
 </head>
 <body><div class="langbar"><div class="in"><span>Norsk</span><a href="/vendor">English</a></div></div><nav><div class="in">
-  <a class="logo" href="/">KR1 PUBLISHING</a>
+  <a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a>
   <ul><li><a href="#marginer">Marginer</a></li><li><a href="#katalog">Katalogen</a></li><li><a href="/ressurser">Forhandlerressurser</a></li><li><a href="/solvhjerte">Sølvhjerte</a></li><li><a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen" target="_blank" rel="noopener">Bøkene</a></li></ul>
   <a class="btn sm" href="#pakken">Last ned forhandlerkatalogen</a>
 </div></nav>
