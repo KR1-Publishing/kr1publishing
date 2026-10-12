@@ -50,9 +50,9 @@
   .btn.ember{background:var(--ember);color:#fff}
   .btn.ember:hover{background:var(--ember-soft)}
 
-  .ann{background:var(--ember);color:#fff;text-align:center;padding:11px 16px;font-family:system-ui,sans-serif;font-size:14px;font-weight:600}
+  .ann{background:#5a2418;color:#f2e6d4;text-align:center;padding:11px 16px;font-family:system-ui,sans-serif;font-size:14px;font-weight:600}
   .ann a{text-decoration:none}
-  .ann .tag{background:#fff;color:var(--ember);border-radius:20px;padding:3px 11px;font-size:11.5px;letter-spacing:1px;margin-right:9px}
+  .ann .tag{background:#f2e6d4;color:#5a2418;border-radius:20px;padding:3px 11px;font-size:11.5px;letter-spacing:1px;margin-right:9px}
 
   nav{background:var(--dark);color:#f2ece0}
   nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
@@ -64,9 +64,9 @@
   @media(max-width:760px){nav ul{display:none}nav .btn.sm{white-space:nowrap;padding:10px 14px;font-size:10px;letter-spacing:.08em}nav .logo{white-space:nowrap;font-size:13px}}
 
   .hero{position:relative;text-align:center;padding:60px 0 64px;overflow:hidden;background:
-    radial-gradient(ellipse at 50% 0%,rgba(216,96,58,.22),transparent 55%),
-    linear-gradient(180deg,rgba(0,0,0,.84) 0%,rgba(8,7,6,.84) 60%,var(--night) 100%),
-    url(/img/ashborn/banner.jpg) center 70%/cover no-repeat #000}
+    linear-gradient(90deg,rgba(8,7,6,.35) 0%,rgba(8,7,6,.5) 40%,rgba(8,7,6,.92) 62%,var(--night) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(8,7,6,.35) 70%,var(--night) 100%),
+    url(/img/ashborn/hero-prefect.jpg) 10% 30%/600px auto no-repeat #0a0908}
   .hero h1{position:absolute;left:-9999px}
   .herogrid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;text-align:center}
   .hero img.wm{width:100%;max-width:620px;margin:0 auto}
@@ -192,7 +192,7 @@
   #play .vis .lad div small{font-size:12.5px}
   @media(max-width:480px){nav .logo{font-size:0;letter-spacing:0;gap:0}}
   @media(max-width:860px){
-    .hero{background:radial-gradient(ellipse at 50% 0%,rgba(216,96,58,.2),transparent 55%),linear-gradient(180deg,rgba(0,0,0,.8) 0px,rgba(8,7,6,.82) 380px,var(--night) 620px),url(/img/ashborn/banner.jpg) 14% 0/auto 620px no-repeat var(--night)}
+    .hero{background:linear-gradient(180deg,rgba(8,7,6,.5) 0px,rgba(8,7,6,.62) 420px,rgba(8,7,6,.9) 640px,var(--night) 760px),url(/img/ashborn/hero-prefect.jpg) center 0/auto 780px no-repeat var(--night)}
     #game .split{display:flex;flex-direction:column;gap:0}
     #game .split>div{display:contents}
     #game .split>div>*{order:1}
@@ -200,11 +200,13 @@
     #game .split>div>p:not(.lead){order:3}
   }
   #play h3.one{white-space:nowrap}@media(max-width:400px){#play h3.one{font-size:15px;letter-spacing:.04em}}@media(max-width:350px){#play h3.one{font-size:13px;letter-spacing:.02em}}
+  @media(max-width:480px){.ann{font-size:13px;padding:9px 12px}.ann .tag{font-size:10.5px;padding:2px 9px;margin-right:7px}}
+  #play .evening{max-width:720px;margin:48px auto 0;border-left:2px solid var(--ember-soft);padding-left:22px}#play .evening p{margin:0 0 14px}#play .evening p:last-child{margin:0}
 </style>
 </head>
 <body>
 
-<div class="ann"><a href="https://www.backerkit.com/c/projects/kr1-publishing/ashborn-the-long-road-home-a-hopeful-dark-fantasy-rpg/pre-launch" target="_blank" rel="noopener"><span class="tag">COMING</span>Ashborn launches on BackerKit in the first quarter of 2027. Follow it and get the code to the Ledger.</a></div>
+<div class="ann"><a href="https://www.backerkit.com/c/projects/kr1-publishing/ashborn-the-long-road-home-a-hopeful-dark-fantasy-rpg/pre-launch" target="_blank" rel="noopener"><span class="tag">COMING</span>Ashborn launches on BackerKit in Q1 2027. Follow it to get the Ledger code.</a></div>
 
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
@@ -239,8 +241,6 @@
       <p class="lead">The Dark Lord ruled for a thousand years. His agents hunted the best warriors of every kin and snatched them from their homes. They were dragged to the Darklands, drowned in magic pools called the Black Mirrors, and rebuilt as weapons of mass destruction, as Ashborn.</p>
       <p>Five years ago he fell. The war was brutal, and it took all the free folk of the world to end him. Now the cracks are healing, but the signs of the war are still present in the world.</p>
       <p>The dark veil has lifted from your mind. But you are still a freak of nature, a monster rebuilt to do the Dark Lord's work. People keep their distance and shut you out until you have proven worthy of their trust.</p>
-      <p>An evening of Ashborn can go like this. You reach the gate of Rivermoot without a letter, and the guards would rather send a monster after a missing farmer's son than one of their own. You find him in the hills with the men who took him. Your Rage Die is already a D10 from the last fight, and you could end it with one swing. If you let them run instead, you mark Humanity, and Rivermoot hears about it.</p>
-      <p>There is no experience for killing. You mark Humanity for restraint, protection, amends and costly kindness, and every level gives you back a memory from before the war. The first one gives you back your name.</p>
     </div>
     <figure>
       <img src="/img/ashborn/road-relic-v2.jpg" alt="An Ashborn on the road above the Vale, ink on paper by Joe Porkio" width="1400" height="1956">
@@ -275,6 +275,10 @@
       <h3>Two tracks home</h3>
       <p>Humanity is what you earn by holding back. Standing is what one town thinks of you, job by job, lost in a single bad night. When you believe a town is ready, you roll both against the dice and ask it to take you in. Beat both and you are home. You decide when to ask.</p>
     </div>
+  </div>
+  <div class="evening">
+    <p>An evening of Ashborn can go like this. You reach the gate of Rivermoot without a letter, and the guards would rather send a monster after a missing farmer's son than one of their own. You find him in the hills with the men who took him. Your Rage Die is already a D10 from the last fight, and you could end it with one swing. If you let them run instead, you mark Humanity, and Rivermoot hears about it.</p>
+    <p>There is no experience for killing. You mark Humanity for restraint, protection, amends and costly kindness, and every level gives you back a memory from before the war. The first one gives you back your name.</p>
   </div>
 </div></section>
 
