@@ -107,7 +107,7 @@
   /* SECTIONS */
   section{padding:72px 0}
   .band{background:var(--night2);border-top:1px solid #2a2622;border-bottom:1px solid #2a2622}
-  h2{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:clamp(28px,3.8vw,42px);line-height:1.15;margin-bottom:16px;color:#fff;letter-spacing:.02em}
+  h2{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:clamp(28px,3.8vw,42px);line-height:1.15;margin-bottom:16px;color:#fff;letter-spacing:.02em;text-wrap:balance}
   h2 em{font-style:normal;color:var(--blood-soft)}
   .kicker{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
   .center{text-align:center}
@@ -147,6 +147,8 @@
   .ladder span:nth-child(2){background:#a8502a}
   .ladder span:nth-child(3){background:#b8863b;color:var(--ink)}
   .ladder span:nth-child(4){background:#2f6b3a;color:#fff}
+  .ladder span{position:relative;margin-bottom:16px}
+  .ladder small{position:absolute;left:0;right:0;top:100%;margin-top:4px;font-size:9.5px;letter-spacing:.2px;text-transform:none;color:#a89f8c;white-space:nowrap}
   .twin{display:flex;gap:10px;margin-bottom:16px}
   .twin b{flex:1;display:block;padding:9px 6px;border-radius:7px;text-align:center;font-family:system-ui,sans-serif;font-size:13px;font-weight:700;letter-spacing:.5px}
   .twin .leg{background:#5a1612;color:#fff}
@@ -287,7 +289,7 @@
     <p class="lead">De Dødes Bok er én innbundet bok med regler, verden og eventyr. Dere trenger bare den, terninger og noen å spille med.</p>
   </div>
   <div class="cards q3 two">
-    <div class="card"><h3>Søkerne og reglene</h3><p>Tolv yrker og seks nasjoner å lage Søkere av. Regler for kamp, reise, hvile, skader og ritualer, alt med det samme terningkastet.</p></div>
+    <div class="card"><h3>Søkerne og reglene</h3><p>Tolv profesjoner og seks nasjoner å lage Søkere av. Regler for kamp, reise, hvile, skader og ritualer, alt med det samme terningkastet.</p></div>
     <div class="card"><h3>Unara</h3><p>Seks nasjoner med byer, adelshus, kulter og konflikter. Nok til at dere vet hvem dere kan stole på i hver by, og hvem dere bør holde dere unna.</p></div>
     <div class="card"><h3>Det som venter</h3><p>Vampyrer, gjengangere, mareritt og verre ting, hver med det den tåler og det den ikke tåler. Spillederen får vite hvordan hver av dem slåss.</p></div>
     <div class="card"><h3>Eventyrene</h3><p>Et første eventyr å starte med, og de trettiseks kapitlene beskrevet som steder dere kan dra til, hver med sine rom, sine voktere og sin hemmelighet.</p></div>
@@ -307,7 +309,7 @@
       <p>Du kaster 5D6 og teller de tre i midten. Den høyeste og den laveste faller bort. Med fordel teller du de tre høyeste, med ulempe de tre laveste. Summen leses på én stige: Feilslag, Svakt treff, Sterkt treff, Fulltreffer.</p>
     </div>
     <div class="card">
-      <div class="ladder"><span>0 til 5</span><span>6 til 10</span><span>11 til 15</span><span>16+</span></div>
+      <div class="ladder"><span>0 til 5<small>Feilslag</small></span><span>6 til 10<small>Svakt treff</small></span><span>11 til 15<small>Sterkt treff</small></span><span>16+<small>Fulltreffer</small></span></div>
       <h3>Samme stige overalt</h3>
       <p>Om du slåss, sniker, utfører et rituale eller leter etter et spor, leser du resultatet på den samme stigen. Feilslag betyr at noe går galt. Svakt treff betyr at du lykkes, men det koster deg noe. Sterkt treff betyr at du lykkes. Fulltreffer gir deg litt ekstra.</p>
     </div>
@@ -323,21 +325,21 @@
   <div class="center narrow">
     <div class="kicker">Søkerne</div>
     <h2>Dere spiller vanlige folk <em>med uvanlig innsikt</em></h2>
-    <p class="lead">Søkerne er folk med et vanlig yrke og en nysgjerrighet som har ført dem for langt.</p>
-    <p>Du velger blant tolv yrker, fra leiesoldat og dusørjeger til okkultist og åndemaner. Hvert yrke har noe bare det kan. Hundetreneren har en hund som finner sporet. Artisten får folk til å snakke. Okkultisten kan bryte et tegn og sende det mot fienden. Ingen av dem klarer seg alene, så gruppa må utfylle hverandre.</p>
+    <p class="lead">Søkerne er folk med en vanlig profesjon og en nysgjerrighet som har ført dem for langt.</p>
+    <p>Du velger blant tolv profesjoner, fra leiesoldat og dusørjeger til okkultist og åndemaner. Hver profesjon har noe bare den kan. Hundetreneren har en hund som finner sporet. Artisten får folk til å snakke. Okkultisten kan bryte et tegn og sende det mot fienden. Ingen av dem klarer seg alene, så gruppa må utfylle hverandre.</p>
     <p>Søkerne blir bedre av det de opplever på veien. Innsikt, som trengs for å lære ritualer, får de bare når de finner ut noe ingen andre vet.</p>
   </div>
   <div class="skort">
     <figure><img src="/img/ddb/fig-akademiker.jpg" alt="Akademiker" loading="lazy"><figcaption><b>Akademiker</b><span>Vet hva det er før de andre har spurt.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-dusorjeger.jpg" alt="Dusørjeger" loading="lazy"><figcaption><b>Dusørjeger</b><span>Finner alle, for en pris.</span></figcaption></figure>
-    <figure><img src="/img/ddb/fig-hundetrener.jpg" alt="Hundetrener" loading="lazy"><figcaption><b>Hundetrener</b><span>Hunden finner sporet før du gjør det.</span></figcaption></figure>
+    <figure><img src="/img/ddb/fig-hundetrener.jpg" alt="Hundetrener" loading="lazy" style="object-position:50% 64%"><figcaption><b>Hundetrener</b><span>Hunden finner sporet før du gjør det.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-duelist.jpg" alt="Duelist" loading="lazy"><figcaption><b>Duelist</b><span>Står først og avslutter fort.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-leiesoldat.jpg" alt="Leiesoldat" loading="lazy"><figcaption><b>Leiesoldat</b><span>Tåler mest og står lengst.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-okkultist.jpg" alt="Okkultist" loading="lazy"><figcaption><b>Okkultist</b><span>Bryter et tegn og sender det mot fienden.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-konstruktor.jpg" alt="Konstruktør" loading="lazy"><figcaption><b>Konstruktør</b><span>Bygger en dukke som slåss for seg.</span></figcaption></figure>
     <figure><img src="/img/ddb/fig-artist.jpg" alt="Artist" loading="lazy"><figcaption><b>Artist</b><span>Får folk til å si det de ikke burde.</span></figcaption></figure>
   </div>
-  <div class="center" style="margin-top:30px"><a class="btn" href="/ddb/soker">Hvilken Søker er du?</a><p class="microtrust" style="margin-top:10px">Sju spørsmål, to minutter.</p></div>
+  <div class="center" style="margin-top:30px"><a class="btn" href="/ddb/soker">Hvilken Søker er du?</a><p class="microtrust" style="margin-top:10px">Svar på disse sju spørsmålene for å finne det ut.</p></div>
 </div></section>
 
 <section class="band"><div class="in">
