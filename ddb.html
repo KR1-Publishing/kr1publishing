@@ -65,7 +65,8 @@
   nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
   nav .logo{font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:15px;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
   nav .logo img{width:auto;height:34px}
-  @media(max-width:520px){nav .logo img{height:28px}nav .logo{gap:8px}}
+  @media(max-width:520px){
+    .split .tall img{aspect-ratio:1/1!important}nav .logo img{height:28px}nav .logo{gap:8px}}
   nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
   nav a{text-decoration:none;opacity:.88}
   nav a:hover{opacity:1;color:var(--gold)}
@@ -170,7 +171,8 @@
   @media(max-width:860px){.figs{grid-template-columns:repeat(4,1fr);gap:8px}.figs figcaption{font-size:14px}}
   .folk{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
   @media(max-width:860px){.folk{grid-template-columns:repeat(4,1fr)}}
-  @media(max-width:520px){.folk{grid-template-columns:repeat(2,1fr);gap:14px}}
+  @media(max-width:520px){
+    .split .tall img{aspect-ratio:1/1!important}.folk{grid-template-columns:repeat(2,1fr);gap:14px}}
   .folk figure{text-align:center}
   .folk img{width:100%;max-width:150px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--gold-dark);box-shadow:0 10px 24px rgba(0,0,0,.6);display:block;margin:0 auto;background:#000}
   .folk.foe img{border-color:var(--blood)}
@@ -193,7 +195,8 @@
     radial-gradient(circle at 50% 50%,#2b231d,#15110e);border:1px solid #3a2f28;overflow:hidden;box-shadow:inset 0 0 60px rgba(0,0,0,.7)}
   .tok{position:absolute;width:64px;height:64px;border-radius:50%;object-fit:cover;border:4px solid var(--blood);box-shadow:0 8px 18px rgba(0,0,0,.7)}
   .tok.s{border-color:#4f78ad;border-left-color:#c8322a;border-bottom-color:#c8322a}
-  @media(max-width:520px){.tok{width:48px;height:48px;border-width:3px}}
+  @media(max-width:520px){
+    .split .tall img{aspect-ratio:1/1!important}.tok{width:48px;height:48px;border-width:3px}}
   .board .lbl{position:absolute;left:12px;bottom:10px;font-family:system-ui,sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8f8878}
 
   /* SIGNUP */
@@ -209,7 +212,8 @@
   .bk{display:block;width:200px;margin:38px auto 0;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.5)}
   .bk img{width:100%;height:auto;display:block}
   .by{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;margin-top:34px;font-family:system-ui,sans-serif;font-size:13.5px;color:#8f8878}
-  @media(max-width:520px){.by .dot{display:none}.by{flex-direction:column;gap:4px}}
+  @media(max-width:520px){
+    .split .tall img{aspect-ratio:1/1!important}.by .dot{display:none}.by{flex-direction:column;gap:4px}}
   .by b{color:var(--bone);font-weight:600}
 
   .wide{position:relative;border-top:1px solid #2a2622;border-bottom:1px solid #2a2622;background:#000;max-width:1400px;margin:0 auto}
@@ -225,9 +229,11 @@
   .figs img{aspect-ratio:346/800;object-fit:cover}
   @media(max-width:860px){
     .figs{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .split .tall img{aspect-ratio:4/3;width:100%;max-height:none;object-position:50% 30%}
+    .split .tall picture{display:block}
+    .split .tall img{aspect-ratio:4/3!important;width:100%!important;height:auto;max-height:none!important;object-position:92% 80%}
   }
   @media(max-width:520px){
+    .split .tall img{aspect-ratio:1/1!important}
     nav .in{height:56px;gap:10px}
     nav .logo{font-size:13px;letter-spacing:1.5px}
     nav .btn.sm{font-size:13px;padding:10px 16px}
@@ -277,7 +283,7 @@
       <p>Innerst i hulen kan det ligge en side fra De Dødes Bok, men også en Vokter som verner om den. Søkerne er vanlige folk som har sett litt for mye til å snu. De klarer seg med list, kunnskap og litt magi, og de som kommer hjem igjen, har med seg noe de aldri får glemt.</p>
     </div>
     <figure class="tall">
-      <img src="/img/ddb/ill-embla-tall.jpg" alt="Embla med bue og hunden hennes i en mørk skog, fra starten av Del I" width="560" height="1049">
+      <picture><source media="(max-width:860px)" srcset="/img/ddb/ill-embla.jpg"><img src="/img/ddb/ill-embla-tall.jpg" alt="Embla med bue og hunden hennes i en mørk skog, fra starten av Del I" width="560" height="1049"></picture>
     </figure>
   </div>
 </div></section>
