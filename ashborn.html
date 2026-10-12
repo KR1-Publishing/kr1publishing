@@ -181,6 +181,8 @@
   .joe{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(227,194,122,.45)}
   .joe:hover{color:#fff;border-color:#fff}
   footer .joe{margin:0}
+  #play .vis{height:104px;display:flex;flex-direction:column;justify-content:center;margin-bottom:14px}
+  #play .vis .dice,#play .vis .lad{margin:0}
 </style>
 </head>
 <body>
@@ -239,21 +241,21 @@
   </div>
   <div class="cards">
     <div class="card">
-      <div class="dice"><span class="die hot">D6</span><span class="arrow">+</span><span class="mod">+3</span><span class="arrow">vs</span><span class="die dia"><i>4</i></span><span class="die dia"><i>7</i></span></div>
+      <div class="vis"><div class="dice"><span class="die hot">D6</span><span class="arrow">+</span><span class="mod">+3</span><span class="arrow">vs</span><span class="die dia"><i>4</i></span><span class="die dia"><i>7</i></span></div></div>
       <h3>One roll, roll high</h3>
       <p>Say what you do and what you want from it. Roll your Rage Die, add one of five Abilities, and compare the total with two ten-sided Challenge Dice. Beat both for a Strong Hit, one for a Weak Hit, neither for a Miss. The system is player-facing. The GM never rolls.</p>
     </div>
     <div class="card">
-      <div class="lad"><div class="l1">D4<small>1 %</small></div><div class="l2">D8<small>7 %</small></div><div class="l3">D12<small>18 %</small></div><div class="l4">D20<small>45 %</small></div></div>
+      <div class="vis"><div class="lad"><div class="l1">D4<small>1 %</small></div><div class="l2">D8<small>7 %</small></div><div class="l3">D12<small>18 %</small></div><div class="l4">D20<small>45 %</small></div></div></div>
       <h3>The die that grows</h3>
       <p>Every point of Harm moves the Rage Die one step up. A bigger die wins more rolls, so you gain power as you lose control. If the bare die ever beats both Challenge Dice added together, you go Berserk. There is no roll and no target of your choosing, because the monster attacks whatever set it off. At a D4 that is once in a hundred rolls. At a D20, almost once in two.</p>
     </div>
     <div class="card">
-      <div class="tl" style="margin-top:0"><span>Humanity</span>never resets</div>
+      <div class="vis"><div class="tl" style="margin-top:0"><span>Humanity</span>never resets</div>
       <div class="track"><i class="lv on"></i><i class="on"></i><i class="lv on"></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i></i><i class="lv"></i></div>
       <div class="tl" style="margin-top:14px"><span>Standing</span>one track per town</div>
-      <div class="track" style="margin-bottom:18px"><i class="lv on"></i><i></i><i class="lv"></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i></i><i class="lv"></i></div>
-      <h3>Two tracks, one road home</h3>
+      <div class="track"><i class="lv on"></i><i></i><i class="lv"></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i class="lv"></i><i></i><i></i><i></i><i></i><i class="lv"></i></div></div>
+      <h3>Two tracks home</h3>
       <p>Humanity is what you earn by holding back. Standing is what one town thinks of you, job by job, lost in a single bad night. When you believe a town is ready, you roll both against the dice and ask it to take you in. Beat both and you are home. You decide when to ask.</p>
     </div>
   </div>
