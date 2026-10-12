@@ -83,20 +83,20 @@ ABOUT = [
    ("spenning","Spenning og fare"),("mysterier","Mysterier å løse"),("samtaler","Rollespill og samtaler"),("taktikk","Taktikk og terninger")]),
 ]
 FIT = {
- "exp": {"aldri":"Har du aldri spilt? Da er Kirkegården stedet å begynne. Tre rom, og hvert kast forklarer seg selv.",
-         "noen":"Spiller du av og til? De Dødes Bok har én regel for alt: fem terninger, tell de tre i midten.",
-         "fast":"Har du en fast gruppe? De Dødes Bok er laget for kampanjer som varer, med 36 kapitler å jakte på.",
-         "gm":"Er du spilleder? Én stige for alt betyr ingen egne tabeller for hver ferdighet, og mer tid til historien."},
- "sys": {"dnd":"Fra D&D kjenner du klassene. Her heter de profesjoner, og du vokser av det du utforsker og finner, ikke bare det du beseirer.",
-         "coc":"Fra Call of Cthulhu kjenner du sinnet som slites. Her har Søkerne en sjanse til å slå tilbake, og magien koster Fatning.",
-         "osr":"Fra OSR kjenner du døden bak neste dør. Her heter den Banesår, og du kan tåle to før den tredje.",
-         "iron":"Fra Ironsworn kjenner du kastet som avgjør alt. Her er det fem terninger og én stige for alt du gjør.",
-         "norsk":"Liker du norske rollespill? De Dødes Bok er skrevet på norsk, med gotisk skrekk, folketro og eldgamle myter.",
-         "ingen":""},
- "vil": {"spenning":"Vil du ha spenning? Med hver 1'er som teller, handler verden mot deg.",
-         "mysterier":"Vil du ha mysterier? 36 kapitler ligger spredt over Unara, og hvert av dem er en gåte.",
-         "samtaler":"Vil du ha rollespill? Søkerne er vanlige folk, med nasjoner, minner og noe de har mistet.",
-         "taktikk":"Vil du ha taktikk? Presse eller Avvente, Legeme eller Fatning. Hver runde er et valg."},
+ "exp": {"aldri":"Har du aldri spilt? Fint. Du trenger fem terninger og én regel, og resten lærer du mens du spiller.",
+         "noen":"Spiller du av og til? Da slipper du å lese deg opp før hver kveld. Én regel gjelder alt: kast fem terninger og tell de tre i midten.",
+         "fast":"Har du en fast gruppe? 36 kapitler ligger gjemt rundt om i Unara. Dere kan jakte på dem i måneder, og hver kveld bringer dere nærmere.",
+         "gm":"Er du spilleder? Du får én stige for alt som skjer ved bordet. Ingen tabeller å slå opp i, og mer tid til historien."},
+ "sys": {"dnd":"Fra D&D kjenner du klassene. Her velger du et yrke, og du blir sterkere av det du finner og forstår, ikke bare av det du dreper.",
+         "coc":"Fra Call of Cthulhu kjenner du sinnet som slites ned. Her kan Søkerne slå tilbake, men all magi har en pris.",
+         "osr":"Fra OSR kjenner du døden bak neste dør. Her har den et navn: Banesår. Du tåler to. Det tredje tar deg.",
+         "iron":"Fra Ironsworn kjenner du kastet som avgjør alt. Her kaster du fem terninger, og ett blikk forteller hvordan det gikk.",
+         "norsk":"Liker du norske rollespill? De Dødes Bok er skrevet på norsk fra grunnen av, med folketro, skrekk og gamle myter.",
+         "ingen":"Du trenger ikke kjenne andre spill. Alt du trenger, står i boken, og terningene forklarer resten."},
+ "vil": {"spenning":"Vil du ha spenning? Hver 1'er som teller, gir verden et trekk mot deg. Du vet aldri helt hva som venter.",
+         "mysterier":"Vil du løse gåter? Hvert av de 36 kapitlene er en gåte, og ingen av dem ligger der du venter.",
+         "samtaler":"Vil du spille et menneske, ikke en helt? Søkerne er vanlige folk, med et hjemland, minner og noe de har mistet.",
+         "taktikk":"Liker du å tenke ut neste trekk? Angripe først eller vente på fienden, ta skaden på kroppen eller på sinnet. Hver runde er et valg."},
 }
 
 def esc(s): return (s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;").replace('"',"&quot;"))
@@ -178,6 +178,9 @@ page=f'''<!DOCTYPE html>
   .res p{{margin-top:12px;color:#d5cdbd}}
   .res .lf{{font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.5px}}
   .fit{{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blood);border-radius:10px;padding:16px 18px;margin-top:26px}}
+  .fit.top{{margin-top:26px;border-left-color:var(--gold)}}
+  .fit .tryk{{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}}
+  .fit.top .cta{{margin-top:14px;justify-content:flex-start}}
   .fit .kicker{{margin-bottom:6px}}
   .fit p{{margin-top:6px;color:#d5cdbd}}
   .cta{{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}}
@@ -231,14 +234,15 @@ function show(k){{ const p=P[k]; const r=document.getElementById('resbox');
   document.getElementById('quizbox').classList.add('hidden'); r.classList.remove('hidden');
   const fit=[FIT.exp[about.exp],FIT.sys[about.sys],FIT.vil[about.vil]].filter(Boolean);
   const track=['ddb-soker',k,about.exp||'',about.sys||'',about.vil||''].join('-');
-  r.innerHTML=`<div class="hero" style="padding-bottom:0"><div class="kicker">Din Søker</div></div>
+  r.innerHTML=`<div class="fit top"><div class="kicker">Derfor passer spillet for deg</div>${{fit.map(t=>`<p>${{esc(t)}}</p>`).join('')}}
+    <p class="tryk">Prøv det selv. I <b>Kirkegården</b> spiller du kampreglene fra boken, tre rom rett i nettleseren. Følg De Dødes Bok på BackerKit, så får du koden.</p>
+    <div class="cta"><a class="btn blood" href="{BK}" target="_blank" rel="noopener">Følg og få koden</a><a class="btn ghost" href="/DDBkirkegarden">Jeg har koden</a></div></div>
+  <div class="hero" style="padding-bottom:0"><div class="kicker">Din Søker</div></div>
   <div class="res"><img src="/img/ddb/fig-${{k}}.jpg" alt="${{esc(p.n)}}"><div>
     <div class="lag" style="color:${{LAGC[p.lag]}}">${{esc(p.lag)}}</div><h2>${{esc(p.n)}}</h2><div class="tag">${{esc(p.tag)}}</div>
     <p>${{esc(p.d)}}</p><p>${{esc(p.spill)}}</p><div class="lf">Legeme ${{p.L}} · Fatning ${{p.F}}</div>
     <div class="cta"><a class="btn blood" href="{BK}" target="_blank" rel="noopener">Følg De Dødes Bok</a><button class="btn ghost" id="share">Del resultatet</button></div>
   </div></div>
-  ${{fit.length?`<div class="fit"><div class="kicker">Slik passer De Dødes Bok for deg</div>${{fit.map(t=>`<p>${{esc(t)}}</p>`).join('')}}</div>`:''}}
-  <div class="fit" style="border-left-color:var(--gold)"><div class="kicker">Prøv kampreglene</div><p>Følgere på BackerKit får koden til Kirkegården, et ferdig scenario i tre rom. Spill det i nettleseren før alle andre.</p><div class="cta"><a class="btn" href="{BK}" target="_blank" rel="noopener">Følg og få koden</a><a class="btn ghost" href="/DDBkirkegarden">Jeg har koden</a></div></div>
   <div class="mail"><p>Vil du heller ha beskjed på e-post når kampanjen starter?</p>
     <form action="{MC}" method="post" target="_blank"><input type="email" name="EMAIL" placeholder="din@epost.no" required><input type="hidden" name="TRACK" value="${{esc(track)}}"><button class="btn ghost" type="submit">Gi meg beskjed</button></form></div>
   <div class="again"><a href="/ddb/soker" id="again">Ta testen på nytt</a> · <a href="/ddb">Om De Dødes Bok</a></div>`;
