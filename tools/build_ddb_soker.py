@@ -253,7 +253,7 @@ function show(k){{ const p=P[k]; const r=document.getElementById('resbox');
     <div class="cta"><a class="btn blood" href="{BK}" target="_blank" rel="noopener">Følg og få koden</a><a class="btn ghost" href="/DDBkirkegarden">Jeg har koden</a></div></div>
   <div class="hero" style="padding-bottom:0"><div class="kicker">Din Søker</div></div>
   <div class="res"><img src="/img/ddb/fig-${{k}}.jpg" alt="${{esc(p.n)}}"><div>
-    <div class="lag" style="color:${{LAGC[p.lag]}}">${{esc(p.lag)}}</div><h2>${{esc(p.n)}}</h2><div class="tag">${{esc(p.tag)}}</div>
+    <h2>${{esc(p.n)}}</h2><div class="tag">${{esc(p.tag)}}</div>
     <p>${{esc(p.d)}}</p><p>${{esc(p.spill)}}</p><div class="lf">Legeme ${{p.L}} · Fatning ${{p.F}}</div>
     <div class="cta"><a class="btn blood" href="{BK}" target="_blank" rel="noopener">Følg De Dødes Bok</a><button class="btn ghost" id="share">Del resultatet</button></div>
   </div></div>
