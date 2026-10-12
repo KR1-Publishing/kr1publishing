@@ -25,7 +25,7 @@
      Bilder i img/ddb/: logo.png (Henriks logo, vektor fra 5. artwork), kloster.jpg og
      skog.jpg (Henriks illustrasjoner), tok-*.jpg (rolle- og
      fiendeportretter), og og-ddb.jpg 1200x630.
-     Appen ligger som /Trefningsbordet i rota, kryptert bak kode (tools/lock_trefningsbordet.py).
+     Kirkegården-demoen ligger som /Trefningsbordet (kode fra BackerKit), arbeidsverktøyet som /Verksted (egen kode). Begge kryptert med tools/lock_trefningsbordet.py.
      Skjemaet poster til Mailchimp-listen med TRACK=ddb.
      ========================================================= */
   :root{
@@ -351,29 +351,30 @@
   <div class="center narrow">
     <div class="kicker">Prøv kampreglene nå</div>
     <h2>Trefningsbordet</h2>
-    <p class="lead">Et digitalt kampbord i nettleseren. Sett opp Søkerne, velg fiender, og spill en trefning runde for runde med reglene slik de står i manuset.</p>
+    <p class="lead">Kirkegården: tre rom, fire Søkere, og det som venter mellom gravene. Du velger hva hver av dem gjør. Terningene og reglene gjør resten, og forteller deg hvorfor.</p>
   </div>
   <div class="app">
     <div>
-      <h3>Spill en trefning på fem minutter</h3>
-      <p>Trefningsbordet er verktøyet vi bruker når vi tester reglene. Det kaster terningene, holder rekkefølgen, trekker skade og viser hvem som er i rekkevidde.</p>
+      <h3>Spill Kirkegården på ti minutter</h3>
+      <p>Et ferdig scenario med reglene slik de står i manuset nå. Fire ferdige Søkere, én fra hvert lag av verden, mot tre rom som blir verre for hvert steg.</p>
       <ul>
-        <li>Brikker med Legeme og Fatning som ringer rundt portrettet</li>
-        <li>Presse, Avvente eller Manøver, i den rekkefølgen reglene krever</li>
-        <li>Fiendene angriper bare det de når, og svarer på tellende 1'ere</li>
-        <li>Banesår og Galskap merkes på brikken når det smeller</li>
-        <li>Fungerer på mobil, lagrer bordet i nettleseren din</li>
+        <li>Alrik, leiesoldat med skjold. Sigrun, hundetrener med Varg og sølv i spydet</li>
+        <li>Matei, artist med kniv av speilglass. Ysolde, okkultist med tre ladede tegn</li>
+        <li>Vetter ved porten, gjengangere mellom gravene, marer i krypten</li>
+        <li>Hvert kast vises med terningene, stigen og hvorfor det gikk som det gikk</li>
+        <li>Fungerer på mobil. Si hva du synes med én knapp</li>
       </ul>
       <a class="btn" href="/Trefningsbordet">Åpne Trefningsbordet</a>
-      <p class="microtrust" style="margin-top:14px">Bordet er låst. Koden får du når du <a href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener" style="color:var(--gold)">følger De Dødes Bok på BackerKit</a>. Betaversjon, reglene endres mens manuset redigeres.</p>
+      <p class="microtrust" style="margin-top:14px">Bordet er låst. Koden får du når du <a href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener" style="color:var(--gold)">følger De Dødes Bok på BackerKit</a>. Prototype, reglene endres mens manuset redigeres.</p>
     </div>
     <div class="board" aria-hidden="true">
-      <img class="tok s" src="/img/ddb/tok-duelist.jpg" alt="" style="left:14%;top:22%">
-      <img class="tok s" src="/img/ddb/tok-hundetrener.jpg" alt="" style="left:30%;top:52%">
-      <img class="tok s" src="/img/ddb/tok-hund.jpg" alt="" style="left:46%;top:34%;width:48px;height:48px">
-      <img class="tok" src="/img/ddb/tok-troll.jpg" alt="" style="left:70%;top:26%;width:80px;height:80px">
-      <img class="tok" src="/img/ddb/tok-vette.jpg" alt="" style="left:62%;top:62%">
-      <span class="lbl">Runde 2 · Duelisten presser</span>
+      <img class="tok s" src="/img/ddb/tok-leiesoldat.jpg" alt="" style="left:14%;top:58%">
+      <img class="tok s" src="/img/ddb/tok-hundetrener.jpg" alt="" style="left:30%;top:30%">
+      <img class="tok s" src="/img/ddb/tok-hund.jpg" alt="" style="left:44%;top:50%;width:48px;height:48px">
+      <img class="tok s" src="/img/ddb/tok-okkultist.jpg" alt="" style="left:12%;top:18%">
+      <img class="tok" src="/img/ddb/tok-gjenganger.jpg" alt="" style="left:70%;top:24%;width:80px;height:80px">
+      <img class="tok" src="/img/ddb/tok-vette.jpg" alt="" style="left:64%;top:62%">
+      <span class="lbl">Rom 2 · Gravene</span>
     </div>
   </div>
 </div></section>
