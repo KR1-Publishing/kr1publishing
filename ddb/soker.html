@@ -61,6 +61,8 @@
   .res .lag{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700}
   .res h2{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:46px;color:#fff;line-height:1;margin:6px 0 4px}
   .res .tag{font-style:italic;font-size:22px;color:var(--gold)}
+  .sharebox{margin:16px 0 6px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}.sharebox .sharenote{font-size:13.5px;color:var(--mut,#a99f8e)}
+  @media(max-width:640px){.sharebox{align-items:center}}
   .res p{margin-top:12px;color:#d5cdbd}
   .res .lf{font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.5px}
   .fit{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blood);border-radius:10px;padding:16px 18px;margin-top:26px}
@@ -136,15 +138,20 @@ function show(k){ const p=P[k]; const r=document.getElementById('resbox');
   <div class="hero" style="padding-bottom:0"><div class="kicker">Din Søker</div></div>
   <div class="res"><img src="/img/ddb/fig-${k}.jpg" alt="${esc(p.n)}"><div>
     <h2>${esc(p.n)}</h2><div class="tag">${esc(p.tag)}</div>
+    <div class="sharebox"><button class="btn blood" id="copyres">Del svaret ditt</button><span class="sharenote" id="sharenote">Kopierer en kort tekst og lenke du kan lime inn hvor du vil.</span></div>
     <p>${esc(p.d)}</p><p>${esc(p.spill)}</p><div class="lf">Legeme ${p.L} · Fatning ${p.F}</div>
-    <div class="cta"><a class="btn blood" href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener">Følg De Dødes Bok</a><button class="btn ghost" id="share">Del resultatet</button></div>
+    <div class="cta"><a class="btn blood" href="https://www.backerkit.com/c/projects/kr1-publishing/de-dodes-bok/pre-launch" target="_blank" rel="noopener">Følg De Dødes Bok</a><button class="btn ghost" id="share">Del via telefonen</button></div>
   </div></div>
   <div class="mail"><p>Vil du heller ha beskjed på e-post når kampanjen starter?</p>
     <form action="https://kr1publishing.us13.list-manage.com/subscribe/post?u=9b8e99b826134f12e16a15a13&amp;id=1eeadea463&amp;f_id=007c7de9f0" method="post" target="_blank"><input type="email" name="EMAIL" placeholder="din@epost.no" required><input type="hidden" name="TRACK" value="${esc(track)}"><button class="btn ghost" type="submit">Gi meg beskjed</button></form></div>
   <div class="again"><a href="/ddb/soker" id="again">Ta testen på nytt</a> · <a href="/ddb">Om De Dødes Bok</a></div>`;
-  document.getElementById('share').onclick=()=>share(k);
+  document.getElementById('share').onclick=()=>share(k); document.getElementById('copyres').onclick=()=>copyRes(k); if(!navigator.share) document.getElementById('share').style.display='none';
   document.getElementById('again').onclick=e=>{e.preventDefault(); location.href='/ddb/soker';};
   history.replaceState(null,'','/ddb/soker?r='+k); window.scrollTo({top:0,behavior:'smooth'}); }
+function shareText(k){ const p=P[k]; return `Jeg ble ${p.n} i De Dødes Bok! ${p.tag} Hvilken Søker er du? https://www.kr1publishing.com/ddb/soker/${k}`; }
+function copyRes(k){ const t=shareText(k); const done=()=>{const b=document.getElementById('copyres'); b.textContent='Kopiert!'; document.getElementById('sharenote').textContent='Lim inn i Messenger, Discord, SMS eller hvor du vil.'; setTimeout(()=>b.textContent='Del svaret ditt',2500);};
+  if(navigator.clipboard&&window.isSecureContext) navigator.clipboard.writeText(t).then(done).catch(()=>fallbackCopy(t,done)); else fallbackCopy(t,done); }
+function fallbackCopy(t,done){ const a=document.createElement('textarea'); a.value=t; a.style.position='fixed'; a.style.opacity='0'; document.body.appendChild(a); a.select(); try{document.execCommand('copy'); done();}catch(e){ prompt('Kopier teksten:',t); } a.remove(); }
 function share(k){ const p=P[k]; const url='https://www.kr1publishing.com/ddb/soker/'+k; const text=`Jeg er ${p.n}. ${p.tag} Hvilken Søker er du?`;
   if(navigator.share) navigator.share({title:'Hvilken Søker er du?',text,url}).catch(()=>{});
   else if(navigator.clipboard) navigator.clipboard.writeText(text+' '+url).then(()=>{const b=document.getElementById('share'); b.textContent='Lenken er kopiert';}); }
