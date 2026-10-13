@@ -27,7 +27,7 @@ P = {
    "spill":"I spillet åpner du dører med ord, og masken din får selv de døde til å nøle.","pitch":"Som Artist løser du med ord det andre må løse med våpen, og i De Dødes Bok kan en god samtale redde flere liv enn et sverd."},
  "okkultist": {"n":"Okkultist","lag":"Kosmisk","L":3,"F":7,"tag":"Leser det ingen tør.",
    "d":"Du vet at et tegn bare er en dør, og at det farlige er det som venter på den andre siden. Likevel åpner du den, fordi noen må.",
-   "spill":"I spillet bærer du ladede tegn som brenner gjennom både rustning og sølv, men hvert tegn du bruker, koster deg noe.","pitch":"Som Okkultist bruker du kreftene alle andre er redde for, og i De Dødes Bok har hver av dem en pris du selv må betale."},
+   "spill":"I spillet bærer du agimater som brenner gjennom både rustning og sølv, men hver agimat du bryter, koster deg noe.","pitch":"Som Okkultist bruker du kreftene alle andre er redde for, og i De Dødes Bok har hver av dem en pris du selv må betale."},
  "konstruktor": {"n":"Konstruktør","lag":"Kosmisk","L":4,"F":6,"tag":"Bygger det som trengs.",
    "d":"Du har alltid en liten figur i lomma, og den våkner når du trenger den. Den lever ikke, men den gjør jobben bedre enn de fleste.",
    "spill":"I spillet gir du gruppa en ekstra kropp. Du lager dukkene selv, og de kan brukes til kamp, vakt eller verre ting.","pitch":"Som Konstruktør har du alltid noe du har bygget selv, og i De Dødes Bok er det ofte det som får gruppa gjennom."},
