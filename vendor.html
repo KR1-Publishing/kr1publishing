@@ -345,19 +345,37 @@
     .ladder th,.ladder td{padding:11px 12px;font-size:15px}
     .b2bform{padding:22px 20px}
   }
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  .btn.hero-dl{padding-left:52px;padding-right:52px}
+  .showm{display:none}
+  @media(max-width:640px){
+    .hidem{display:none}.showm{display:inline}
+    nav .btn.sm{white-space:nowrap}
+    .btn.hero-dl{display:block;width:100%;box-sizing:border-box;padding:16px 18px;white-space:normal;font-size:15.5px}
+  }
+  @media(max-width:520px){
+    table.ladder{font-size:13px}table.ladder th,table.ladder td{padding-left:6px;padding-right:6px}
+    .orow{grid-template-columns:52px minmax(0,1fr) 62px;gap:10px}
+    .orow img{width:52px}
+    .orow h3{font-size:15px;line-height:1.25}
+    .orow p{font-size:13px;line-height:1.4}
+    .orow .bdg{font-size:9px;letter-spacing:.6px;padding:2px 7px}
+    .orow input{width:62px;padding:10px 4px;font-size:16px}
+    .olist2 .orow{grid-template-columns:52px minmax(0,1fr)}
+  }
 </style>
 </head>
 <body><div class="langbar"><div class="in"><span>English</span><a href="/forhandler">Norsk</a></div></div><nav><div class="in">
   <a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a>
   <ul><li><a href="#margins">Margins</a></li><li><a href="#catalog">Catalog</a></li><li><a href="/assets">Retailer assets</a></li><li><a href="/silverheart">Silverheart</a></li><li><a href="https://www.drivethrurpg.com/en/publisher/15347/karl-otto-kristoffersen?src=web_202608_vendor&affiliate_id=927841" target="_blank" rel="noopener">Books</a></li></ul>
-  <a class="btn sm" href="#pack">Download the retailer catalogue</a>
+  <a class="btn sm" href="#pack"><span class="hidem">Download the retailer catalogue</span><span class="showm">Get the catalogue</span></a>
 </div></nav>
 <div class="hero b2b"><div class="in">
   <div class="kicker">For retailers and institutions</div>
   <h1>The shops that stock them, <em style="white-space:nowrap">reorder</em></h1>
   <p>A catalog where all of the titles in print carry a bestseller medal on the largest tabletop RPG marketplace in the world. Up to 55% margin, no minimum order, and printing in Europe or the USA depending on the market you order into.</p>
   <div class="heroform" style="text-align:center">
-      <a class="btn" href="/files/kr1-vendor-pack.pdf?ref=vendor_hero" target="_blank" rel="noopener" style="padding-left:52px;padding-right:52px">Download the retailer catalogue</a>
+      <a class="btn hero-dl" href="/files/kr1-vendor-pack.pdf?ref=vendor_hero" target="_blank" rel="noopener">Download the retailer catalogue</a>
       <p class="microtrust" style="margin-top:12px;max-width:620px;margin-left:auto;margin-right:auto;font-size:12px;line-height:1.55;color:#8f8878">Opens straight away as a PDF, no email needed. Four pages of catalogue, margins and terms.</p>
     </div>
 </div></div>
