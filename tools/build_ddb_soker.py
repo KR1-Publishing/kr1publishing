@@ -160,6 +160,7 @@ page=f'''<!DOCTYPE html>
   nav .logo img{{height:30px;width:auto}}
   nav .back{{font-family:system-ui,sans-serif;font-size:14px;color:#b9ab95;text-decoration:none;white-space:nowrap}}
   nav .back:hover{{color:var(--gold)}}
+  @media(max-width:420px){{nav .back .bl{{display:none}}}}
   .hero{{text-align:center;padding:46px 0 18px;background:radial-gradient(ellipse at 50% 0%,rgba(168,32,26,.28),transparent 60%)}}
   .kicker{{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);font-weight:700}}
   h1{{font-family:'IM Fell English SC',Georgia,serif;font-weight:400;font-size:clamp(38px,6vw,56px);line-height:1.05;color:#fff;margin:10px 0 12px;letter-spacing:.02em}}
@@ -211,7 +212,7 @@ page=f'''<!DOCTYPE html>
 </style>
 </head>
 <body>
-<nav><div class="in"><a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a><a class="back" href="/ddb">&larr; Tilbake til De Dødes Bok</a></div></nav>
+<nav><div class="in"><a class="logo" href="/"><img src="/img/kr1-hex.png" alt="" width="80" height="90">KR1 PUBLISHING</a><a class="back" href="/ddb">&larr; <span class="bl">Tilbake til </span>De Dødes Bok</a></div></nav>
 <div id="quizbox">
 <div class="hero"><div class="in">
   <div class="kicker">De Dødes Bok</div>
