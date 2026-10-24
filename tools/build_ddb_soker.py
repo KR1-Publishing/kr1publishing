@@ -160,6 +160,8 @@ page=f'''<!DOCTYPE html>
   nav .logo img{{height:30px;width:auto}}
   nav .back{{font-family:system-ui,sans-serif;font-size:14px;color:#b9ab95;text-decoration:none;white-space:nowrap}}
   nav .back:hover{{color:var(--gold)}}
+  a.btn[href*="backerkit.com"]{{background:#FFD200!important;color:#111!important;border:2px solid #FFD200!important}}
+  a.btn[href*="backerkit.com"]:hover{{background:#FFE14D!important;border-color:#FFE14D!important}}
   @media(max-width:420px){{nav .back .bl{{display:none}}}}
   .hero{{text-align:center;padding:46px 0 18px;background:radial-gradient(ellipse at 50% 0%,rgba(168,32,26,.28),transparent 60%)}}
   .kicker{{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);font-weight:700}}
