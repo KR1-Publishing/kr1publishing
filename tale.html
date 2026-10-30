@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tale, the role-playing game | KR1 Publishing</title>
+<meta name="description" content="Tale is a Powered by the Apocalypse fantasy RPG about young graduates fresh out of the Academy, leaving home to prove themselves. Relaunched on DriveThruRPG by Game Forlag and KR1 Publishing, with a new edition on the way.">
+<link rel="canonical" href="https://www.kr1publishing.com/tale">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KR1 Publishing">
+<meta property="og:title" content="Tale, the role-playing game">
+<meta property="og:description" content="Fresh out of the Academy, what will your characters do to prove themselves? Tale is back on DriveThruRPG.">
+<meta property="og:image" content="https://www.kr1publishing.com/img/tale/og-tale.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://www.kr1publishing.com/tale">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.kr1publishing.com/img/tale/og-tale.jpg">
+<meta name="theme-color" content="#0c1c19">
+<link rel="icon" href="/img/ashborn/kr1hex.png">
+<style>
+  /* TALE landing page (Oct 2026). Images and fonts in img/tale/. All DTRPG links carry affiliate_id and src=web_tale. */
+  @font-face{font-family:'Cormorant';font-weight:700;font-display:swap;src:url(/img/tale/cormorant-latin-700-normal.woff2) format('woff2')}
+  @font-face{font-family:'EB Garamond';font-weight:400;font-display:swap;src:url(/img/tale/eb-garamond-latin-400-normal.woff2) format('woff2')}
+  @font-face{font-family:'EB Garamond';font-weight:400;font-style:italic;font-display:swap;src:url(/img/tale/eb-garamond-latin-400-italic.woff2) format('woff2')}
+  @font-face{font-family:'EB Garamond';font-weight:600;font-display:swap;src:url(/img/tale/eb-garamond-latin-600-normal.woff2) format('woff2')}
+  :root{
+    --night:#0c1c19; --night2:#11251f; --card:#152c26; --line:#24413a;
+    --fog:#e8f1ec; --mist:#c3d8cf; --muted:#8fa89f; --torch:#f0c68a; --torch-soft:#f6dcb2;
+    --disp:'Cormorant',Georgia,serif; --serif:'EB Garamond',Georgia,'Times New Roman',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);color:var(--fog);background:var(--night);line-height:1.55;font-size:19px;-webkit-font-smoothing:antialiased}
+  .in{max-width:1120px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:740px;margin:0 auto}
+  a{color:inherit}
+  img{max-width:100%;height:auto;display:block}
+  p{color:#d3e2dc}
+  p+p{margin-top:14px}
+
+  .btn{display:inline-block;background:var(--torch);color:#1b1408;text-decoration:none;font-family:system-ui,sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;padding:16px 30px;border-radius:30px;white-space:nowrap;text-align:center}
+  .btn:hover{background:var(--torch-soft)}
+  .btn.ghost{background:transparent;border:2px solid var(--mist);color:var(--fog)}
+  .btn.ghost:hover{background:var(--fog);color:var(--night)}
+  .btn.sm{font-size:13px;padding:10px 18px}
+
+  nav{background:#081411;border-bottom:1px solid var(--line)}
+  nav .in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:18px}
+  nav .logo{display:flex;align-items:center;gap:10px;font-family:system-ui,sans-serif;font-weight:700;letter-spacing:2px;font-size:14px;color:var(--fog);text-decoration:none}
+  nav .logo img{height:30px;width:auto}
+  nav ul{display:flex;gap:26px;list-style:none;font-family:system-ui,sans-serif;font-size:14.5px}
+  nav ul a{text-decoration:none;opacity:.85}
+  nav ul a:hover{opacity:1;color:var(--torch)}
+  @media(max-width:760px){nav ul{display:none}}
+
+  .hero{position:relative;text-align:center;padding:56px 0 70px;background:
+    linear-gradient(180deg,rgba(6,16,14,.82) 0%,rgba(6,16,14,.35) 40%,rgba(6,16,14,.55) 75%,var(--night) 100%),
+    url(/img/tale/hero-forest.jpg) center 62%/cover no-repeat #0a1a17}
+  .partners{display:flex;align-items:center;justify-content:center;gap:18px;opacity:.92}
+  .partners img{height:42px;width:auto}
+  .partners span{font-family:system-ui,sans-serif;font-size:18px;color:var(--mist)}
+  .presents{font-family:var(--serif);font-size:13px;letter-spacing:.45em;text-transform:uppercase;color:var(--mist);margin-top:12px}
+  .hero .wm{width:min(78vw,380px);margin:34px auto 0}
+  .hero h1{font-family:var(--disp);font-weight:700;font-size:clamp(30px,4.6vw,50px);line-height:1.12;margin:40px auto 0;max-width:760px;text-wrap:balance;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+  .hero .lead{font-size:clamp(19px,2.2vw,22px);max-width:600px;margin:18px auto 0;color:var(--fog);text-shadow:0 1px 14px rgba(0,0,0,.7)}
+  .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .microtrust{font-family:system-ui,sans-serif;font-size:13.5px;color:var(--mist);margin-top:20px}
+
+  .proofbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--night2)}
+  .proofbar .in{display:grid;grid-template-columns:repeat(4,1fr);padding-top:28px;padding-bottom:28px;text-align:center}
+  .proofbar .in>div{padding:4px 10px;border-left:1px solid var(--line)}
+  .proofbar .in>div:first-child{border-left:0}
+  .proofbar b{display:block;font-family:var(--disp);font-size:clamp(30px,4vw,44px);color:var(--torch);line-height:1}
+  .proofbar span{display:block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-top:10px}
+  @media(max-width:640px){.proofbar .in{grid-template-columns:repeat(2,1fr);row-gap:20px}.proofbar .in>div:nth-child(3){border-left:0}}
+
+  section{padding:64px 0}
+  .band{background:var(--night2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.6vw,40px);line-height:1.15;margin-bottom:16px;text-wrap:balance}
+  .kicker{font-family:system-ui,sans-serif;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--torch);font-weight:700;margin-bottom:10px}
+  .center{text-align:center}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .split.rev{grid-template-columns:.9fr 1.1fr}
+  @media(max-width:860px){.split,.split.rev{grid-template-columns:1fr;gap:28px}}
+  .split figure img{width:100%;border-radius:8px;box-shadow:0 24px 50px rgba(0,0,0,.5)}
+  figure figcaption{font-family:system-ui,sans-serif;font-size:13px;color:var(--muted);margin-top:10px}
+  .book{max-width:360px;margin:0 auto;box-shadow:0 30px 60px rgba(0,0,0,.6);border-radius:4px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+  @media(max-width:860px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 24px}
+  .card h3{font-family:var(--disp);font-weight:700;font-size:25px;margin-bottom:8px;color:var(--torch-soft)}
+  .card p{font-size:17.5px}
+
+  .shelf{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:34px}
+  @media(max-width:900px){.shelf{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){.shelf{grid-template-columns:repeat(2,1fr)}}
+  .shelf a{text-decoration:none;display:block}
+  .shelf img{border-radius:4px;box-shadow:0 14px 30px rgba(0,0,0,.45);transition:transform .2s}
+  .shelf a:hover img{transform:translateY(-4px)}
+  .shelf b{display:block;font-family:var(--disp);font-size:19px;margin-top:12px;line-height:1.2}
+  .shelf small{display:block;font-family:system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:4px}
+
+  .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:860px){.offers{grid-template-columns:1fr}}
+  .offer{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 24px;text-align:center;display:flex;flex-direction:column}
+  .offer.best{border:2px solid var(--torch)}
+  .offer .tag{font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--torch);font-weight:700;min-height:16px}
+  .offer h3{font-family:var(--disp);font-weight:700;font-size:28px;margin:8px 0 4px}
+  .offer .price{font-family:var(--disp);font-size:42px;color:var(--torch);line-height:1.1;margin:6px 0 2px}
+  .offer .was{font-family:system-ui,sans-serif;font-size:13px;color:var(--muted)}
+  .offer p{font-size:17px;margin:14px 0 22px;flex:1}
+  .note{font-family:system-ui,sans-serif;font-size:14px;color:var(--muted);margin-top:22px}
+
+  .quote{font-family:var(--disp);font-size:clamp(28px,4vw,44px);line-height:1.2;text-wrap:balance}
+  footer{background:#081411;border-top:1px solid var(--line);padding:40px 0;font-family:system-ui,sans-serif;font-size:14px;color:var(--muted);text-align:center}
+  footer a{color:var(--fog);margin:0 10px;text-decoration:none}
+  footer a:hover{color:var(--torch)}
+  footer .cred{margin-bottom:16px;color:var(--mist)}
+</style>
+</head>
+<body>
+
+<nav><div class="in">
+  <a class="logo" href="/"><img src="/img/ashborn/kr1hex.png" alt="">KR1 PUBLISHING</a>
+  <ul>
+    <li><a href="#game">The game</a></li>
+    <li><a href="#line">The line</a></li>
+    <li><a href="#edition">New edition</a></li>
+    <li><a href="#story">The story</a></li>
+  </ul>
+  <a class="btn sm" href="https://www.drivethrurpg.com/en/product/590983/tale-rpg-core-rulebook?affiliate_id=927841&src=web_tale">Get Tale</a>
+</div></nav>
+
+<header class="hero">
+  <div class="in">
+    <div class="partners"><img src="/img/tale/kr1-light.png" alt="KR1 Publishing"><span>&times;</span><img src="/img/tale/gf-light.png" alt="Game Forlag"></div>
+    <div class="presents">Presents</div>
+    <img class="wm" src="/img/tale/tale-logo-light.png" alt="Tale, the role-playing game">
+    <h1>Fresh out of the Academy, what will your characters do to prove themselves?</h1>
+    <p class="lead">A Powered by the Apocalypse fantasy game about young graduates leaving home for the first time. Back on DriveThruRPG, with a new edition on the way.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://www.drivethrurpg.com/en/product/590983/tale-rpg-core-rulebook?affiliate_id=927841&src=web_tale">Core Rulebook, 4.99</a>
+      <a class="btn ghost" href="https://www.drivethrurpg.com/en/product/591450/tale-rpg-complete-set-bundle?affiliate_id=927841&src=web_tale">Everything, 14.99</a>
+    </div>
+    <p class="microtrust">Relaunched by Game Forlag and KR1 Publishing. Buy now and get the new edition free.</p>
+  </div>
+</header>
+
+<div class="proofbar"><div class="in">
+  <div><b>297</b><span>Pages of rules</span></div>
+  <div><b>12</b><span>Ready diplomas</span></div>
+  <div><b>2d6</b><span>Per player</span></div>
+  <div><b>2019</b><span>Funded on Kickstarter</span></div>
+</div></div>
+
+<section id="game">
+  <div class="in split">
+    <div>
+      <div class="kicker">The game</div>
+      <h2>Your diploma is your first step out the door</h2>
+      <p>You play young graduates fresh out of the Academy. They leave home for the first time and take on quests and errands to prove themselves. Some come back with a name. Some come back with a story.</p>
+      <p>Your diploma decides who you are and what you can do, from Loremaster and Channeler to Smith and Globetrotter. Every skill you learn grows from it.</p>
+      <p>All you need is the book, two six-sided dice per player and a notebook.</p>
+    </div>
+    <figure><img class="book" src="/img/tale/core_rulebook.jpg" alt="Tale Core Rulebook, relaunched"></figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="in">
+    <div class="center narrow">
+      <div class="kicker">How it plays</div>
+      <h2>Fast to learn, built to tell stories</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Roll two dice</h3><p>Tale is Powered by the Apocalypse. Roll 2d6 when it counts. A 10 or more is a clean success. 7 to 9 gets it done at a cost. Less, and the story turns against you.</p></div>
+      <div class="card"><h3>A diploma, not a class</h3><p>Each graduate carries a diploma with its own actions, skills and qualities. Twelve ready diplomas from the Academy of Merelin get a new group playing in minutes.</p></div>
+      <div class="card"><h3>Quests and errands</h3><p>The world sends work your way. The Quest Pack gives you a full campaign of quests, errands and arcs to run straight from the page.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="line">
+  <div class="in">
+    <div class="center narrow">
+      <div class="kicker">The line</div>
+      <h2>Everything for Tale, together again</h2>
+      <p>The whole line is back on DriveThruRPG. Start with the rules, or get every book, map and poster in one go.</p>
+    </div>
+    <div class="shelf">
+      <a href="https://www.drivethrurpg.com/en/product/590983/tale-rpg-core-rulebook?affiliate_id=927841&src=web_tale"><img src="/img/tale/core_rulebook.jpg" alt="Core Rulebook"><b>Core Rulebook</b><small>The complete game</small></a>
+      <a href="https://www.drivethrurpg.com/en/product/591422/tale-rpg-quest-pack?affiliate_id=927841&src=web_tale"><img src="/img/tale/quest_pack.jpg" alt="Quest Pack"><b>Quest Pack</b><small>A full campaign</small></a>
+      <a href="https://www.drivethrurpg.com/en/product/591448/tale-rpg-starter-pack-bundle?affiliate_id=927841&src=web_tale"><img src="/img/tale/diploma_set_i.jpg" alt="Diploma Set I"><b>Diploma Set I</b><small>Twelve ready characters</small></a>
+      <a href="https://www.drivethrurpg.com/en/product/591450/tale-rpg-complete-set-bundle?affiliate_id=927841&src=web_tale"><img src="/img/tale/mystery_diploma_set.jpg" alt="Mystery Diploma Set"><b>Mystery Diplomas</b><small>Three new diplomas</small></a>
+      <a href="https://www.drivethrurpg.com/en/product/591448/tale-rpg-starter-pack-bundle?affiliate_id=927841&src=web_tale"><img src="/img/tale/world_map.jpg" alt="World Map"><b>World Map</b><small>The world in full colour</small></a>
+      <a href="https://www.drivethrurpg.com/en/product/591450/tale-rpg-complete-set-bundle?affiliate_id=927841&src=web_tale"><img src="/img/tale/poster_spirit.jpg" alt="Spirit of the Forest poster"><b>Spirit of the Forest</b><small>Poster</small></a>
+    </div>
+
+    <div class="offers">
+      <div class="offer">
+        <div class="tag">Start here</div>
+        <h3>Core Rulebook</h3>
+        <div class="price">4.99</div><div class="was">Launch price, normally 14.99</div>
+        <p>The complete game in 297 pages. Rules, setting and Gamemaster advice, plus the new edition free when it is ready.</p>
+        <a class="btn ghost" href="https://www.drivethrurpg.com/en/product/590983/tale-rpg-core-rulebook?affiliate_id=927841&src=web_tale">Get the rules</a>
+      </div>
+      <div class="offer">
+        <div class="tag">First session</div>
+        <h3>Starter Pack</h3>
+        <div class="price">12.99</div><div class="was">Bundle</div>
+        <p>The rules, Diploma Set I, the Quest Pack and the World Map. Everything a new group needs to start playing.</p>
+        <a class="btn ghost" href="https://www.drivethrurpg.com/en/product/591448/tale-rpg-starter-pack-bundle?affiliate_id=927841&src=web_tale">Get the Starter Pack</a>
+      </div>
+      <div class="offer best">
+        <div class="tag">Best value</div>
+        <h3>Complete Set</h3>
+        <div class="price">14.99</div><div class="was">Bundle</div>
+        <p>Every Tale product. Adds the Mystery Diploma Set and the Spirit of the Forest poster for two dollars more.</p>
+        <a class="btn" href="https://www.drivethrurpg.com/en/product/591450/tale-rpg-complete-set-bundle?affiliate_id=927841&src=web_tale">Get everything</a>
+      </div>
+    </div>
+    <p class="note center">DriveThruRPG only charges you for the titles you do not already own.</p>
+  </div>
+</section>
+
+<section class="band" id="edition">
+  <div class="in narrow center">
+    <div class="kicker">New edition</div>
+    <h2>A new edition is on the way</h2>
+    <p>Game Forlag and KR1 Publishing have started work on a new edition of Tale. It is a real lift to meet modern standards, built on the game players already love.</p>
+    <p>Buy the Core Rulebook now and you get the new edition as a free update in your DriveThruRPG library when it is ready.</p>
+  </div>
+</section>
+
+<section id="story">
+  <div class="in split rev">
+    <figure><img src="/img/tale/arcon-2019.jpg" alt="Karl Otto playing Tale in 2019 with the Diploma Set I folder on the table"><figcaption>Karl Otto (left) playing Tale in 2019.</figcaption></figure>
+    <div>
+      <div class="kicker">The story</div>
+      <h2>From backer to partner</h2>
+      <p>Tale was created by Hans Olav Ekornrød and published by Game Forlag in 2019, after a successful Kickstarter.</p>
+      <p>Karl Otto from KR1 Publishing was a superbacker, and bought a game session with Hans Olav and Thomas from Game Forlag. Seven years later the two publishers have joined forces to give Tale its second wind.</p>
+      <p><a class="btn" style="margin-top:14px" href="https://www.drivethrurpg.com/en/product/590983/tale-rpg-core-rulebook?affiliate_id=927841&src=web_tale">Get the Core Rulebook</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="in narrow center">
+    <p class="quote">Fresh out of the Academy, what will your characters do to prove themselves?</p>
+    <p style="margin-top:18px;font-style:italic;color:var(--mist)">Play to find out.</p>
+  </div>
+</section>
+
+<footer><div class="in">
+  <div class="cred">Tale is created by Hans Olav Ekornrød and published by <a style="margin:0" href="https://www.drivethrurpg.com/en/publisher/14152/game-forlag?affiliate_id=927841&src=web_tale">Game Forlag</a>. Distributed on DriveThruRPG by KR1 Publishing.</div>
+  <a href="/">KR1 Publishing</a>
+  <a href="/ashborn">Ashborn</a>
+  <a href="/ddb">De Dødes Bok</a>
+  <a href="https://www.drivethrurpg.com/en/publisher/15347/kr1-publishing?affiliate_id=927841&src=web_tale">All KR1 titles</a>
+  <a href="https://discord.gg/3xvckbcKz8" target="_blank" rel="noopener">Discord</a>
+  <p style="margin-top:14px;opacity:.7">contact@kr1publishing.com &middot; Kongsberg, Norway &middot; Org. no. 928 261 468 &middot; &copy; 2026 KR1 Publishing</p>
+</div></footer>
+</body>
+</html>
