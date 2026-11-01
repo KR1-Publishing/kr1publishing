@@ -132,6 +132,31 @@
       "source": "/store-policy",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/gr%C3%BCnder",
+      "destination": "/grunder",
+      "permanent": true
+    },
+    {
+      "source": "/gründer",
+      "destination": "/grunder",
+      "permanent": true
+    },
+    {
+      "source": "/west-marches",
+      "destination": "/westmarches",
+      "permanent": true
+    },
+    {
+      "source": "/westmarch",
+      "destination": "/westmarches",
+      "permanent": true
+    },
+    {
+      "source": "/hexcrawls",
+      "destination": "/hexcrawl",
+      "permanent": true
     }
   ],
   "headers": [
