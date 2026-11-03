@@ -211,8 +211,9 @@
   }
 
   /* Prosjekter */
-  .proj{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px}
-  @media(max-width:1100px){.proj{grid-template-columns:repeat(2,1fr)}}
+  .proj{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
+  .proj>a{flex:0 1 calc(25% - 14px)}
+  @media(max-width:1100px){.proj>a{flex-basis:calc(50% - 9px)}}
   .proj a{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .15s,box-shadow .15s}
   .proj a:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,28,24,.14)}
   .proj img{width:100%;aspect-ratio:1200/630;object-fit:cover;display:block;background:var(--dark)}
@@ -222,7 +223,7 @@
   .proj .pjb p{font-size:15.5px;color:var(--muted);margin:0;line-height:1.45;font-weight:400;font-family:inherit;text-align:left}
   .proj .pjb p{text-wrap:pretty}
   .proj .go{display:inline-block;margin-top:auto;padding-top:12px;font-family:system-ui,sans-serif;font-size:13.5px;font-weight:700;color:var(--gold-dark)}
-  @media(max-width:860px){.proj{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+  @media(max-width:860px){.proj{max-width:520px;margin-left:auto;margin-right:auto}.proj>a{flex-basis:100%}}
 @media(max-width:640px){.proofbar span{font-size:11.5px}.card .badge,.pill,.orow .bdg{font-size:11px}}
 </style>
 </head>
@@ -523,7 +524,7 @@
     <div class="proj">
       <a href="/westmarches"><img src="/img/series/og-westmarches.jpg?v=2" alt="The four West Marches books" loading="lazy"><div class="pjb"><div class="pk">Four books &middot; 8,200+ sold</div><h3>West Marches</h3><p>Run one open campaign for more players than fit at your table. The Guidebook, the GM Workbook, the Party Ledger and the Player Journal.</p><span class="go">See West Marches &rarr;</span></div></a>
       <a href="/hexcrawl"><img src="/img/series/og-hexcrawl.jpg?v=3" alt="The four Hexcrawl books by Matthijs Holter" loading="lazy"><div class="pjb"><div class="pk">Four books &middot; 6,900+ sold</div><h3>Hexcrawl</h3><p>Wilderness campaigns where the journey is the adventure. Campaign Style, Encounter Design, Worldbuilding Design and The Thornwall Frontier.</p><span class="go">See Hexcrawl &rarr;</span></div></a>
-      <a href="/grunder"><img src="/img/series/og-grunder.jpg" alt="Gr&uuml;nder: Business Adventure Game" loading="lazy"><div class="pjb"><div class="pk">OSR one-shot</div><h3>Gr&uuml;nder</h3><p>Grab a serial killer's hoard before thirty soldiers do. Whatever you carry out is your start-up capital. Into the Odd rules.</p><span class="go">See Gr&uuml;nder &rarr;</span></div></a>
+      <a href="/grunder"><img src="/img/series/og-grunder.jpg?v=2" alt="Gr&uuml;nder: Business Adventure Game" loading="lazy"><div class="pjb"><div class="pk">OSR one-shot</div><h3>Gr&uuml;nder</h3><p>Grab a serial killer's hoard before thirty soldiers do. Whatever you carry out is your start-up capital. Into the Odd rules.</p><span class="go">See Gr&uuml;nder &rarr;</span></div></a>
       <a href="/tale"><img src="/img/tale/og-tale.jpg" alt="Tale, the role-playing game" loading="lazy"><div class="pjb"><div class="pk">PbtA fantasy</div><h3>Tale</h3><p>Young graduates fresh out of the Academy, leaving home to prove themselves. A Powered by the Apocalypse fantasy RPG.</p><span class="go">See Tale &rarr;</span></div></a>
     </div>
   </div>

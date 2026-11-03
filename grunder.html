@@ -10,7 +10,7 @@
 <meta property="og:site_name" content="KR1 Publishing">
 <meta property="og:title" content="Gründer: a one-shot OSR adventure where the loot decides who starts a company">
 <meta property="og:description" content="Gründer is a one-shot OSR adventure game by Petter Fornes, on Into the Odd rules. Reach a serial killer's hoard before thirty soldiers do, then one roll decides if your company survives. 3 to 6 players, one evening.">
-<meta property="og:image" content="https://www.kr1publishing.com/img/series/og-grunder.jpg">
+<meta property="og:image" content="https://www.kr1publishing.com/img/series/og-grunder.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Gründer: Business Adventure Game by Petter Fornes">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gründer: a one-shot OSR adventure where the loot decides who starts a company">
 <meta name="twitter:description" content="Gründer is a one-shot OSR adventure game by Petter Fornes, on Into the Odd rules. Reach a serial killer's hoard before thirty soldiers do, then one roll decides if your company survives. 3 to 6 players, one evening.">
-<meta name="twitter:image" content="https://www.kr1publishing.com/img/series/og-grunder.jpg">
+<meta name="twitter:image" content="https://www.kr1publishing.com/img/series/og-grunder.jpg?v=2">
 <meta name="theme-color" content="#170c09">
 <link rel="icon" href="/img/ashborn/kr1hex.png">
 <link rel="preload" as="image" href="/img/series/grunder.webp" type="image/webp">
@@ -92,6 +92,15 @@ p+p{margin-top:14px}
 .lead{font-size:20px}
 .split{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 @media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}}
+.pages{display:grid;grid-template-columns:repeat(var(--n,5),1fr);gap:18px;margin-top:32px;align-items:end}
+.pages figure{margin:0}
+.pages img{width:100%;height:auto;display:block;border-radius:3px;box-shadow:0 18px 34px rgba(0,0,0,.55);background:#fff}
+.pages figure:nth-child(odd) img{transform:rotate(-1.5deg)}
+.pages figure:nth-child(even) img{transform:rotate(1.2deg) translateY(-10px)}
+.pages figcaption{font-family:var(--sys);font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+@media(max-width:860px){.pages{grid-template-columns:repeat(3,1fr)}.pages figure:nth-child(n+4){display:none}}
+@media(max-width:520px){.pages{grid-template-columns:repeat(2,1fr)}.pages figure:nth-child(n+3){display:none}}
+.engrave{background:linear-gradient(180deg,rgba(14,20,17,.88),rgba(14,20,17,.94)),var(--bandimg) center/cover no-repeat}
 .split figure img{width:100%;max-width:380px;margin:0 auto;filter:drop-shadow(0 24px 34px rgba(0,0,0,.55))}
 .cards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px;margin-top:34px}
 @media(max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
