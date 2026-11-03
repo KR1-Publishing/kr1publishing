@@ -173,6 +173,8 @@ footer a:hover{text-decoration:underline}
 .steps div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
 .steps div:before{counter-increment:st;content:counter(st);display:block;font-family:var(--disp);font-size:26px;color:var(--acc);line-height:1;margin-bottom:6px}
 .steps b{display:block;font-family:var(--disp);font-size:15px;color:#fff;letter-spacing:.03em}
+.steps b{white-space:nowrap}
+@media(max-width:480px){.steps div{padding:14px 12px}.steps b{font-size:13px;letter-spacing:0}}
 .steps span{font-family:var(--sys);font-size:13px;color:var(--muted)}
 .made{border-left:3px solid var(--acc);padding-left:20px;margin-top:30px}
 
