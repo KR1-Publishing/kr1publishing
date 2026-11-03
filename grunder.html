@@ -98,8 +98,9 @@ p+p{margin-top:14px}
 .pages figure:nth-child(odd) img{transform:rotate(-1.5deg)}
 .pages figure:nth-child(even) img{transform:rotate(1.2deg) translateY(-10px)}
 .pages figcaption{font-family:var(--sys);font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
-@media(max-width:860px){.pages{grid-template-columns:repeat(3,1fr)}.pages figure:nth-child(n+4){display:none}}
-@media(max-width:520px){.pages{grid-template-columns:repeat(2,1fr)}.pages figure:nth-child(n+3){display:none}}
+.pages{row-gap:34px}
+@media(max-width:860px){.pages{grid-template-columns:repeat(3,1fr)}.pages figure:nth-child(n+7){display:none}}
+@media(max-width:520px){.pages{grid-template-columns:repeat(2,1fr)}.pages figure:nth-child(n+5){display:none}}
 .engrave{background:linear-gradient(180deg,rgba(14,20,17,.88),rgba(14,20,17,.94)),var(--bandimg) center/cover no-repeat}
 .split figure img{width:100%;max-width:380px;margin:0 auto;filter:drop-shadow(0 24px 34px rgba(0,0,0,.55))}
 .cards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px;margin-top:34px}
