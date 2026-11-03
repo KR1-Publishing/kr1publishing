@@ -128,7 +128,27 @@ p+p{margin-top:14px}
 .faq summary:after{content:"+";color:var(--acc);font-size:22px;line-height:1}
 .faq details[open] summary:after{content:"\2013"}
 .faq details p{margin-top:12px;font-size:17px}
-.more{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.more{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+@media(max-width:1000px){.more{grid-template-columns:repeat(2,1fr)}}
+.quotes{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:20px;margin-top:30px}
+@media(max-width:900px){.quotes{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px 24px 20px;margin:0;display:flex;flex-direction:column}
+.quote .stars{color:var(--acc);font-size:18px;letter-spacing:3px}
+.quote blockquote{margin:12px 0 0;font-family:var(--serif);font-size:18px;line-height:1.5;color:var(--bone);flex:1}
+.quote figcaption{font-family:var(--sys);font-size:13px;color:var(--muted);margin-top:14px}
+.starline{font-family:var(--sys);font-size:14px;color:var(--bone);margin-top:14px}
+.starline b{color:var(--acc);letter-spacing:2px;font-weight:400;margin-right:6px}
+.vids{display:grid;grid-template-columns:repeat(var(--n,3),1fr);gap:22px;margin-top:30px}
+@media(max-width:860px){.vids{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.vids{grid-template-columns:1fr}}
+.vid .yt,.vid iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:10px;overflow:hidden;background:#000;position:relative;cursor:pointer;padding:0;box-shadow:0 16px 30px rgba(0,0,0,.45)}
+.vid .yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;transition:opacity .15s}
+.vid .yt:hover img{opacity:1}
+.vid .yt span{position:absolute;left:50%;top:50%;width:64px;height:44px;margin:-22px 0 0 -32px;border-radius:12px;background:rgba(0,0,0,.72)}
+.vid .yt span:after{content:"";position:absolute;left:26px;top:13px;border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vid .yt:hover span{background:#c00}
+.vid p{font-family:var(--sys);font-size:14px;color:var(--bone);margin-top:10px;line-height:1.4}
+.vid p small{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
 @media(max-width:760px){.more{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
 .more a{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .more a:hover{border-color:var(--acc)}
@@ -153,7 +173,7 @@ footer a:hover{text-decoration:underline}
 .ledger small{display:block;font-family:var(--sys);font-size:12px;color:#6b5a45;margin-top:12px}
 .family{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .family span{font-family:var(--sys);font-size:13px;border:1px solid var(--line);border-radius:20px;padding:6px 14px;color:var(--bone)}
-.inside{columns:2;column-gap:40px;margin:22px 0 0 20px;font-size:17px;color:var(--text)}
+.inside{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;margin:22px 0 0 20px;font-size:17px;color:var(--text)}
 .inside li{margin-bottom:8px;break-inside:avoid}
 @media(max-width:640px){.inside{columns:1}}
 .made{border-left:3px solid var(--acc);padding-left:20px;margin-top:30px}
@@ -242,15 +262,16 @@ footer a:hover{text-decoration:underline}
     <div class="kicker">What is inside</div>
     <h2>A complete game <em>in a small book</em></h2>
     <ul class="inside">
-      <li>The complete 24-page rulebook</li>
-      <li>Character sheet and company sheet</li>
-      <li>DIY character booklet and role descriptors</li>
-      <li>The starting adventure, Christman and the Devil</li>
-      <li>Clear procedures and low friction at the table</li>
-      <li>Risk against reward, with player-driven consequences</li>
+      <li>The 24-page rulebook</li>
+      <li>Character and company sheets</li>
+      <li>Six roles to start from</li>
+      <li>A DIY character booklet</li>
+      <li>The adventure Christman and the Devil</li>
+      <li>The final roll for the company</li>
     </ul>
     <p style="margin-top:22px">Built on Into the Odd by Chris McDowall, in the same family as:</p>
     <div class="family"><span>Cairn</span><span>Mausritter</span><span>Mythic Bastionland</span></div>
+    <p class="starline"><b>&#9733;&#9733;&#9733;&#9733;&#9733;</b>&ldquo;Mixing entrepreneurship, roleplaying and creative problem solving is a surprisingly fun idea.&rdquo; Vegard, on DriveThruRPG</p>
     <div class="made"><p><b>Made by people.</b> There is no AI in the text, layout or editing, and the art is public domain, printed in full colour on A5.</p>
     <p>A sequel from KR1 is in the works, about what comes after the final roll: running the company itself, OSR style. It has no release date yet.</p></div>
     <div class="cta-row" style="margin-top:28px"><a class="btn" href="https://www.drivethrurpg.com/en/product/555680?affiliate_id=927841&src=site_grunder" target="_blank" rel="noopener">Get Gr&uuml;nder on DriveThruRPG</a></div>
@@ -264,13 +285,14 @@ footer a:hover{text-decoration:underline}
 </div></section>
 <section id="more"><div class="in">
   <div class="center"><div class="kicker">More from KR1</div><h2>Other books on the same shelf</h2></div>
-  <div class="more"><a href="/westmarches"><img src="/img/series/og-westmarches.jpg?v=2" alt="" loading="lazy" width="1200" height="630"><span>West Marches<small>Open table campaigns</small></span></a><a href="/hexcrawl"><img src="/img/series/og-hexcrawl.jpg?v=3" alt="" loading="lazy" width="1200" height="630"><span>Hexcrawl<small>Wilderness exploration</small></span></a><a href="/ashborn"><img src="/img/ashborn/og-ashborn.jpg" alt="" loading="lazy" width="1200" height="630"><span>Ashborn<small>Coming to BackerKit 2027</small></span></a></div>
+  <div class="more"><a href="/westmarches"><img src="/img/series/og-westmarches.jpg?v=2" alt="" loading="lazy" width="1200" height="630"><span>West Marches<small>Open table campaigns</small></span></a><a href="/hexcrawl"><img src="/img/series/og-hexcrawl.jpg?v=3" alt="" loading="lazy" width="1200" height="630"><span>Hexcrawl<small>Wilderness exploration</small></span></a><a href="/sandbox"><img src="/img/series/og-sandbox.jpg" alt="" loading="lazy" width="1200" height="630"><span>Sandbox Toolkit: The City<small>Cities that generate play</small></span></a><a href="/ashborn"><img src="/img/ashborn/og-ashborn.jpg" alt="" loading="lazy" width="1200" height="630"><span>Ashborn<small>Coming to BackerKit 2027</small></span></a></div>
 </div></section>
 <footer><div class="in">
   <div class="cred">Written, designed and laid out by Petter Fornes &middot; Rules from Into the Odd by Chris McDowall &middot; Published by KR1 Publishing</div>
   <a href="/">KR1 Publishing</a>
   <a href="/westmarches">West Marches</a>
   <a href="/hexcrawl">Hexcrawl</a>
+  <a href="/sandbox">Sandbox Toolkit</a>
   <a href="/grunder">Gr&uuml;nder</a>
   <a href="/tale">Tale</a>
   <a href="/vendor">For retailers</a>
