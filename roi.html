@@ -189,8 +189,9 @@ footer a:hover{text-decoration:underline}
 .tools a:hover{border-color:var(--acc)}
 .tools b{display:block;font-family:var(--disp);font-size:16px;color:#fff;letter-spacing:.03em;margin-bottom:6px}
 .tools span{font-family:var(--sys);font-size:13.5px;color:var(--muted)}
-.curve{max-width:1000px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 14px 6px;overflow-x:auto}
-.curve svg{min-width:620px}
+.curve{max-width:1000px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 14px 6px}
+.curve svg{display:block}.curve .cv-m{display:none}
+@media(max-width:640px){.curve{padding:12px 8px 4px}.curve .cv-d{display:none}.curve .cv-m{display:block}}
 .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px;border-top:2px solid var(--acc)}
 .timeline div{padding:16px 14px 0;border-left:1px solid var(--line)}
 .timeline div:first-child{border-left:0}
