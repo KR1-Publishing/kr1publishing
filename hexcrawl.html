@@ -199,7 +199,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
-  <ul><li><a href="#map">The series</a></li><li><a href="#method">The method</a></li><li><a href="#thornwall">Thornwall</a></li><li><a href="#books">The books</a></li></ul>
+  <ul><li><a href="#map">The series</a></li><li><a href="#method">The method</a></li><li><a href="#watch">Roll a watch</a></li><li><a href="#thornwall">Thornwall</a></li><li><a href="#books">The books</a></li></ul>
   <a class="btn sm" href="https://www.drivethrurpg.com/en/product/562366?affiliate_id=927841&src=site_hexcrawl" target="_blank" rel="noopener">Start with book one</a>
 </div></nav>
 
@@ -271,6 +271,90 @@ footer a:hover{text-decoration:underline}
   </div>
   <figure class="mapcard"><img src="/img/series/inside/thornwall-map.webp" alt="The GM's keyed hex map of the Thornwall Frontier, 30 hexes" width="1201" height="1287" loading="lazy"><figcaption>The GM&rsquo;s keyed hex map, page 5 of the book</figcaption></figure>
 </div></div></section>
+
+<section id="watch"><div class="in">
+  <div class="center"><div class="kicker">Try the method</div><h2>Roll a watch <em>in the wilds</em></h2>
+  <p class="lead narrow">One watch is six hours of travel. Pick where the party is, roll, and get the weather, the cost of the hex and what they meet. The procedure follows the exploration turn from the Campaign Style Guidebook, the 60/40 rule from the Encounter Design Guidebook and the zones, weather and terrain costs from The Thornwall Frontier.</p></div>
+  <div class="hxtool">
+    <div class="hxctl">
+      <label>Zone<select id="hxZone"><option value="1">Settled ring</option><option value="2" selected>Frontier</option><option value="3">The Deep</option></select></label>
+      <label>Terrain<select id="hxTer"><option value="plains">Plains</option><option value="forest" selected>Forest</option><option value="hills">Hills</option><option value="swamp">Swamp</option><option value="mountains">Mountains</option></select></label>
+      <label>Season<select id="hxSea"><option value="0">Spring</option><option value="1">Summer</option><option value="2" selected>Autumn</option><option value="3">Winter</option></select></label>
+      <button class="btn" type="button" id="hxRoll">Roll the watch</button>
+    </div>
+    <div class="hxout" id="hxOut" aria-live="polite">
+      <div class="hxempty">Press <b>Roll the watch</b> to send the party into the next hex.</div>
+    </div>
+    <div class="hxlog"><div class="hxloghead"><span id="hxClock">Day 1, before the first watch</span><button type="button" id="hxReset">Start over</button></div><ol id="hxLog"></ol></div>
+  </div>
+  <p class="note center" style="margin-top:18px">The example encounters are written for this page in the style the books teach: a hook, a decision and a consequence. The books show you how to build tables like these for your own map.</p>
+</div></section>
+<style>
+.hxtool{max-width:1000px;margin:30px auto 0;display:grid;grid-template-columns:1fr;gap:16px}
+.hxctl{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:12px;align-items:end;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.hxctl label{display:flex;flex-direction:column;gap:6px;font-family:var(--sys);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.hxctl select{font:inherit;font-size:16px;letter-spacing:0;text-transform:none;color:var(--bone);background:var(--night);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.hxctl .btn{white-space:nowrap}
+@media(max-width:760px){.hxctl{grid-template-columns:1fr 1fr}.hxctl .btn{grid-column:1/-1}}
+.hxout{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;min-height:150px}
+.hxempty{font-family:var(--sys);color:var(--muted);text-align:center;padding:40px 0}
+.hxrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:640px){.hxrow{grid-template-columns:1fr}}
+.hxbox{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.hxbox small{display:block;font-family:var(--sys);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.hxbox b{font-family:var(--disp);color:#fff;font-size:18px;letter-spacing:.02em}
+.hxbox span{display:block;font-family:var(--sys);font-size:13px;color:var(--muted);margin-top:3px}
+.hxdie{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:7px;background:var(--bone);color:#111;font-family:var(--sys);font-weight:800;margin-right:8px;vertical-align:middle}
+.hxenc{border-left:3px solid var(--acc);padding:4px 0 4px 16px}
+.hxenc .cat{font-family:var(--sys);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.hxenc p{font-size:18px;margin-top:6px;color:var(--text)}
+.hxenc .react{font-family:var(--sys);font-size:14px;color:var(--muted);margin-top:8px}
+.hxquiet{font-size:18px;color:var(--text)}
+.hxlog{background:var(--night2);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+.hxloghead{display:flex;justify-content:space-between;align-items:center;font-family:var(--sys);font-size:13px;color:var(--muted)}
+.hxloghead button{font:inherit;color:var(--acc-soft);background:none;border:0;cursor:pointer;text-decoration:underline}
+#hxLog{list-style:none;margin:8px 0 0;padding:0;font-family:var(--sys);font-size:13.5px;color:var(--text)}
+#hxLog li{padding:6px 0;border-top:1px solid var(--line)}
+#hxLog li:first-child{border-top:0}
+#hxLog:empty{display:none}
+</style>
+<script>
+(function(){
+var W=[["Clear, mild","Overcast, warm","Light rain","Heavy rain","Fog (morning)","Sudden cold"],["Hot, still","Hazy, humid","Thunderstorms","Hot, dry wind","Clear, perfect","Violent storm"],["Crisp, clear","Overcast, cool","Drizzle, fog","Heavy rain, mud","Wind and rain","First frost"],["Cold, clear","Grey, bitter cold","Light snow","Heavy snow","Blizzard","Thaw (brief)"]];
+var COST={plains:["1 watch","Open ground. Easy to navigate."],forest:["2 watches","Dense forest. Navigation is harder."],hills:["2 watches","Climbing. Good vantage points."],swamp:["3 watches","Exhausting. Leeches. Gear damage."],mountains:["3 watches","Dangerous. Weather exposure."]};
+var ZN=["","Settled ring","Frontier","The Deep"];
+var CAT=[["sign","Signs and traces"],["sign","Signs and traces"],["npc","Someone on the road"],["hazard","Environmental hazard"],["disc","Discovery"],["beast","Creatures"],["beast","Creatures"],["beast","Creatures"]];
+var E={
+plains:{sign:["Wagon ruts, freshly churned, leave the road and cut straight across the grass. Follow them and lose half a watch, or note the direction for later.","A ring of trampled grass around a cold fire pit. Six bedrolls' worth of flattened stalks, and one boot left behind. Whoever camped here left in a hurry."],npc:["A shepherd counting sheep that are not there. She lost the flock two nights ago and swears the grass took them.","A tax collector on a tired mule, two guards short of what he set out with. He pays well for an escort to the next village."],hazard:["A grass fire on the horizon, and the wind is bringing it your way. Run for the river and lose your route, or burn a firebreak and lose a watch.","Hidden sinkholes under the turf. The first one takes a leg to the knee. Probing ahead with a pole halves your pace."],disc:["A lone standing stone with a carved arrow, pointing at a hill on the horizon. The hill is not on your map.","A dry well with a rope still tied to the windlass. At the bottom sits a sealed clay jar."],beast:["Feral dogs shadow the party at a distance, closing in as the light goes.","A bull aurochs stands on the trail and will not move. Go around and lose time, or move it."]},
+forest:{sign:["Claw marks on a birch, higher than a man can reach. The bark is still weeping sap.","Strips of red cloth tied to branches, leading off the path. Someone wanted to be found, or wanted to be followed."],npc:["A charcoal burner who has not seen another face in a month. He trades food for news, and knows a shortcut he is afraid to use.","Two hunters arguing over a deer neither of them killed. The arrow in it belongs to someone else."],hazard:["A deadfall of old trees blocks the way. Climbing over is slow and loud. Going around adds a watch.","Fog rolls in between the trunks. Navigation turns hard until it lifts, and sounds carry strangely."],disc:["An overgrown shrine with a bowl of fresh berries on the altar. Nobody lives within a day of here.","A hunter's hide high in an oak, with a view over three hexes and a map scratched into the planks."],beast:["Three wolves test the edge of the firelight. They want the pack mule more than a fight.","A giant spider's web spans the path, the owner nowhere in sight. Something wrapped in silk hangs in the middle."]},
+hills:{sign:["A cairn on a ridge, freshly rebuilt. There is a coin under the top stone.","Smoke from a hollow below. Too thin for a camp, too steady for a wildfire."],npc:["A goatherd on a high slope waves you up. She has seen riders on the far ridge, and they were not wearing colours.","A prospector with a cart of rocks he insists are silver. He will sell a share in his claim for a fair price."],hazard:["A rockslide starts above you. Scatter and run, or hold together and take the hit.","A sudden squall on the ridge line. Shelter in the lee and lose a watch, or push on cold and wet."],disc:["A cave mouth behind a curtain of ivy, with old torch soot on the ceiling.","From the top you can see three hexes in every direction. Whoever holds the map gets to mark them."],beast:["A wyvern's shadow passes over the slope. It is hunting goats today, unless the party looks easier.","Two hill giants toss boulders across the valley for sport, and the path runs right between them."]},
+swamp:{sign:["Footprints in the mud that fill with water as you watch. Whoever made them is only minutes ahead.","A drowned boat, stern up, with a symbol on the hull you have seen somewhere before."],npc:["A leech gatherer up to her waist in black water. She knows the safe path and charges in salt.","A deserter on a hummock, half starved. He will trade what he knows about his old unit for a meal."],hazard:["Leeches. Everyone who waded loses a little blood and strength until they reach dry ground and a fire.","The path sinks under the weight of the mule. One pack goes under. Dive for it, or let the swamp keep it."],disc:["A stilt house abandoned mid meal, bowls still on the table. The ladder was pulled up from the inside.","Pale lights drift off the path. Follow them and find a sunken shrine, or a deeper pool."],beast:["A giant snapping turtle surfaces beside the trail, interested in whoever is last in line.","Bog wights rise from the reeds as dusk falls. They are slow, and they do not stop."]},
+mountains:{sign:["Iron pitons hammered into the cliff face. The newest one is bright and unrusted.","A frozen body in a crevasse, gear intact, one hand still pointing up the pass."],npc:["A barefoot monk on his way to a shrine above the snow line. He knows where the weather breaks.","Smugglers hauling crates over the pass. They would rather pay you to forget their faces than fight."],hazard:["Thin air and bitter cold. Every watch above the tree line costs extra rations, or someone starts to fall behind.","An avalanche slope. Cross one at a time and in silence, or find another way and lose half a day."],disc:["An old door carved into the rock, shut, with a riddle in a language one of you half knows.","A hot spring in a sheltered valley. A night here mends more than a night usually does."],beast:["A snow leopard follows the rear of the party, patient, waiting for someone to straggle.","Ogres in a cave above the pass demand a toll in meat. They can be bargained with, barely."]}};
+var REACT=[[2,2,"Hostile, acts against you"],[3,5,"Wary and unfriendly"],[6,8,"Uncertain, waiting to see what you do"],[9,11,"Talkative, has news to share"],[12,12,"Helpful, offers more than you asked"]];
+function d(n){return 1+Math.floor(Math.random()*n)}
+var $=function(i){return document.getElementById(i)};
+var watch=0;
+function clock(){var day=Math.floor(watch/4)+1,w=watch%4;return "Day "+day+", "+(w===0?"before the first watch":"after watch "+w+" of 4")}
+$("hxRoll").addEventListener("click",function(){
+  var z=+$("hxZone").value,t=$("hxTer").value,s=+$("hxSea").value;
+  var wd=d(6),weather=W[s][wd-1],ed=d(6),hit=ed<=z,html="";
+  html+='<div class="hxrow"><div class="hxbox"><small>Weather, d6</small><b>'+weather+'</b><span>Rolled '+wd+' on the '+["spring","summer","autumn","winter"][s]+' table</span></div>';
+  html+='<div class="hxbox"><small>Cost of the hex</small><b>'+COST[t][0]+'</b><span>'+COST[t][1]+'</span></div>';
+  html+='<div class="hxbox"><small>Encounter check, d6</small><b><i class="hxdie">'+ed+'</i>'+(hit?"Encounter":"Quiet")+'</b><span>'+ZN[z]+': encounter on '+(z===1?"a 1":"1 to "+z)+'</span></div></div>';
+  var logtxt;
+  if(hit){var cd=d(8),c=CAT[cd-1],pool=E[t][c[0]],txt=pool[d(pool.length)-1];
+    html+='<div class="hxenc"><div class="cat">d8: '+cd+' &middot; '+c[1]+'</div><p>'+txt+'</p>';
+    if(c[0]==="npc"){var r=d(6)+d(6),rr=REACT.filter(function(x){return r>=x[0]&&r<=x[1]})[0];html+='<div class="react">Reaction, 2d6: <b>'+r+'</b>, '+rr[2]+'</div>'}
+    html+='</div>';logtxt=c[1]+": "+txt.split(". ")[0]+".";
+  }else{html+='<p class="hxquiet">Nothing finds the party this watch. Spend the time on the map, the rations and whatever the last encounter left behind.</p>';logtxt="Quiet watch."}
+  $("hxOut").innerHTML=html;watch++;
+  var li=document.createElement("li");li.textContent="Watch "+watch+" · "+t.charAt(0).toUpperCase()+t.slice(1)+", "+weather.toLowerCase()+" · "+logtxt;
+  $("hxLog").insertBefore(li,$("hxLog").firstChild);while($("hxLog").children.length>6)$("hxLog").removeChild($("hxLog").lastChild);
+  $("hxClock").textContent=clock()+(watch%4===0?" · a day has passed: deduct rations":"");
+});
+$("hxReset").addEventListener("click",function(){watch=0;$("hxLog").innerHTML="";$("hxClock").textContent=clock();$("hxOut").innerHTML='<div class="hxempty">Press <b>Roll the watch</b> to send the party into the next hex.</div>'});
+})();
+</script>
 
 <section class="band" id="pages"><div class="in">
   <div class="center"><div class="kicker">Look inside</div><h2>Art, maps <em>and pages you can run from</em></h2></div>

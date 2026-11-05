@@ -9,7 +9,7 @@
       "permanent": false
     },
     {
-      "source": "/kirkeg\u00e5rden",
+      "source": "/kirkegården",
       "destination": "/DDBkirkegarden",
       "permanent": false
     },
@@ -29,7 +29,7 @@
       "permanent": false
     },
     {
-      "source": "/DDBkirkeg\u00e5rden",
+      "source": "/DDBkirkegården",
       "destination": "/DDBkirkegarden",
       "permanent": false
     },
@@ -54,7 +54,7 @@
       "permanent": false
     },
     {
-      "source": "/s\u00f8lvhjerte",
+      "source": "/sølvhjerte",
       "destination": "/solvhjerte",
       "permanent": false
     },
@@ -139,7 +139,7 @@
       "permanent": true
     },
     {
-      "source": "/gr\u00fcnder",
+      "source": "/gründer",
       "destination": "/grunder",
       "permanent": true
     },
@@ -166,6 +166,11 @@
     {
       "source": "/the-city",
       "destination": "/sandbox",
+      "permanent": true
+    },
+    {
+      "source": "/roll-for-innovation",
+      "destination": "/roi",
       "permanent": true
     }
   ],

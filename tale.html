@@ -135,6 +135,7 @@
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.png" alt="">KR1 PUBLISHING</a>
   <ul>
     <li><a href="#game">The game</a></li>
+    <li><a href="#diploma">Your diploma</a></li>
     <li><a href="#line">The line</a></li>
     <li><a href="#edition">New edition</a></li>
     <li><a href="#story">The story</a></li>
@@ -207,6 +208,84 @@
     </div>
   </div>
 </section>
+
+<section id="diploma">
+  <div class="in">
+    <div class="center narrow">
+      <div class="kicker">Find your diploma</div>
+      <h2>Which graduate <em>are you?</em></h2>
+      <p class="lead">Every character in Tale leaves the Academy of Merelin with a diploma from one of four colleges. Answer two questions and see which of the twelve fits you, or roll a whole band of wanderers for tonight.</p>
+    </div>
+    <div class="dptool">
+      <div class="dpq" id="dpQ1"><p class="dpask">When the road gets hard, what do you reach for?</p><div class="dpopts">
+        <button type="button" data-c="0">A spell or a secret</button><button type="button" data-c="1">My tools</button><button type="button" data-c="2">A remedy</button><button type="button" data-c="3">The right words</button></div></div>
+      <div class="dpq" id="dpQ2" hidden><p class="dpask">And how do you like to work?</p><div class="dpopts" id="dpO2"></div></div>
+      <div class="dpcard" id="dpCard" hidden></div>
+      <div class="dpbar"><button type="button" class="btn" id="dpBand">Roll a band of wanderers</button><button type="button" class="btn ghost" id="dpAgain">Start over</button></div>
+      <div class="dpband" id="dpBandOut" hidden></div>
+    </div>
+    <p class="note center" style="margin-top:18px">From the Academy of Merelin diploma set in the Tale Core Rulebook. All twelve diplomas are in the book, ready to print.</p>
+  </div>
+</section>
+<style>
+#diploma .note{font-family:system-ui,sans-serif;font-size:13.5px;color:var(--muted)}
+.dptool{max-width:860px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.dpask{font-family:var(--disp);font-size:clamp(22px,2.6vw,28px);color:var(--fog);text-align:center;margin-bottom:16px}
+.dpopts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:560px){.dpopts{grid-template-columns:1fr}}
+.dpopts button{font:inherit;font-size:18px;color:var(--fog);background:var(--night);border:1px solid var(--line);border-radius:10px;padding:16px;cursor:pointer;text-align:center}
+.dpopts button:hover{border-color:var(--torch);color:var(--torch-soft)}
+.dpcard{text-align:center;padding:8px 6px 4px}
+.dpcard .col{font-family:system-ui,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--torch)}
+.dpcard h3{font-family:var(--disp);font-size:clamp(34px,5vw,48px);color:var(--fog);margin:6px 0 2px}
+.dpcard .motto{font-style:italic;font-size:21px;color:var(--mist)}
+.dpcard p{max-width:600px;margin:14px auto 0}
+.dptrees{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.dptrees span{font-family:system-ui,sans-serif;font-size:13px;border:1px solid var(--line);border-radius:20px;padding:6px 14px;color:var(--fog)}
+.dpbar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.dpq,.dpcard{padding-bottom:22px;margin-bottom:20px;border-bottom:1px solid var(--line)}
+.dpband{margin-top:20px}
+.dpband ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.dpband ol{grid-template-columns:1fr}}
+.dpband li{border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+.dpband li small{display:block;font-family:system-ui,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--torch)}
+.dpband li b{display:block;font-family:var(--disp);font-size:26px;color:var(--fog)}
+.dpband li i{font-size:16px;color:var(--mist)}
+.dpband h4{font-family:var(--disp);font-size:22px;color:var(--fog);margin:22px 0 8px;text-align:center}
+.dpband ul{max-width:560px;margin:0 auto;padding-left:20px}
+.dpband ul li{border:0;padding:4px 0;text-align:left}
+</style>
+<script>
+(function(){
+var C=[["College of Arcana","Ylaha's crest is tattooed on the left shoulder of every graduate. The college teaches the responsible and efficient use of magic.",[
+ ["Loremaster","Knowledge is power.","A walking library with a fun fact or tip for any situation. Runes, magical objects and auras are the fields of study.",["Insight","Arcana","Notebook"],"Knowing things"],
+ ["Clairvoyant","The stars guide me.","Listens to the Astra, the voices of the stars, and to the voices of the deep. Scrying and reading auras.",["Crystal ball","Astra","Entrails"],"Seeing what is coming"],
+ ["Channeler","My blood is my weapon.","Academy blood magic. Sacrifice your own well-being to drain creatures, strengthen skills and summon forces from Altera.",["Balance","Altera"],"Paying the price myself"]]],
+["College of Engineering","Every member receives an ember-puzzle as a reminder that there is more to learn. No student has solved it yet.",[
+ ["Tinkerer","Nothing is worthless in the hands of an artist.","Follows the teachings of the god Fumbus and solves any problem with whatever is lying around.",["Tricks","Momentum","Mechanics"],"Improvising"],
+ ["Prospector","The world is out there!","Trained as an explorer and investigator, with a semester-long field trip called the Proving.",["Navigation","Always prepared","Survival"],"Finding the way"],
+ ["Smith","Steel and flame are mine to shape.","Works magical runes and mystical metals, and crafts what the party needs from what it carries.",["Runic pommel","Sacred crest","Craft"],"Making things last"]]],
+["College of Medicine","Nymnir, patron god of the dead and dying, is honoured here. The countryside whispers about what the college really does.",[
+ ["Anatomist","The body is my tome of secrets.","The most feared graduates, who practise surgery on the dead and swear oaths of secrecy.",["Diagnosis","Funeral rites","Surgery"],"Understanding the body"],
+ ["Alchemist","My art is the language of the gods.","Highly regarded everywhere. Synthesises mystical materials and unleashes the elements.",["Precious metals","Elements","Elixirs"],"Mixing something powerful"],
+ ["Herbalist","There is a lot of wisdom in a good brew.","Revered in rural areas, trained to heal Body, Mind and Soul, and to brew something calming in a crisis.",["Heal","Cure","Chemistry"],"Taking care of others"]]],
+["College of Anthropology","A bridge between cultures, kingdoms and history, old, new or obliterated.",[
+ ["Globetrotter","The key to happiness is understanding.","Adventure-driven and curious, with strange fashions and unhealthy habits picked up on the road.",["Tradition","Servitude","Foreign relics"],"Meeting new people"],
+ ["Linguist","The first step to peace is good conversation.","Master of languages dead and alive, with runic tattoos and words of power.",["Polyglot","Tattooed","Words of power"],"Talking my way through"],
+ ["Dancer","I move with the wind.","Studies ritual dance, ceremony and martial arts from around the world.",["Martial arts","Ritual dance","War paint"],"Moving fast"]]]];
+var $=function(i){return document.getElementById(i)};
+function card(ci,di){var c=C[ci],d=c[2][di];return '<div class="col">'+c[0]+'</div><h3>The '+d[0]+'</h3><div class="motto">&ldquo;'+d[1]+'&rdquo;</div><p>'+d[2]+'</p><div class="dptrees">'+d[3].map(function(t){return "<span>"+t+"</span>"}).join("")+'</div><p style="font-size:16px;color:var(--muted)">'+c[1]+'</p>'}
+[].forEach.call($("dpQ1").querySelectorAll("button"),function(b){b.addEventListener("click",function(){var ci=+b.dataset.c;
+ $("dpO2").innerHTML=C[ci][2].map(function(d,i){return '<button type="button" data-d="'+i+'">'+d[4]+'</button>'}).join("");
+ [].forEach.call($("dpO2").querySelectorAll("button"),function(x){x.addEventListener("click",function(){$("dpCard").innerHTML=card(ci,+x.dataset.d);$("dpCard").hidden=false;$("dpQ2").hidden=true})});
+ $("dpQ1").hidden=true;$("dpQ2").hidden=false;$("dpBandOut").hidden=true})});
+$("dpAgain").addEventListener("click",function(){$("dpQ1").hidden=false;$("dpQ2").hidden=true;$("dpCard").hidden=true;$("dpBandOut").hidden=true});
+$("dpBand").addEventListener("click",function(){var cols=[0,1,2,3].sort(function(){return Math.random()-.5}).slice(0,3);
+ var h='<ol>'+cols.map(function(ci){var d=C[ci][2][Math.floor(Math.random()*3)];return '<li><small>'+C[ci][0].replace("College of ","")+'</small><b>'+d[0]+'</b><i>&ldquo;'+d[1]+'&rdquo;</i></li>'}).join("")+'</ol>';
+ h+='<h4>Before the first scene, answer together</h4><ul><li>How do we know one another?</li><li>Why are we together?</li><li>Why are we on the road?</li><li>Why do we seek adventure?</li></ul>';
+ $("dpBandOut").innerHTML=h;$("dpBandOut").hidden=false;$("dpQ1").hidden=true;$("dpQ2").hidden=true;$("dpCard").hidden=true});
+})();
+</script>
 
 <section id="line">
   <div class="in">

@@ -191,7 +191,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
-  <ul><li><a href="#city">The city</a></li><li><a href="#jiffy">A city in a jiffy</a></li><li><a href="#inside">Look inside</a></li><li><a href="#faq">Questions</a></li></ul>
+  <ul><li><a href="#city">The city</a></li><li><a href="#jiffy">A city in a jiffy</a></li><li><a href="#roll">Roll a city</a></li><li><a href="#inside">Look inside</a></li></ul>
   <a class="btn sm" href="https://www.drivethrurpg.com/en/product/578387?affiliate_id=927841&src=site_sandbox" target="_blank" rel="noopener">Get The City</a>
 </div></nav>
 
@@ -244,6 +244,83 @@ footer a:hover{text-decoration:underline}
     <div><b>Street names</b><span>For the map</span></div>
   </div>
 </div></section>
+
+<section id="roll"><div class="in">
+  <div class="center"><div class="kicker">Try it now</div><h2>Roll a city <em>in eight steps</em></h2>
+  <p class="lead narrow">The same eight steps as the opening chapter of the book, with a sample from each of its tables. Roll the whole city, or click a line to roll that step again.</p></div>
+  <div class="cytool">
+    <div class="cyctl">
+      <label class="cysw"><input type="checkbox" id="cyUnc"> Uncommon city types</label>
+      <label class="cysw"><input type="checkbox" id="cyRare"> Rare name prefixes</label>
+      <button class="btn" type="button" id="cyRoll">Roll a city</button>
+      <button class="btn ghost" type="button" id="cyCopy">Copy</button>
+    </div>
+    <div class="cyhead"><small id="cyType">&nbsp;</small><h3 id="cyName">Your city</h3></div>
+    <ol class="cysteps" id="cySteps"></ol>
+  </div>
+  <p class="note center" style="margin-top:18px">This page uses about half of each d20 table. The book has the full tables, plus inns, guilds, shops, temples, 120 city encounters and the worked example of Kingsfall.</p>
+</div></section>
+<style>
+.cytool{max-width:900px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px 10px}
+.cyctl{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.cysw{font-family:var(--sys);font-size:14px;color:var(--text);display:flex;align-items:center;gap:8px;cursor:pointer}
+.cysw input{width:18px;height:18px;accent-color:var(--acc)}
+.cyctl .btn{margin-left:auto}
+.cyctl .btn+.btn{margin-left:0}
+@media(max-width:640px){.cysw{flex:1 1 100%}.cyctl .btn{margin-left:0;flex:1 1 40%;text-align:center;white-space:nowrap;padding-left:12px;padding-right:12px}}
+.cyhead{text-align:center;padding:20px 0 6px}
+.cyhead small{font-family:var(--sys);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.cyhead h3{font-family:var(--disp);font-size:clamp(28px,4vw,40px);color:#fff;letter-spacing:.03em;margin-top:4px}
+.cysteps{list-style:none;padding:0;margin:8px 0 0;counter-reset:cy}
+.cysteps li{display:grid;grid-template-columns:44px 150px 1fr;gap:10px;align-items:baseline;padding:12px 6px;border-top:1px solid var(--line);cursor:pointer;border-radius:6px}
+.cysteps li:hover{background:rgba(255,255,255,.03)}
+.cysteps li:before{counter-increment:cy;content:counter(cy);font-family:var(--disp);font-size:22px;color:var(--acc)}
+.cysteps b{font-family:var(--sys);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cysteps span{font-size:17px;color:var(--text)}
+.cysteps em{font-style:normal;color:var(--muted);font-family:var(--sys);font-size:13px}
+@media(max-width:640px){.cysteps li{grid-template-columns:34px 1fr}.cysteps span{grid-column:2}}
+</style>
+<script>
+(function(){
+var T={
+typeC:["Borderland fort","Cozy hamlet","Port town","Swamp community","Forest village","River trade hub","Mining town","Frontier outpost","Ruined city, partially inhabited","Crossroads town"],
+typeU:["Floating lake town","Tree-top settlement","Crater town","Great bridge city","Glacier outpost","Sinkhole settlement","Collapsed dungeon town","Giant statue settlement","Monster-hunter lodge town","Treasure-hunter boomtown"],
+preC:["Raven","Wolf","Iron","Oak","Black","Stone","Frost","Thorn","Ashen","Silver"],
+preR:["Strange","Thistle","Dread","Hollow","Wight","Thunder","Skull","Dead Man's","Haunt","Hammer"],
+suf:["haven","ford","dale","keep","watch","hold","bridge","gate","moor","fall"],
+fIn:["Built on ancient ruins","Dominated by a great tower","Split by a deep chasm","Wooden walkways above the streets","Shrouded in constant mist","Centred on a sacred tree","Tunnels beneath the streets","Dusted with falling ash","Lit by ever-burning lanterns","Slowly sinking foundations"],
+fOut:["A ruined watchtower nearby","Ancient barrow mounds","A haunted battlefield","Standing stones on a hill","A marsh of black reeds","A lonely stone bridge","An abandoned quarry","A collapsed mine","A lake that glows at night","A hill crowned by gallows"],
+gov:["Council of Elders","Baron or Baroness","Merchant Council","Guild Consortium","Mayor and Town Council","Military Commander","Religious Authority","Mage Council","Crime Syndicate","Hero-Protector"],
+think:["Beloved by the people","Weak and indecisive","Out of touch","Feared more than loved","Too soft on crime","Blind to problems","Holding the town together","A puppet for other power players","Greedy for coin","Barely tolerated"],
+bC:["Bakery","Blacksmith","Cemetery","Shrine","Stable","Market square","Healer's house","Inn","General store","Guild hall","Tavern","Temple","Watchtower"],
+bL:["Granary","Alchemist's shop","Bathhouse","Brewery","Library","Moneylender","Wizard's tower","Orphanage","Herbalist","Noble manor"],
+hP:["Strong","Honor","Storm","Silver","Gold","Thorn","Wilde","Moon","Ember","Grim"],
+hS:["borne","wood","vale","helm","grave","ward","crow","hart","bane","mere"],
+wealth:["Iron mines","Silver mines","Shipbuilding monopoly","Merchant guild charter","Salt caverns","Dragon hoard","Arcane relics","Sea raider plunder","Trade caravan routes","War spoils"],
+goal:["Reclaim lost lands","Restore honor","Secure royal favor","Marry into a higher house","Eliminate a rival house","Accumulate forbidden magic","Break an ancient curse","Gain a seat on the council","End an ancient blood feud","Find and kill all traitors"],
+st1:["Main","King's","Queen's","Merchant","Market","Dock"],st2:["Victory","Lament","Dagger","Pickpocket","Clover","Wolfsbane"],st3:["Eagle's","Gilded","Lookout","Royal","River","Bridge"],st4:["Hangman's","Jester","Thistle","Harmony","Whisper","Swine"],
+stS:["Road","Way","Alley","Walk","Row","Gate","Corner","Lane","Court"]};
+function p(a){return a[Math.floor(Math.random()*a.length)]}
+function street(){return p(p([T.st1,T.st2,T.st3,T.st4]))+" "+p(T.stS)}
+function house(){return "House "+p(T.hP)+p(T.hS)}
+var $=function(i){return document.getElementById(i)};
+var S={};
+var steps=[
+ ["type","City type",function(){S.type=p($("cyUnc").checked?T.typeU:T.typeC);$("cyType").textContent=S.type;return S.type}],
+ ["name","Name",function(){S.name=p($("cyRare").checked?T.preR:T.preC)+p(T.suf);$("cyName").textContent=S.name;return S.name}],
+ ["feat","Special features",function(){return p(T.fIn)+" <em>in town.</em> "+p(T.fOut)+" <em>outside.</em>"}],
+ ["gov","Governance",function(){return p(T.gov)+" <em>The people think they are:</em> "+p(T.think).toLowerCase()+"."}],
+ ["bld","Buildings",function(){var a=T.bC.slice().sort(function(){return Math.random()-.5}).slice(0,4);return a.join(", ")+", and one less common: "+p(T.bL).toLowerCase()+"."}],
+ ["h1","Noble house",function(){return house()+" <em>Wealth from</em> "+p(T.wealth).toLowerCase()+". <em>Wants to</em> "+p(T.goal).toLowerCase()+"."}],
+ ["h2","Rival house",function(){return house()+" <em>Wealth from</em> "+p(T.wealth).toLowerCase()+". <em>Wants to</em> "+p(T.goal).toLowerCase()+"."}],
+ ["st","Street names",function(){return street()+", "+street()+" and "+street()+"."}]];
+function render(){var ol=$("cySteps");ol.innerHTML="";steps.forEach(function(s,i){var li=document.createElement("li");li.title="Click to roll this step again";li.innerHTML="<b>"+s[1]+"</b><span>"+s[2]()+"</span>";li.addEventListener("click",function(){li.querySelector("span").innerHTML=s[2]()});ol.appendChild(li)})}
+$("cyRoll").addEventListener("click",render);
+$("cyCopy").addEventListener("click",function(){var t=$("cyName").textContent+" ("+$("cyType").textContent+")\n"+[].map.call($("cySteps").children,function(li){return li.querySelector("b").textContent+": "+li.querySelector("span").textContent}).join("\n");
+ var b=$("cyCopy");try{navigator.clipboard.writeText(t).then(function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1500)})}catch(e){}});
+render();
+})();
+</script>
 
 <section id="inside"><div class="in">
   <div class="center"><div class="kicker">Look inside</div><h2>Tables, maps <em>and art on every spread</em></h2></div>
