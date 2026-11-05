@@ -212,7 +212,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
-  <ul><li><a href="#why">Why this book</a></li><li><a href="#chapters">The chapters</a></li><li><a href="#inside">Look inside</a></li></ul>
+  <ul><li><a href="#why">Why this book</a></li><li><a href="#chapters">The chapters</a></li><li><a href="#quiz">Find your chapter</a></li><li><a href="#inside">Look inside</a></li></ul>
   <a class="btn sm" href="https://www.drivethrurpg.com/en/product/551434?affiliate_id=927841&src=site_rollforinnovation" target="_blank" rel="noopener"><span class="cl">Get the book</span><span class="cs">Get it</span></a>
 </div></nav>
 
@@ -260,6 +260,64 @@ footer a:hover{text-decoration:underline}
     <li><b>9</b>Save versus replacement</li><li><b>10</b>Enter the dragon</li>
   </ol>
 </div></section>
+<section id="quiz" data-buy="https://www.drivethrurpg.com/en/product/551434?affiliate_id=927841&amp;src=site_rollforinnovation"><div class="in">
+  <div class="center"><div class="kicker">A small quiz</div><h2>Which chapter <em>should you read first?</em></h2>
+  <p class="lead narrow">Five quick questions about where you stand with AI in the hobby. There are no right answers, and the quiz does not score your opinion. It points you to the two chapters that take up your questions.</p></div>
+  <div class="rqtool">
+    <div class="rqprog" id="rqProg"></div>
+    <div id="rqBody"></div>
+  </div>
+</div></section>
+<style>
+.rqtool{max-width:820px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.rqprog{display:flex;gap:6px;justify-content:center;margin-bottom:18px}
+.rqprog i{width:34px;height:5px;border-radius:3px;background:var(--line)}
+.rqprog i.on{background:var(--acc)}
+.rqask{font-family:var(--disp);font-size:clamp(22px,2.6vw,28px);color:#fff;text-align:center;margin:0 0 18px}
+.rqopts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.rqopts{grid-template-columns:1fr}}
+.rqopts button{font:inherit;font-size:17px;line-height:1.4;color:var(--text);background:var(--night);border:1px solid var(--line);border-radius:10px;padding:15px 16px;cursor:pointer;text-align:left}
+.rqopts button:hover{border-color:var(--acc);color:var(--bone)}
+.rqres{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.rqres{grid-template-columns:1fr}}
+.rqch{border:1px solid var(--line);border-radius:10px;padding:18px}
+.rqch small{font-family:var(--sys);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.rqch h3{font-family:var(--disp);font-size:24px;color:#fff;margin:6px 0 4px}
+.rqch em{display:block;font-size:16px;color:var(--muted);margin-bottom:10px}
+.rqch p{font-size:17px}
+.rqend{text-align:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.rqend p{margin-bottom:14px}
+.rqend .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+</style>
+<script>
+(function(){
+var CH={1:["Fear of a black dragon","Why power without restraint feels threatening","Fáfnir, the printing press and photography, and why new tools always arrive before we understand them.",5],
+2:["Behind the screen","A practical look at how AI actually works","What a language model does with a prompt, and what it does not know about dragons or tension.",8],
+3:["Rolling with advantage","Why AI feels powerful","Speed shifts the odds. The chapter asks whether moving faster also means moving in the right direction.",11],
+4:["Ethical bastionland","Fairness, consent and responsibility","Training data, consent and livelihood, taken one question at a time.",14],
+5:["Illusion spells","How transparency is the new honesty","How the platforms handle AI disclosure, and why openness builds trust with readers.",17],
+6:["In the eyes of the beholder","Who decides what creative work is worth","Price against value, and what photography taught us about work that is faster to make.",21],
+7:["Between two cairns","From personal play to public work","AI at your home table and AI in a book you sell, and why readers expect different things.",24],
+8:["No free experience points","What AI means for the creative voice","How a voice grows through practice, and what happens when a tool skips some of it.",27],
+9:["Save versus replacement","What AI automates, what stays human","Which chores a machine can take over, and which decisions stay with the author.",31],
+10:["Enter the dragon","How AI shapes the hobby and culture around it","Lower barriers at the table, and the risk when reliance takes the place of presence.",34]};
+var Q=[["When AI comes up in the hobby, what do you feel first?",[["Unease. It all moves too fast.",[1]],["Curiosity about how it actually works.",[2]],["Concern for fairness. Whose work trained it?",[4]],["Mostly tired of the whole debate.",[10]]]],
+["Which question keeps coming back to you?",[["Should creators say when they use it?",[5]],["Is a book worth less if it was quicker to make?",[6]],["Will it take paid work away from people?",[9]],["Does speed make the work any better?",[3]]]],
+["Where do you run into AI the most?",[["In prep for my own home games",[7]],["In books and products I buy",[5,6]],["In my own writing or design",[8,3]],["In conversations in the community",[10,1]]]],
+["What would you hate to lose?",[["My own creative voice",[8]],["Paid work for artists and writers",[9,4]],["Trust between creators and readers",[5,7]],["The feeling of making something together at the table",[10]]]],
+["How do you feel about using it yourself?",[["I do not, and I have no plans to",[4,1]],["Only in private, never in published work",[7]],["For small chores like grammar and name lists",[9,2]],["I am still working that out",[3,6]]]]];
+var $=function(i){return document.getElementById(i)},step=0,sc={};
+function prog(){$("rqProg").innerHTML=Q.map(function(q,i){return '<i class="'+(i<step?"on":"")+'"></i>'}).join("")}
+function ask(){prog();var q=Q[step];$("rqBody").innerHTML='<p class="rqask">'+q[0]+'</p><div class="rqopts">'+q[1].map(function(o,i){return '<button type="button" data-i="'+i+'">'+o[0]+'</button>'}).join("")+'</div>';
+ [].forEach.call($("rqBody").querySelectorAll("button"),function(b){b.addEventListener("click",function(){q[1][+b.dataset.i][1].forEach(function(c,j){sc[c]=(sc[c]||0)+(j===0?2:1)});step++;step<Q.length?ask():res()})})}
+function card(n,lab){var c=CH[n];return '<div class="rqch"><small>'+lab+' &middot; Chapter '+n+', page '+c[3]+'</small><h3>'+c[0]+'</h3><em>'+c[1]+'</em><p>'+c[2]+'</p></div>'}
+function res(){prog();var r=Object.keys(sc).sort(function(a,b){return sc[b]-sc[a]||a-b});
+ $("rqBody").innerHTML='<p class="rqask">Start with these two</p><div class="rqres">'+card(r[0],"Read first")+card(r[1],"Then")+'</div><div class="rqend"><p>The chapters are short, and each takes a single question. The book leaves the answer with you.</p><div class="cta-row"><a class="btn" href="'+$("quiz").dataset.buy+'" target="_blank" rel="noopener">Get the book</a><button type="button" class="btn ghost" id="rqAgain">Take it again</button></div></div>';
+ $("rqAgain").addEventListener("click",function(){step=0;sc={};ask()})}
+ask();
+})();
+</script>
+
 
 <section id="inside"><div class="in">
   <div class="center"><div class="kicker">Look inside</div><h2>Read a few pages <em>before you buy</em></h2></div>

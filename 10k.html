@@ -212,7 +212,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
-  <ul><li><a href="#story">The story</a></li><li><a href="#curve">The curve</a></li><li><a href="#phases">Four phases</a></li><li><a href="#inside">Look inside</a></li><li><a href="#tools">Free tools</a></li></ul>
+  <ul><li><a href="#story">The story</a></li><li><a href="#curve">The curve</a></li><li><a href="#phases">Four phases</a></li><li><a href="#checklist">The checklist</a></li><li><a href="#inside">Look inside</a></li></ul>
   <a class="btn sm" href="https://www.drivethrurpg.com/en/product/575992?affiliate_id=927841&src=site_10k" target="_blank" rel="noopener"><span class="cl">Get the book</span><span class="cs">Get it</span></a>
 </div></nav>
 
@@ -272,6 +272,59 @@ footer a:hover{text-decoration:underline}
     <div><b>June 2026</b><span>Ten thousand books sold</span></div>
   </div>
 </div></section>
+<section id="checklist"><div class="in">
+  <div class="center"><div class="kicker">Try it now</div><h2>Where are you <em>on the path?</em></h2>
+  <p class="lead narrow">The checklist from the last page of the book. Tick what you have already done, and it shows which phase you are in and the next box to tick.</p></div>
+  <div class="cktool">
+    <div class="ckmeter" id="ckMeter"><span>Make</span><span>Give</span><span>Grow</span><span>Sell</span></div>
+    <p class="cknow" id="ckNow"></p>
+    <div class="ckgrid" id="ckGrid"></div>
+    <div class="ckbar"><button type="button" class="btn ghost" id="ckReset">Clear the ticks</button><button type="button" class="btn ghost" id="ckPrint">Print the checklist</button></div>
+  </div>
+  <p class="note center" style="margin-top:18px">Your ticks stay in this browser only. Nothing is sent anywhere.</p>
+</div></section>
+<style>
+.cktool{max-width:900px;margin:30px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.ckmeter{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.ckmeter span{font-family:var(--sys);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-align:center;color:var(--muted);padding:9px 4px;border-radius:6px;background:var(--night);border:1px solid var(--line)}
+.ckmeter span.done{background:var(--acc);color:var(--ink);border-color:var(--acc)}
+.ckmeter span.here{color:var(--acc);border-color:var(--acc)}
+.cknow{font-size:19px;color:var(--bone);text-align:center;margin:18px auto 4px;max-width:640px;min-height:2.4em}
+.cknow b{font-family:var(--disp);color:var(--acc)}
+.ckgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-top:16px}
+@media(max-width:700px){.ckgrid{grid-template-columns:1fr}}
+.ckgrid h3{font-family:var(--sys);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:6px 0 4px}
+.ckgrid label{display:flex;gap:12px;align-items:flex-start;padding:9px 6px;border-top:1px solid var(--line);font-size:17px;line-height:1.4;color:var(--text);cursor:pointer}
+.ckgrid input{width:20px;height:20px;flex:0 0 20px;margin-top:2px;accent-color:var(--acc)}
+.ckgrid label.next{color:var(--bone);background:rgba(255,255,255,.035);border-radius:6px}
+.ckgrid input:checked+span{color:var(--muted);text-decoration:line-through}
+.ckbar{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+@media print{body *{visibility:hidden}#checklist,#checklist *{visibility:visible}#checklist{position:absolute;left:0;top:0;width:100%}#checklist .ckbar,#checklist .note,#checklist .kicker{display:none}}
+</style>
+<script>
+(function(){
+var P=[["Make",["Pick one small thing you can finish in a week","Aim it at one real problem, for one real person","Finish it, even if it is ugly"]],
+["Give",["Release it free on DriveThruRPG, or pay what you want","Switch on follower and mailing lists before you launch","Read every comment and note what repeats"]],
+["Grow",["Run the loop again, and again","Watch for the shift: downloads in hours, names you recognize","Wait to sell until people are waiting for you"]],
+["Sell",["Cut friction before you add pages","Price it so the value is obviously bigger","Keep it single digits, with a nine at the end","Point each release at the one before it"]]];
+var K="kr1-10k-checklist",st={};try{st=JSON.parse(localStorage.getItem(K)||"{}")||{}}catch(e){st={}}
+var $=function(i){return document.getElementById(i)},grid=$("ckGrid"),h="";
+P.forEach(function(ph,pi){h+="<div><h3>"+ph[0]+"</h3>";ph[1].forEach(function(t,ti){var id=pi+"-"+ti;h+='<label data-id="'+id+'"><input type="checkbox" data-id="'+id+'"'+(st[id]?" checked":"")+'><span>'+t+'</span></label>'});h+="</div>"});
+grid.innerHTML=h;
+function upd(){var next=null,first=-1,spans=$("ckMeter").children;
+ P.forEach(function(ph,pi){var all=true;ph[1].forEach(function(t,ti){var id=pi+"-"+ti;if(!st[id]){all=false;if(!next)next=[pi,ti,t]}});spans[pi].className=all?"done":"";if(!all&&first<0)first=pi});
+ if(first>=0)spans[first].className="here";
+ [].forEach.call(grid.querySelectorAll("label"),function(l){l.className=next&&l.dataset.id===next[0]+"-"+next[1]?"next":""});
+ var n=Object.keys(st).filter(function(k){return st[k]}).length;
+ $("ckNow").innerHTML=!next?"<b>All thirteen boxes ticked.</b> Run the loop again with the next release.":n===0?"<b>Start this week.</b> Tick the first box: "+next[2].toLowerCase()+".":"<b>You are in "+P[next[0]][0]+".</b> Next box: "+next[2].charAt(0).toLowerCase()+next[2].slice(1)+".";
+ try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+grid.addEventListener("change",function(e){var id=e.target.dataset.id;if(id){st[id]=e.target.checked;upd()}});
+$("ckReset").addEventListener("click",function(){st={};[].forEach.call(grid.querySelectorAll("input"),function(i){i.checked=false});upd()});
+$("ckPrint").addEventListener("click",function(){window.print()});
+upd();
+})();
+</script>
+
 
 <section id="inside"><div class="in">
   <div class="center"><div class="kicker">Look inside</div><h2>Short chapters <em>and a checklist at the end</em></h2></div>

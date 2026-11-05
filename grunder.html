@@ -212,7 +212,7 @@ footer a:hover{text-decoration:underline}
 <body>
 <nav><div class="in">
   <a class="logo" href="/"><img src="/img/ashborn/kr1hex.svg" alt="" width="30" height="34">KR1 PUBLISHING</a>
-  <ul><li><a href="#premise">The premise</a></li><li><a href="#play">How it plays</a></li><li><a href="#roles">The roles</a></li><li><a href="#inside">What is inside</a></li></ul>
+  <ul><li><a href="#premise">The premise</a></li><li><a href="#play">How it plays</a></li><li><a href="#roles">The roles</a></li><li><a href="#found">Found a Company</a></li><li><a href="#inside">What is inside</a></li></ul>
   <a class="btn sm" href="https://www.drivethrurpg.com/en/product/555680?affiliate_id=927841&src=site_grunder" target="_blank" rel="noopener"><span class="cl">Get Gründer</span><span class="cs">Get it</span></a>
 </div></nav>
 
@@ -273,6 +273,78 @@ footer a:hover{text-decoration:underline}
   <div class="roles"><article class="role"><img src="/img/grunder/landsknecht.webp" alt="Landsknecht, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Landsknecht</h3><p>A mercenary for the Emperor, or for the highest bidder. Puff and slash outfit, a feathered hat and a katzbalger sword.</p></div></article><article class="role"><img src="/img/grunder/lay-monastic.webp" alt="Lay Monastic, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Lay Monastic</h3><p>A disciplined life in a monastery, without ever being ordained. Loose robes, a bible, ink and a quill.</p></div></article><article class="role"><img src="/img/grunder/peasant-serf.webp" alt="Peasant Serf, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Peasant Serf</h3><p>A small farm, bound to the land of your lord. A worn woollen tunic, a ten-foot stick and a pitchfork.</p></div></article><article class="role"><img src="/img/grunder/rat-catcher.webp" alt="Rat Catcher, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Rat Catcher</h3><p>The dirty jobs the fine folk would not touch. A patchy fur coat, a skinning knife and a cage full of rats.</p></div></article><article class="role"><img src="/img/grunder/silver-miner.webp" alt="Silver Miner, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Silver Miner</h3><p>Years in the dark and the choking air, digging for someone else&rsquo;s profit. Pit trousers, a leather apron and a pick axe.</p></div></article><article class="role"><img src="/img/grunder/town-musician.webp" alt="Town Musician, period print used in Gr&uuml;nder" width="720" height="503" loading="lazy"><div><h3>Town Musician</h3><p>Joy for hamlets and big towns alike, living from hand to mouth. Puffy breeches, an extravagant cape and a sharp dagger.</p></div></article></div>
   <p class="note center" style="margin-top:18px">The art in the book and on this page is public domain, from 16th and 17th century prints and paintings.</p>
 </div></section>
+<section id="found"><div class="in">
+  <div class="center"><div class="kicker">Try it now</div><h2>Found a Company <em>and roll its legacy</em></h2>
+  <p class="lead narrow">Roll a Gr&uuml;nder and a Company with the tables from the book. Then fill the Treasurer&rsquo;s dice pool and read the epilogue your sixes give you.</p></div>
+  <div class="grtool">
+    <div class="grcol">
+      <div class="grhead"><b>Your Gründer</b><button type="button" id="grRollG">Roll</button></div>
+      <dl id="grG"></dl>
+    </div>
+    <div class="grcol">
+      <div class="grhead"><b>The Company</b><button type="button" id="grRollC">Roll</button></div>
+      <dl id="grC"></dl>
+    </div>
+    <div class="grcol grwide">
+      <div class="grhead"><b>The Company legacy</b></div>
+      <div class="grpool">
+        <label>Silver Thalers secured<input type="number" id="grTh" min="0" step="50" value="300"></label>
+        <label>Useful assets<input type="number" id="grAs" min="0" value="1"></label>
+        <label>Gründers lost and replaced<input type="number" id="grNe" min="0" value="0"></label>
+        <button class="btn" type="button" id="grLegacy">Roll the legacy</button>
+      </div>
+      <div class="grdice" id="grDice"></div>
+      <p class="grepi" id="grEpi">One d6 per 100 Thalers, two per useful asset, one less for every new Gründer brought in. Every six counts.</p>
+    </div>
+  </div>
+  <p class="note center" style="margin-top:18px">Names, characteristics, reputations, careers, business types, idea sparks and the legacy table are from the rulebook. The name idea is just a suggestion. The book has the career equipment, the six company roles and the adventure.</p>
+</div></section>
+<style>
+.grtool{max-width:1000px;margin:30px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grtool{grid-template-columns:1fr}}
+.grcol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.grwide{grid-column:1/-1}
+.grhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}
+.grhead b{font-family:var(--disp);font-size:20px;color:#fff;letter-spacing:.03em}
+.grhead button{font-family:var(--sys);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--acc);border:0;border-radius:20px;padding:8px 16px;cursor:pointer}
+.grcol dl{display:grid;grid-template-columns:130px 1fr;gap:8px 12px;margin:0}
+.grcol dt{font-family:var(--sys);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.grcol dd{margin:0;font-size:18px;color:var(--text)}
+.grpool{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:12px;align-items:end}
+@media(max-width:760px){.grpool{grid-template-columns:1fr 1fr}.grpool .btn{grid-column:1/-1}}
+.grpool label{display:flex;flex-direction:column;gap:6px;font-family:var(--sys);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.grpool input{font:inherit;font-size:17px;letter-spacing:0;color:var(--bone);background:var(--night);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%;box-sizing:border-box}
+.grdice{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;min-height:8px}
+.grdice i{font-style:normal;width:38px;height:38px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-family:var(--sys);font-weight:800;font-size:18px;background:var(--bone);color:#222}
+.grdice i.six{background:var(--acc);color:var(--ink);box-shadow:0 0 0 2px var(--acc-soft)}
+.grepi{font-size:18px;color:var(--text);margin-top:8px}
+.grepi b{font-family:var(--disp);color:var(--acc)}
+</style>
+<script>
+(function(){
+var FN=[["Contz","Els"],["Hanns","Engel"],["Heintz","Gertrudt"],["Jorg","Margret"],["Jost","Metze"],["Ott","Walpurg"]];
+var LN=["Bauer","Braun","Bremer","Fischer","Krieger","Schmidt"];
+var CH=["Bald","Beautiful","Beer belly","Black fingernails","Broken teeth","Bull-necked","Coal black mane","Curly locks","Emaciated","Fishy smell","Fleshy lips","Gaunt","Hairy mole","Handsome","Heavy jaw","Large ears","Long nose","Missing ring finger","Muscular arms","Mustache or braids","Pale complexion","Pig eyes","Plump","Pox scars","Red cheeks","Rough hands","Scalds","Seven foot tall","Short cut hair","Squat","Stained hands","Sweaty","Tanned","Throat scar","White hair","Wide grin"];
+var RE=["Ambitious","Cocky","Cunning","Curious","Cutthroat","Devious","Eccentric","Envious","Foolhardy","Frivolous","Glutton","Greedy","Gullible","Honest","Hot-blooded","Ingenious","Kind-hearted","Loyal","Opportunistic","Optimistic","Pious","Prideful","Prolific","Reckless","Righteous","Rude","Scheming","Self-sacrificing","Serious","Shrewd","Stiff-necked","Stingy","Trustworthy","Vain","Vicious","Vindictive"];
+var CA=["Landsknecht","Lay monastic","Peasant serf","Rat catcher","Silver miner","Town musician"];
+var BT=["Farm","Mining works","Newspaper","Tavern","Theater","University"],IS=["Artistic vision","Competition","Espionage","Invention","Necessity","Rumour"];
+var NA=["Affen","Silber","Krone","Hirsch","Adler","Wolf"],NB=["bräu","werk","haus","blatt","bühne","halle"];
+var LEG=["The Company fails spectacularly. All the funding goes down the drain, without the business getting off the ground. Back to poverty.","The Company keeps afloat for a while, but is unable to grow and return the investment. Shutdown when the founders are sick and tired of it all.","The Company provides well enough for daily bread and butter. Everything falls apart when the founders pass away and their heirs take over.","The Company earns good money. When the business is sold to a bigger actor, the founders secure a luxurious pension for themselves.","The Company rises to regional dominance, and the founders become filthy rich. Outcompeted when a new disruptive technology enters the field.","The Company turns into a global corporation, lasting until human society breaks down and everything crashes and burns."];
+function d(n){return 1+Math.floor(Math.random()*n)}function p(a){return a[Math.floor(Math.random()*a.length)]}
+function s3(){return d(6)+d(6)+d(6)}
+var $=function(i){return document.getElementById(i)};
+function dl(el,rows){el.innerHTML=rows.map(function(r){return "<dt>"+r[0]+"</dt><dd>"+r[1]+"</dd>"}).join("")}
+function g(){var f=p(FN)[d(2)-1];dl($("grG"),[["Name",f+" "+p(LN)],["Characteristic",p(CH)],["Reputation",p(RE)],["Old career",p(CA)],["STR / DEX / WIL",s3()+" / "+s3()+" / "+s3()],["HP and Thalers",d(6)+" HP, "+d(6)+" Thalers"]])}
+function c(){dl($("grC"),[["Business",p(BT)],["Idea spark",p(IS)],["Name idea",p(NA)+p(NB)],["First question","How do the Gründers know each other?"]])}
+$("grRollG").addEventListener("click",g);$("grRollC").addEventListener("click",c);
+$("grLegacy").addEventListener("click",function(){var th=Math.max(0,+$("grTh").value||0),as=Math.max(0,+$("grAs").value||0),ne=Math.max(0,+$("grNe").value||0);
+ var n=Math.max(0,Math.floor(th/100)+2*as-ne);n=Math.min(n,40);var six=0,h="";
+ for(var i=0;i<n;i++){var r=d(6);if(r===6)six++;h+='<i class="'+(r===6?"six":"")+'">'+r+'</i>'}
+ $("grDice").innerHTML=h||"";$("grEpi").innerHTML="<b>"+n+" dice, "+six+" six"+(six===1?"":"es")+".</b> "+LEG[Math.min(5,six)]});
+g();c();
+})();
+</script>
+
 <section id="inside"><div class="in"><div class="split">
   <div>
     <div class="kicker">What is inside</div>
